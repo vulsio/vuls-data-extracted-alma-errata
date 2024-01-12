@@ -7,13 +7,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "python3.11-libs",
+				"name": "python3.11-devel",
 				"arches": [
 					"i686",
-					"x86_64",
+					"aarch64",
 					"ppc64le",
-					"s390x",
-					"aarch64"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -34,13 +34,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "python3.11-tkinter",
+				"name": "python3.11-libs",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
+					"i686",
 					"aarch64",
-					"i686"
+					"ppc64le",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -63,11 +63,38 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "python3.11",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
 					"aarch64",
-					"i686"
+					"ppc64le",
+					"x86_64",
+					"i686",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.11.2-2.el9_2.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "python3.11-tkinter",
+				"arches": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"i686",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -91,10 +118,10 @@
 				"name": "python3.11-idle",
 				"arches": [
 					"i686",
-					"ppc64le",
-					"aarch64",
+					"x86_64",
 					"s390x",
-					"x86_64"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -118,10 +145,10 @@
 				"name": "python3.11-test",
 				"arches": [
 					"i686",
-					"ppc64le",
-					"aarch64",
+					"x86_64",
 					"s390x",
-					"x86_64"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -145,37 +172,10 @@
 				"name": "python3.11-debug",
 				"arches": [
 					"i686",
-					"ppc64le",
-					"aarch64",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.11.2-2.el9_2.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "python3.11-devel",
-				"arches": [
-					"i686",
 					"x86_64",
-					"ppc64le",
 					"s390x",
-					"aarch64"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -201,6 +201,14 @@
 	],
 	"references": [
 		{
+			"name": "2173917",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2173917"
+		},
+		{
 			"name": "ALSA-2023-3585",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -223,14 +231,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-24329"
-		},
-		{
-			"name": "2173917",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2173917"
 		}
 	],
 	"published": "2023-06-14T00:00:00Z",

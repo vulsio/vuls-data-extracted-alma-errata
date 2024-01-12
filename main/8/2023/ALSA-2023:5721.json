@@ -7,6 +7,29 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-misc",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-tests",
 				"arches": [
 					"noarch"
@@ -55,10 +78,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::go-toolset",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -79,12 +102,58 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang",
+				"name": "go-toolset:rhel8::golang-bin",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-src",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-race",
+				"arches": [
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -128,81 +197,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-src",
+				"name": "go-toolset:rhel8::golang",
 				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-misc",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-bin",
-				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-race",
-				"arches": [
-					"x86_64"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -227,6 +227,22 @@
 		}
 	],
 	"references": [
+		{
+			"name": "RHSA-2023:5721",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5721"
+		},
+		{
+			"name": "CVE-2023-39325",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-39325"
+		},
 		{
 			"name": "CVE-2023-44487",
 			"source": "errata.almalinux.org",
@@ -258,22 +274,6 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2023-5721.html"
-		},
-		{
-			"name": "RHSA-2023:5721",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5721"
-		},
-		{
-			"name": "CVE-2023-39325",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-39325"
 		}
 	],
 	"published": "2023-10-16T00:00:00Z",

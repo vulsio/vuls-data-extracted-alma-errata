@@ -7,12 +7,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-devel",
+				"name": "nginx:1.20::nginx-filesystem",
 				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -33,12 +30,38 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-mail",
+				"name": "nginx:1.20::nginx",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nginx:1.20::nginx-mod-devel",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -61,36 +84,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "nginx:1.20::nginx-mod-http-image-filter",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-stream",
-				"arches": [
 					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -134,9 +131,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-filesystem",
+				"name": "nginx:1.20::nginx-mod-mail",
 				"arches": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -159,36 +159,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "nginx:1.20::nginx-mod-http-perl",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx",
-				"arches": [
 					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -211,10 +185,36 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "nginx:1.20::nginx-mod-http-xslt-filter",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nginx:1.20::nginx-mod-stream",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -240,22 +240,6 @@
 	],
 	"references": [
 		{
-			"name": "ALSA-2023-5712",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-5712.html"
-		},
-		{
-			"name": "RHSA-2023:5712",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5712"
-		},
-		{
 			"name": "CVE-2023-44487",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -270,6 +254,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2242803"
+		},
+		{
+			"name": "ALSA-2023-5712",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-5712.html"
+		},
+		{
+			"name": "RHSA-2023:5712",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5712"
 		}
 	],
 	"published": "2023-10-16T00:00:00Z",
