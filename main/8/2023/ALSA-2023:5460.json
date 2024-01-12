@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16",
+				"name": "bind9.16-chroot",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -59,9 +59,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "python3-bind9.16",
+				"name": "bind9.16-libs",
 				"arches": [
-					"noarch"
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -128,7 +132,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-chroot",
+				"name": "bind9.16-dnssec-utils",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-0.14.el8_8.2.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind9.16",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -181,39 +211,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-libs",
+				"name": "python3-bind9.16",
 				"arches": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-0.14.el8_8.2.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-dnssec-utils",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
