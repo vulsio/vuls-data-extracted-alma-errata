@@ -7,12 +7,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang",
+				"name": "go-toolset:rhel8::golang-tests",
 				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -33,7 +30,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-tests",
+				"name": "go-toolset:rhel8::golang-src",
 				"arches": [
 					"noarch"
 				]
@@ -128,7 +125,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::go-toolset",
+				"name": "go-toolset:rhel8::golang",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -154,9 +151,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-src",
+				"name": "go-toolset:rhel8::golang-race",
 				"arches": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -177,9 +174,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-race",
+				"name": "go-toolset:rhel8::go-toolset",
 				"arches": [
-					"x86_64"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -228,6 +228,38 @@
 	],
 	"references": [
 		{
+			"name": "ALSA-2023-3922",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-3922.html"
+		},
+		{
+			"name": "CVE-2023-29403",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-29403"
+		},
+		{
+			"name": "2216965",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2216965"
+		},
+		{
+			"name": "2217565",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2217565"
+		},
+		{
 			"name": "RHSA-2023:3922",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -244,14 +276,6 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-29402"
 		},
 		{
-			"name": "CVE-2023-29403",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-29403"
-		},
-		{
 			"name": "CVE-2023-29404",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -260,28 +284,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-29404"
 		},
 		{
-			"name": "2217565",
+			"name": "CVE-2023-29405",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"bugzilla"
+				"cve"
 			],
-			"url": "https://bugzilla.redhat.com/2217565"
-		},
-		{
-			"name": "ALSA-2023-3922",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-3922.html"
-		},
-		{
-			"name": "2216965",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2216965"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-29405"
 		},
 		{
 			"name": "2217562",
@@ -298,14 +306,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2217569"
-		},
-		{
-			"name": "CVE-2023-29405",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-29405"
 		}
 	],
 	"published": "2023-06-29T00:00:00Z",
