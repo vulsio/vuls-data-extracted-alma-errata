@@ -1,0 +1,131 @@
+{
+	"id": "ALSA-2022:7329",
+	"title": "Moderate: lua security update",
+	"description": "The lua packages provide support for Lua, a powerful light-weight programming language designed for extending applications. Lua is also frequently used as a general-purpose, stand-alone language.\n\nSecurity Fix(es):\n\n* lua: heap buffer overflow in luaG_errormsg() in ldebug.c due to uncontrolled recursion in error handling (CVE-2022-33099)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+	"affected": [
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "lua",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64",
+					"i686"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:5.4.2-4.el9_0.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "lua-libs",
+				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:5.4.2-4.el9_0.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "lua-devel",
+				"arches": [
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"i686",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:5.4.2-4.el9_0.3"
+						}
+					]
+				}
+			]
+		}
+	],
+	"severity": [
+		{
+			"type": "advisory",
+			"advisory": "Moderate"
+		}
+	],
+	"references": [
+		{
+			"name": "ALSA-2022-7329",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2022-7329.html"
+		},
+		{
+			"name": "RHSA-2022:7329",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2022:7329"
+		},
+		{
+			"name": "CVE-2022-33099",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-33099"
+		},
+		{
+			"name": "2104427",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2104427"
+		}
+	],
+	"published": "2022-11-02T00:00:00Z",
+	"modified": "2022-11-03T06:47:44Z",
+	"data_source": "alma-errata"
+}
