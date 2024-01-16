@@ -7,6 +7,75 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "python3-ipaserver",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.10.2-5.el9_3.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "ipa-common",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.10.2-5.el9_3.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "python3-ipatests",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.10.2-5.el9_3.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "ipa-client-common",
 				"arches": [
 					"noarch"
@@ -30,30 +99,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "python3-ipaclient",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.10.2-5.el9_3.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "ipa-selinux",
+				"name": "ipa-server-dns",
 				"arches": [
 					"noarch"
 				]
@@ -77,29 +123,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:9",
 				"name": "python3-ipalib",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.10.2-5.el9_3.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "python3-ipaserver",
 				"arches": [
 					"noarch"
 				]
@@ -148,9 +171,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "python3-ipatests",
+				"name": "ipa-client-samba",
 				"arches": [
-					"noarch"
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -171,7 +197,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "ipa-common",
+				"name": "python3-ipaclient",
 				"arches": [
 					"noarch"
 				]
@@ -195,29 +221,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:9",
 				"name": "ipa-server-common",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.10.2-5.el9_3.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "ipa-server-dns",
 				"arches": [
 					"noarch"
 				]
@@ -318,12 +321,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "ipa-client-samba",
+				"name": "ipa-selinux",
 				"arches": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -341,10 +341,20 @@
 			]
 		}
 	],
-	"severity": [
+	"severity": "Moderate",
+	"vulnerabilities": [
 		{
-			"type": "advisory",
-			"advisory": "Moderate"
+			"cve": "CVE-2023-5455",
+			"references": [
+				{
+					"name": "CVE-2023-5455",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5455"
+				}
+			]
 		}
 	],
 	"references": [

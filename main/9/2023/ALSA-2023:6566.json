@@ -7,6 +7,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "libmicrohttpd",
+				"arches": [
+					"i686",
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.9.72-5.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "libmicrohttpd-devel",
 				"arches": [
 					"i686",
@@ -52,50 +79,25 @@
 					]
 				}
 			]
-		},
+		}
+	],
+	"severity": "Moderate",
+	"vulnerabilities": [
 		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "libmicrohttpd",
-				"arches": [
-					"i686",
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
+			"cve": "CVE-2023-27371",
+			"references": [
 				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:0.9.72-5.el9"
-						}
-					]
+					"name": "CVE-2023-27371",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-27371"
 				}
 			]
 		}
 	],
-	"severity": [
-		{
-			"type": "advisory",
-			"advisory": "Moderate"
-		}
-	],
 	"references": [
-		{
-			"name": "2174313",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2174313"
-		},
 		{
 			"name": "ALSA-2023-6566",
 			"source": "errata.almalinux.org",
@@ -119,6 +121,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-27371"
+		},
+		{
+			"name": "2174313",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2174313"
 		}
 	],
 	"published": "2023-11-07T00:00:00Z",

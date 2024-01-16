@@ -7,33 +7,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-libs",
-				"arches": [
-					"i686",
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-5.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "bind-dnssec-doc",
 				"arches": [
 					"noarch"
@@ -58,32 +31,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:9",
 				"name": "bind-chroot",
-				"arches": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-5.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-utils",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -161,7 +108,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-doc",
+				"name": "bind-license",
 				"arches": [
 					"noarch"
 				]
@@ -184,7 +131,83 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-license",
+				"name": "bind-libs",
+				"arches": [
+					"i686",
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-5.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "python3-bind",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-5.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-dnssec-utils",
+				"arches": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-5.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-doc",
 				"arches": [
 					"noarch"
 				]
@@ -229,38 +252,54 @@
 					]
 				}
 			]
+		}
+	],
+	"severity": "Moderate",
+	"vulnerabilities": [
+		{
+			"cve": "CVE-2021-25220",
+			"references": [
+				{
+					"name": "CVE-2021-25220",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2021-25220"
+				}
+			]
 		},
 		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "python3-bind",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
+			"cve": "CVE-2022-0396",
+			"references": [
 				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-5.el9_1"
-						}
-					]
+					"name": "CVE-2022-0396",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-0396"
 				}
 			]
 		}
 	],
-	"severity": [
-		{
-			"type": "advisory",
-			"advisory": "Moderate"
-		}
-	],
 	"references": [
+		{
+			"name": "2064512",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2064512"
+		},
+		{
+			"name": "2064513",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2064513"
+		},
 		{
 			"name": "ALSA-2022-8068",
 			"source": "errata.almalinux.org",
@@ -292,22 +331,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-0396"
-		},
-		{
-			"name": "2064512",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2064512"
-		},
-		{
-			"name": "2064513",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2064513"
 		}
 	],
 	"published": "2022-11-15T00:00:00Z",
