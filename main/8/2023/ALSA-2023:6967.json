@@ -7,34 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "qt5-qtbase-static",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:5.15.3-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "qt5-qtbase-private-devel",
+				"name": "qt5-qtbase-mysql",
 				"arches": [
 					"i686",
 					"x86_64",
@@ -61,13 +34,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "qt5-qtbase-examples",
+				"name": "qt5-qtbase-common",
 				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -142,9 +111,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "qt5-qtbase-common",
+				"name": "qt5-qtbase-examples",
 				"arches": [
-					"noarch"
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -166,60 +139,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "qt5-qtbase-odbc",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:5.15.3-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "qt5-qtbase-mysql",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:5.15.3-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "qt5-qtbase-gui",
 				"arches": [
 					"i686",
 					"x86_64",
@@ -268,23 +187,91 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "qt5-qtbase-static",
+				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:5.15.3-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "qt5-qtbase-private-devel",
+				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:5.15.3-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "qt5-qtbase-gui",
+				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:5.15.3-5.el8"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2023-34410",
-			"references": [
-				{
-					"name": "CVE-2023-34410",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2023-33285",
 			"references": [
@@ -295,6 +282,19 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2023-33285"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-34410",
+			"references": [
+				{
+					"name": "CVE-2023-34410",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
 				}
 			]
 		},
@@ -327,14 +327,6 @@
 	],
 	"references": [
 		{
-			"name": "ALSA-2023-6967",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-6967.html"
-		},
-		{
 			"name": "RHSA-2023:6967",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -343,12 +335,12 @@
 			"url": "https://access.redhat.com/errata/RHSA-2023:6967"
 		},
 		{
-			"name": "CVE-2023-34410",
+			"name": "CVE-2023-33285",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-33285"
 		},
 		{
 			"name": "2212747",
@@ -367,12 +359,20 @@
 			"url": "https://bugzilla.redhat.com/2232173"
 		},
 		{
-			"name": "CVE-2023-33285",
+			"name": "ALSA-2023-6967",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-6967.html"
+		},
+		{
+			"name": "CVE-2023-34410",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-33285"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
 		},
 		{
 			"name": "CVE-2023-37369",

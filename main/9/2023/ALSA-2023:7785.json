@@ -33,33 +33,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-docs",
-				"arches": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:15.5-1.module_el9.3.0+52+21733919"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql",
+				"name": "postgresql:15::postgresql-contrib",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -111,33 +85,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::pgaudit",
-				"arches": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.7.0-1.module_el9.2.0+22+09653793"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-pltcl",
+				"name": "postgresql:15::postgresql-test",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -163,7 +111,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-server",
+				"name": "postgresql:15::postgresql-server-devel",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -215,12 +163,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-static",
+				"name": "postgresql:15::postgresql-test-rpm-macros",
 				"arches": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -267,7 +212,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-test",
+				"name": "postgresql:15::postgresql-docs",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -293,9 +238,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-test-rpm-macros",
+				"name": "postgresql:15::postgresql-pltcl",
 				"arches": [
-					"noarch"
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -342,7 +290,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-contrib",
+				"name": "postgresql:15::postgresql",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -420,6 +368,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "postgresql:15::pgaudit",
+				"arches": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.7.0-1.module_el9.2.0+22+09653793"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "postgresql:15::postgresql-plpython3",
 				"arches": [
 					"aarch64",
@@ -446,7 +420,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql:15::postgresql-server-devel",
+				"name": "postgresql:15::postgresql-server",
+				"arches": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:15.5-1.module_el9.3.0+52+21733919"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "postgresql:15::postgresql-static",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -472,19 +472,6 @@
 	"severity": "Important",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2023-5868",
-			"references": [
-				{
-					"name": "CVE-2023-5868",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5868"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2023-5870",
 			"references": [
 				{
@@ -494,19 +481,6 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5870"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-39417",
-			"references": [
-				{
-					"name": "CVE-2023-39417",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-39417"
 				}
 			]
 		},
@@ -524,6 +498,19 @@
 			]
 		},
 		{
+			"cve": "CVE-2023-5868",
+			"references": [
+				{
+					"name": "CVE-2023-5868",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5868"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2023-5869",
 			"references": [
 				{
@@ -535,41 +522,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5869"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-39417",
+			"references": [
+				{
+					"name": "CVE-2023-39417",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-39417"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "2247168",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2247168"
-		},
-		{
-			"name": "ALSA-2023-7785",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-7785.html"
-		},
-		{
-			"name": "RHSA-2023:7785",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:7785"
-		},
-		{
-			"name": "CVE-2023-39417",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-39417"
-		},
 		{
 			"name": "CVE-2023-5868",
 			"source": "errata.almalinux.org",
@@ -577,6 +545,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-5868"
+		},
+		{
+			"name": "CVE-2023-5869",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-5869"
 		},
 		{
 			"name": "CVE-2023-5870",
@@ -595,12 +571,12 @@
 			"url": "https://bugzilla.redhat.com/2228111"
 		},
 		{
-			"name": "2228112",
+			"name": "RHSA-2023:7785",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"bugzilla"
+				"third-party-advisory"
 			],
-			"url": "https://bugzilla.redhat.com/2228112"
+			"url": "https://access.redhat.com/errata/RHSA-2023:7785"
 		},
 		{
 			"name": "CVE-2023-39418",
@@ -611,12 +587,20 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-39418"
 		},
 		{
-			"name": "CVE-2023-5869",
+			"name": "2228112",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"cve"
+				"bugzilla"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-5869"
+			"url": "https://bugzilla.redhat.com/2228112"
+		},
+		{
+			"name": "2247168",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2247168"
 		},
 		{
 			"name": "2247169",
@@ -633,6 +617,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2247170"
+		},
+		{
+			"name": "ALSA-2023-7785",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-7785.html"
+		},
+		{
+			"name": "CVE-2023-39417",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-39417"
 		}
 	],
 	"published": "2023-12-13T00:00:00Z",
