@@ -7,32 +7,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_session",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "httpd:2.4::mod_proxy_html",
 				"arches": [
 					"aarch64",
@@ -59,7 +33,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-tools",
+				"name": "httpd:2.4::mod_ldap",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -102,6 +76,32 @@
 						},
 						{
 							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::mod_http2",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.15.7-8.module_el8.8.0+3554+ec1058a7.3"
 						}
 					]
 				}
@@ -160,29 +160,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-filesystem",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "httpd:2.4::httpd-manual",
 				"arches": [
 					"noarch"
@@ -206,7 +183,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_http2",
+				"name": "httpd:2.4::mod_session",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -222,7 +199,33 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.15.7-8.module_el8.8.0+3554+ec1058a7.3"
+							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::httpd-tools",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
 						}
 					]
 				}
@@ -238,6 +241,29 @@
 					"x86_64",
 					"s390x",
 					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::httpd-filesystem",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -278,32 +304,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_ldap",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
@@ -324,22 +324,6 @@
 	],
 	"references": [
 		{
-			"name": "CVE-2023-27522",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-27522"
-		},
-		{
-			"name": "2176211",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2176211"
-		},
-		{
 			"name": "ALSA-2023-5050",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -354,6 +338,22 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:5050"
+		},
+		{
+			"name": "CVE-2023-27522",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-27522"
+		},
+		{
+			"name": "2176211",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2176211"
 		}
 	],
 	"published": "2023-09-11T00:00:00Z",

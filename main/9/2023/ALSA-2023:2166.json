@@ -7,12 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-krb5",
+				"name": "freeradius-unixODBC",
 				"arches": [
-					"aarch64",
-					"ppc64le",
 					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -33,12 +33,38 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-sqlite",
+				"name": "freeradius-mysql",
 				"arches": [
 					"x86_64",
 					"s390x",
 					"aarch64",
 					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.0.21-37.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "python3-freeradius",
+				"arches": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -111,7 +137,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-unixODBC",
+				"name": "freeradius-sqlite",
 				"arches": [
 					"x86_64",
 					"s390x",
@@ -137,33 +163,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-mysql",
-				"arches": [
-					"x86_64",
-					"s390x",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.0.21-37.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-utils",
+				"name": "freeradius-krb5",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -216,32 +216,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:9",
 				"name": "freeradius",
-				"arches": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.0.21-37.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "python3-freeradius",
 				"arches": [
 					"aarch64",
 					"ppc64le",
@@ -340,6 +314,32 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "freeradius-utils",
+				"arches": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.0.21-37.el9"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
@@ -385,14 +385,6 @@
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2022-41859",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-41859"
-		},
 		{
 			"name": "CVE-2022-41860",
 			"source": "errata.almalinux.org",
@@ -448,6 +440,14 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:2166"
+		},
+		{
+			"name": "CVE-2022-41859",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-41859"
 		}
 	],
 	"published": "2023-05-09T00:00:00Z",
