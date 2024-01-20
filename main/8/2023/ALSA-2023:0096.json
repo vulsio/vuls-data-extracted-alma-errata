@@ -10,8 +10,8 @@
 				"name": "dbus-libs",
 				"arches": [
 					"i686",
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -57,12 +57,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dbus-tools",
+				"name": "dbus-devel",
 				"arches": [
-					"aarch64",
+					"i686",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -83,10 +84,10 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dbus-daemon",
+				"name": "dbus-tools",
 				"arches": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -111,8 +112,34 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "dbus",
 				"arches": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.12.8-23.el8_7.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "dbus-daemon",
+				"arches": [
+					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -137,35 +164,8 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "dbus-x11",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.12.8-23.el8_7.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "dbus-devel",
-				"arches": [
-					"i686",
 					"aarch64",
-					"x86_64",
 					"s390x",
 					"ppc64le"
 				]
@@ -187,19 +187,6 @@
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2022-42010",
-			"references": [
-				{
-					"name": "CVE-2022-42010",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-42010"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2022-42011",
 			"references": [
@@ -225,17 +212,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-42012"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-42010",
+			"references": [
+				{
+					"name": "CVE-2022-42010",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-42010"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2022-42011",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-42011"
-		},
 		{
 			"name": "CVE-2022-42012",
 			"source": "errata.almalinux.org",
@@ -291,9 +283,17 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-42010"
+		},
+		{
+			"name": "CVE-2022-42011",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-42011"
 		}
 	],
 	"published": "2023-01-12T00:00:00Z",
-	"modified": "2023-01-13T08:57:49Z",
+	"modified": "2023-01-13T08:57:51Z",
 	"data_source": "alma-errata"
 }
