@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-src",
+				"name": "go-toolset:rhel8::golang-tests",
 				"arches": [
 					"noarch"
 				]
@@ -30,32 +30,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-docs",
+				"name": "go-toolset:rhel8::golang-bin",
 				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-race",
-				"arches": [
-					"x86_64"
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -99,7 +79,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-tests",
+				"name": "go-toolset:rhel8::golang-src",
 				"arches": [
 					"noarch"
 				]
@@ -197,12 +177,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-bin",
+				"name": "go-toolset:rhel8::golang-race",
 				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-docs",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -251,6 +251,14 @@
 	],
 	"references": [
 		{
+			"name": "ALSA-2023-3083",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-3083.html"
+		},
+		{
 			"name": "RHSA-2023:3083",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -289,14 +297,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2178492"
-		},
-		{
-			"name": "ALSA-2023-3083",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-3083.html"
 		}
 	],
 	"published": "2023-05-16T00:00:00Z",
