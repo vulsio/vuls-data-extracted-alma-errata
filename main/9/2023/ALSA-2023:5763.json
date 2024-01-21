@@ -7,13 +7,40 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "libcurl-devel",
+				"arches": [
+					"i686",
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:7.76.1-23.el9_2.4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "libcurl-minimal",
 				"arches": [
 					"i686",
 					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -38,9 +65,9 @@
 				"arches": [
 					"i686",
 					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -64,9 +91,9 @@
 				"name": "curl-minimal",
 				"arches": [
 					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -90,36 +117,9 @@
 				"name": "curl",
 				"arches": [
 					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:7.76.1-23.el9_2.4"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "libcurl-devel",
-				"arches": [
-					"i686",
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -140,19 +140,6 @@
 	"severity": "Important",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2023-38545",
-			"references": [
-				{
-					"name": "CVE-2023-38545",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38545"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2023-38546",
 			"references": [
 				{
@@ -164,9 +151,30 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-38546"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-38545",
+			"references": [
+				{
+					"name": "CVE-2023-38545",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38545"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "2241938",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2241938"
+		},
 		{
 			"name": "ALSA-2023-5763",
 			"source": "errata.almalinux.org",
@@ -206,14 +214,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2241933"
-		},
-		{
-			"name": "2241938",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2241938"
 		}
 	],
 	"published": "2023-10-17T00:00:00Z",
