@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-libs-lite",
+				"name": "bind-lite-devel",
 				"arches": [
 					"i686",
 					"x86_64",
@@ -34,8 +34,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-sdb",
+				"name": "bind-pkcs11-devel",
 				"arches": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"s390x",
@@ -60,8 +61,36 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-pkcs11-utils",
+				"name": "bind-export-libs",
 				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.11.36-11.el8_9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind-pkcs11-libs",
+				"arches": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"s390x",
@@ -135,7 +164,30 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-lite-devel",
+				"name": "python3-bind",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.11.36-11.el8_9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind-libs-lite",
 				"arches": [
 					"i686",
 					"x86_64",
@@ -162,7 +214,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-pkcs11-devel",
+				"name": "bind-libs",
 				"arches": [
 					"i686",
 					"x86_64",
@@ -241,60 +293,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-devel",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.11.36-11.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "bind-libs",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.11.36-11.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "bind-export-devel",
 				"arches": [
 					"i686",
@@ -322,13 +320,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind-export-libs",
+				"name": "bind-devel",
 				"arches": [
 					"i686",
 					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -349,32 +347,8 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "python3-bind",
+				"name": "bind-sdb",
 				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.11.36-11.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "bind-pkcs11-libs",
-				"arches": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"s390x",
@@ -446,6 +420,32 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind-pkcs11-utils",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.11.36-11.el8_9"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
@@ -465,14 +465,6 @@
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2022-3094",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-3094"
-		},
 		{
 			"name": "2164032",
 			"source": "errata.almalinux.org",
@@ -496,6 +488,14 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:7177"
+		},
+		{
+			"name": "CVE-2022-3094",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-3094"
 		}
 	],
 	"published": "2023-11-14T00:00:00Z",
