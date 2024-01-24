@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-core",
+				"name": "mod_ssl",
 				"arches": [
 					"ppc64le",
 					"s390x",
@@ -23,7 +23,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:2.4.57-5.el9"
+							"fixed": "1:2.4.57-5.el9"
 						}
 					]
 				}
@@ -33,9 +33,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-manual",
+				"name": "mod_session",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -108,6 +111,52 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "httpd-filesystem",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.57-5.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "httpd-manual",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.57-5.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "httpd",
 				"arches": [
 					"ppc64le",
@@ -134,7 +183,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_session",
+				"name": "httpd-core",
 				"arches": [
 					"ppc64le",
 					"s390x",
@@ -166,29 +215,6 @@
 					"s390x",
 					"x86_64",
 					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.57-5.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-filesystem",
-				"arches": [
-					"noarch"
 				]
 			},
 			"ranges": [
@@ -256,32 +282,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "mod_ssl",
-				"arches": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:2.4.57-5.el9"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
@@ -301,14 +301,6 @@
 		}
 	],
 	"references": [
-		{
-			"name": "2176211",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2176211"
-		},
 		{
 			"name": "ALSA-2023-6403",
 			"source": "errata.almalinux.org",
@@ -332,6 +324,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-27522"
+		},
+		{
+			"name": "2176211",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2176211"
 		}
 	],
 	"published": "2023-11-07T00:00:00Z",
