@@ -7,52 +7,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::nodejs-docs",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:14.20.1-2.module_el8.7.0+3342+b2df8497"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::nodejs-packaging",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:23-3.module_el8.4.0+2522+3bd42762"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:14::nodejs-full-i18n",
 				"arches": [
 					"x86_64",
@@ -175,23 +129,56 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::nodejs-docs",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:14.20.1-2.module_el8.7.0+3342+b2df8497"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::nodejs-packaging",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:23-3.module_el8.4.0+2522+3bd42762"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2021-44532",
-			"references": [
-				{
-					"name": "CVE-2021-44532",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2021-44532"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2021-44533",
 			"references": [
@@ -243,9 +230,38 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2021-44531"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2021-44532",
+			"references": [
+				{
+					"name": "CVE-2021-44532",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2021-44532"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "2040862",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2040862"
+		},
+		{
+			"name": "ALSA-2022-7830",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2022-7830.html"
+		},
 		{
 			"name": "RHSA-2022:7830",
 			"source": "errata.almalinux.org",
@@ -253,22 +269,6 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2022:7830"
-		},
-		{
-			"name": "CVE-2021-44531",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2021-44531"
-		},
-		{
-			"name": "CVE-2021-44532",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2021-44532"
 		},
 		{
 			"name": "CVE-2021-44533",
@@ -303,14 +303,6 @@
 			"url": "https://bugzilla.redhat.com/2040839"
 		},
 		{
-			"name": "ALSA-2022-7830",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-7830.html"
-		},
-		{
 			"name": "2040856",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -319,20 +311,28 @@
 			"url": "https://bugzilla.redhat.com/2040856"
 		},
 		{
-			"name": "2040862",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2040862"
-		},
-		{
 			"name": "2130518",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2130518"
+		},
+		{
+			"name": "CVE-2021-44531",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2021-44531"
+		},
+		{
+			"name": "CVE-2021-44532",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2021-44532"
 		},
 		{
 			"name": "2040846",
