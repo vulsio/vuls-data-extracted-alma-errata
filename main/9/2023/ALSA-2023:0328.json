@@ -9,10 +9,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "golang-bin",
 				"arches": [
-					"ppc64le",
-					"s390x",
 					"x86_64",
-					"aarch64"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -33,35 +33,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "go-toolset",
+				"name": "golang",
 				"arches": [
-					"ppc64le",
-					"s390x",
 					"x86_64",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.18.9-1.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "golang-race",
-				"arches": [
-					"x86_64"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -174,12 +151,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "golang",
+				"name": "golang-race",
 				"arches": [
-					"ppc64le",
-					"s390x",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.18.9-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "go-toolset",
+				"arches": [
 					"x86_64",
-					"aarch64"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -199,6 +199,19 @@
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2022-41715",
+			"references": [
+				{
+					"name": "CVE-2022-41715",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41715"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2022-2879",
 			"references": [
@@ -222,19 +235,6 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2880"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2022-41715",
-			"references": [
-				{
-					"name": "CVE-2022-41715",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41715"
 				}
 			]
 		}
