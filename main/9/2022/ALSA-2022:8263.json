@@ -7,6 +7,31 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "dpdk",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:21.11.2-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "dpdk-devel",
 				"arches": [
 					"x86_64",
@@ -75,35 +100,23 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "dpdk",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:21.11.2-1.el9_1"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2022-28199",
+			"references": [
+				{
+					"name": "CVE-2022-28199",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-28199"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2021-3839",
 			"references": [
@@ -129,38 +142,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2132"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-28199",
-			"references": [
-				{
-					"name": "CVE-2022-28199",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-28199"
-				}
-			]
 		}
 	],
 	"references": [
-		{
-			"name": "ALSA-2022-8263",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2022-8263.html"
-		},
-		{
-			"name": "RHSA-2022:8263",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2022:8263"
-		},
 		{
 			"name": "CVE-2021-3839",
 			"source": "errata.almalinux.org",
@@ -208,6 +192,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2123549"
+		},
+		{
+			"name": "ALSA-2022-8263",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2022-8263.html"
+		},
+		{
+			"name": "RHSA-2022:8263",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2022:8263"
 		}
 	],
 	"published": "2022-11-15T00:00:00Z",
