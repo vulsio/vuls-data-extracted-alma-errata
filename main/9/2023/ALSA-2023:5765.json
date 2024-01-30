@@ -33,10 +33,10 @@
 				"name": "nodejs-libs",
 				"arches": [
 					"i686",
-					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -59,10 +59,36 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs-full-i18n",
 				"arches": [
-					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.20.2-3.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs",
+				"arches": [
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -85,10 +111,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "npm",
 				"arches": [
-					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -100,32 +126,6 @@
 						},
 						{
 							"fixed": "1:8.19.4-1.16.20.2.3.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.20.2-3.el9_2"
 						}
 					]
 				}
@@ -150,6 +150,14 @@
 	],
 	"references": [
 		{
+			"name": "ALSA-2023-5765",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-5765.html"
+		},
+		{
 			"name": "RHSA-2023:5765",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -172,14 +180,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2242803"
-		},
-		{
-			"name": "ALSA-2023-5765",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-5765.html"
 		}
 	],
 	"published": "2023-10-17T00:00:00Z",
