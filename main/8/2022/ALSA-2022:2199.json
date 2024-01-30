@@ -31,7 +31,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "aspnetcore-runtime-6.0",
+				"name": "dotnet-hostfxr-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64"
@@ -55,7 +55,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-runtime-6.0",
+				"name": "dotnet",
 				"arches": [
 					"x86_64",
 					"aarch64"
@@ -69,7 +69,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:6.0.5-1.el8_6"
+							"fixed": "0:6.0.105-1.el8_6"
 						}
 					]
 				}
@@ -80,30 +80,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "dotnet-targeting-pack-6.0",
-				"arches": [
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.5-1.el8_6"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "aspnetcore-targeting-pack-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64"
@@ -175,30 +151,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-hostfxr-6.0",
-				"arches": [
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.5-1.el8_6"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "dotnet-sdk-6.0",
 				"arches": [
 					"x86_64",
@@ -247,7 +199,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet",
+				"name": "aspnetcore-runtime-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64"
@@ -261,7 +213,31 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:6.0.105-1.el8_6"
+							"fixed": "0:6.0.5-1.el8_6"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "dotnet-runtime-6.0",
+				"arches": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.5-1.el8_6"
 						}
 					]
 				}
@@ -290,10 +266,47 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "aspnetcore-targeting-pack-6.0",
+				"arches": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.5-1.el8_6"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Important",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2022-29117",
+			"references": [
+				{
+					"name": "CVE-2022-29117",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://vulners.com/cve/CVE-2022-29117"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2022-29145",
 			"references": [
@@ -319,22 +332,17 @@
 					"url": "https://vulners.com/cve/CVE-2022-23267"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-29117",
-			"references": [
-				{
-					"name": "CVE-2022-29117",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://vulners.com/cve/CVE-2022-29117"
-				}
-			]
 		}
 	],
 	"references": [
+		{
+			"name": "CVE-2022-23267",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://vulners.com/cve/CVE-2022-23267"
+		},
 		{
 			"name": "CVE-2022-29117",
 			"source": "errata.almalinux.org",
@@ -358,14 +366,6 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2022-2199.html"
-		},
-		{
-			"name": "CVE-2022-23267",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://vulners.com/cve/CVE-2022-23267"
 		}
 	],
 	"published": "2022-05-11T13:20:34Z",
