@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "python3-bind",
+				"name": "bind-dnssec-doc",
 				"arches": [
 					"noarch"
 				]
@@ -30,9 +30,38 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-doc",
+				"name": "bind",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-11.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-utils",
+				"arches": [
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -79,9 +108,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-doc",
+				"name": "bind-devel",
 				"arches": [
-					"noarch"
+					"i686",
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -178,12 +211,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind",
+				"name": "bind-doc",
 				"arches": [
-					"ppc64le",
-					"aarch64",
-					"s390x",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -204,39 +234,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-utils",
+				"name": "python3-bind",
 				"arches": [
-					"ppc64le",
-					"aarch64",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-11.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-devel",
-				"arches": [
-					"i686",
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -256,19 +256,6 @@
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2022-3736",
-			"references": [
-				{
-					"name": "CVE-2022-3736",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3736"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2022-2795",
 			"references": [
@@ -307,6 +294,19 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-3924"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-3736",
+			"references": [
+				{
+					"name": "CVE-2022-3736",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3736"
+				}
+			]
 		}
 	],
 	"references": [
@@ -333,6 +333,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2164032"
+		},
+		{
+			"name": "2164038",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2164038"
+		},
+		{
+			"name": "2164039",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2164039"
 		},
 		{
 			"name": "RHSA-2023:2261",
@@ -373,22 +389,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2128584"
-		},
-		{
-			"name": "2164038",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2164038"
-		},
-		{
-			"name": "2164039",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2164039"
 		}
 	],
 	"published": "2023-05-09T00:00:00Z",
