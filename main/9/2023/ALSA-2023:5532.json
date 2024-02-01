@@ -7,6 +7,85 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs-full-i18n",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.20.2-1.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "npm",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:8.19.4-1.16.20.2.1.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs-libs",
+				"arches": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.20.2-1.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs-docs",
 				"arches": [
 					"noarch"
@@ -32,88 +111,9 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs",
 				"arches": [
+					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.20.2-1.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs-full-i18n",
-				"arches": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.20.2-1.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "npm",
-				"arches": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:8.19.4-1.16.20.2.1.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs-libs",
-				"arches": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -134,6 +134,19 @@
 	],
 	"severity": "Important",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2023-32002",
+			"references": [
+				{
+					"name": "CVE-2023-32002",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2023-32006",
 			"references": [
@@ -159,38 +172,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32559"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2023-32002",
-			"references": [
-				{
-					"name": "CVE-2023-32002",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
-				}
-			]
 		}
 	],
 	"references": [
-		{
-			"name": "RHSA-2023:5532",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5532"
-		},
-		{
-			"name": "CVE-2023-32002",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
-		},
 		{
 			"name": "CVE-2023-32006",
 			"source": "errata.almalinux.org",
@@ -238,6 +222,22 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/9/ALSA-2023-5532.html"
+		},
+		{
+			"name": "RHSA-2023:5532",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5532"
+		},
+		{
+			"name": "CVE-2023-32002",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
 		}
 	],
 	"published": "2023-10-09T00:00:00Z",
