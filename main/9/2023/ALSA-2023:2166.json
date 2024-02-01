@@ -7,6 +7,58 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "freeradius-mysql",
+				"arches": [
+					"s390x",
+					"ppc64le",
+					"aarch64",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.0.21-37.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "freeradius-postgresql",
+				"arches": [
+					"s390x",
+					"ppc64le",
+					"aarch64",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.0.21-37.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "freeradius-sqlite",
 				"arches": [
 					"s390x",
@@ -33,33 +85,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-rest",
-				"arches": [
-					"s390x",
-					"ppc64le",
-					"aarch64",
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.0.21-37.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-devel",
+				"name": "freeradius",
 				"arches": [
 					"ppc64le",
 					"aarch64",
@@ -85,7 +111,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius",
+				"name": "freeradius-ldap",
 				"arches": [
 					"ppc64le",
 					"aarch64",
@@ -163,12 +189,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-mysql",
+				"name": "freeradius-utils",
 				"arches": [
-					"s390x",
 					"ppc64le",
 					"aarch64",
-					"x86_64"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -189,7 +215,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-utils",
+				"name": "freeradius-devel",
 				"arches": [
 					"ppc64le",
 					"aarch64",
@@ -267,7 +293,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-postgresql",
+				"name": "freeradius-rest",
 				"arches": [
 					"s390x",
 					"ppc64le",
@@ -299,32 +325,6 @@
 					"ppc64le",
 					"aarch64",
 					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.0.21-37.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "freeradius-ldap",
-				"arches": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
 				]
 			},
 			"ranges": [
@@ -386,6 +386,30 @@
 	],
 	"references": [
 		{
+			"name": "2078485",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2078485"
+		},
+		{
+			"name": "2078487",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2078487"
+		},
+		{
+			"name": "ALSA-2023-2166",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-2166.html"
+		},
+		{
 			"name": "RHSA-2023:2166",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -424,30 +448,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2078483"
-		},
-		{
-			"name": "2078485",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2078485"
-		},
-		{
-			"name": "2078487",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2078487"
-		},
-		{
-			"name": "ALSA-2023-2166",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-2166.html"
 		}
 	],
 	"published": "2023-05-09T00:00:00Z",
