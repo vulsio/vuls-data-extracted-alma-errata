@@ -7,9 +7,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-manual",
+				"name": "httpd-filesystem",
 				"arches": [
 					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.53-7.el9_1.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "mod_session",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -56,7 +82,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-core",
+				"name": "httpd",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -134,7 +160,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-filesystem",
+				"name": "httpd-manual",
 				"arches": [
 					"noarch"
 				]
@@ -157,7 +183,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_session",
+				"name": "mod_ldap",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -183,7 +209,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_ldap",
+				"name": "httpd-core",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -256,49 +282,10 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "httpd",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.53-7.el9_1.1"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2006-20001",
-			"references": [
-				{
-					"name": "CVE-2006-20001",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2006-20001"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2022-36760",
 			"references": [
@@ -324,25 +311,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2006-20001",
+			"references": [
+				{
+					"name": "CVE-2006-20001",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2006-20001"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "2161773",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2161773"
-		},
-		{
-			"name": "2161774",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2161774"
-		},
 		{
 			"name": "2161777",
 			"source": "errata.almalinux.org",
@@ -390,6 +374,22 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
+		},
+		{
+			"name": "2161773",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2161773"
+		},
+		{
+			"name": "2161774",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2161774"
 		}
 	],
 	"published": "2023-02-28T00:00:00Z",
