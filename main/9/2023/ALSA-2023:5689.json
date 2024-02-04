@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-utils",
+				"name": "bind-chroot",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -34,6 +34,32 @@
 			"package": {
 				"ecosystem": "AlmaLinux:9",
 				"name": "bind-utils",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-11.el9_2.2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -86,13 +112,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-devel",
+				"name": "bind-doc",
 				"arches": [
-					"ppc64le",
-					"i686",
-					"aarch64",
-					"s390x",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -182,7 +204,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-chroot",
+				"name": "bind-dnssec-utils",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -208,35 +230,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-doc",
+				"name": "bind-devel",
 				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-11.el9_2.2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind",
-				"arches": [
-					"x86_64",
 					"ppc64le",
+					"i686",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -272,22 +272,6 @@
 	],
 	"references": [
 		{
-			"name": "ALSA-2023-5689",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-5689.html"
-		},
-		{
-			"name": "RHSA-2023:5689",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5689"
-		},
-		{
 			"name": "CVE-2023-3341",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -302,6 +286,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2239621"
+		},
+		{
+			"name": "ALSA-2023-5689",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-5689.html"
+		},
+		{
+			"name": "RHSA-2023:5689",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5689"
 		}
 	],
 	"published": "2023-10-12T00:00:00Z",
