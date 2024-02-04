@@ -7,13 +7,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-devel",
+				"name": "python3-bind",
 				"arches": [
-					"ppc64le",
-					"i686",
-					"aarch64",
-					"s390x",
-					"x86_64"
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-11.el9_2.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-dnssec-doc",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -60,12 +79,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind",
+				"name": "bind-devel",
 				"arches": [
-					"x86_64",
 					"ppc64le",
+					"i686",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -86,7 +106,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-doc",
+				"name": "bind-license",
 				"arches": [
 					"noarch"
 				]
@@ -162,6 +182,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "bind",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-11.el9_2.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "bind-dnssec-utils",
 				"arches": [
 					"x86_64",
@@ -206,52 +252,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "python3-bind",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-11.el9_2.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-license",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-11.el9_2.1"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
@@ -272,22 +272,6 @@
 	],
 	"references": [
 		{
-			"name": "ALSA-2023-4099",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-4099.html"
-		},
-		{
-			"name": "RHSA-2023:4099",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:4099"
-		},
-		{
 			"name": "CVE-2023-2828",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -302,6 +286,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2216227"
+		},
+		{
+			"name": "ALSA-2023-4099",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-4099.html"
+		},
+		{
+			"name": "RHSA-2023:4099",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:4099"
 		}
 	],
 	"published": "2023-07-17T00:00:00Z",
