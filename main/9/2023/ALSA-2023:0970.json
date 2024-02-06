@@ -7,9 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-manual",
+				"name": "mod_lua",
 				"arches": [
-					"noarch"
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -30,7 +33,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_session",
+				"name": "httpd-tools",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -108,12 +111,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-tools",
+				"name": "httpd-filesystem",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -134,35 +134,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_ssl",
+				"name": "mod_session",
 				"arches": [
 					"x86_64",
 					"ppc64le",
 					"aarch64",
 					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:2.4.53-7.el9_1.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-filesystem",
-				"arches": [
-					"noarch"
 				]
 			},
 			"ranges": [
@@ -235,12 +212,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-core",
+				"name": "mod_ssl",
 				"arches": [
 					"x86_64",
 					"ppc64le",
 					"aarch64",
 					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.4.53-7.el9_1.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "httpd-manual",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -261,7 +261,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_lua",
+				"name": "httpd-core",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -287,6 +287,19 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
+			"cve": "CVE-2022-37436",
+			"references": [
+				{
+					"name": "CVE-2022-37436",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2006-20001",
 			"references": [
 				{
@@ -311,46 +324,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-37436",
-			"references": [
-				{
-					"name": "CVE-2022-37436",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
-				}
-			]
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2006-20001",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2006-20001"
-		},
-		{
-			"name": "CVE-2022-36760",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
-		},
-		{
-			"name": "CVE-2022-37436",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
-		},
 		{
 			"name": "2161773",
 			"source": "errata.almalinux.org",
@@ -390,6 +366,30 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:0970"
+		},
+		{
+			"name": "CVE-2006-20001",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2006-20001"
+		},
+		{
+			"name": "CVE-2022-36760",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
+		},
+		{
+			"name": "CVE-2022-37436",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
 		}
 	],
 	"published": "2023-02-28T00:00:00Z",
