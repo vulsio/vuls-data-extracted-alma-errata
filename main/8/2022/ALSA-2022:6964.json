@@ -7,12 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:16::nodejs",
+				"name": "nodejs:16::nodejs-full-i18n",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x",
-					"ppc64le"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -24,6 +24,81 @@
 						},
 						{
 							"fixed": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:16::nodejs-packaging",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:25-1.module_el8.5.0+2605+45d748af"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:16::nodejs-devel",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:16::npm",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:8.15.0-1.16.17.1.1.module_el8.6.0+3328+2e4711d7"
 						}
 					]
 				}
@@ -56,6 +131,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:16::nodejs",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:16::nodejs-docs",
 				"arches": [
 					"noarch"
@@ -70,107 +171,6 @@
 						},
 						{
 							"fixed": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:16::nodejs-full-i18n",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:16::nodejs-devel",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:16::npm",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:8.15.0-1.16.17.1.1.module_el8.6.0+3328+2e4711d7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:16::nodejs-packaging",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:25-1.module_el8.5.0+2605+45d748af"
 						}
 					]
 				}
@@ -207,14 +207,6 @@
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2022-35255",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-35255"
-		},
 		{
 			"name": "CVE-2022-35256",
 			"source": "errata.almalinux.org",
@@ -254,9 +246,17 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2022:6964"
+		},
+		{
+			"name": "CVE-2022-35255",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-35255"
 		}
 	],
 	"published": "2022-10-17T00:00:00Z",
-	"modified": "2022-10-27T10:15:16Z",
+	"modified": "2022-10-27T10:15:15Z",
 	"data_source": "alma-errata"
 }
