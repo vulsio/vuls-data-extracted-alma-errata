@@ -7,6 +7,58 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::nodejs-full-i18n",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:14.21.1-2.module_el8.7.0+3373+a4c18c43"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::npm",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:6.14.17-1.14.21.1.2.module_el8.7.0+3373+a4c18c43"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:14::nodejs-docs",
 				"arches": [
 					"noarch"
@@ -123,72 +175,20 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::nodejs-full-i18n",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:14.21.1-2.module_el8.7.0+3373+a4c18c43"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::npm",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:6.14.17-1.14.21.1.2.module_el8.7.0+3373+a4c18c43"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2021-44906",
+			"cve": "CVE-2022-0235",
 			"references": [
 				{
-					"name": "CVE-2021-44906",
+					"name": "CVE-2022-0235",
 					"source": "errata.almalinux.org",
 					"tags": [
 						"cve"
 					],
-					"url": "https://access.redhat.com/security/cve/CVE-2021-44906"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-0235"
 				}
 			]
 		},
@@ -219,6 +219,19 @@
 			]
 		},
 		{
+			"cve": "CVE-2021-44906",
+			"references": [
+				{
+					"name": "CVE-2021-44906",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2021-44906"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2022-43548",
 			"references": [
 				{
@@ -230,30 +243,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-43548"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-0235",
-			"references": [
-				{
-					"name": "CVE-2022-0235",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-0235"
-				}
-			]
 		}
 	],
 	"references": [
-		{
-			"name": "2044591",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2044591"
-		},
 		{
 			"name": "2134609",
 			"source": "errata.almalinux.org",
@@ -261,22 +253,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2134609"
-		},
-		{
-			"name": "2150323",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2150323"
-		},
-		{
-			"name": "CVE-2022-0235",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-0235"
 		},
 		{
 			"name": "RHSA-2023:0050",
@@ -287,12 +263,20 @@
 			"url": "https://access.redhat.com/errata/RHSA-2023:0050"
 		},
 		{
-			"name": "CVE-2021-44906",
+			"name": "CVE-2022-43548",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2021-44906"
+			"url": "https://access.redhat.com/security/cve/CVE-2022-43548"
+		},
+		{
+			"name": "CVE-2022-0235",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-0235"
 		},
 		{
 			"name": "CVE-2022-24999",
@@ -311,12 +295,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2022-3517"
 		},
 		{
-			"name": "CVE-2022-43548",
+			"name": "2044591",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"cve"
+				"bugzilla"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-43548"
+			"url": "https://bugzilla.redhat.com/2044591"
 		},
 		{
 			"name": "2066009",
@@ -341,6 +325,22 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2023-0050.html"
+		},
+		{
+			"name": "CVE-2021-44906",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2021-44906"
+		},
+		{
+			"name": "2150323",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2150323"
 		}
 	],
 	"published": "2023-01-09T00:00:00Z",
