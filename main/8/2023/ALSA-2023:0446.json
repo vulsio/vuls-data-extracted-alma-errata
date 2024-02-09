@@ -7,6 +7,29 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::delve",
+				"arches": [
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.8.3-1.module_el8.7.0+3280+24dc9c5d"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-src",
 				"arches": [
 					"noarch"
@@ -53,9 +76,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-misc",
+				"name": "go-toolset:rhel8::go-toolset",
 				"arches": [
-					"noarch"
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -99,32 +125,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-tests",
 				"arches": [
 					"noarch"
@@ -148,12 +148,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::go-toolset",
+				"name": "go-toolset:rhel8::golang-misc",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -174,9 +171,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::delve",
+				"name": "go-toolset:rhel8::golang",
 				"arches": [
-					"x86_64"
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -187,7 +187,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.8.3-1.module_el8.7.0+3280+24dc9c5d"
+							"fixed": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
 						}
 					]
 				}
@@ -199,10 +199,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-bin",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -264,6 +264,22 @@
 	],
 	"references": [
 		{
+			"name": "ALSA-2023-0446",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-0446.html"
+		},
+		{
+			"name": "RHSA-2023:0446",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:0446"
+		},
+		{
 			"name": "CVE-2022-2879",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -310,22 +326,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2132872"
-		},
-		{
-			"name": "ALSA-2023-0446",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-0446.html"
-		},
-		{
-			"name": "RHSA-2023:0446",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:0446"
 		}
 	],
 	"published": "2023-01-25T00:00:00Z",

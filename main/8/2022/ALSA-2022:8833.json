@@ -7,12 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:18::nodejs-full-i18n",
+				"name": "nodejs:18::nodejs",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -35,10 +35,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:18::npm",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -61,10 +61,36 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:18::nodejs-devel",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:18.12.1-2.module_el8.7.0+3370+40ccb2a8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:18::nodejs-full-i18n",
+				"arches": [
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -172,32 +198,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:18::nodejs",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:18.12.1-2.module_el8.7.0+3370+40ccb2a8"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
@@ -231,6 +231,22 @@
 	],
 	"references": [
 		{
+			"name": "2140911",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2140911"
+		},
+		{
+			"name": "ALSA-2022-8833",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2022-8833.html"
+		},
+		{
 			"name": "RHSA-2022:8833",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -261,22 +277,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2134609"
-		},
-		{
-			"name": "2140911",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2140911"
-		},
-		{
-			"name": "ALSA-2022-8833",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-8833.html"
 		}
 	],
 	"published": "2022-12-06T00:00:00Z",

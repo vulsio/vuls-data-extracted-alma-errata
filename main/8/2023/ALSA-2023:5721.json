@@ -7,6 +7,29 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-misc",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-docs",
 				"arches": [
 					"noarch"
@@ -32,10 +55,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::go-toolset",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -58,10 +81,33 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-src",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -84,10 +130,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-bin",
 				"arches": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -131,52 +177,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-misc",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-tests",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.13-1.module_el8.8.0+3625+a06035cf"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::delve",
 				"arches": [
 					"x86_64"
@@ -200,7 +200,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-src",
+				"name": "go-toolset:rhel8::golang-tests",
 				"arches": [
 					"noarch"
 				]
@@ -251,30 +251,6 @@
 	],
 	"references": [
 		{
-			"name": "2243296",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2243296"
-		},
-		{
-			"name": "ALSA-2023-5721",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-5721.html"
-		},
-		{
-			"name": "RHSA-2023:5721",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5721"
-		},
-		{
 			"name": "CVE-2023-39325",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -297,6 +273,30 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2242803"
+		},
+		{
+			"name": "2243296",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2243296"
+		},
+		{
+			"name": "ALSA-2023-5721",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-5721.html"
+		},
+		{
+			"name": "RHSA-2023:5721",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5721"
 		}
 	],
 	"published": "2023-10-16T00:00:00Z",
