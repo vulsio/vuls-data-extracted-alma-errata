@@ -30,7 +30,30 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "git-instaweb",
+				"name": "perl-Git-SVN",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.39.1-1.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "git-core-doc",
 				"arches": [
 					"noarch"
 				]
@@ -54,6 +77,32 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "git",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.39.1-1.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "git-credential-libsecret",
 				"arches": [
 					"x86_64",
 					"ppc64le",
@@ -105,76 +154,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "perl-Git-SVN",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.39.1-1.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "gitk",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.39.1-1.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "perl-Git",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.39.1-1.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "git-all",
 				"arches": [
 					"noarch"
 				]
@@ -220,7 +200,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "git-core-doc",
+				"name": "git-instaweb",
 				"arches": [
 					"noarch"
 				]
@@ -266,12 +246,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "git-daemon",
+				"name": "git-all",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -315,12 +292,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "git-credential-libsecret",
+				"name": "gitk",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -362,10 +336,62 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "git-daemon",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.39.1-1.el8"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2022-29187",
+			"references": [
+				{
+					"name": "CVE-2022-29187",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-29187"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2022-24765",
+			"references": [
+				{
+					"name": "CVE-2022-24765",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-24765"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2022-39253",
 			"references": [
@@ -391,32 +417,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-39260"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-24765",
-			"references": [
-				{
-					"name": "CVE-2022-24765",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-24765"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2022-29187",
-			"references": [
-				{
-					"name": "CVE-2022-29187",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-29187"
-				}
-			]
 		}
 	],
 	"references": [
@@ -427,14 +427,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-24765"
-		},
-		{
-			"name": "CVE-2022-29187",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-29187"
 		},
 		{
 			"name": "CVE-2022-39253",
@@ -453,12 +445,28 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2022-39260"
 		},
 		{
+			"name": "2073414",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2073414"
+		},
+		{
 			"name": "2137422",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2137422"
+		},
+		{
+			"name": "ALSA-2023-2859",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-2859.html"
 		},
 		{
 			"name": "RHSA-2023:2859",
@@ -469,12 +477,12 @@
 			"url": "https://access.redhat.com/errata/RHSA-2023:2859"
 		},
 		{
-			"name": "2073414",
+			"name": "CVE-2022-29187",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"bugzilla"
+				"cve"
 			],
-			"url": "https://bugzilla.redhat.com/2073414"
+			"url": "https://access.redhat.com/security/cve/CVE-2022-29187"
 		},
 		{
 			"name": "2107439",
@@ -491,14 +499,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2137423"
-		},
-		{
-			"name": "ALSA-2023-2859",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-2859.html"
 		}
 	],
 	"published": "2023-05-16T00:00:00Z",
