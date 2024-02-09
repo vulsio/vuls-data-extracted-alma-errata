@@ -7,9 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-manual",
+				"name": "httpd:2.4::mod_ldap",
 				"arches": [
-					"noarch"
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -30,7 +33,30 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-filesystem",
+				"name": "httpd:2.4::mod_md",
+				"arches": [
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::httpd-manual",
 				"arches": [
 					"noarch"
 				]
@@ -78,7 +104,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_ssl",
+				"name": "httpd:2.4::mod_proxy_html",
 				"arches": [
 					"aarch64",
 					"s390x",
@@ -104,9 +130,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_md",
+				"name": "httpd:2.4::httpd-devel",
 				"arches": [
-					"s390x"
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -117,7 +146,33 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::mod_http2",
+				"arches": [
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.15.7-5.module_el8.7.0+3515+9e4fe0d6.4"
 						}
 					]
 				}
@@ -133,6 +188,29 @@
 					"s390x",
 					"x86_64",
 					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::httpd-filesystem",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -205,7 +283,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_proxy_html",
+				"name": "httpd:2.4::mod_ssl",
 				"arches": [
 					"aarch64",
 					"s390x",
@@ -222,84 +300,6 @@
 						},
 						{
 							"fixed": "1:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-devel",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_ldap",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_http2",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.15.7-5.module_el8.7.0+3515+9e4fe0d6.4"
 						}
 					]
 				}
