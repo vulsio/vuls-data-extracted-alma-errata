@@ -7,12 +7,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::oci-seccomp-bpf-hook",
+				"name": "container-tools:4.0::criu",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -23,7 +22,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.2.5-2.module_el8.8.0+3468+16b86c82"
+							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
 						}
 					]
 				}
@@ -33,12 +32,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::fuse-overlayfs",
+				"name": "container-tools:4.0::toolbox-tests",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -49,7 +48,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.9-2.module_el8.9.0+3627+db8ec155"
+							"fixed": "0:0.0.99.4-5.module_el8.9.0+3627+db8ec155"
 						}
 					]
 				}
@@ -59,9 +58,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::python3-podman",
+				"name": "container-tools:4.0::python3-criu",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -72,7 +73,83 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:4.0.0-2.module_el8.9.0+3627+db8ec155"
+							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::criu-libs",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::crun",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.8.3-1.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::libslirp",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
 						}
 					]
 				}
@@ -84,10 +161,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "container-tools:4.0::podman-tests",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -108,11 +185,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::crit",
+				"name": "container-tools:4.0::podman-remote",
 				"arches": [
-					"aarch64",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -123,7 +201,59 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::podman",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::toolbox",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:0.0.99.4-5.module_el8.9.0+3627+db8ec155"
 						}
 					]
 				}
@@ -156,35 +286,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::container-selinux",
+				"name": "container-tools:4.0::podman-gvproxy",
 				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:2.205.0-3.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::aardvark-dns",
-				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -195,7 +302,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "2:1.0.1-38.module_el8.9.0+3627+db8ec155"
+							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
 						}
 					]
 				}
@@ -205,7 +312,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::criu-devel",
+				"name": "container-tools:4.0::podman-plugins",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::crit",
 				"arches": [
 					"s390x"
 				]
@@ -228,390 +361,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::podman-plugins",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::skopeo",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:1.6.2-8.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::podman",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::toolbox",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:0.0.99.4-5.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::runc",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.1.5-2.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::crun",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.8.3-1.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::toolbox-tests",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:0.0.99.4-5.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::libslirp-devel",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::python3-criu",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::libslirp-devel",
-				"arches": [
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::conmon",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:2.1.4-2.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "container-tools:4.0::criu-devel",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::podman-catatonit",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::podman-gvproxy",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::criu-libs",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::criu-libs",
 				"arches": [
 					"s390x"
 				]
@@ -657,12 +407,89 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::containernetworking-plugins",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.1.1-5.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::criu-devel",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::podman-catatonit",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "container-tools:4.0::buildah-tests",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -683,12 +510,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::containernetworking-plugins",
+				"name": "container-tools:4.0::libslirp-devel",
 				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -699,7 +523,59 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "1:1.1.1-5.module_el8.9.0+3627+db8ec155"
+							"fixed": "0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::fuse-overlayfs",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.9-2.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::containers-common",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1-38.module_el8.9.0+3627+db8ec155"
 						}
 					]
 				}
@@ -732,6 +608,29 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::criu-libs",
+				"arches": [
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "container-tools:4.0::cockpit-podman",
 				"arches": [
 					"noarch"
@@ -755,11 +654,83 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::libslirp",
+				"name": "container-tools:4.0::container-selinux",
 				"arches": [
-					"aarch64",
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.205.0-3.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::skopeo-tests",
+				"arches": [
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.6.2-8.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::python3-podman",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.0.0-2.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::libslirp-devel",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -780,85 +751,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::slirp4netns",
+				"name": "container-tools:4.0::buildah",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.1.8-3.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::containers-common",
-				"arches": [
 					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:1-38.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::criu",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::crit",
-				"arches": [
 					"s390x"
 				]
 			},
@@ -870,85 +767,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::buildah",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
 							"fixed": "1:1.24.6-7.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::netavark",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:1.0.1-38.module_el8.9.0+3627+db8ec155"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::skopeo-tests",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "2:1.6.2-8.module_el8.9.0+3627+db8ec155"
 						}
 					]
 				}
@@ -981,12 +800,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "container-tools:4.0::podman-remote",
+				"name": "container-tools:4.0::slirp4netns",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -997,7 +816,188 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "2:4.0.2-24.module_el8.9.0+3627+db8ec155"
+							"fixed": "0:1.1.8-3.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::runc",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.1.5-2.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::skopeo",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.6.2-8.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::oci-seccomp-bpf-hook",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.2.5-2.module_el8.8.0+3468+16b86c82"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::netavark",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.0.1-38.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::aardvark-dns",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.0.1-38.module_el8.9.0+3627+db8ec155"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::crit",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "container-tools:4.0::conmon",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.1.4-2.module_el8.9.0+3627+db8ec155"
 						}
 					]
 				}
@@ -1030,19 +1030,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2023-24540",
-			"references": [
-				{
-					"name": "CVE-2023-24540",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-24540"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-41723",
 			"references": [
 				{
@@ -1052,84 +1039,6 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41723"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-3978",
-			"references": [
-				{
-					"name": "CVE-2023-3978",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3978"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2022-41724",
-			"references": [
-				{
-					"name": "CVE-2022-41724",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-28642",
-			"references": [
-				{
-					"name": "CVE-2023-28642",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28642"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2022-3064",
-			"references": [
-				{
-					"name": "CVE-2022-3064",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3064"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-25809",
-			"references": [
-				{
-					"name": "CVE-2023-25809",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-25809"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-29400",
-			"references": [
-				{
-					"name": "CVE-2023-29400",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29400"
 				}
 			]
 		},
@@ -1147,6 +1056,32 @@
 			]
 		},
 		{
+			"cve": "CVE-2023-25809",
+			"references": [
+				{
+					"name": "CVE-2023-25809",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-25809"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-3978",
+			"references": [
+				{
+					"name": "CVE-2023-3978",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3978"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2022-41725",
 			"references": [
 				{
@@ -1156,32 +1091,6 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-24536",
-			"references": [
-				{
-					"name": "CVE-2023-24536",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-24536"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-27561",
-			"references": [
-				{
-					"name": "CVE-2023-27561",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-27561"
 				}
 			]
 		},
@@ -1199,6 +1108,19 @@
 			]
 		},
 		{
+			"cve": "CVE-2022-3064",
+			"references": [
+				{
+					"name": "CVE-2022-3064",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3064"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2023-29406",
 			"references": [
 				{
@@ -1212,6 +1134,19 @@
 			]
 		},
 		{
+			"cve": "CVE-2022-41724",
+			"references": [
+				{
+					"name": "CVE-2022-41724",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2023-24539",
 			"references": [
 				{
@@ -1221,6 +1156,71 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2023-24539"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-29400",
+			"references": [
+				{
+					"name": "CVE-2023-29400",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29400"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-27561",
+			"references": [
+				{
+					"name": "CVE-2023-27561",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-27561"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-24540",
+			"references": [
+				{
+					"name": "CVE-2023-24540",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-24540"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-28642",
+			"references": [
+				{
+					"name": "CVE-2023-28642",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28642"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-24536",
+			"references": [
+				{
+					"name": "CVE-2023-24536",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-24536"
 				}
 			]
 		},
@@ -1256,12 +1256,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-3978"
 		},
 		{
-			"name": "2196029",
+			"name": "2184484",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
-			"url": "https://bugzilla.redhat.com/2196029"
+			"url": "https://bugzilla.redhat.com/2184484"
 		},
 		{
 			"name": "CVE-2022-41723",
@@ -1272,28 +1272,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2022-41723"
 		},
 		{
-			"name": "CVE-2023-24536",
+			"name": "CVE-2023-24534",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24536"
-		},
-		{
-			"name": "CVE-2023-24538",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24538"
-		},
-		{
-			"name": "CVE-2023-24539",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24539"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24534"
 		},
 		{
 			"name": "CVE-2023-27561",
@@ -1304,76 +1288,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-27561"
 		},
 		{
-			"name": "2184484",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2184484"
-		},
-		{
-			"name": "CVE-2022-41724",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
-		},
-		{
-			"name": "CVE-2023-28642",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-28642"
-		},
-		{
 			"name": "2182883",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2182883"
-		},
-		{
-			"name": "2184481",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2184481"
-		},
-		{
-			"name": "2196026",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2196026"
-		},
-		{
-			"name": "CVE-2023-24537",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24537"
-		},
-		{
-			"name": "2178488",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2178488"
-		},
-		{
-			"name": "2178492",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2178492"
 		},
 		{
 			"name": "2184482",
@@ -1384,52 +1304,36 @@
 			"url": "https://bugzilla.redhat.com/2184482"
 		},
 		{
-			"name": "2196027",
+			"name": "2196026",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
-			"url": "https://bugzilla.redhat.com/2196027"
+			"url": "https://bugzilla.redhat.com/2196026"
 		},
 		{
-			"name": "2175721",
+			"name": "2196029",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
-			"url": "https://bugzilla.redhat.com/2175721"
+			"url": "https://bugzilla.redhat.com/2196029"
 		},
 		{
-			"name": "2222167",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2222167"
-		},
-		{
-			"name": "CVE-2023-29406",
+			"name": "CVE-2022-41725",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-29406"
+			"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
 		},
 		{
-			"name": "CVE-2023-29400",
+			"name": "CVE-2023-24537",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-29400"
-		},
-		{
-			"name": "2178358",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2178358"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24537"
 		},
 		{
 			"name": "2228689",
@@ -1440,52 +1344,12 @@
 			"url": "https://bugzilla.redhat.com/2228689"
 		},
 		{
-			"name": "CVE-2022-3064",
+			"name": "CVE-2023-24539",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-3064"
-		},
-		{
-			"name": "RHSA-2023:6938",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:6938"
-		},
-		{
-			"name": "CVE-2023-24534",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24534"
-		},
-		{
-			"name": "CVE-2023-24540",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24540"
-		},
-		{
-			"name": "ALSA-2023-6938",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-6938.html"
-		},
-		{
-			"name": "2163037",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2163037"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24539"
 		},
 		{
 			"name": "2182884",
@@ -1496,6 +1360,86 @@
 			"url": "https://bugzilla.redhat.com/2182884"
 		},
 		{
+			"name": "2163037",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2163037"
+		},
+		{
+			"name": "2222167",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2222167"
+		},
+		{
+			"name": "CVE-2022-3064",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-3064"
+		},
+		{
+			"name": "CVE-2023-29406",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-29406"
+		},
+		{
+			"name": "2184481",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2184481"
+		},
+		{
+			"name": "2196027",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2196027"
+		},
+		{
+			"name": "ALSA-2023-6938",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-6938.html"
+		},
+		{
+			"name": "RHSA-2023:6938",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:6938"
+		},
+		{
+			"name": "2178358",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2178358"
+		},
+		{
+			"name": "2178488",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2178488"
+		},
+		{
 			"name": "2184483",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -1504,12 +1448,68 @@
 			"url": "https://bugzilla.redhat.com/2184483"
 		},
 		{
-			"name": "CVE-2022-41725",
+			"name": "CVE-2023-24536",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24536"
+		},
+		{
+			"name": "2175721",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2175721"
+		},
+		{
+			"name": "CVE-2023-28642",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-28642"
+		},
+		{
+			"name": "CVE-2023-29400",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-29400"
+		},
+		{
+			"name": "CVE-2023-24538",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24538"
+		},
+		{
+			"name": "CVE-2023-24540",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24540"
+		},
+		{
+			"name": "CVE-2022-41724",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
+		},
+		{
+			"name": "2178492",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2178492"
 		}
 	],
 	"published": "2023-11-14T00:00:00Z",

@@ -9,10 +9,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "varnish:6::varnish-docs",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -33,8 +33,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "varnish:6::varnish-modules",
+				"name": "varnish:6::varnish",
 				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -46,7 +49,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:0.15.0-6.module_el8.6.0+3089+dac88e97"
+							"fixed": "0:6.0.8-3.module_el8.8.0+3665+0b8dabc5.1.alma.1"
 						}
 					]
 				}
@@ -81,8 +84,8 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "varnish:6::varnish-modules",
 				"arches": [
-					"aarch64",
-					"x86_64"
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -103,12 +106,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "varnish:6::varnish",
+				"name": "varnish:6::varnish-modules",
 				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -119,7 +119,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:6.0.8-3.module_el8.8.0+3665+0b8dabc5.1.alma.1"
+							"fixed": "0:0.15.0-6.module_el8.6.0+3089+dac88e97"
 						}
 					]
 				}
@@ -131,10 +131,10 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "varnish:6::varnish-devel",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -170,6 +170,14 @@
 	],
 	"references": [
 		{
+			"name": "2242803",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2242803"
+		},
+		{
 			"name": "ALSA-2023-5989",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -192,14 +200,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-44487"
-		},
-		{
-			"name": "2242803",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2242803"
 		}
 	],
 	"published": "2023-10-23T00:00:00Z",
