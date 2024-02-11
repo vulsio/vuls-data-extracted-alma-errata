@@ -7,6 +7,29 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "pki-server",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:11.0.6-2.el9_0"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "pki-ca",
 				"arches": [
 					"noarch"
@@ -53,7 +76,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-base",
+				"name": "pki-kra",
 				"arches": [
 					"noarch"
 				]
@@ -125,9 +148,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-server",
+				"name": "pki-symkey",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -148,12 +174,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-symkey",
+				"name": "pki-base",
 				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -192,29 +215,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "pki-kra",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:11.0.6-2.el9_0"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
@@ -235,22 +235,6 @@
 	],
 	"references": [
 		{
-			"name": "ALSA-2022-7326",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2022-7326.html"
-		},
-		{
-			"name": "RHSA-2022:7326",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2022:7326"
-		},
-		{
 			"name": "CVE-2022-2414",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -265,6 +249,22 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2104676"
+		},
+		{
+			"name": "ALSA-2022-7326",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2022-7326.html"
+		},
+		{
+			"name": "RHSA-2022:7326",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2022:7326"
 		}
 	],
 	"published": "2022-11-02T00:00:00Z",
