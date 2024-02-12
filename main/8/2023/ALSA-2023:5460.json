@@ -7,12 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-devel",
+				"name": "bind9.16-libs",
 				"arches": [
 					"i686",
+					"ppc64le",
 					"x86_64",
 					"aarch64",
-					"ppc64le",
 					"s390x"
 				]
 			},
@@ -62,6 +62,32 @@
 					"x86_64",
 					"aarch64",
 					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-0.14.el8_8.2.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind9.16-chroot",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -135,12 +161,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-libs",
+				"name": "bind9.16-devel",
 				"arches": [
 					"i686",
-					"ppc64le",
 					"x86_64",
 					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -203,32 +229,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-chroot",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-0.14.el8_8.2.alma.1"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
@@ -248,6 +248,14 @@
 		}
 	],
 	"references": [
+		{
+			"name": "RHSA-2023:5460",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5460"
+		},
 		{
 			"name": "CVE-2023-3341",
 			"source": "errata.almalinux.org",
@@ -271,14 +279,6 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2023-5460.html"
-		},
-		{
-			"name": "RHSA-2023:5460",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5460"
 		}
 	],
 	"published": "2023-10-05T00:00:00Z",

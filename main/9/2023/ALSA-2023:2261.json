@@ -7,6 +7,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "bind-devel",
+				"arches": [
+					"i686",
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-11.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "python3-bind",
 				"arches": [
 					"noarch"
@@ -30,40 +57,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-libs",
+				"name": "bind-dnssec-doc",
 				"arches": [
-					"i686",
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-11.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-devel",
-				"arches": [
-					"i686",
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -208,9 +204,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-doc",
+				"name": "bind-libs",
 				"arches": [
-					"noarch"
+					"i686",
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -257,6 +257,19 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
+			"cve": "CVE-2022-3924",
+			"references": [
+				{
+					"name": "CVE-2022-3924",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3924"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2022-2795",
 			"references": [
 				{
@@ -294,30 +307,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-3736"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-3924",
-			"references": [
-				{
-					"name": "CVE-2022-3924",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3924"
-				}
-			]
 		}
 	],
 	"references": [
-		{
-			"name": "ALSA-2023-2261",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-2261.html"
-		},
 		{
 			"name": "RHSA-2023:2261",
 			"source": "errata.almalinux.org",
@@ -325,38 +317,6 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:2261"
-		},
-		{
-			"name": "CVE-2022-2795",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-2795"
-		},
-		{
-			"name": "2164032",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2164032"
-		},
-		{
-			"name": "2164038",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2164038"
-		},
-		{
-			"name": "CVE-2022-3094",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-3094"
 		},
 		{
 			"name": "CVE-2022-3736",
@@ -383,12 +343,52 @@
 			"url": "https://bugzilla.redhat.com/2128584"
 		},
 		{
+			"name": "2164038",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2164038"
+		},
+		{
 			"name": "2164039",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2164039"
+		},
+		{
+			"name": "ALSA-2023-2261",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-2261.html"
+		},
+		{
+			"name": "CVE-2022-2795",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-2795"
+		},
+		{
+			"name": "CVE-2022-3094",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-3094"
+		},
+		{
+			"name": "2164032",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2164032"
 		}
 	],
 	"published": "2023-05-09T00:00:00Z",
