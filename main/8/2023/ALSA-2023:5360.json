@@ -7,32 +7,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:16::nodejs-devel",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.20.2-2.module_el8.8.0+3614+204d6f43"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:16::npm",
 				"arches": [
 					"x86_64",
@@ -175,10 +149,49 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:16::nodejs-devel",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.20.2-2.module_el8.8.0+3614+204d6f43"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Important",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2023-32006",
+			"references": [
+				{
+					"name": "CVE-2023-32006",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2022-25883",
 			"references": [
@@ -206,19 +219,6 @@
 			]
 		},
 		{
-			"cve": "CVE-2023-32006",
-			"references": [
-				{
-					"name": "CVE-2023-32006",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2023-32559",
 			"references": [
 				{
@@ -234,12 +234,20 @@
 	],
 	"references": [
 		{
-			"name": "CVE-2023-32559",
+			"name": "RHSA-2023:5360",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:5360"
+		},
+		{
+			"name": "CVE-2023-32006",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-32559"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
 		},
 		{
 			"name": "2216475",
@@ -250,6 +258,14 @@
 			"url": "https://bugzilla.redhat.com/2216475"
 		},
 		{
+			"name": "2230948",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2230948"
+		},
+		{
 			"name": "2230955",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -258,12 +274,20 @@
 			"url": "https://bugzilla.redhat.com/2230955"
 		},
 		{
-			"name": "RHSA-2023:5360",
+			"name": "2230956",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"third-party-advisory"
+				"bugzilla"
 			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:5360"
+			"url": "https://bugzilla.redhat.com/2230956"
+		},
+		{
+			"name": "ALSA-2023-5360",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-5360.html"
 		},
 		{
 			"name": "CVE-2022-25883",
@@ -282,36 +306,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
 		},
 		{
-			"name": "CVE-2023-32006",
+			"name": "CVE-2023-32559",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
-		},
-		{
-			"name": "ALSA-2023-5360",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-5360.html"
-		},
-		{
-			"name": "2230948",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2230948"
-		},
-		{
-			"name": "2230956",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2230956"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-32559"
 		}
 	],
 	"published": "2023-09-26T00:00:00Z",
