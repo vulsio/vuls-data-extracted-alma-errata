@@ -7,12 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dbus-daemon",
+				"name": "dbus-x11",
 				"arches": [
-					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -33,11 +33,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dbus-x11",
+				"name": "dbus-devel",
 				"arches": [
-					"x86_64",
+					"i686",
 					"aarch64",
 					"s390x",
+					"x86_64",
 					"ppc64le"
 				]
 			},
@@ -109,33 +110,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dbus-devel",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.12.8-24.el8_8.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "dbus",
 				"arches": [
 					"x86_64",
@@ -183,6 +157,32 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "dbus-daemon",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.12.8-24.el8_8.1"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
@@ -202,6 +202,14 @@
 		}
 	],
 	"references": [
+		{
+			"name": "ALSA-2023-4498",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-4498.html"
+		},
 		{
 			"name": "RHSA-2023:4498",
 			"source": "errata.almalinux.org",
@@ -225,17 +233,9 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2213166"
-		},
-		{
-			"name": "ALSA-2023-4498",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-4498.html"
 		}
 	],
 	"published": "2023-08-07T00:00:00Z",
-	"modified": "2023-08-08T07:04:35Z",
+	"modified": "2023-08-08T07:04:33Z",
 	"data_source": "alma-errata"
 }
