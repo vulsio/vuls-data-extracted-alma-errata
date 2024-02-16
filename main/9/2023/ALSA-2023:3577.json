@@ -7,9 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs:18::nodejs-docs",
+				"name": "nodejs:18::nodejs-devel",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -76,6 +79,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs:18::npm",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.5.0-1.18.14.2.3.module_el9.2.0+30+e3312493"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs:18::nodejs-nodemon",
 				"arches": [
 					"noarch"
@@ -99,38 +128,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs:18::nodejs",
-				"arches": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:18.14.2-3.module_el9.2.0+30+e3312493"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs:18::nodejs-full-i18n",
 				"arches": [
-					"x86_64",
 					"ppc64le",
-					"s390x",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -151,12 +154,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs:18::npm",
+				"name": "nodejs:18::nodejs",
 				"arches": [
-					"x86_64",
 					"ppc64le",
-					"s390x",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -167,7 +170,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "1:9.5.0-1.18.14.2.3.module_el9.2.0+30+e3312493"
+							"fixed": "1:18.14.2-3.module_el9.2.0+30+e3312493"
 						}
 					]
 				}
@@ -177,12 +180,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs:18::nodejs-devel",
+				"name": "nodejs:18::nodejs-docs",
 				"arches": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -202,19 +202,6 @@
 	],
 	"severity": "Important",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2023-32067",
-			"references": [
-				{
-					"name": "CVE-2023-32067",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2023-31147",
 			"references": [
@@ -253,9 +240,54 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-32067",
+			"references": [
+				{
+					"name": "CVE-2023-32067",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "CVE-2023-31147",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
+		},
+		{
+			"name": "2209501",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2209501"
+		},
+		{
+			"name": "2209502",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2209502"
+		},
+		{
+			"name": "ALSA-2023-3577",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-3577.html"
+		},
 		{
 			"name": "RHSA-2023:3577",
 			"source": "errata.almalinux.org",
@@ -273,36 +305,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-31124"
 		},
 		{
-			"name": "CVE-2023-31147",
+			"name": "CVE-2023-31130",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
-		},
-		{
-			"name": "2209494",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2209494"
-		},
-		{
-			"name": "2209501",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2209501"
-		},
-		{
-			"name": "ALSA-2023-3577",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-3577.html"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
 		},
 		{
 			"name": "CVE-2023-32067",
@@ -313,31 +321,23 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
 		},
 		{
+			"name": "2209494",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2209494"
+		},
+		{
 			"name": "2209497",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2209497"
-		},
-		{
-			"name": "2209502",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2209502"
-		},
-		{
-			"name": "CVE-2023-31130",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
 		}
 	],
 	"published": "2023-06-14T00:00:00Z",
-	"modified": "2023-06-23T19:30:54Z",
+	"modified": "2023-06-23T19:30:55Z",
 	"data_source": "alma-errata"
 }
