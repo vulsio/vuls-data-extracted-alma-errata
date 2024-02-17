@@ -7,6 +7,55 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "npm",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:8.19.3-1.16.19.1.2.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs-docs",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.19.1-2.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs-full-i18n",
 				"arches": [
 					"ppc64le",
@@ -81,55 +130,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "npm",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:8.19.3-1.16.19.1.2.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs-docs",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:16.19.1-2.el9_2"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
@@ -144,19 +144,6 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2023-31130",
-			"references": [
-				{
-					"name": "CVE-2023-31130",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
 				}
 			]
 		},
@@ -185,9 +172,30 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-31124"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-31130",
+			"references": [
+				{
+					"name": "CVE-2023-31130",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "2209502",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2209502"
+		},
 		{
 			"name": "ALSA-2023-3586",
 			"source": "errata.almalinux.org",
@@ -205,44 +213,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-31124"
 		},
 		{
-			"name": "CVE-2023-31147",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
-		},
-		{
-			"name": "2209502",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2209502"
-		},
-		{
-			"name": "RHSA-2023:3586",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:3586"
-		},
-		{
 			"name": "CVE-2023-31130",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
-		},
-		{
-			"name": "CVE-2023-32067",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
 		},
 		{
 			"name": "2209494",
@@ -259,6 +235,30 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2209497"
+		},
+		{
+			"name": "RHSA-2023:3586",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:3586"
+		},
+		{
+			"name": "CVE-2023-31147",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
+		},
+		{
+			"name": "CVE-2023-32067",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
 		},
 		{
 			"name": "2209501",

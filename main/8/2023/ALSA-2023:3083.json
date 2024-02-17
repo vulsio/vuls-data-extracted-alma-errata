@@ -7,9 +7,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-tests",
+				"name": "go-toolset:rhel8::golang-race",
 				"arches": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -30,30 +30,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-misc",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-bin",
+				"name": "go-toolset:rhel8::golang",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -70,6 +47,29 @@
 						},
 						{
 							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::delve",
+				"arches": [
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.9.1-1.module_el8.8.0+3471+a62632a0"
 						}
 					]
 				}
@@ -102,7 +102,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-docs",
+				"name": "go-toolset:rhel8::golang-tests",
 				"arches": [
 					"noarch"
 				]
@@ -125,30 +125,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-race",
-				"arches": [
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang",
+				"name": "go-toolset:rhel8::golang-bin",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -200,9 +177,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::delve",
+				"name": "go-toolset:rhel8::golang-docs",
 				"arches": [
-					"x86_64"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -213,7 +190,30 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.9.1-1.module_el8.8.0+3471+a62632a0"
+							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-misc",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
 						}
 					]
 				}
@@ -222,19 +222,6 @@
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2022-41725",
-			"references": [
-				{
-					"name": "CVE-2022-41725",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2022-41724",
 			"references": [
@@ -247,33 +234,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-41725",
+			"references": [
+				{
+					"name": "CVE-2022-41725",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "RHSA-2023:3083",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:3083"
-		},
-		{
-			"name": "CVE-2022-41724",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
-		},
-		{
-			"name": "CVE-2022-41725",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
-		},
 		{
 			"name": "2178488",
 			"source": "errata.almalinux.org",
@@ -297,6 +273,30 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2023-3083.html"
+		},
+		{
+			"name": "RHSA-2023:3083",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:3083"
+		},
+		{
+			"name": "CVE-2022-41724",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
+		},
+		{
+			"name": "CVE-2022-41725",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
 		}
 	],
 	"published": "2023-05-16T00:00:00Z",
