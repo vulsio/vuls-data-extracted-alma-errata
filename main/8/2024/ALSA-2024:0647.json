@@ -7,9 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rpm-cron",
+				"name": "rpm-plugin-ima",
 				"arches": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -82,32 +85,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rpm-plugin-prioreset",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.14.3-28.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "rpm-devel",
 				"arches": [
 					"i686",
@@ -135,7 +112,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rpm-apidocs",
+				"name": "rpm-cron",
 				"arches": [
 					"noarch"
 				]
@@ -158,85 +135,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rpm-plugin-systemd-inhibit",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.14.3-28.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "rpm-plugin-ima",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.14.3-28.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "rpm",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.14.3-28.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "python3-rpm",
+				"name": "rpm-plugin-prioreset",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -263,6 +162,32 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "rpm-sign",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.14.3-28.el8_9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "rpm",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -389,6 +314,81 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "rpm-plugin-systemd-inhibit",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.14.3-28.el8_9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "rpm-apidocs",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.14.3-28.el8_9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "python3-rpm",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.14.3-28.el8_9"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
@@ -434,14 +434,6 @@
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2021-35939",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2021-35939"
-		},
 		{
 			"name": "1964114",
 			"source": "errata.almalinux.org",
@@ -497,6 +489,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2021-35938"
+		},
+		{
+			"name": "CVE-2021-35939",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2021-35939"
 		}
 	],
 	"published": "2024-02-01T00:00:00Z",
