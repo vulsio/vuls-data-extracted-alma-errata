@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "dotnet-sdk-6.0",
+				"name": "aspnetcore-targeting-pack-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -22,7 +22,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:6.0.125-1.el9_3"
+							"fixed": "0:6.0.25-1.el9_3"
 						}
 					]
 				}
@@ -32,7 +32,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "aspnetcore-runtime-6.0",
+				"name": "dotnet-runtime-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -107,6 +107,56 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "dotnet-sdk-6.0",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.125-1.el9_3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "dotnet-targeting-pack-6.0",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.25-1.el9_3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "dotnet-apphost-pack-6.0",
 				"arches": [
 					"x86_64",
@@ -132,7 +182,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "aspnetcore-targeting-pack-6.0",
+				"name": "aspnetcore-runtime-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -177,73 +227,10 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "dotnet-runtime-6.0",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.25-1.el9_3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "dotnet-targeting-pack-6.0",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.25-1.el9_3"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2023-36049",
-			"references": [
-				{
-					"name": "CVE-2023-36049",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-36049"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2023-36558",
 			"references": [
@@ -256,9 +243,30 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-36558"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-36049",
+			"references": [
+				{
+					"name": "CVE-2023-36049",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-36049"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "2248883",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2248883"
+		},
 		{
 			"name": "ALSA-2023-7257",
 			"source": "errata.almalinux.org",
@@ -298,14 +306,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2247750"
-		},
-		{
-			"name": "2248883",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2248883"
 		}
 	],
 	"published": "2023-11-15T00:00:00Z",
