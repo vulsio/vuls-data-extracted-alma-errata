@@ -7,9 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-device-display-virtio-vga",
+				"name": "qemu-img",
 				"arches": [
-					"x86_64"
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -30,7 +33,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-pr-helper",
+				"name": "qemu-kvm-tools",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -55,9 +58,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-ui-egl-headless",
+				"name": "qemu-kvm-ui-opengl",
 				"arches": [
 					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "qemu-kvm-device-display-virtio-gpu-pci",
+				"arches": [
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -103,110 +130,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-device-display-virtio-gpu",
+				"name": "qemu-kvm-device-usb-redirect",
 				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-device-display-virtio-gpu-ccw",
-				"arches": [
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-img",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-core",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-tools",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -277,8 +203,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-device-usb-host",
+				"name": "qemu-guest-agent",
 				"arches": [
+					"ppc64le",
 					"x86_64",
 					"aarch64",
 					"s390x"
@@ -302,9 +229,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-ui-opengl",
+				"name": "qemu-kvm-device-usb-host",
 				"arches": [
-					"x86_64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -350,9 +279,59 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-device-usb-redirect",
+				"name": "qemu-kvm-core",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "qemu-kvm-device-display-virtio-vga",
 				"arches": [
 					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "qemu-pr-helper",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -423,9 +402,31 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-guest-agent",
+				"name": "qemu-kvm-ui-egl-headless",
 				"arches": [
-					"ppc64le",
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "17:7.2.0-14.el9_2.5.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "qemu-kvm-device-display-virtio-gpu",
+				"arches": [
 					"x86_64",
 					"aarch64",
 					"s390x"
@@ -449,10 +450,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "qemu-kvm-device-display-virtio-gpu-pci",
+				"name": "qemu-kvm-device-display-virtio-gpu-ccw",
 				"arches": [
-					"x86_64",
-					"aarch64"
+					"s390x"
 				]
 			},
 			"ranges": [
