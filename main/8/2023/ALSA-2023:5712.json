@@ -7,9 +7,38 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-filesystem",
+				"name": "nginx:1.20::nginx-mod-http-perl",
 				"arches": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nginx:1.20::nginx-mod-http-xslt-filter",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -56,7 +85,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-http-image-filter",
+				"name": "nginx:1.20::nginx-mod-mail",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -108,7 +137,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-http-xslt-filter",
+				"name": "nginx:1.20::nginx-mod-http-image-filter",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -183,38 +212,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-mail",
+				"name": "nginx:1.20::nginx-filesystem",
 				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nginx:1.20::nginx-mod-http-perl",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -250,14 +250,6 @@
 	],
 	"references": [
 		{
-			"name": "2242803",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2242803"
-		},
-		{
 			"name": "ALSA-2023-5712",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -280,6 +272,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-44487"
+		},
+		{
+			"name": "2242803",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2242803"
 		}
 	],
 	"published": "2023-10-16T00:00:00Z",
