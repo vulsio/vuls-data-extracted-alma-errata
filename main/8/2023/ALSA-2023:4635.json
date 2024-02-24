@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-debugger-common",
+				"name": "rust-toolset:rhel8::rust-lldb",
 				"arches": [
 					"noarch"
 				]
@@ -30,7 +30,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-std-static",
+				"name": "rust-toolset:rhel8::rust-analysis",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -56,7 +56,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::cargo",
+				"name": "rust-toolset:rhel8::rust-std-static",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -105,11 +105,10 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust",
+				"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
 				"arches": [
 					"x86_64",
 					"aarch64",
-					"s390x",
 					"ppc64le"
 				]
 			},
@@ -131,7 +130,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rustfmt",
+				"name": "rust-toolset:rhel8::cargo",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -183,7 +182,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-gdb",
+				"name": "rust-toolset:rhel8::clippy",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "rust-toolset:rhel8::rust-debugger-common",
 				"arches": [
 					"noarch"
 				]
@@ -231,7 +256,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-analysis",
+				"name": "rust-toolset:rhel8::rust",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -257,7 +282,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-lldb",
+				"name": "rust-toolset:rhel8::rust-toolset",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "rust-toolset:rhel8::rust-gdb",
 				"arches": [
 					"noarch"
 				]
@@ -306,58 +357,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::rust-toolset",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "rust-toolset:rhel8::clippy",
+				"name": "rust-toolset:rhel8::rustfmt",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -398,22 +398,6 @@
 	],
 	"references": [
 		{
-			"name": "RHSA-2023:4635",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:4635"
-		},
-		{
-			"name": "CVE-2023-38497",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
-		},
-		{
 			"name": "2228038",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -428,6 +412,22 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2023-4635.html"
+		},
+		{
+			"name": "RHSA-2023:4635",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:4635"
+		},
+		{
+			"name": "CVE-2023-38497",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
 		}
 	],
 	"published": "2023-08-14T00:00:00Z",
