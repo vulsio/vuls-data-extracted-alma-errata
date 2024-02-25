@@ -7,6 +7,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "mod_proxy_html",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.4.53-7.el9_1.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "mod_ssl",
 				"arches": [
 					"ppc64le",
@@ -59,32 +85,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-tools",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.53-7.el9_1.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "httpd",
 				"arches": [
 					"ppc64le",
@@ -111,9 +111,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-manual",
+				"name": "mod_session",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -160,7 +163,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_proxy_html",
+				"name": "httpd-tools",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -176,7 +179,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "1:2.4.53-7.el9_1.1"
+							"fixed": "0:2.4.53-7.el9_1.1"
 						}
 					]
 				}
@@ -209,12 +212,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_session",
+				"name": "httpd-manual",
 				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -287,6 +287,19 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
+			"cve": "CVE-2022-36760",
+			"references": [
+				{
+					"name": "CVE-2022-36760",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
+				}
+			]
+		},
+		{
 			"cve": "CVE-2022-37436",
 			"references": [
 				{
@@ -311,22 +324,33 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2006-20001"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-36760",
-			"references": [
-				{
-					"name": "CVE-2022-36760",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
-				}
-			]
 		}
 	],
 	"references": [
+		{
+			"name": "2161774",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2161774"
+		},
+		{
+			"name": "2161777",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2161777"
+		},
+		{
+			"name": "ALSA-2023-0970",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-0970.html"
+		},
 		{
 			"name": "RHSA-2023:0970",
 			"source": "errata.almalinux.org",
@@ -366,30 +390,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2161773"
-		},
-		{
-			"name": "2161774",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2161774"
-		},
-		{
-			"name": "2161777",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2161777"
-		},
-		{
-			"name": "ALSA-2023-0970",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-0970.html"
 		}
 	],
 	"published": "2023-02-28T00:00:00Z",
