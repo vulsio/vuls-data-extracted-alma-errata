@@ -7,33 +7,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-libs",
-				"arches": [
-					"i686",
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:250-12.el9_1.3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "systemd-rpm-macros",
 				"arches": [
 					"noarch"
@@ -83,8 +56,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-journal-remote",
+				"name": "systemd-oomd",
 				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:250-12.el9_1.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "systemd-container",
+				"arches": [
+					"i686",
 					"ppc64le",
 					"x86_64",
 					"aarch64",
@@ -113,6 +113,60 @@
 				"arches": [
 					"ppc64le",
 					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:250-12.el9_1.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "systemd",
+				"arches": [
+					"i686",
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:250-12.el9_1.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "systemd-libs",
+				"arches": [
+					"i686",
+					"ppc64le",
 					"x86_64",
 					"aarch64",
 					"s390x"
@@ -188,62 +242,8 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-oomd",
+				"name": "systemd-journal-remote",
 				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:250-12.el9_1.3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "systemd",
-				"arches": [
-					"i686",
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:250-12.el9_1.3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-container",
-				"arches": [
-					"i686",
 					"ppc64le",
 					"x86_64",
 					"aarch64",
@@ -268,19 +268,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2022-4415",
-			"references": [
-				{
-					"name": "CVE-2022-4415",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4415"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-45873",
 			"references": [
 				{
@@ -292,25 +279,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-45873"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-4415",
+			"references": [
+				{
+					"name": "CVE-2022-4415",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4415"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "2149063",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2149063"
-		},
-		{
-			"name": "2155515",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2155515"
-		},
 		{
 			"name": "ALSA-2023-0954",
 			"source": "errata.almalinux.org",
@@ -342,6 +326,22 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-45873"
+		},
+		{
+			"name": "2149063",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2149063"
+		},
+		{
+			"name": "2155515",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2155515"
 		}
 	],
 	"published": "2023-02-28T00:00:00Z",

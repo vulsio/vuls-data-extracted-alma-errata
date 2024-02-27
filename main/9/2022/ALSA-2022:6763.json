@@ -7,9 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-doc",
+				"name": "bind-dnssec-utils",
 				"arches": [
-					"noarch"
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -80,32 +83,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-chroot",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-1.el9_0.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "bind-license",
 				"arches": [
 					"noarch"
@@ -129,12 +106,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-utils",
+				"name": "bind-devel",
 				"arches": [
+					"i686",
 					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"s390x",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-1.el9_0.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-dnssec-doc",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -207,12 +207,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-devel",
+				"name": "bind-chroot",
 				"arches": [
-					"i686",
 					"ppc64le",
-					"s390x",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -232,6 +232,19 @@
 	],
 	"severity": "Important",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2022-3080",
+			"references": [
+				{
+					"name": "CVE-2022-3080",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3080"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2022-38177",
 			"references": [
@@ -255,19 +268,6 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2022-38178"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2022-3080",
-			"references": [
-				{
-					"name": "CVE-2022-3080",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3080"
 				}
 			]
 		}
