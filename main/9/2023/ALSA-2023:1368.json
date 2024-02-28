@@ -7,6 +7,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "nss",
+				"arches": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.79.0-17.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "nss-tools",
 				"arches": [
 					"ppc64le",
@@ -60,7 +87,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nss-softokn-freebl-devel",
+				"name": "nss-softokn-devel",
 				"arches": [
 					"ppc64le",
 					"i686",
@@ -87,9 +114,10 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nss-sysinit",
+				"name": "nspr-devel",
 				"arches": [
 					"ppc64le",
+					"i686",
 					"x86_64",
 					"aarch64",
 					"s390x"
@@ -103,7 +131,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:3.79.0-17.el9_1"
+							"fixed": "0:4.34.0-17.el9_1"
 						}
 					]
 				}
@@ -140,10 +168,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nss",
+				"name": "nss-sysinit",
 				"arches": [
 					"ppc64le",
-					"i686",
 					"x86_64",
 					"aarch64",
 					"s390x"
@@ -221,60 +248,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nss-util-devel",
-				"arches": [
-					"ppc64le",
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.79.0-17.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nss-softokn-devel",
-				"arches": [
-					"ppc64le",
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.79.0-17.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "nss-softokn",
 				"arches": [
 					"ppc64le",
@@ -302,7 +275,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nspr-devel",
+				"name": "nss-util-devel",
 				"arches": [
 					"ppc64le",
 					"i686",
@@ -319,7 +292,34 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:4.34.0-17.el9_1"
+							"fixed": "0:3.79.0-17.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nss-softokn-freebl-devel",
+				"arches": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.79.0-17.el9_1"
 						}
 					]
 				}
@@ -344,6 +344,14 @@
 	],
 	"references": [
 		{
+			"name": "2170377",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2170377"
+		},
+		{
 			"name": "ALSA-2023-1368",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -366,14 +374,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-0767"
-		},
-		{
-			"name": "2170377",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2170377"
 		}
 	],
 	"published": "2023-03-21T00:00:00Z",
