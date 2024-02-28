@@ -7,30 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-filesystem",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.53-7.el9_1.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "mod_http2",
+				"name": "httpd-core",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -46,7 +23,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.15.19-3.el9_1.5"
+							"fixed": "0:2.4.53-7.el9_1.5"
 						}
 					]
 				}
@@ -82,7 +59,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_session",
+				"name": "mod_lua",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -108,12 +85,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-devel",
+				"name": "httpd-filesystem",
 				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -137,32 +111,6 @@
 				"name": "httpd-manual",
 				"arches": [
 					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.53-7.el9_1.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "httpd-core",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"ranges": [
@@ -235,7 +183,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_ldap",
+				"name": "mod_session",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -261,7 +209,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "mod_lua",
+				"name": "mod_ldap",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -308,6 +256,58 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "httpd-devel",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.53-7.el9_1.5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "mod_http2",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.15.19-3.el9_1.5"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Important",
@@ -328,22 +328,6 @@
 	],
 	"references": [
 		{
-			"name": "2176209",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2176209"
-		},
-		{
-			"name": "ALSA-2023-1670",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-1670.html"
-		},
-		{
 			"name": "RHSA-2023:1670",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -358,6 +342,22 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-25690"
+		},
+		{
+			"name": "2176209",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2176209"
+		},
+		{
+			"name": "ALSA-2023-1670",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-1670.html"
 		}
 	],
 	"published": "2023-04-06T00:00:00Z",
