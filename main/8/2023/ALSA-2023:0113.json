@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-docs",
+				"name": "postgresql:10::postgresql-upgrade-devel",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -59,7 +59,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-test",
+				"name": "postgresql:10::postgresql-static",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -111,7 +111,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-server",
+				"name": "postgresql:10::postgresql-server-devel",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -137,7 +137,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-server-devel",
+				"name": "postgresql:10::postgresql-upgrade",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:10.23-1.module_el8.7.0+3379+54d21c26"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "postgresql:10::postgresql-test",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -189,7 +215,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-upgrade-devel",
+				"name": "postgresql:10::postgresql-server",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -293,33 +319,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-static",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:10.23-1.module_el8.7.0+3379+54d21c26"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "postgresql:10::postgresql-upgrade",
+				"name": "postgresql:10::postgresql-docs",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -360,14 +360,6 @@
 	],
 	"references": [
 		{
-			"name": "RHSA-2023:0113",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:0113"
-		},
-		{
 			"name": "CVE-2022-2625",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -390,6 +382,14 @@
 				"vendor-advisory"
 			],
 			"url": "https://errata.almalinux.org/8/ALSA-2023-0113.html"
+		},
+		{
+			"name": "RHSA-2023:0113",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:0113"
 		}
 	],
 	"published": "2023-01-12T00:00:00Z",
