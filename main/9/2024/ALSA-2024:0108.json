@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nspr",
+				"name": "nss-softokn-devel",
 				"arches": [
 					"ppc64le",
 					"i686",
@@ -24,7 +24,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:4.35.0-4.el9_3"
+							"fixed": "0:3.90.0-4.el9_3"
 						}
 					]
 				}
@@ -60,7 +60,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nspr-devel",
+				"name": "nss-util",
 				"arches": [
 					"ppc64le",
 					"i686",
@@ -77,7 +77,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:4.35.0-4.el9_3"
+							"fixed": "0:3.90.0-4.el9_3"
 						}
 					]
 				}
@@ -87,7 +87,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nss-util",
+				"name": "nss-softokn-freebl-devel",
 				"arches": [
 					"ppc64le",
 					"i686",
@@ -140,7 +140,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "nss-softokn-devel",
+				"name": "nss",
 				"arches": [
 					"ppc64le",
 					"i686",
@@ -158,6 +158,87 @@
 						},
 						{
 							"fixed": "0:3.90.0-4.el9_3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nss-softokn",
+				"arches": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:3.90.0-4.el9_3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nspr",
+				"arches": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.35.0-4.el9_3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nspr-devel",
+				"arches": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.35.0-4.el9_3"
 						}
 					]
 				}
@@ -243,87 +324,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nss-softokn-freebl-devel",
-				"arches": [
-					"ppc64le",
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.90.0-4.el9_3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nss",
-				"arches": [
-					"ppc64le",
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.90.0-4.el9_3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nss-softokn",
-				"arches": [
-					"ppc64le",
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:3.90.0-4.el9_3"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
@@ -343,6 +343,14 @@
 		}
 	],
 	"references": [
+		{
+			"name": "2243644",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2243644"
+		},
 		{
 			"name": "ALSA-2024-0108",
 			"source": "errata.almalinux.org",
@@ -366,14 +374,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-5388"
-		},
-		{
-			"name": "2243644",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2243644"
 		}
 	],
 	"published": "2024-01-10T00:00:00Z",
