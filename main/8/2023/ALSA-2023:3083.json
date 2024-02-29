@@ -7,9 +7,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-src",
+				"name": "go-toolset:rhel8::delve",
 				"arches": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -20,7 +20,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+							"fixed": "0:1.9.1-1.module_el8.8.0+3471+a62632a0"
 						}
 					]
 				}
@@ -76,52 +76,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-misc",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::delve",
-				"arches": [
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:1.9.1-1.module_el8.8.0+3471+a62632a0"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "go-toolset:rhel8::golang-race",
 				"arches": [
 					"x86_64"
@@ -145,7 +99,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang-bin",
+				"name": "go-toolset:rhel8::golang",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -171,7 +125,53 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "go-toolset:rhel8::golang",
+				"name": "go-toolset:rhel8::golang-src",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-misc",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "go-toolset:rhel8::golang-bin",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -223,19 +223,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2022-41725",
-			"references": [
-				{
-					"name": "CVE-2022-41725",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-41724",
 			"references": [
 				{
@@ -247,25 +234,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41724"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-41725",
+			"references": [
+				{
+					"name": "CVE-2022-41725",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "2178488",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2178488"
-		},
-		{
-			"name": "2178492",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2178492"
-		},
 		{
 			"name": "ALSA-2023-3083",
 			"source": "errata.almalinux.org",
@@ -297,6 +281,22 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-41725"
+		},
+		{
+			"name": "2178488",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2178488"
+		},
+		{
+			"name": "2178492",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2178492"
 		}
 	],
 	"published": "2023-05-16T00:00:00Z",
