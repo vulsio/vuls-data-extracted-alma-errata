@@ -7,9 +7,8 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "openblas-openmp",
+				"name": "openblas-threads64",
 				"arches": [
-					"i686",
 					"aarch64",
 					"x86_64",
 					"ppc64le",
@@ -34,7 +33,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "openblas-threads64",
+				"name": "openblas-Rblas",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -112,92 +111,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "openblas-Rblas",
+				"name": "openblas-openmp",
 				"arches": [
+					"i686",
 					"aarch64",
 					"x86_64",
 					"ppc64le",
 					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:0.3.15-4.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "openblas-serial64",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:0.3.15-4.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "openblas",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:0.3.15-4.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "openblas-threads",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -319,6 +239,86 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "openblas-serial64",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:0.3.15-4.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "openblas",
+				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:0.3.15-4.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "openblas-threads",
+				"arches": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:0.3.15-4.el8"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
@@ -338,6 +338,14 @@
 		}
 	],
 	"references": [
+		{
+			"name": "ALSA-2022-7639",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2022-7639.html"
+		},
 		{
 			"name": "RHSA-2022:7639",
 			"source": "errata.almalinux.org",
@@ -361,14 +369,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2024358"
-		},
-		{
-			"name": "ALSA-2022-7639",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-7639.html"
 		}
 	],
 	"published": "2022-11-08T00:00:00Z",
