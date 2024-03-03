@@ -7,6 +7,31 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "openssl",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.1.1k-7.el8_6"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "openssl-devel",
 				"arches": [
 					"i686",
@@ -79,48 +104,10 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "openssl",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:1.1.1k-7.el8_6"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2022-1292",
-			"references": [
-				{
-					"name": "CVE-2022-1292",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2022-2068",
 			"references": [
@@ -146,9 +133,46 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-1292",
+			"references": [
+				{
+					"name": "CVE-2022-1292",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "ALSA-2022-5818",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2022-5818.html"
+		},
+		{
+			"name": "RHSA-2022:5818",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2022:5818"
+		},
+		{
+			"name": "CVE-2022-1292",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+		},
 		{
 			"name": "CVE-2022-2068",
 			"source": "errata.almalinux.org",
@@ -188,30 +212,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2104905"
-		},
-		{
-			"name": "ALSA-2022-5818",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-5818.html"
-		},
-		{
-			"name": "RHSA-2022:5818",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2022:5818"
-		},
-		{
-			"name": "CVE-2022-1292",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
 		}
 	],
 	"published": "2022-08-03T00:00:00Z",
