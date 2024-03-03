@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "kernel-rt-debug-devel",
+				"name": "kernel-rt-debug-core",
 				"arches": [
 					"x86_64"
 				]
@@ -31,52 +31,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "kernel-rt",
-				"arches": [
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.18.0-425.19.2.rt7.230.el8_7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "kernel-rt-modules-extra",
-				"arches": [
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.18.0-425.19.2.rt7.230.el8_7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "kernel-rt-debug-modules-extra",
 				"arches": [
 					"x86_64"
 				]
@@ -168,7 +122,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "kernel-rt-debug-core",
+				"name": "kernel-rt-modules-extra",
 				"arches": [
 					"x86_64"
 				]
@@ -192,29 +146,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "kernel-rt-kvm",
-				"arches": [
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.18.0-425.19.2.rt7.230.el8_7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "kernel-rt-debug",
 				"arches": [
 					"x86_64"
 				]
@@ -278,23 +209,79 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "kernel-rt-debug-modules-extra",
+				"arches": [
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.18.0-425.19.2.rt7.230.el8_7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "kernel-rt-debug",
+				"arches": [
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.18.0-425.19.2.rt7.230.el8_7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "kernel-rt-debug-devel",
+				"arches": [
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.18.0-425.19.2.rt7.230.el8_7"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Important",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2023-0386",
-			"references": [
-				{
-					"name": "CVE-2023-0386",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0386"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2022-4269",
 			"references": [
@@ -333,9 +320,30 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-0266"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-0386",
+			"references": [
+				{
+					"name": "CVE-2023-0386",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0386"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "ALSA-2023-1584",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-1584.html"
+		},
 		{
 			"name": "RHSA-2023:1584",
 			"source": "errata.almalinux.org",
@@ -343,6 +351,22 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:1584"
+		},
+		{
+			"name": "CVE-2023-0386",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-0386"
+		},
+		{
+			"name": "2150272",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2150272"
 		},
 		{
 			"name": "CVE-2022-4269",
@@ -369,36 +393,12 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2023-0266"
 		},
 		{
-			"name": "CVE-2023-0386",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-0386"
-		},
-		{
-			"name": "2150272",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2150272"
-		},
-		{
 			"name": "2152548",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2152548"
-		},
-		{
-			"name": "ALSA-2023-1584",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-1584.html"
 		},
 		{
 			"name": "2159505",
