@@ -32,6 +32,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::httpd-devel",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "httpd:2.4::mod_proxy_html",
 				"arches": [
 					"x86_64",
@@ -58,7 +84,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_session",
+				"name": "httpd:2.4::mod_ldap",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -84,9 +110,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_md",
+				"name": "httpd:2.4::httpd-manual",
 				"arches": [
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -97,7 +123,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
 						}
 					]
 				}
@@ -182,58 +208,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-devel",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::mod_ldap",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.4.37-51.module_el8.7.0+3515+9e4fe0d6.5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "httpd:2.4::mod_http2",
 				"arches": [
 					"x86_64",
@@ -260,9 +234,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "httpd:2.4::httpd-manual",
+				"name": "httpd:2.4::mod_session",
 				"arches": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -304,6 +281,29 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "httpd:2.4::mod_md",
+				"arches": [
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Important",
@@ -324,22 +324,6 @@
 	],
 	"references": [
 		{
-			"name": "CVE-2023-25690",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-25690"
-		},
-		{
-			"name": "2176209",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2176209"
-		},
-		{
 			"name": "ALSA-2023-1673",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -354,6 +338,22 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:1673"
+		},
+		{
+			"name": "CVE-2023-25690",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-25690"
+		},
+		{
+			"name": "2176209",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2176209"
 		}
 	],
 	"published": "2023-04-06T00:00:00Z",
