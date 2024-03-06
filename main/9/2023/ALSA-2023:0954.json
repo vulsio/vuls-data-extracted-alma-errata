@@ -7,6 +7,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "systemd",
+				"arches": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:250-12.el9_1.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "systemd-devel",
 				"arches": [
 					"i686",
@@ -34,11 +61,63 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "systemd-udev",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:250-12.el9_1.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "systemd-pam",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:250-12.el9_1.3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "systemd-libs",
 				"arches": [
 					"i686",
-					"ppc64le",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
 					"s390x"
 				]
@@ -64,8 +143,8 @@
 				"name": "systemd-container",
 				"arches": [
 					"i686",
-					"ppc64le",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
 					"s390x"
 				]
@@ -88,12 +167,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-udev",
+				"name": "systemd-rpm-macros",
 				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -140,86 +216,10 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd",
-				"arches": [
-					"i686",
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:250-12.el9_1.3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-rpm-macros",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:250-12.el9_1.3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "systemd-resolved",
 				"arches": [
-					"ppc64le",
 					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:250-12.el9_1.3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-pam",
-				"arches": [
 					"ppc64le",
-					"x86_64",
 					"aarch64",
 					"s390x"
 				]
@@ -244,8 +244,8 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "systemd-oomd",
 				"arches": [
-					"ppc64le",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
 					"s390x"
 				]
@@ -268,19 +268,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2022-4415",
-			"references": [
-				{
-					"name": "CVE-2022-4415",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4415"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-45873",
 			"references": [
 				{
@@ -292,17 +279,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-45873"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-4415",
+			"references": [
+				{
+					"name": "CVE-2022-4415",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4415"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "ALSA-2023-0954",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-0954.html"
-		},
 		{
 			"name": "RHSA-2023:0954",
 			"source": "errata.almalinux.org",
@@ -342,9 +334,17 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2155515"
+		},
+		{
+			"name": "ALSA-2023-0954",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-0954.html"
 		}
 	],
 	"published": "2023-02-28T00:00:00Z",
-	"modified": "2023-02-28T17:55:52Z",
+	"modified": "2023-02-28T17:55:55Z",
 	"data_source": "alma-errata"
 }
