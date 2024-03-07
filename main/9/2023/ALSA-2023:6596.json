@@ -9,36 +9,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "cups-client",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:2.3.3op2-21.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "cups",
-				"arches": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -61,10 +35,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "cups-printerapp",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -88,8 +62,8 @@
 				"name": "cups-libs",
 				"arches": [
 					"i686",
-					"x86_64",
 					"ppc64le",
+					"x86_64",
 					"aarch64",
 					"s390x"
 				]
@@ -115,10 +89,10 @@
 				"name": "cups-devel",
 				"arches": [
 					"i686",
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -164,10 +138,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "cups-lpd",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -190,10 +164,36 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "cups-ipptool",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.3op2-21.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "cups",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -214,19 +214,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2023-32324",
-			"references": [
-				{
-					"name": "CVE-2023-32324",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32324"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2023-34241",
 			"references": [
 				{
@@ -238,33 +225,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-34241"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-32324",
+			"references": [
+				{
+					"name": "CVE-2023-32324",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32324"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "2214914",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2214914"
-		},
-		{
-			"name": "ALSA-2023-6596",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-6596.html"
-		},
-		{
-			"name": "RHSA-2023:6596",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:6596"
-		},
 		{
 			"name": "CVE-2023-32324",
 			"source": "errata.almalinux.org",
@@ -288,9 +264,33 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2209603"
+		},
+		{
+			"name": "2214914",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2214914"
+		},
+		{
+			"name": "ALSA-2023-6596",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-6596.html"
+		},
+		{
+			"name": "RHSA-2023:6596",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:6596"
 		}
 	],
 	"published": "2023-11-07T00:00:00Z",
-	"modified": "2023-11-14T12:05:19Z",
+	"modified": "2023-11-14T12:10:52Z",
 	"data_source": "alma-errata"
 }
