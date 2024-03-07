@@ -1,112 +1,17 @@
 {
 	"id": "ALSA-2022:2074",
 	"title": "Moderate: samba security, bug fix, and enhancement update",
-	"description": "Samba is an open-source implementation of the Server Message Block (SMB) protocol and the related Common Internet File System (CIFS) protocol, which allow PC-compatible machines to share files, printers, and various information.\nThe following packages have been upgraded to a later upstream version: samba (4.15.5). (BZ#2013596)\nSecurity Fix(es):\n* samba: Symlink race error can allow metadata read and modify outside of the exported share (CVE-2021-20316)\n* samba: Information leak via symlinks of existance of files or directories outside of the exported share (CVE-2021-44141)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+	"description": "Samba is an open-source implementation of the Server Message Block (SMB) protocol and the related Common Internet File System (CIFS) protocol, which allow PC-compatible machines to share files, printers, and various information.\n\nThe following packages have been upgraded to a later upstream version: samba (4.15.5). (BZ#2013596)\n\nSecurity Fix(es):\n\n* samba: Symlink race error can allow metadata read and modify outside of the exported share (CVE-2021-20316)\n\n* samba: Information leak via symlinks of existance of files or directories outside of the exported share (CVE-2021-44141)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
 	"affected": [
 		{
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "samba-winbind-modules",
+				"name": "samba-client-libs",
 				"arches": [
+					"x86_64",
+					"x86_64",
 					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-pidl",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-winexe",
-				"arches": [
-					"x86_64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-common-libs",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-winbind",
-				"arches": [
-					"x86_64",
 					"aarch64",
 					"ppc64le"
 				]
@@ -154,159 +59,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "samba-client",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-common-tools",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-winbind-krb5-locator",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "libsmbclient-devel",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-client-libs",
-				"arches": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "samba-vfs-iouring",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "python3-samba-test",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -356,9 +109,258 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "samba-common-tools",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-winexe",
+				"arches": [
+					"x86_64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-client",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "libsmbclient-devel",
+				"arches": [
+					"x86_64",
+					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-common-libs",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "samba-libs",
 				"arches": [
+					"x86_64",
+					"x86_64",
 					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "python3-samba-test",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-winbind-clients",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-common",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-devel",
+				"arches": [
+					"x86_64",
+					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-winbind-krb5-locator",
+				"arches": [
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -407,34 +409,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "samba-test-libs",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
 				"name": "python3-samba",
 				"arches": [
+					"x86_64",
+					"x86_64",
 					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-winbind",
+				"arches": [
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -458,58 +461,10 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "samba-devel",
+				"name": "libwbclient-devel",
 				"arches": [
+					"x86_64",
 					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-common",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-krb5-printing",
-				"arches": [
-					"x86_64",
 					"aarch64",
 					"ppc64le"
 				]
@@ -555,9 +510,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "libsmbclient",
+				"name": "samba-winbind-modules",
 				"arches": [
+					"x86_64",
+					"x86_64",
 					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-krb5-printing",
+				"arches": [
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -583,7 +564,56 @@
 				"ecosystem": "AlmaLinux:8",
 				"name": "libwbclient",
 				"arches": [
+					"x86_64",
+					"x86_64",
 					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-pidl",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:4.15.5-5.el8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "samba-test-libs",
+				"arches": [
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -607,35 +637,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "libwbclient-devel",
+				"name": "libsmbclient",
 				"arches": [
+					"x86_64",
+					"x86_64",
 					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:4.15.5-5.el8"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "samba-winbind-clients",
-				"arches": [
-					"x86_64",
 					"aarch64",
 					"ppc64le"
 				]
@@ -702,20 +708,12 @@
 	],
 	"references": [
 		{
-			"name": "2009673",
+			"name": "ALSA-2022-2074",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"bugzilla"
+				"vendor-advisory"
 			],
-			"url": "https://bugzilla.redhat.com/2009673"
-		},
-		{
-			"name": "2046120",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2046120"
+			"url": "https://errata.almalinux.org/8/ALSA-2022-2074.html"
 		},
 		{
 			"name": "CVE-2021-20316",
@@ -732,14 +730,6 @@
 				"cve"
 			],
 			"url": "https://vulners.com/cve/CVE-2021-44141"
-		},
-		{
-			"name": "ALSA-2022-2074",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-2074.html"
 		},
 		{
 			"name": "RHSA-2022:2074",
@@ -764,9 +754,25 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2021-44141"
+		},
+		{
+			"name": "2009673",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2009673"
+		},
+		{
+			"name": "2046120",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2046120"
 		}
 	],
-	"published": "2022-05-10T00:00:00Z",
-	"modified": "2022-06-29T11:18:55Z",
+	"published": "2022-05-10T08:15:39Z",
+	"modified": "2022-05-10T08:15:23Z",
 	"data_source": "alma-errata"
 }
