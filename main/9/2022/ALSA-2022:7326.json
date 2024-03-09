@@ -7,9 +7,35 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-ca",
+				"name": "pki-server",
 				"arches": [
 					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:11.0.6-2.el9_0"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "pki-symkey",
+				"arches": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -76,30 +102,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-acme",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:11.0.6-2.el9_0"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "pki-symkey",
+				"name": "pki-tools",
 				"arches": [
 					"ppc64le",
 					"aarch64",
@@ -125,7 +128,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-base",
+				"name": "pki-acme",
 				"arches": [
 					"noarch"
 				]
@@ -171,12 +174,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-tools",
+				"name": "pki-base",
 				"arches": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -197,7 +197,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "pki-server",
+				"name": "pki-ca",
 				"arches": [
 					"noarch"
 				]
@@ -235,14 +235,6 @@
 	],
 	"references": [
 		{
-			"name": "2104676",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2104676"
-		},
-		{
 			"name": "ALSA-2022-7326",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -265,6 +257,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-2414"
+		},
+		{
+			"name": "2104676",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2104676"
 		}
 	],
 	"published": "2022-11-02T00:00:00Z",
