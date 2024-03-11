@@ -7,11 +7,36 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "dotnet-hostfxr-6.0",
+				"arches": [
+					"x86_64",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.13-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "dotnet-sdk-6.0",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -32,61 +57,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "dotnet-targeting-pack-6.0",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.13-1.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "dotnet-hostfxr-6.0",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.13-1.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "dotnet-templates-6.0",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -110,8 +85,8 @@
 				"name": "dotnet-sdk-6.0-source-built-artifacts",
 				"arches": [
 					"aarch64",
-					"s390x",
-					"x86_64"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -132,11 +107,11 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "aspnetcore-targeting-pack-6.0",
+				"name": "dotnet-runtime-6.0",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -159,34 +134,9 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "aspnetcore-runtime-6.0",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.13-1.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "dotnet-runtime-6.0",
-				"arches": [
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -209,9 +159,59 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "dotnet-apphost-pack-6.0",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"s390x",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.13-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "aspnetcore-targeting-pack-6.0",
+				"arches": [
+					"x86_64",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.13-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "dotnet-targeting-pack-6.0",
+				"arches": [
+					"x86_64",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -247,6 +247,14 @@
 	],
 	"references": [
 		{
+			"name": "ALSA-2023-0077",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-0077.html"
+		},
+		{
 			"name": "RHSA-2023:0077",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -269,14 +277,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2158342"
-		},
-		{
-			"name": "ALSA-2023-0077",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-0077.html"
 		}
 	],
 	"published": "2023-01-11T00:00:00Z",

@@ -7,12 +7,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "ghostscript-tools-dvipdf",
+				"name": "ghostscript-tools-fonts",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"aarch64",
+					"i686"
 				]
 			},
 			"ranges": [
@@ -33,13 +34,39 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "ghostscript-tools-fonts",
+				"name": "ghostscript",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"ppc64le",
 					"s390x",
+					"aarch64",
 					"i686"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:9.54.0-10.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "ghostscript-x11",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -62,11 +89,37 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "ghostscript-tools-printing",
 				"arches": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"ppc64le",
 					"s390x",
+					"aarch64",
 					"i686"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:9.54.0-10.el9_2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "ghostscript-tools-dvipdf",
+				"arches": [
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -92,8 +145,8 @@
 					"i686",
 					"ppc64le",
 					"aarch64",
-					"s390x",
-					"x86_64"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -140,63 +193,10 @@
 				"name": "libgs",
 				"arches": [
 					"i686",
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:9.54.0-10.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "ghostscript",
-				"arches": [
 					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x",
-					"i686"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:9.54.0-10.el9_2"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "ghostscript-x11",
-				"arches": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"aarch64"
 				]
 			},
 			"ranges": [
@@ -232,6 +232,14 @@
 	],
 	"references": [
 		{
+			"name": "ALSA-2023-5459",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-5459.html"
+		},
+		{
 			"name": "RHSA-2023:5459",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -254,14 +262,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2217798"
-		},
-		{
-			"name": "ALSA-2023-5459",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-5459.html"
 		}
 	],
 	"published": "2023-10-05T00:00:00Z",
