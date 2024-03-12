@@ -7,7 +7,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-hostfxr-6.0",
+				"name": "dotnet-sdk-6.0",
+				"arches": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:6.0.118-1.el8_8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "aspnetcore-targeting-pack-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -32,7 +57,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-apphost-pack-6.0",
+				"name": "dotnet-sdk-6.0-source-built-artifacts",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -47,7 +72,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:6.0.18-1.el8_8"
+							"fixed": "0:6.0.118-1.el8_8"
 						}
 					]
 				}
@@ -107,7 +132,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-sdk-6.0",
+				"name": "dotnet-apphost-pack-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -122,7 +147,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:6.0.118-1.el8_8"
+							"fixed": "0:6.0.18-1.el8_8"
 						}
 					]
 				}
@@ -182,7 +207,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "aspnetcore-targeting-pack-6.0",
+				"name": "dotnet-hostfxr-6.0",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -202,48 +227,10 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-sdk-6.0-source-built-artifacts",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:6.0.118-1.el8_8"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
 	"vulnerabilities": [
-		{
-			"cve": "CVE-2023-33128",
-			"references": [
-				{
-					"name": "CVE-2023-33128",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
-				}
-			]
-		},
 		{
 			"cve": "CVE-2023-24936",
 			"references": [
@@ -254,6 +241,19 @@
 						"cve"
 					],
 					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2023-29331",
+			"references": [
+				{
+					"name": "CVE-2023-29331",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
 				}
 			]
 		},
@@ -271,28 +271,20 @@
 			]
 		},
 		{
-			"cve": "CVE-2023-29331",
+			"cve": "CVE-2023-33128",
 			"references": [
 				{
-					"name": "CVE-2023-29331",
+					"name": "CVE-2023-33128",
 					"source": "errata.almalinux.org",
 					"tags": [
 						"cve"
 					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
 				}
 			]
 		}
 	],
 	"references": [
-		{
-			"name": "ALSA-2023-3582",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2023-3582.html"
-		},
 		{
 			"name": "RHSA-2023:3582",
 			"source": "errata.almalinux.org",
@@ -302,12 +294,12 @@
 			"url": "https://access.redhat.com/errata/RHSA-2023:3582"
 		},
 		{
-			"name": "CVE-2023-29331",
+			"name": "CVE-2023-29337",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
+			"url": "https://access.redhat.com/security/cve/CVE-2023-29337"
 		},
 		{
 			"name": "CVE-2023-33128",
@@ -316,30 +308,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
-		},
-		{
-			"name": "2192438",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2192438"
-		},
-		{
-			"name": "CVE-2023-24936",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
-		},
-		{
-			"name": "CVE-2023-29337",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-29337"
 		},
 		{
 			"name": "2212617",
@@ -356,6 +324,38 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2212618"
+		},
+		{
+			"name": "ALSA-2023-3582",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2023-3582.html"
+		},
+		{
+			"name": "CVE-2023-24936",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
+		},
+		{
+			"name": "CVE-2023-29331",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
+		},
+		{
+			"name": "2192438",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2192438"
 		},
 		{
 			"name": "2213703",
