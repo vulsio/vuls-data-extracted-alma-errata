@@ -34,9 +34,13 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-rpm-macros",
+				"name": "systemd-libs",
 				"arches": [
-					"noarch"
+					"i686",
+					"ppc64le",
+					"s390x",
+					"aarch64",
+					"x86_64"
 				]
 			},
 			"ranges": [
@@ -57,12 +61,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-pam",
+				"name": "systemd-rpm-macros",
 				"arches": [
-					"ppc64le",
-					"s390x",
-					"aarch64",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -188,9 +189,8 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "systemd-libs",
+				"name": "systemd-pam",
 				"arches": [
-					"i686",
 					"ppc64le",
 					"s390x",
 					"aarch64",
@@ -268,19 +268,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2022-45873",
-			"references": [
-				{
-					"name": "CVE-2022-45873",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-45873"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-4415",
 			"references": [
 				{
@@ -292,9 +279,38 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-4415"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-45873",
+			"references": [
+				{
+					"name": "CVE-2022-45873",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-45873"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "ALSA-2023-0954",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-0954.html"
+		},
+		{
+			"name": "RHSA-2023:0954",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:0954"
+		},
 		{
 			"name": "CVE-2022-4415",
 			"source": "errata.almalinux.org",
@@ -326,22 +342,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2155515"
-		},
-		{
-			"name": "ALSA-2023-0954",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-0954.html"
-		},
-		{
-			"name": "RHSA-2023:0954",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:0954"
 		}
 	],
 	"published": "2023-02-28T00:00:00Z",
