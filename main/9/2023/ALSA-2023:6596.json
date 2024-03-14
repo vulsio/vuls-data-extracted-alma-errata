@@ -7,12 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "cups-lpd",
+				"name": "cups-printerapp",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -62,11 +62,11 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "cups-devel",
 				"arches": [
-					"aarch64",
 					"i686",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -110,64 +110,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "cups-client",
+				"name": "cups-lpd",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:2.3.3op2-21.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "cups-printerapp",
-				"arches": [
 					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:2.3.3op2-21.el9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "cups",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -190,10 +138,62 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "cups-ipptool",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.3op2-21.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "cups-client",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.3op2-21.el9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "cups",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -214,19 +214,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2023-34241",
-			"references": [
-				{
-					"name": "CVE-2023-34241",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2023-34241"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2023-32324",
 			"references": [
 				{
@@ -238,25 +225,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32324"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2023-34241",
+			"references": [
+				{
+					"name": "CVE-2023-34241",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2023-34241"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "ALSA-2023-6596",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/9/ALSA-2023-6596.html"
-		},
-		{
-			"name": "RHSA-2023:6596",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2023:6596"
-		},
 		{
 			"name": "CVE-2023-32324",
 			"source": "errata.almalinux.org",
@@ -288,9 +272,25 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2214914"
+		},
+		{
+			"name": "ALSA-2023-6596",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/9/ALSA-2023-6596.html"
+		},
+		{
+			"name": "RHSA-2023:6596",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2023:6596"
 		}
 	],
 	"published": "2023-11-07T00:00:00Z",
-	"modified": "2023-11-14T12:11:39Z",
+	"modified": "2023-11-14T12:10:52Z",
 	"data_source": "alma-errata"
 }

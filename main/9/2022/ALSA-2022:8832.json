@@ -9,36 +9,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs:18::nodejs-devel",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:18.12.1-1.module_el9.1.0+16+91bc168f"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs:18::nodejs",
-				"arches": [
 					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -61,10 +35,10 @@
 				"ecosystem": "AlmaLinux:9",
 				"name": "nodejs:18::npm",
 				"arches": [
-					"aarch64",
-					"s390x",
+					"ppc64le",
 					"x86_64",
-					"ppc64le"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -88,32 +62,6 @@
 				"name": "nodejs:18::nodejs-docs",
 				"arches": [
 					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:18.12.1-1.module_el9.1.0+16+91bc168f"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "nodejs:18::nodejs-full-i18n",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -198,6 +146,58 @@
 					]
 				}
 			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs:18::nodejs-full-i18n",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:18.12.1-1.module_el9.1.0+16+91bc168f"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "nodejs:18::nodejs",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:18.12.1-1.module_el9.1.0+16+91bc168f"
+						}
+					]
+				}
+			]
 		}
 	],
 	"severity": "Moderate",
@@ -230,6 +230,14 @@
 		}
 	],
 	"references": [
+		{
+			"name": "CVE-2022-43548",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-43548"
+		},
 		{
 			"name": "2134609",
 			"source": "errata.almalinux.org",
@@ -269,17 +277,9 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-3517"
-		},
-		{
-			"name": "CVE-2022-43548",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-43548"
 		}
 	],
 	"published": "2022-12-06T00:00:00Z",
-	"modified": "2022-12-07T14:39:51Z",
+	"modified": "2022-12-07T14:39:49Z",
 	"data_source": "alma-errata"
 }
