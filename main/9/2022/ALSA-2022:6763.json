@@ -7,6 +7,58 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
+				"name": "bind-chroot",
+				"arches": [
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-1.el9_0.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-devel",
+				"arches": [
+					"i686",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-1.el9_0.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
 				"name": "bind",
 				"arches": [
 					"aarch64",
@@ -34,32 +86,6 @@
 			"package": {
 				"ecosystem": "AlmaLinux:9",
 				"name": "bind-utils",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-1.el9_0.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-chroot",
 				"arches": [
 					"aarch64",
 					"s390x",
@@ -202,32 +228,6 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-devel",
-				"arches": [
-					"i686",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-1.el9_0.1"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Important",
@@ -273,6 +273,14 @@
 		}
 	],
 	"references": [
+		{
+			"name": "2128602",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2128602"
+		},
 		{
 			"name": "ALSA-2022-6763",
 			"source": "errata.almalinux.org",
@@ -328,14 +336,6 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2128601"
-		},
-		{
-			"name": "2128602",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2128602"
 		}
 	],
 	"published": "2022-10-03T00:00:00Z",
