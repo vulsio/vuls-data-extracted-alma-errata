@@ -7,6 +7,75 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::nodejs-nodemon",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:2.0.19-2.module_el8.6.0+3261+490666b3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::nodejs-packaging",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:23-3.module_el8.5.0+2618+8d46dafd"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "nodejs:14::nodejs-docs",
+				"arches": [
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:14.20.0-2.module_el8.6.0+3261+490666b3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
 				"name": "nodejs:14::npm",
 				"arches": [
 					"aarch64",
@@ -106,79 +175,36 @@
 					]
 				}
 			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::nodejs-nodemon",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:2.0.19-2.module_el8.6.0+3261+490666b3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::nodejs-packaging",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:23-3.module_el8.5.0+2618+8d46dafd"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "nodejs:14::nodejs-docs",
-				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "1:14.20.0-2.module_el8.6.0+3261+490666b3"
-						}
-					]
-				}
-			]
 		}
 	],
 	"severity": "Moderate",
 	"vulnerabilities": [
+		{
+			"cve": "CVE-2022-32213",
+			"references": [
+				{
+					"name": "CVE-2022-32213",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2022-32215",
+			"references": [
+				{
+					"name": "CVE-2022-32215",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32215"
+				}
+			]
+		},
 		{
 			"cve": "CVE-2022-32212",
 			"references": [
@@ -206,19 +232,6 @@
 			]
 		},
 		{
-			"cve": "CVE-2022-32215",
-			"references": [
-				{
-					"name": "CVE-2022-32215",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32215"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-33987",
 			"references": [
 				{
@@ -230,30 +243,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-33987"
 				}
 			]
-		},
-		{
-			"cve": "CVE-2022-32213",
-			"references": [
-				{
-					"name": "CVE-2022-32213",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
-				}
-			]
 		}
 	],
 	"references": [
-		{
-			"name": "CVE-2022-32215",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-32215"
-		},
 		{
 			"name": "CVE-2022-33987",
 			"source": "errata.almalinux.org",
@@ -261,6 +253,14 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-33987"
+		},
+		{
+			"name": "2102001",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2102001"
 		},
 		{
 			"name": "2105422",
@@ -279,12 +279,12 @@
 			"url": "https://bugzilla.redhat.com/2105428"
 		},
 		{
-			"name": "ALSA-2022-6448",
+			"name": "2105430",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"vendor-advisory"
+				"bugzilla"
 			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-6448.html"
+			"url": "https://bugzilla.redhat.com/2105430"
 		},
 		{
 			"name": "RHSA-2022:6448",
@@ -295,12 +295,12 @@
 			"url": "https://access.redhat.com/errata/RHSA-2022:6448"
 		},
 		{
-			"name": "CVE-2022-32213",
+			"name": "CVE-2022-32212",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
+			"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
 		},
 		{
 			"name": "CVE-2022-32214",
@@ -311,22 +311,6 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2022-32214"
 		},
 		{
-			"name": "CVE-2022-32212",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
-		},
-		{
-			"name": "2102001",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2102001"
-		},
-		{
 			"name": "2105426",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -335,12 +319,28 @@
 			"url": "https://bugzilla.redhat.com/2105426"
 		},
 		{
-			"name": "2105430",
+			"name": "ALSA-2022-6448",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"bugzilla"
+				"vendor-advisory"
 			],
-			"url": "https://bugzilla.redhat.com/2105430"
+			"url": "https://errata.almalinux.org/8/ALSA-2022-6448.html"
+		},
+		{
+			"name": "CVE-2022-32213",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
+		},
+		{
+			"name": "CVE-2022-32215",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2022-32215"
 		}
 	],
 	"published": "2022-09-13T00:00:00Z",

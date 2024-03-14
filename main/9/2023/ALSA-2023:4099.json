@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-utils",
+				"name": "bind-chroot",
 				"arches": [
 					"aarch64",
 					"s390x",
@@ -33,9 +33,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "python3-bind",
+				"name": "bind-utils",
 				"arches": [
-					"noarch"
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -79,13 +82,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-libs",
+				"name": "bind-dnssec-doc",
 				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le",
-					"i686"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -156,7 +155,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-chroot",
+				"name": "bind-dnssec-utils",
 				"arches": [
 					"aarch64",
 					"s390x",
@@ -182,35 +181,36 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "bind-utils",
-				"arches": [
-					"aarch64",
-					"s390x",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-11.el9_2.1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "bind-dnssec-doc",
+				"name": "python3-bind",
 				"arches": [
 					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-11.el9_2.1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "bind-libs",
+				"arches": [
+					"aarch64",
+					"s390x",
+					"x86_64",
+					"ppc64le",
+					"i686"
 				]
 			},
 			"ranges": [
@@ -272,6 +272,14 @@
 	],
 	"references": [
 		{
+			"name": "2216227",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2216227"
+		},
+		{
 			"name": "ALSA-2023-4099",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -294,14 +302,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2023-2828"
-		},
-		{
-			"name": "2216227",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2216227"
 		}
 	],
 	"published": "2023-07-17T00:00:00Z",
