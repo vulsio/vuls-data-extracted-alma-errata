@@ -7,32 +7,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "python3-bind9.16",
+				"name": "bind9.16-dnssec-utils",
 				"arches": [
-					"noarch"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-0.14.el8_8.1.alma"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-doc",
-				"arches": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -54,6 +34,32 @@
 			"package": {
 				"ecosystem": "AlmaLinux:8",
 				"name": "bind9.16",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-0.14.el8_8.1.alma"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind9.16-utils",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -105,13 +111,32 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-libs",
+				"name": "python3-bind9.16",
 				"arches": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
+					"noarch"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "32:9.16.23-0.14.el8_8.1.alma"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "bind9.16-doc",
+				"arches": [
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -182,34 +207,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-dnssec-utils",
+				"name": "bind9.16-libs",
 				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "32:9.16.23-0.14.el8_8.1.alma"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "bind9.16-utils",
-				"arches": [
+					"i686",
 					"aarch64",
 					"x86_64",
 					"s390x",
@@ -249,6 +249,14 @@
 	],
 	"references": [
 		{
+			"name": "CVE-2023-2828",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2023-2828"
+		},
+		{
 			"name": "2216227",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -271,14 +279,6 @@
 				"third-party-advisory"
 			],
 			"url": "https://access.redhat.com/errata/RHSA-2023:4100"
-		},
-		{
-			"name": "CVE-2023-2828",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://access.redhat.com/security/cve/CVE-2023-2828"
 		}
 	],
 	"published": "2023-07-17T00:00:00Z",
