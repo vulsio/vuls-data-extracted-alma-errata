@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-targeting-pack-8.0",
+				"name": "dotnet-sdk-8.0",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -23,7 +23,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:8.0.1-1.el8_9"
+							"fixed": "0:8.0.101-1.el8_9"
 						}
 					]
 				}
@@ -33,12 +33,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet",
+				"name": "dotnet-sdk-8.0-source-built-artifacts",
 				"arches": [
-					"aarch64",
 					"x86_64",
-					"s390x",
-					"ppc64le"
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"ranges": [
@@ -85,7 +85,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-host",
+				"name": "dotnet-targeting-pack-8.0",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -189,7 +189,33 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "aspnetcore-targeting-pack-8.0",
+				"name": "dotnet-templates-8.0",
+				"arches": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:8.0.101-1.el8_9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:8",
+				"name": "dotnet-host",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -215,7 +241,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-templates-8.0",
+				"name": "aspnetcore-targeting-pack-8.0",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -231,7 +257,7 @@
 							"introduced": "0"
 						},
 						{
-							"fixed": "0:8.0.101-1.el8_9"
+							"fixed": "0:8.0.1-1.el8_9"
 						}
 					]
 				}
@@ -267,33 +293,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-sdk-8.0-source-built-artifacts",
-				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:8.0.101-1.el8_9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:8",
-				"name": "dotnet-sdk-8.0",
+				"name": "dotnet",
 				"arches": [
 					"aarch64",
 					"x86_64",
@@ -319,19 +319,6 @@
 	"severity": "Important",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2024-0056",
-			"references": [
-				{
-					"name": "CVE-2024-0056",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2024-0056"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2024-0057",
 			"references": [
 				{
@@ -356,41 +343,22 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2024-21319"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2024-0056",
+			"references": [
+				{
+					"name": "CVE-2024-0056",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2024-0056"
+				}
+			]
 		}
 	],
 	"references": [
-		{
-			"name": "2255386",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2255386"
-		},
-		{
-			"name": "2257566",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2257566"
-		},
-		{
-			"name": "ALSA-2024-0150",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2024-0150.html"
-		},
-		{
-			"name": "RHSA-2024:0150",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"third-party-advisory"
-			],
-			"url": "https://access.redhat.com/errata/RHSA-2024:0150"
-		},
 		{
 			"name": "CVE-2024-0056",
 			"source": "errata.almalinux.org",
@@ -422,6 +390,38 @@
 				"bugzilla"
 			],
 			"url": "https://bugzilla.redhat.com/2255384"
+		},
+		{
+			"name": "2255386",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2255386"
+		},
+		{
+			"name": "2257566",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2257566"
+		},
+		{
+			"name": "ALSA-2024-0150",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2024-0150.html"
+		},
+		{
+			"name": "RHSA-2024:0150",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"third-party-advisory"
+			],
+			"url": "https://access.redhat.com/errata/RHSA-2024:0150"
 		}
 	],
 	"published": "2024-01-10T00:00:00Z",
