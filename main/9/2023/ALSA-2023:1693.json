@@ -7,7 +7,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-plperl",
+				"name": "postgresql-pltcl",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -59,7 +59,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-static",
+				"name": "postgresql-server-devel",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -111,38 +111,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-server-devel",
+				"name": "postgresql-docs",
 				"arches": [
 					"ppc64le",
 					"x86_64",
 					"s390x",
 					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:13.10-1.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-plpython3",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"ranges": [
@@ -215,32 +189,6 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-test",
-				"arches": [
-					"ppc64le",
-					"x86_64",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"ranges": [
-				{
-					"type": "ECOSYSTEM",
-					"events": [
-						{
-							"introduced": "0"
-						},
-						{
-							"fixed": "0:13.10-1.el9_1"
-						}
-					]
-				}
-			]
-		},
-		{
-			"vulnerable": true,
-			"package": {
-				"ecosystem": "AlmaLinux:9",
 				"name": "postgresql",
 				"arches": [
 					"ppc64le",
@@ -267,7 +215,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-pltcl",
+				"name": "postgresql-plperl",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -345,7 +293,59 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:9",
-				"name": "postgresql-docs",
+				"name": "postgresql-plpython3",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:13.10-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "postgresql-test",
+				"arches": [
+					"ppc64le",
+					"x86_64",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0:13.10-1.el9_1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"vulnerable": true,
+			"package": {
+				"ecosystem": "AlmaLinux:9",
+				"name": "postgresql-static",
 				"arches": [
 					"ppc64le",
 					"x86_64",
@@ -371,19 +371,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2022-41862",
-			"references": [
-				{
-					"name": "CVE-2022-41862",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41862"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2022-2625",
 			"references": [
 				{
@@ -395,9 +382,38 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2625"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2022-41862",
+			"references": [
+				{
+					"name": "CVE-2022-41862",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41862"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "2113825",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2113825"
+		},
+		{
+			"name": "2165722",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"bugzilla"
+			],
+			"url": "https://bugzilla.redhat.com/2165722"
+		},
 		{
 			"name": "ALSA-2023-1693",
 			"source": "errata.almalinux.org",
@@ -429,22 +445,6 @@
 				"cve"
 			],
 			"url": "https://access.redhat.com/security/cve/CVE-2022-41862"
-		},
-		{
-			"name": "2113825",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2113825"
-		},
-		{
-			"name": "2165722",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2165722"
 		}
 	],
 	"published": "2023-04-11T00:00:00Z",
