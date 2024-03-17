@@ -32,7 +32,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "xorg-x11-server-Xephyr",
+				"name": "xorg-x11-server-Xnest",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -57,7 +57,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "xorg-x11-server-Xorg",
+				"name": "xorg-x11-server-common",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -130,9 +130,12 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "xorg-x11-server-source",
+				"name": "xorg-x11-server-devel",
 				"arches": [
-					"noarch"
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"ranges": [
@@ -153,11 +156,9 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "xorg-x11-server-Xnest",
+				"name": "xorg-x11-server-source",
 				"arches": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"ranges": [
@@ -203,7 +204,7 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "xorg-x11-server-common",
+				"name": "xorg-x11-server-Xephyr",
 				"arches": [
 					"x86_64",
 					"aarch64",
@@ -228,9 +229,8 @@
 			"vulnerable": true,
 			"package": {
 				"ecosystem": "AlmaLinux:8",
-				"name": "xorg-x11-server-devel",
+				"name": "xorg-x11-server-Xorg",
 				"arches": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -254,27 +254,6 @@
 	"severity": "Moderate",
 	"vulnerabilities": [
 		{
-			"cve": "CVE-2021-4008",
-			"references": [
-				{
-					"name": "CVE-2021-4008",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2021-4008"
-				},
-				{
-					"name": "CVE-2021-4008",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://vulners.com/cve/CVE-2021-4008"
-				}
-			]
-		},
-		{
 			"cve": "CVE-2021-4010",
 			"references": [
 				{
@@ -283,7 +262,7 @@
 					"tags": [
 						"cve"
 					],
-					"url": "https://vulners.com/cve/CVE-2021-4010"
+					"url": "https://access.redhat.com/security/cve/CVE-2021-4010"
 				},
 				{
 					"name": "CVE-2021-4010",
@@ -291,28 +270,7 @@
 					"tags": [
 						"cve"
 					],
-					"url": "https://access.redhat.com/security/cve/CVE-2021-4010"
-				}
-			]
-		},
-		{
-			"cve": "CVE-2021-4009",
-			"references": [
-				{
-					"name": "CVE-2021-4009",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://access.redhat.com/security/cve/CVE-2021-4009"
-				},
-				{
-					"name": "CVE-2021-4009",
-					"source": "errata.almalinux.org",
-					"tags": [
-						"cve"
-					],
-					"url": "https://vulners.com/cve/CVE-2021-4009"
+					"url": "https://vulners.com/cve/CVE-2021-4010"
 				}
 			]
 		},
@@ -336,9 +294,67 @@
 					"url": "https://vulners.com/cve/CVE-2021-4011"
 				}
 			]
+		},
+		{
+			"cve": "CVE-2021-4008",
+			"references": [
+				{
+					"name": "CVE-2021-4008",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://vulners.com/cve/CVE-2021-4008"
+				},
+				{
+					"name": "CVE-2021-4008",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2021-4008"
+				}
+			]
+		},
+		{
+			"cve": "CVE-2021-4009",
+			"references": [
+				{
+					"name": "CVE-2021-4009",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://vulners.com/cve/CVE-2021-4009"
+				},
+				{
+					"name": "CVE-2021-4009",
+					"source": "errata.almalinux.org",
+					"tags": [
+						"cve"
+					],
+					"url": "https://access.redhat.com/security/cve/CVE-2021-4009"
+				}
+			]
 		}
 	],
 	"references": [
+		{
+			"name": "CVE-2021-4008",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2021-4008"
+		},
+		{
+			"name": "CVE-2021-4009",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://vulners.com/cve/CVE-2021-4009"
+		},
 		{
 			"name": "CVE-2021-4009",
 			"source": "errata.almalinux.org",
@@ -348,20 +364,20 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2021-4009"
 		},
 		{
-			"name": "CVE-2021-4011",
+			"name": "2026073",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"cve"
+				"bugzilla"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2021-4011"
+			"url": "https://bugzilla.redhat.com/2026073"
 		},
 		{
-			"name": "CVE-2021-4008",
+			"name": "2026074",
 			"source": "errata.almalinux.org",
 			"tags": [
-				"cve"
+				"bugzilla"
 			],
-			"url": "https://vulners.com/cve/CVE-2021-4008"
+			"url": "https://bugzilla.redhat.com/2026074"
 		},
 		{
 			"name": "CVE-2021-4010",
@@ -370,6 +386,22 @@
 				"cve"
 			],
 			"url": "https://vulners.com/cve/CVE-2021-4010"
+		},
+		{
+			"name": "CVE-2021-4011",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://vulners.com/cve/CVE-2021-4011"
+		},
+		{
+			"name": "ALSA-2022-1917",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"vendor-advisory"
+			],
+			"url": "https://errata.almalinux.org/8/ALSA-2022-1917.html"
 		},
 		{
 			"name": "RHSA-2022:1917",
@@ -388,6 +420,14 @@
 			"url": "https://access.redhat.com/security/cve/CVE-2021-4010"
 		},
 		{
+			"name": "CVE-2021-4011",
+			"source": "errata.almalinux.org",
+			"tags": [
+				"cve"
+			],
+			"url": "https://access.redhat.com/security/cve/CVE-2021-4011"
+		},
+		{
 			"name": "2026059",
 			"source": "errata.almalinux.org",
 			"tags": [
@@ -404,52 +444,12 @@
 			"url": "https://bugzilla.redhat.com/2026072"
 		},
 		{
-			"name": "2026074",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2026074"
-		},
-		{
-			"name": "ALSA-2022-1917",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"vendor-advisory"
-			],
-			"url": "https://errata.almalinux.org/8/ALSA-2022-1917.html"
-		},
-		{
-			"name": "CVE-2021-4011",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://vulners.com/cve/CVE-2021-4011"
-		},
-		{
-			"name": "CVE-2021-4009",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"cve"
-			],
-			"url": "https://vulners.com/cve/CVE-2021-4009"
-		},
-		{
-			"name": "2026073",
-			"source": "errata.almalinux.org",
-			"tags": [
-				"bugzilla"
-			],
-			"url": "https://bugzilla.redhat.com/2026073"
-		},
-		{
 			"name": "CVE-2021-4008",
 			"source": "errata.almalinux.org",
 			"tags": [
 				"cve"
 			],
-			"url": "https://access.redhat.com/security/cve/CVE-2021-4008"
+			"url": "https://vulners.com/cve/CVE-2021-4008"
 		}
 	],
 	"published": "2022-05-10T00:00:00Z",
