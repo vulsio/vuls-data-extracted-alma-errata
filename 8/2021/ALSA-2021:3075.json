@@ -1,0 +1,91 @@
+{
+	"id": "ALSA-2021:3075",
+	"advisories": [
+		{
+			"id": "ALSA-2021:3075",
+			"title": "Low: libuv security update",
+			"description": "libuv is a multi-platform support library with a focus on asynchronous I/O. \n\nSecurity Fix(es):\n\n* libuv: out-of-bounds read in uv__idna_toascii() can lead to information disclosures or crashes (CVE-2021-22918)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "errata.almalinux.org",
+					"vendor": "Low"
+				}
+			],
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2021-3075.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-22918"
+				}
+			],
+			"published": "2021-08-10T12:00:55Z",
+			"modified": "2021-08-11T08:54:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-22918",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-22918"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "libuv",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"i686",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.41.1-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:1.41.1-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "libuv-devel",
+				"architectures": [
+					"x86_64",
+					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.41.1-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:1.41.1-1.el8_4"
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}
