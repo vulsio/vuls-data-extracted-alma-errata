@@ -36,6 +36,15 @@
 	],
 	"vulnerabilities": [
 		{
+			"id": "CVE-2019-9946",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-9946"
+				}
+			]
+		},
+		{
 			"id": "CVE-2019-10214",
 			"references": [
 				{
@@ -52,18 +61,30 @@
 					"url": "https://vulners.com/cve/CVE-2019-14378"
 				}
 			]
-		},
-		{
-			"id": "CVE-2019-9946",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-9946"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:1.0::oci-umount",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.3.4-2.git87f9237.module_el8.5.0+119+9a9ec082"
+					}
+				],
+				"fixed": [
+					"2:2.3.4-2.git87f9237.module_el8.5.0+119+9a9ec082"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -103,27 +124,6 @@
 				],
 				"fixed": [
 					"2:2.3.4-2.git87f9237.module_el8.4.0+2496+12421f43"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:1.0::oci-umount",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:2.3.4-2.git87f9237.module_el8.5.0+119+9a9ec082"
-					}
-				],
-				"fixed": [
-					"2:2.3.4-2.git87f9237.module_el8.5.0+119+9a9ec082"
 				]
 			}
 		},
