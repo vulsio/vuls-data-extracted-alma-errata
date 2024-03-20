@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29409"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-39319"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,7 +23,23 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2237778"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-7765.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-39318"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-39322"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2228743"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,7 +51,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-7765.html"
+					"url": "https://bugzilla.redhat.com/2237777"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,23 +59,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-39318"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-39319"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2228743"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2237777"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2237778"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29409"
 				}
 			],
 			"published": "2023-12-12T00:00:00Z",
@@ -114,6 +114,30 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "podman-tests",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:4.6.1-7.el9_3"
+					}
+				],
+				"fixed": [
+					"2:4.6.1-7.el9_3"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -212,30 +236,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "podman-gvproxy",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.6.1-7.el9_3"
-					}
-				],
-				"fixed": [
-					"2:4.6.1-7.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "podman-tests",
 				"architectures": [
 					"ppc64le",
 					"x86_64",
