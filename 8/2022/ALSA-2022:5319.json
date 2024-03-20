@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2083931"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2022-5319.html"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2083924"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2083931"
 				}
 			],
 			"published": "2022-06-30T00:00:00Z",
@@ -63,6 +63,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.1763-19.el8_6.2"
+					}
+				],
+				"fixed": [
+					"2:8.0.1763-19.el8_6.2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -141,27 +162,6 @@
 					"aarch64",
 					"x86_64",
 					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.0.1763-19.el8_6.2"
-					}
-				],
-				"fixed": [
-					"2:8.0.1763-19.el8_6.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-filesystem",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
