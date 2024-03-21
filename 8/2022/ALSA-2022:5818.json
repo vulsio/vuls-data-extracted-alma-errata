@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2081494"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2097310"
 				},
 				{
@@ -36,21 +44,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2068"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2081494"
 				}
 			],
 			"published": "2022-08-03T00:00:00Z",
-			"modified": "2022-08-10T17:55:51Z"
+			"modified": "2022-08-10T17:55:52Z"
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-1292",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-2068",
 			"references": [
@@ -68,15 +77,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-1292",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -86,32 +86,9 @@
 			"package": {
 				"name": "openssl-devel",
 				"architectures": [
-					"aarch64",
 					"i686",
 					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.1.1k-7.el8_6"
-					}
-				],
-				"fixed": [
-					"1:1.1.1k-7.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "openssl",
-				"architectures": [
 					"aarch64",
-					"x86_64",
 					"ppc64le"
 				]
 			},
@@ -133,8 +110,8 @@
 			"package": {
 				"name": "openssl-perl",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le"
 				]
 			},
@@ -156,9 +133,32 @@
 			"package": {
 				"name": "openssl-libs",
 				"architectures": [
-					"aarch64",
 					"x86_64",
 					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.1.1k-7.el8_6"
+					}
+				],
+				"fixed": [
+					"1:1.1.1k-7.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le"
 				]
 			},
