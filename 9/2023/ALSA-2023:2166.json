@@ -15,18 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-2166.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2166"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41859"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41860"
 				},
 				{
@@ -44,6 +32,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2078487"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-2166.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:2166"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41859"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -51,6 +51,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-41861",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41861"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-41859",
 			"references": [
@@ -68,15 +77,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41860"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-41861",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41861"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -84,12 +84,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "freeradius-devel",
+				"name": "python3-freeradius",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.21-37.el9"
+					}
+				],
+				"fixed": [
+					"0:3.0.21-37.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius-sqlite",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -110,10 +134,10 @@
 			"package": {
 				"name": "freeradius-utils",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -132,31 +156,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-freeradius",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.21-37.el9"
-					}
-				],
-				"fixed": [
-					"0:3.0.21-37.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "freeradius-mysql",
+				"name": "freeradius-devel",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -180,7 +180,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "freeradius-postgresql",
+				"name": "freeradius-doc",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -204,7 +204,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "freeradius-unixODBC",
+				"name": "freeradius",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.21-37.el9"
+					}
+				],
+				"fixed": [
+					"0:3.0.21-37.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius-ldap",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -232,80 +256,8 @@
 				"architectures": [
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.21-37.el9"
-					}
-				],
-				"fixed": [
-					"0:3.0.21-37.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "freeradius-ldap",
-				"architectures": [
-					"x86_64",
 					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.21-37.el9"
-					}
-				],
-				"fixed": [
-					"0:3.0.21-37.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "freeradius",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.21-37.el9"
-					}
-				],
-				"fixed": [
-					"0:3.0.21-37.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "freeradius-doc",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -326,10 +278,10 @@
 			"package": {
 				"name": "freeradius-krb5",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -348,12 +300,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "freeradius-sqlite",
+				"name": "freeradius-mysql",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -376,8 +328,56 @@
 				"architectures": [
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.21-37.el9"
+					}
+				],
+				"fixed": [
+					"0:3.0.21-37.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius-postgresql",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.21-37.el9"
+					}
+				],
+				"fixed": [
+					"0:3.0.21-37.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius-unixODBC",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
