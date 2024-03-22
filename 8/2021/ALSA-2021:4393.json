@@ -15,11 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-4393.html"
+					"url": "https://vulners.com/cve/CVE-2020-10001"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-10001"
+					"url": "https://errata.almalinux.org/8/ALSA-2021-4393.html"
 				}
 			],
 			"published": "2021-11-09T09:16:27Z",
@@ -38,6 +38,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-lpd",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.2.6-40.el8"
+					}
+				],
+				"fixed": [
+					"1:2.2.6-40.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -130,27 +151,6 @@
 				"name": "cups-filesystem",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.2.6-40.el8"
-					}
-				],
-				"fixed": [
-					"1:2.2.6-40.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "cups-lpd",
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
