@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5455"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2025721"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2020-17049"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5455"
 				}
 			],
 			"published": "2024-01-10T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-5455",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5455"
-				}
-			]
-		},
-		{
 			"id": "CVE-2020-17049",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2020-17049"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-5455",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5455"
 				}
 			]
 		}
@@ -67,7 +67,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-common",
+				"name": "idm:DL1::python3-ipaserver",
 				"architectures": [
 					"noarch"
 				]
@@ -88,7 +88,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-server-dns",
+				"name": "idm:DL1::python3-ipaclient",
 				"architectures": [
 					"noarch"
 				]
@@ -109,70 +109,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::python3-kdcproxy",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.4-5.module_el8.9.0+3682+f63caf3e"
-					}
-				],
-				"fixed": [
-					"0:0.4-5.module_el8.9.0+3682+f63caf3e"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::python3-ipatests",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::ipa-server-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::custodia",
+				"name": "idm:DL1::python3-custodia",
 				"architectures": [
 					"noarch"
 				]
@@ -193,7 +130,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-server",
+				"name": "idm:DL1::ipa-server-trust-ad",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -234,6 +171,27 @@
 				],
 				"fixed": [
 					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-healthcheck",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.12-3.module_el8.9.0+3651+d05ea4c5"
+					}
+				],
+				"fixed": [
+					"0:0.12-3.module_el8.9.0+3651+d05ea4c5"
 				]
 			}
 		},
@@ -283,7 +241,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-healthcheck-core",
+				"name": "idm:DL1::python3-ipatests",
 				"architectures": [
 					"noarch"
 				]
@@ -292,11 +250,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.12-3.module_el8.9.0+3651+d05ea4c5"
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
 					}
 				],
 				"fixed": [
-					"0:0.12-3.module_el8.9.0+3651+d05ea4c5"
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
 				]
 			}
 		},
@@ -304,7 +262,141 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::python3-ipaclient",
+				"name": "idm:DL1::bind-dyndb-ldap",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:11.6-4.module_el8.6.0+3339+9b5fdd22"
+					}
+				],
+				"fixed": [
+					"0:11.6-4.module_el8.6.0+3339+9b5fdd22"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::python3-ipalib",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-selinux",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::softhsm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.6.0-5.module_el8.6.0+2881+2f24dc92"
+					}
+				],
+				"fixed": [
+					"0:2.6.0-5.module_el8.6.0+2881+2f24dc92"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::softhsm",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
+					}
+				],
+				"fixed": [
+					"0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::slapi-nis",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.60.0-4.module_el8.9.0+3682+f63caf3e.alma.1"
+					}
+				],
+				"fixed": [
+					"0:0.60.0-4.module_el8.9.0+3682+f63caf3e.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-client-common",
 				"architectures": [
 					"noarch"
 				]
@@ -370,7 +462,136 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-healthcheck",
+				"name": "idm:DL1::ipa-server",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-server-dns",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-common",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::python3-jwcrypto",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.5.0-1.1.module_el8.7.0+3349+cfeff52e"
+					}
+				],
+				"fixed": [
+					"0:0.5.0-1.1.module_el8.7.0+3349+cfeff52e"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-server-common",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::python3-qrcode",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1-12.module_el8.6.0+2881+2f24dc92"
+					}
+				],
+				"fixed": [
+					"0:5.1-12.module_el8.6.0+2881+2f24dc92"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "idm:DL1::ipa-healthcheck-core",
 				"architectures": [
 					"noarch"
 				]
@@ -391,23 +612,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::slapi-nis",
+				"name": "idm:DL1::python3-qrcode-core",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.60.0-4.module_el8.9.0+3682+f63caf3e.alma.1"
+						"lt": "0:5.1-12.module_el8.6.0+2881+2f24dc92"
 					}
 				],
 				"fixed": [
-					"0:0.60.0-4.module_el8.9.0+3682+f63caf3e.alma.1"
+					"0:5.1-12.module_el8.6.0+2881+2f24dc92"
 				]
 			}
 		},
@@ -459,92 +677,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::softhsm-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.0-5.module_el8.6.0+2881+2f24dc92"
-					}
-				],
-				"fixed": [
-					"0:2.6.0-5.module_el8.6.0+2881+2f24dc92"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::softhsm-devel",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
-					}
-				],
-				"fixed": [
-					"0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::python3-jwcrypto",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.5.0-1.1.module_el8.7.0+3349+cfeff52e"
-					}
-				],
-				"fixed": [
-					"0:0.5.0-1.1.module_el8.7.0+3349+cfeff52e"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::python3-qrcode-core",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1-12.module_el8.6.0+2881+2f24dc92"
-					}
-				],
-				"fixed": [
-					"0:5.1-12.module_el8.6.0+2881+2f24dc92"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "idm:DL1::ipa-client-samba",
 				"architectures": [
 					"x86_64",
@@ -569,53 +701,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-client-common",
+				"name": "idm:DL1::softhsm-devel",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::python3-qrcode",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1-12.module_el8.6.0+2881+2f24dc92"
-					}
-				],
-				"fixed": [
-					"0:5.1-12.module_el8.6.0+2881+2f24dc92"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::bind-dyndb-ldap",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
 					"s390x"
 				]
 			},
@@ -623,11 +710,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:11.6-4.module_el8.6.0+3339+9b5fdd22"
+						"lt": "0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
 					}
 				],
 				"fixed": [
-					"0:11.6-4.module_el8.6.0+3339+9b5fdd22"
+					"0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
 				]
 			}
 		},
@@ -635,31 +722,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::ipa-server-trust-ad",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::softhsm",
+				"name": "idm:DL1::softhsm-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -682,28 +745,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::softhsm",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
-					}
-				],
-				"fixed": [
-					"0:2.6.0-5.module_el8.6.0+3031+2f24dc92"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::python3-ipalib",
+				"name": "idm:DL1::python3-kdcproxy",
 				"architectures": [
 					"noarch"
 				]
@@ -712,11 +754,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+						"lt": "0:0.4-5.module_el8.9.0+3682+f63caf3e"
 					}
 				],
 				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
+					"0:0.4-5.module_el8.9.0+3682+f63caf3e"
 				]
 			}
 		},
@@ -724,7 +766,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "idm:DL1::python3-custodia",
+				"name": "idm:DL1::custodia",
 				"architectures": [
 					"noarch"
 				]
@@ -738,48 +780,6 @@
 				],
 				"fixed": [
 					"0:0.6.0-3.module_el8.6.0+2881+2f24dc92"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::python3-ipaserver",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "idm:DL1::ipa-selinux",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.9.12-11.module_el8.9.0+3715+e4197dc9.alma.1"
 				]
 			}
 		}
