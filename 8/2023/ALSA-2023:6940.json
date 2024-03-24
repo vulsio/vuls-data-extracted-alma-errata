@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2153655"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2184118"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28625"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2153655"
 				}
 			],
 			"published": "2023-11-14T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-23527",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-23527"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-28625",
 			"references": [
 				{
@@ -60,33 +51,18 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28625"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-23527",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-23527"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mod_auth_openidc:2.3::cjose-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
-					}
-				],
-				"fixed": [
-					"0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -132,6 +108,30 @@
 				],
 				"fixed": [
 					"0:2.4.9.4-5.module_el8.9.0+3631+0ced13d7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_openidc:2.3::cjose-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
+					}
+				],
+				"fixed": [
+					"0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
 				]
 			}
 		}
