@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-4634.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4634"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2228038"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-4634.html"
 				}
 			],
 			"published": "2023-08-14T00:00:00Z",
@@ -46,6 +46,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-lldb",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -71,28 +92,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-debugger-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-analysis",
+				"name": "rust",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -140,9 +140,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-src",
+				"name": "rust-analyzer",
 				"architectures": [
-					"noarch"
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -161,9 +164,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-lldb",
+				"name": "rust-std-static",
 				"architectures": [
-					"noarch"
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -203,36 +210,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust",
+				"name": "rust-std-static-wasm32-wasi",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rustfmt",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -275,12 +255,54 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-analyzer",
+				"name": "rust-analysis",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
 					"x86_64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-src",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-debugger-common",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -323,30 +345,8 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-std-static-wasm32-wasi",
+				"name": "rustfmt",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-std-static",
-				"architectures": [
-					"i686",
 					"ppc64le",
 					"aarch64",
 					"x86_64",
