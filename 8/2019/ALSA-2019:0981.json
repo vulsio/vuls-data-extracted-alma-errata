@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-9636"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2019-0981.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-7164"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-7548"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-9636"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2019-0981.html"
 				}
 			],
 			"published": "2019-05-07T03:40:00Z",
@@ -35,15 +35,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2019-7548",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-7548"
-				}
-			]
-		},
 		{
 			"id": "CVE-2019-9636",
 			"references": [
@@ -61,6 +52,15 @@
 					"url": "https://vulners.com/cve/CVE-2019-7164"
 				}
 			]
+		},
+		{
+			"id": "CVE-2019-7548",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-7548"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -68,41 +68,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python2-chardet",
+				"name": "python27:2.7::python-psycopg2-doc",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.0.4-10.module_el8.6.0+2781+fed64c13"
+						"lt": "0:2.7.5-7.module_el8.6.0+2781+fed64c13"
 					}
 				],
 				"fixed": [
-					"0:3.0.4-10.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-funcsigs",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0.2-13.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:1.0.2-13.module_el8.6.0+2781+fed64c13"
+					"0:2.7.5-7.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		},
@@ -131,7 +112,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python2-rpm-macros",
+				"name": "python27:2.7::python2-docutils",
 				"architectures": [
 					"noarch"
 				]
@@ -140,32 +121,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3-38.module_el8.6.0+2781+fed64c13"
+						"lt": "0:0.14-12.module_el8.6.0+2781+fed64c13"
 					}
 				],
 				"fixed": [
-					"0:3-38.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-pysocks",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.8-6.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:1.6.8-6.module_el8.6.0+2781+fed64c13"
+					"0:0.14-12.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		},
@@ -194,29 +154,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python2-Cython",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.28.1-7.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:0.28.1-7.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "python27:2.7::python2-pytest-mock",
 				"architectures": [
 					"noarch"
@@ -231,117 +168,6 @@
 				],
 				"fixed": [
 					"0:1.9.0-4.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-markupsafe",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.23-19.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:0.23-19.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-pytest",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.4.2-13.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:3.4.2-13.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-pyyaml",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.12-16.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:3.12-16.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-mock",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.0.0-13.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:2.0.0-13.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-coverage",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.5.1-4.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:4.5.1-4.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		},
@@ -393,7 +219,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python2-docutils",
+				"name": "python27:2.7::python2-pysocks",
 				"architectures": [
 					"noarch"
 				]
@@ -402,11 +228,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.14-12.module_el8.6.0+2781+fed64c13"
+						"lt": "0:1.6.8-6.module_el8.6.0+2781+fed64c13"
 					}
 				],
 				"fixed": [
-					"0:0.14-12.module_el8.6.0+2781+fed64c13"
+					"0:1.6.8-6.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		},
@@ -414,104 +240,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python2-attrs",
+				"name": "python27:2.7::python2-psycopg2-debug",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:17.4.0-10.module_el8.6.0+2781+fed64c13"
+						"lt": "0:2.7.5-7.module_el8.6.0+2781+fed64c13"
 					}
 				],
 				"fixed": [
-					"0:17.4.0-10.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-idna",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.5-7.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:2.5-7.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-pluggy",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.6.0-8.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:0.6.0-8.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-setuptools_scm",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.15.7-6.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:1.15.7-6.module_el8.6.0+2781+fed64c13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python27:2.7::python2-ipaddress",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0.18-6.module_el8.6.0+2781+fed64c13"
-					}
-				],
-				"fixed": [
-					"0:1.0.18-6.module_el8.6.0+2781+fed64c13"
+					"0:2.7.5-7.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		},
@@ -542,7 +286,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python-psycopg2-doc",
+				"name": "python27:2.7::python2-coverage",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -553,11 +297,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.7.5-7.module_el8.6.0+2781+fed64c13"
+						"lt": "0:4.5.1-4.module_el8.6.0+2781+fed64c13"
 					}
 				],
 				"fixed": [
-					"0:2.7.5-7.module_el8.6.0+2781+fed64c13"
+					"0:4.5.1-4.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		},
@@ -565,7 +309,70 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python27:2.7::python2-psycopg2-debug",
+				"name": "python27:2.7::python2-pluggy",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.6.0-8.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:0.6.0-8.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-rpm-macros",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3-38.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:3-38.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-attrs",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:17.4.0-10.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:17.4.0-10.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-Cython",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -576,11 +383,204 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.7.5-7.module_el8.6.0+2781+fed64c13"
+						"lt": "0:0.28.1-7.module_el8.6.0+2781+fed64c13"
 					}
 				],
 				"fixed": [
-					"0:2.7.5-7.module_el8.6.0+2781+fed64c13"
+					"0:0.28.1-7.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-chardet",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.4-10.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:3.0.4-10.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-idna",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.5-7.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:2.5-7.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-funcsigs",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0.2-13.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:1.0.2-13.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-setuptools_scm",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.15.7-6.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:1.15.7-6.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-pyyaml",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.12-16.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:3.12-16.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-mock",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.0-13.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:2.0.0-13.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-ipaddress",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0.18-6.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:1.0.18-6.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-markupsafe",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.23-19.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:0.23-19.module_el8.6.0+2781+fed64c13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python27:2.7::python2-pytest",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.2-13.module_el8.6.0+2781+fed64c13"
+					}
+				],
+				"fixed": [
+					"0:3.4.2-13.module_el8.6.0+2781+fed64c13"
 				]
 			}
 		}
