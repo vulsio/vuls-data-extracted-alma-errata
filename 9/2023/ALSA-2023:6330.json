@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-2650",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-2650"
-				}
-			]
-		},
-		{
 			"id": "CVE-2019-14560",
 			"references": [
 				{
@@ -60,9 +51,60 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2019-14560"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-2650",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-2650"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "edk2-aarch64",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:20230524-3.el9"
+					}
+				],
+				"fixed": [
+					"0:20230524-3.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "edk2-ovmf",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:20230524-3.el9"
+					}
+				],
+				"fixed": [
+					"0:20230524-3.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -92,48 +134,6 @@
 				"architectures": [
 					"aarch64",
 					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:20230524-3.el9"
-					}
-				],
-				"fixed": [
-					"0:20230524-3.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "edk2-aarch64",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:20230524-3.el9"
-					}
-				],
-				"fixed": [
-					"0:20230524-3.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "edk2-ovmf",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
