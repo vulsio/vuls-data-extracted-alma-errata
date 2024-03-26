@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2020-1766.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2018-20337"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-3825"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2020-1766.html"
 				}
 			],
 			"published": "2020-04-28T09:13:23Z",
@@ -43,6 +43,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2018-20337",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2018-20337"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-12447",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-12447"
+				}
+			]
+		},
 		{
 			"id": "CVE-2019-12448",
 			"references": [
@@ -69,24 +87,6 @@
 					"url": "https://vulners.com/cve/CVE-2019-3825"
 				}
 			]
-		},
-		{
-			"id": "CVE-2018-20337",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2018-20337"
-				}
-			]
-		},
-		{
-			"id": "CVE-2019-12447",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-12447"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -94,10 +94,52 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "clutter",
+				"name": "mozjs52",
 				"architectures": [
 					"x86_64",
-					"i686",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:52.9.0-2.el8"
+					}
+				],
+				"fixed": [
+					"0:52.9.0-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mozjs52",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:52.9.0-2.el8.alma"
+					}
+				],
+				"fixed": [
+					"0:52.9.0-2.el8.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "clutter-doc",
+				"architectures": [
+					"x86_64",
 					"aarch64",
 					"ppc64le"
 				]
@@ -118,10 +160,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mozjs60-devel",
+				"name": "mozjs60",
 				"architectures": [
 					"x86_64",
-					"i686",
 					"aarch64"
 				]
 			},
@@ -141,7 +182,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mozjs60-devel",
+				"name": "mozjs60",
 				"architectures": [
 					"ppc64le"
 				]
@@ -162,20 +203,21 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "gnome-tweaks",
+				"name": "accountsservice-devel",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"i686"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.28.1-7.el8"
+						"lt": "0:0.6.50-8.el8"
 					}
 				],
 				"fixed": [
-					"0:3.28.1-7.el8"
+					"0:0.6.50-8.el8"
 				]
 			}
 		},
@@ -207,21 +249,65 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "accountsservice-devel",
+				"name": "mozjs52-devel",
 				"architectures": [
 					"x86_64",
-					"i686"
+					"i686",
+					"aarch64"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.6.50-8.el8"
+						"lt": "0:52.9.0-2.el8"
 					}
 				],
 				"fixed": [
-					"0:0.6.50-8.el8"
+					"0:52.9.0-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mozjs52-devel",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:52.9.0-2.el8.alma"
+					}
+				],
+				"fixed": [
+					"0:52.9.0-2.el8.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "gjs-devel",
+				"architectures": [
+					"i686",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.56.2-4.el8"
+					}
+				],
+				"fixed": [
+					"0:1.56.2-4.el8"
 				]
 			}
 		},
@@ -274,10 +360,31 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "clutter-doc",
+				"name": "mozjs60-devel",
 				"architectures": [
 					"x86_64",
-					"aarch64",
+					"i686",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:60.9.0-4.el8"
+					}
+				],
+				"fixed": [
+					"0:60.9.0-4.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mozjs60-devel",
+				"architectures": [
 					"ppc64le"
 				]
 			},
@@ -285,11 +392,33 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.26.2-8.el8"
+						"lt": "0:60.9.0-4.el8.alma"
 					}
 				],
 				"fixed": [
-					"0:1.26.2-8.el8"
+					"0:60.9.0-4.el8.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "vala",
+				"architectures": [
+					"x86_64",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.40.19-1.el8"
+					}
+				],
+				"fixed": [
+					"0:0.40.19-1.el8"
 				]
 			}
 		},
@@ -321,75 +450,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "vala",
-				"architectures": [
-					"x86_64",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.40.19-1.el8"
-					}
-				],
-				"fixed": [
-					"0:0.40.19-1.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "gjs-devel",
-				"architectures": [
-					"i686",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.56.2-4.el8"
-					}
-				],
-				"fixed": [
-					"0:1.56.2-4.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mozjs52-devel",
+				"name": "clutter",
 				"architectures": [
 					"x86_64",
 					"i686",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:52.9.0-2.el8"
-					}
-				],
-				"fixed": [
-					"0:52.9.0-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mozjs52-devel",
-				"architectures": [
+					"aarch64",
 					"ppc64le"
 				]
 			},
@@ -397,11 +462,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:52.9.0-2.el8.alma"
+						"lt": "0:1.26.2-8.el8"
 					}
 				],
 				"fixed": [
-					"0:52.9.0-2.el8.alma"
+					"0:1.26.2-8.el8"
 				]
 			}
 		},
@@ -433,85 +498,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mozjs52",
+				"name": "gnome-tweaks",
 				"architectures": [
-					"x86_64",
-					"aarch64"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:52.9.0-2.el8"
+						"lt": "0:3.28.1-7.el8"
 					}
 				],
 				"fixed": [
-					"0:52.9.0-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mozjs52",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:52.9.0-2.el8.alma"
-					}
-				],
-				"fixed": [
-					"0:52.9.0-2.el8.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mozjs60",
-				"architectures": [
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:60.9.0-4.el8"
-					}
-				],
-				"fixed": [
-					"0:60.9.0-4.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mozjs60",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:60.9.0-4.el8.alma"
-					}
-				],
-				"fixed": [
-					"0:60.9.0-4.el8.alma"
+					"0:3.28.1-7.el8"
 				]
 			}
 		}

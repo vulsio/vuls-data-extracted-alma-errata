@@ -32,20 +32,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-39275",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-39275"
-				}
-			]
-		},
-		{
 			"id": "CVE-2021-34798",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-34798"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39275",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-39275"
 				}
 			]
 		}
@@ -55,20 +55,42 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_ssl",
+				"name": "httpd:2.4::httpd-manual",
 				"architectures": [
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
+						"lt": "0:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
 					}
 				],
 				"fixed": [
-					"1:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
+					"0:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::mod_md",
+				"architectures": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+					}
+				],
+				"fixed": [
+					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
 				]
 			}
 		},
@@ -160,9 +182,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-manual",
+				"name": "httpd:2.4::httpd-devel",
 				"architectures": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -223,7 +245,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-devel",
+				"name": "httpd:2.4::mod_ssl",
 				"architectures": [
 					"x86_64"
 				]
@@ -232,33 +254,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
+						"lt": "1:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
 					}
 				],
 				"fixed": [
-					"0:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_md",
-				"architectures": [
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-					}
-				],
-				"fixed": [
-					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+					"1:2.4.37-43.module_el8.5.0+2630+51c6d843.2.alma"
 				]
 			}
 		}
