@@ -19,14 +19,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105428"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105422"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:6448"
 				},
 				{
@@ -36,6 +28,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2102001"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105422"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105426"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105428"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,14 +59,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2102001"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105426"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2105430"
 				}
 			],
@@ -67,15 +67,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-32212",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-32213",
 			"references": [
@@ -111,9 +102,39 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-33987"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-32212",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:14::nodejs-packaging",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:23-3.module_el8.5.0+2618+8d46dafd"
+					}
+				],
+				"fixed": [
+					"0:23-3.module_el8.5.0+2618+8d46dafd"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -249,27 +270,6 @@
 				],
 				"fixed": [
 					"0:2.0.19-2.module_el8.6.0+3261+490666b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:14::nodejs-packaging",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:23-3.module_el8.5.0+2618+8d46dafd"
-					}
-				],
-				"fixed": [
-					"0:23-3.module_el8.5.0+2618+8d46dafd"
 				]
 			}
 		}
