@@ -15,23 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/1939614"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38469"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38470"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38472"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2191687"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2191692"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-7836.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38473"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,11 +39,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-3468"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38471"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38472"
+					"url": "https://bugzilla.redhat.com/1939614"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -55,19 +51,23 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-7836.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38473"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2191692"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-3468"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2191694"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38469"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38470"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38471"
 				}
 			],
 			"published": "2023-12-14T00:00:00Z",
@@ -75,6 +75,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-38472",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38472"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-38473",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38473"
+				}
+			]
+		},
 		{
 			"id": "CVE-2021-3468",
 			"references": [
@@ -110,24 +128,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-38471"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-38472",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38472"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-38473",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38473"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -135,9 +135,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-ui",
+				"name": "avahi-autoipd",
 				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -160,9 +159,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi",
+				"name": "python3-avahi",
 				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -185,34 +183,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-gobject",
+				"name": "avahi-tools",
 				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7-21.el8_9.1"
-					}
-				],
-				"fixed": [
-					"0:0.7-21.el8_9.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-glib",
-				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -260,82 +232,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7-21.el8_9.1"
-					}
-				],
-				"fixed": [
-					"0:0.7-21.el8_9.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-compat-howl",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7-21.el8_9.1"
-					}
-				],
-				"fixed": [
-					"0:0.7-21.el8_9.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-compat-howl-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7-21.el8_9.1"
-					}
-				],
-				"fixed": [
-					"0:0.7-21.el8_9.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-gobject-devel",
+				"name": "avahi-compat-libdns_sd",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -385,8 +282,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-autoipd",
+				"name": "avahi-glib",
 				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -434,7 +332,82 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-compat-libdns_sd",
+				"name": "avahi-compat-howl-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7-21.el8_9.1"
+					}
+				],
+				"fixed": [
+					"0:0.7-21.el8_9.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-compat-howl",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7-21.el8_9.1"
+					}
+				],
+				"fixed": [
+					"0:0.7-21.el8_9.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-ui",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7-21.el8_9.1"
+					}
+				],
+				"fixed": [
+					"0:0.7-21.el8_9.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-gobject",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -509,8 +482,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-avahi",
+				"name": "avahi-gobject-devel",
 				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -533,8 +507,34 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-tools",
+				"name": "avahi",
 				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7-21.el8_9.1"
+					}
+				],
+				"fixed": [
+					"0:0.7-21.el8_9.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-devel",
+				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
