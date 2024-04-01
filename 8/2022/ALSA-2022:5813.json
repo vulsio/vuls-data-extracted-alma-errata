@@ -52,6 +52,15 @@
 	],
 	"vulnerabilities": [
 		{
+			"id": "CVE-2022-1785",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1785"
+				}
+			]
+		},
+		{
 			"id": "CVE-2022-1897",
 			"references": [
 				{
@@ -68,18 +77,30 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-1927"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-1785",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1785"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.1763-19.el8_6.4"
+					}
+				],
+				"fixed": [
+					"2:8.0.1763-19.el8_6.4"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -158,27 +179,6 @@
 					"x86_64",
 					"aarch64",
 					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.0.1763-19.el8_6.4"
-					}
-				],
-				"fixed": [
-					"2:8.0.1763-19.el8_6.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-filesystem",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
