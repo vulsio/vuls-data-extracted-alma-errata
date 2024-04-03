@@ -15,6 +15,34 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:2319"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-39260"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2137423"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2107439"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2137422"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-2319.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-24765"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-29187"
 				},
 				{
@@ -23,35 +51,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-39260"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2107439"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-2319.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2319"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-24765"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2073414"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2137422"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2137423"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-39253",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-39253"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-39260",
 			"references": [
@@ -94,6 +85,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-29187"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-39253",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-39253"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -102,27 +102,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "git-email",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.1-1.el9"
-					}
-				],
-				"fixed": [
-					"0:2.39.1-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "git-gui",
 				"architectures": [
 					"noarch"
 				]
@@ -164,99 +143,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "git-credential-libsecret",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.1-1.el9"
+					}
+				],
+				"fixed": [
+					"0:2.39.1-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "git-subtree",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.1-1.el9"
-					}
-				],
-				"fixed": [
-					"0:2.39.1-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "git-core-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.1-1.el9"
-					}
-				],
-				"fixed": [
-					"0:2.39.1-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "git-instaweb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.1-1.el9"
-					}
-				],
-				"fixed": [
-					"0:2.39.1-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "git",
-				"architectures": [
 					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.1-1.el9"
-					}
-				],
-				"fixed": [
-					"0:2.39.1-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "git-all",
-				"architectures": [
-					"noarch"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -317,7 +233,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "perl-Git",
+				"name": "git-instaweb",
 				"architectures": [
 					"noarch"
 				]
@@ -359,12 +275,33 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "git-credential-libsecret",
+				"name": "git-all",
 				"architectures": [
-					"ppc64le",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.1-1.el9"
+					}
+				],
+				"fixed": [
+					"0:2.39.1-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "git",
+				"architectures": [
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -385,10 +322,73 @@
 			"package": {
 				"name": "git-daemon",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.1-1.el9"
+					}
+				],
+				"fixed": [
+					"0:2.39.1-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "git-core-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.1-1.el9"
+					}
+				],
+				"fixed": [
+					"0:2.39.1-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "git-gui",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.1-1.el9"
+					}
+				],
+				"fixed": [
+					"0:2.39.1-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "perl-Git",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -409,10 +409,10 @@
 			"package": {
 				"name": "git-core",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {

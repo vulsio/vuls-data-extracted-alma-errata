@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30589"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -27,7 +27,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30581"
+					"url": "https://errata.almalinux.org/9/ALSA-2023-4330.html"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,7 +35,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30589"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2219824"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,15 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-4330.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4330"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2219824"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30581"
 				}
 			],
 			"published": "2023-07-31T00:00:00Z",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-30590",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-30581",
 			"references": [
@@ -94,6 +85,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-30589"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-30590",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -103,10 +103,10 @@
 			"package": {
 				"name": "nodejs:18::nodejs-devel",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -127,58 +127,10 @@
 			"package": {
 				"name": "nodejs:18::nodejs",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:18.16.1-1.module_el9.2.0+31+cbae0c8e"
-					}
-				],
-				"fixed": [
-					"1:18.16.1-1.module_el9.2.0+31+cbae0c8e"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::npm",
-				"architectures": [
 					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:9.5.1-1.18.16.1.1.module_el9.2.0+31+cbae0c8e"
-					}
-				],
-				"fixed": [
-					"1:9.5.1-1.18.16.1.1.module_el9.2.0+31+cbae0c8e"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs-full-i18n",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -274,6 +226,54 @@
 				],
 				"fixed": [
 					"0:2.0.20-2.module_el9.2.0+29+de583a0b"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::npm",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:9.5.1-1.18.16.1.1.module_el9.2.0+31+cbae0c8e"
+					}
+				],
+				"fixed": [
+					"1:9.5.1-1.18.16.1.1.module_el9.2.0+31+cbae0c8e"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs-full-i18n",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.16.1-1.module_el9.2.0+31+cbae0c8e"
+					}
+				],
+				"fixed": [
+					"1:18.16.1-1.module_el9.2.0+31+cbae0c8e"
 				]
 			}
 		}
