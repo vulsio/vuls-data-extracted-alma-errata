@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46874"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46882"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,7 +23,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2153466"
+					"url": "https://bugzilla.redhat.com/2153449"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2153467"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,7 +35,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46872"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46874"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-46878"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46880"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,7 +55,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2153449"
+					"url": "https://bugzilla.redhat.com/2153466"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,7 +63,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46872"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-45414"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46881"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -56,26 +76,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2153463"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-45414"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46880"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46881"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46882"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2153467"
 				}
 			],
 			"published": "2022-12-15T00:00:00Z",
@@ -83,6 +83,33 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-45414",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-45414"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-46872",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46872"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-46874",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46874"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-46878",
 			"references": [
@@ -118,33 +145,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-46882"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-45414",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-45414"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-46872",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46872"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-46874",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46874"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -164,11 +164,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:102.6.0-2.el8_7.alma"
+						"lt": "0:102.6.0-2.el8_7.alma.plus"
 					}
 				],
 				"fixed": [
-					"0:102.6.0-2.el8_7.alma"
+					"0:102.6.0-2.el8_7.alma.plus"
 				]
 			}
 		},
@@ -178,9 +178,9 @@
 			"package": {
 				"name": "thunderbird",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -188,11 +188,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:102.6.0-2.el8_7.alma.plus"
+						"lt": "0:102.6.0-2.el8_7.alma"
 					}
 				],
 				"fixed": [
-					"0:102.6.0-2.el8_7.alma.plus"
+					"0:102.6.0-2.el8_7.alma"
 				]
 			}
 		}
