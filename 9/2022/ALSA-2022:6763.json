@@ -15,18 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3080"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-38177"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-38178"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2128600"
 				},
 				{
@@ -44,6 +32,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:6763"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3080"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-38177"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-38178"
 				}
 			],
 			"published": "2022-10-03T00:00:00Z",
@@ -80,6 +80,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-dnssec-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-1.el9_0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-1.el9_0.1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -126,30 +147,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-utils",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-1.el9_0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-1.el9_0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "bind-dnssec-utils",
 				"architectures": [
 					"aarch64",
@@ -174,9 +171,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-doc",
+				"name": "bind-devel",
 				"architectures": [
-					"noarch"
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -244,7 +244,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-chroot",
+				"name": "bind-utils",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -268,12 +268,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-devel",
+				"name": "bind-chroot",
 				"architectures": [
-					"i686",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
