@@ -15,15 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2020-4628.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-12802"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-12803"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2020-4628.html"
 				}
 			],
 			"published": "2020-11-03T12:21:42Z",
@@ -32,15 +32,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-12802",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-12802"
-				}
-			]
-		},
-		{
 			"id": "CVE-2020-12803",
 			"references": [
 				{
@@ -48,9 +39,39 @@
 					"url": "https://vulners.com/cve/CVE-2020-12803"
 				}
 			]
+		},
+		{
+			"id": "CVE-2020-12802",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-12802"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "libreoffice-sdk",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:6.3.6.2-3.el8.alma"
+					}
+				],
+				"fixed": [
+					"1:6.3.6.2-3.el8.alma"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -92,27 +113,6 @@
 				],
 				"fixed": [
 					"0:0.5.2-1.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "libreoffice-sdk",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:6.3.6.2-3.el8.alma"
-					}
-				],
-				"fixed": [
-					"1:6.3.6.2-3.el8.alma"
 				]
 			}
 		}
