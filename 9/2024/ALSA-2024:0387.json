@@ -15,15 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2230101"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-0567"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3247"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,27 +23,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2170761"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0568"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3824"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-0387.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:0387"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-0662"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2170770"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,7 +35,31 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2170770"
+					"url": "https://access.redhat.com/errata/RHSA-2024:0387"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0568"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3247"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2230101"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-0387.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3824"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2170761"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -75,33 +75,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-0567",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0567"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-0568",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0568"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-0662",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0662"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-3247",
 			"references": [
@@ -128,6 +101,33 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-3824"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-0567",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0567"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-0568",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0568"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-0662",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0662"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -135,7 +135,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-devel",
+				"name": "php:8.1::php-gd",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -159,7 +159,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-pecl-xdebug3",
+				"name": "php:8.1::php-common",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -171,11 +171,131 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.1.4-1.module_el9.1.0+15+94ba28e4"
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
 					}
 				],
 				"fixed": [
-					"0:3.1.4-1.module_el9.1.0+15+94ba28e4"
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-ffi",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-pgsql",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-dbg",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-enchant",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-process",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
 				]
 			}
 		},
@@ -207,7 +327,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-cli",
+				"name": "php:8.1::php-pecl-apcu",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -219,11 +339,35 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+						"lt": "0:5.1.21-1.module_el9.1.0+15+94ba28e4"
 					}
 				],
 				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					"0:5.1.21-1.module_el9.1.0+15+94ba28e4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-pecl-rrd",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.3-4.module_el9.1.0+15+94ba28e4"
+					}
+				],
+				"fixed": [
+					"0:2.0.3-4.module_el9.1.0+15+94ba28e4"
 				]
 			}
 		},
@@ -279,52 +423,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-odbc",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::apcu-panel",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.21-1.module_el9.1.0+15+94ba28e4"
-					}
-				],
-				"fixed": [
-					"0:5.1.21-1.module_el9.1.0+15+94ba28e4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-mysqlnd",
+				"name": "php:8.1::php-soap",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -372,6 +471,30 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "php:8.1::php-snmp",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "php:8.1::php-pecl-zip",
 				"architectures": [
 					"aarch64",
@@ -389,222 +512,6 @@
 				],
 				"fixed": [
 					"0:1.20.1-1.module_el9.1.0+15+94ba28e4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-pecl-apcu",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.21-1.module_el9.1.0+15+94ba28e4"
-					}
-				],
-				"fixed": [
-					"0:5.1.21-1.module_el9.1.0+15+94ba28e4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-dba",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-bcmath",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-process",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-soap",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-gd",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-opcache",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-xml",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-common",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
-					}
-				],
-				"fixed": [
-					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
 				]
 			}
 		},
@@ -660,7 +567,55 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-dbg",
+				"name": "php:8.1::php-bcmath",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-pecl-xdebug3",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.module_el9.1.0+15+94ba28e4"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.module_el9.1.0+15+94ba28e4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-odbc",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -732,7 +687,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-snmp",
+				"name": "php:8.1::php-opcache",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -756,7 +711,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-pgsql",
+				"name": "php:8.1::php-xml",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -780,31 +735,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-pecl-rrd",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.0.3-4.module_el9.1.0+15+94ba28e4"
-					}
-				],
-				"fixed": [
-					"0:2.0.3-4.module_el9.1.0+15+94ba28e4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "php:8.1::php-ffi",
+				"name": "php:8.1::php-cli",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -828,7 +759,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php:8.1::php-enchant",
+				"name": "php:8.1::php-mysqlnd",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-devel",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
@@ -853,6 +808,51 @@
 			"vulnerable": true,
 			"package": {
 				"name": "php:8.1::php-intl",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.1.27-1.module_el9.3.0+53+44872dd1"
+					}
+				],
+				"fixed": [
+					"0:8.1.27-1.module_el9.3.0+53+44872dd1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::apcu-panel",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1.21-1.module_el9.1.0+15+94ba28e4"
+					}
+				],
+				"fixed": [
+					"0:5.1.21-1.module_el9.1.0+15+94ba28e4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "php:8.1::php-dba",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
