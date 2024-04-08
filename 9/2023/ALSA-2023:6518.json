@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2179219"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2179220"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28101"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2179219"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-28100",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28100"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-28101",
 			"references": [
 				{
@@ -60,9 +51,43 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28101"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-28100",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28100"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "flatpak-session-helper",
+				"architectures": [
+					"i686",
+					"aarch64",
+					"ppc64le",
+					"s390x",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.12.8-1.el9"
+					}
+				],
+				"fixed": [
+					"0:1.12.8-1.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -139,31 +164,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "flatpak",
-				"architectures": [
-					"i686",
-					"aarch64",
-					"ppc64le",
-					"s390x",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.12.8-1.el9"
-					}
-				],
-				"fixed": [
-					"0:1.12.8-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "flatpak-session-helper",
 				"architectures": [
 					"i686",
 					"aarch64",

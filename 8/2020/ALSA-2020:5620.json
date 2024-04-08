@@ -15,14 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2020-5620.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-14349"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-14350"
 				},
 				{
@@ -40,6 +32,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-25696"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2020-5620.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-14349"
 				}
 			],
 			"published": "2020-12-17T15:30:10Z",
@@ -47,24 +47,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2020-14349",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-14349"
-				}
-			]
-		},
-		{
-			"id": "CVE-2020-14350",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-14350"
-				}
-			]
-		},
 		{
 			"id": "CVE-2020-1720",
 			"references": [
@@ -100,9 +82,48 @@
 					"url": "https://vulners.com/cve/CVE-2020-25696"
 				}
 			]
+		},
+		{
+			"id": "CVE-2020-14349",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-14349"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14350",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-14350"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::postgres-decoderbufs",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.10.0-2.module_el8.6.0+2760+1746ec94"
+					}
+				],
+				"fixed": [
+					"0:0.10.0-2.module_el8.6.0+2760+1746ec94"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -122,27 +143,6 @@
 				],
 				"fixed": [
 					"0:0.10.0-2.module_el8.6.0+2758+4f4474df"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::postgres-decoderbufs",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.10.0-2.module_el8.6.0+2760+1746ec94"
-					}
-				],
-				"fixed": [
-					"0:0.10.0-2.module_el8.6.0+2760+1746ec94"
 				]
 			}
 		}
