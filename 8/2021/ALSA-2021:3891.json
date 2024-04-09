@@ -15,22 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-3891.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35550"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35559"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35561"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-35565"
 				},
 				{
@@ -43,7 +27,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35586"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35550"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-35556"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35561"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,7 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35586"
+					"url": "https://errata.almalinux.org/8/ALSA-2021-3891.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35559"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -63,42 +63,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2021-35561",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35561"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-35564",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35564"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-35565",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35565"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-35578",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35578"
-				}
-			]
-		},
 		{
 			"id": "CVE-2021-35556",
 			"references": [
@@ -114,6 +78,15 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-35559"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-35564",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35564"
 				}
 			]
 		},
@@ -152,6 +125,33 @@
 					"url": "https://vulners.com/cve/CVE-2021-35550"
 				}
 			]
+		},
+		{
+			"id": "CVE-2021-35565",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35565"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-35578",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35578"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-35561",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35561"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -159,7 +159,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-jmods-slowdebug",
+				"name": "java-11-openjdk-jmods-fastdebug",
 				"architectures": [
 					"x86_64"
 				]
@@ -180,7 +180,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-slowdebug",
+				"name": "java-11-openjdk-src",
 				"architectures": [
 					"x86_64"
 				]
@@ -201,7 +201,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-demo",
+				"name": "java-11-openjdk-javadoc",
 				"architectures": [
 					"x86_64"
 				]
@@ -222,7 +222,112 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-devel",
+				"name": "java-11-openjdk-jmods",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-javadoc-zip",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-headless-slowdebug",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-fastdebug",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-static-libs-slowdebug",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-headless",
 				"architectures": [
 					"x86_64"
 				]
@@ -264,7 +369,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-jmods-fastdebug",
+				"name": "java-11-openjdk-headless-fastdebug",
 				"architectures": [
 					"x86_64"
 				]
@@ -306,6 +411,48 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "java-11-openjdk-devel-fastdebug",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-slowdebug",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "java-11-openjdk-src-slowdebug",
 				"architectures": [
 					"x86_64"
@@ -327,7 +474,49 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-javadoc",
+				"name": "java-11-openjdk-jmods-slowdebug",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-demo",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.13.0.8-1.el8_4"
+					}
+				],
+				"fixed": [
+					"1:11.0.13.0.8-1.el8_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk",
 				"architectures": [
 					"x86_64"
 				]
@@ -411,153 +600,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-devel-fastdebug",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-headless-fastdebug",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-headless",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-jmods",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-javadoc-zip",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-fastdebug",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-static-libs-slowdebug",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "java-11-openjdk-demo-slowdebug",
 				"architectures": [
 					"x86_64"
@@ -579,49 +621,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-headless-slowdebug",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.13.0.8-1.el8_4"
-					}
-				],
-				"fixed": [
-					"1:11.0.13.0.8-1.el8_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-src",
+				"name": "java-11-openjdk-devel",
 				"architectures": [
 					"x86_64"
 				]
