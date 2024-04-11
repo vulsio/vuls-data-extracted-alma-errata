@@ -15,27 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2063257"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-26353"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2036966"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2036998"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-4207"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-26354"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,7 +35,23 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-4207"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2063257"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2021-4206"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-26353"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-26354"
 				}
 			],
 			"published": "2022-08-02T00:00:00Z",
@@ -59,6 +59,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-26353",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-26353"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-26354",
 			"references": [
@@ -85,15 +94,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2021-4207"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-26353",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-26353"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -101,28 +101,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::seabios-bin",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage",
+				"name": "virt:rhel::hivex",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -133,11 +112,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
 					}
 				],
 				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -145,344 +124,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::supermin-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-gluster",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-hw-usbredir",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-java",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::python3-libvirt",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::ocaml-libguestfs-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::virt-v2v-man-pages-uk",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-gzip-filter",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::seabios",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-tmpdisk-plugin",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libtpms-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.9.1-0.20211126git1ff6fe1f43.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:0.9.1-0.20211126git1ff6fe1f43.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::supermin",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-scsi",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-gobject",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libnbd-bash-completion",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-img",
+				"name": "virt:rhel::qemu-kvm-block-curl",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -498,189 +140,6 @@
 				],
 				"fixed": [
 					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-logical",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-dbus",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.0-2.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.3.0-2.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::sgabios-bin",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::ocaml-libnbd",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::swtpm-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-xfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-iscsi",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -711,6 +170,142 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "virt:rhel::nbdkit",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-iscsi-direct",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libnbd-bash-completion",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::python3-libguestfs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::netcf-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "virt:rhel::libvirt-daemon-config-nwfilter",
 				"architectures": [
 					"x86_64",
@@ -734,31 +329,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::ocaml-libnbd-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-client",
+				"name": "virt:rhel::libvirt",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -781,11 +352,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::nbdkit-ssh-plugin",
+				"name": "virt:rhel::nbdkit-bash-completion",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -804,7 +373,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libguestfs-gfs2",
+				"name": "virt:rhel::qemu-kvm-ui-spice",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-nodedev",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -815,11 +405,34 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libnbd",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -850,20 +463,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libguestfs-inspect-icons",
+				"name": "virt:rhel::qemu-kvm-hw-usbredir",
 				"architectures": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
 					}
 				],
 				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
 				]
 			}
 		},
@@ -871,8 +484,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-wireshark",
+				"name": "virt:rhel::ocaml-hivex",
 				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -882,11 +496,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
 					}
 				],
 				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -894,74 +508,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::virt-v2v-man-pages-ja",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libnbd-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::netcf-libs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-linuxdisk-plugin",
+				"name": "virt:rhel::nbdkit-xz-filter",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -984,7 +531,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libiscsi",
+				"name": "virt:rhel::libguestfs-gobject-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -995,11 +542,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 					}
 				],
 				"fixed": [
-					"0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 				]
 			}
 		},
@@ -1007,7 +554,162 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libguestfs-tools",
+				"name": "virt:rhel::virt-v2v",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::seabios-bin",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-appliance",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-xfs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-block-ssh",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-block-rbd",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::virt-v2v-bash-completion",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-inspect-icons",
 				"architectures": [
 					"noarch"
 				]
@@ -1021,6 +723,120 @@
 				],
 				"fixed": [
 					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-block-gluster",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-tests",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-basic-plugins",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::ocaml-libnbd",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -1074,20 +890,137 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::qemu-kvm-block-gluster",
+				"name": "virt:rhel::libvirt-lock-sanlock",
 				"architectures": [
-					"x86_64"
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-gluster",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::swtpm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libiscsi-utils",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-disk",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-client",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -1096,6 +1029,75 @@
 			"vulnerable": true,
 			"package": {
 				"name": "virt:rhel::libguestfs-java-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-java",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-scsi",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-gobject",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -1139,122 +1141,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::python3-hivex",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-xz-filter",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::ocaml-libguestfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libiscsi-utils",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-man-pages-uk",
+				"name": "virt:rhel::virt-v2v-man-pages-uk",
 				"architectures": [
 					"noarch"
 				]
@@ -1263,758 +1150,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-ui-spice",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::ruby-libguestfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-interface",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-qemu",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::python3-libguestfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::perl-Sys-Virt",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-disk",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-core",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::perl-Sys-Guestfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdfuse",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::SLOF",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:20210217-1.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:20210217-1.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-rsync",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-gobject-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-ui-opengl",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::ocaml-hivex",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-bash-completion",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::ocaml-hivex-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::lua-guestfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-appliance",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::hivex",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-man-pages-ja",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-block-ssh",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-libs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-docs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-python-plugin",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-nodedev",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-block-rbd",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-vddk-plugin",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-basic-plugins",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-javadoc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-server",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-config-network",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -2045,22 +1185,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::nbdkit-basic-filters",
+				"name": "virt:rhel::sgabios",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"x86_64"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+						"lt": "1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
 					}
 				],
 				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					"1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -2068,212 +1206,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-network",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::swtpm-tools-pkcs11",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-tests",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-bash-completion",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon-kvm",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libguestfs-tools-c",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-					}
-				],
-				"fixed": [
-					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::swtpm",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::python3-libnbd",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::swtpm-tools",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::netcf-devel",
+				"name": "virt:rhel::netcf",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2289,6 +1222,29 @@
 				],
 				"fixed": [
 					"0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::perl-Sys-Virt",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -2319,7 +1275,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::nbdkit-nbd-plugin",
+				"name": "virt:rhel::libtpms-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2330,11 +1286,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+						"lt": "0:0.9.1-0.20211126git1ff6fe1f43.module_el8.6.0+2880+7d9e3703"
 					}
 				],
 				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					"0:0.9.1-0.20211126git1ff6fe1f43.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -2342,7 +1298,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::ruby-hivex",
+				"name": "virt:rhel::libguestfs-javadoc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::lua-guestfs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2353,11 +1330,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 					}
 				],
 				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 				]
 			}
 		},
@@ -2365,7 +1342,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::qemu-kvm",
+				"name": "virt:rhel::libvirt-daemon-driver-storage-iscsi",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2376,11 +1353,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -2388,53 +1365,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::nbdkit-curl-plugin",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::hivex-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-					}
-				],
-				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libnbd",
+				"name": "virt:rhel::python3-libnbd",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2457,7 +1388,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::nbdkit-gzip-plugin",
+				"name": "virt:rhel::libvirt-daemon-driver-nwfilter",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2468,11 +1399,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -2481,6 +1412,29 @@
 			"vulnerable": true,
 			"package": {
 				"name": "virt:rhel::libiscsi-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.18.0-8.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libiscsi",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2526,30 +1480,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::qemu-kvm-common",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-					}
-				],
-				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::nbdkit-tar-plugin",
+				"name": "virt:rhel::nbdkit-nbd-plugin",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2572,7 +1503,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::perl-hivex",
+				"name": "virt:rhel::libnbd-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2583,11 +1514,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
 					}
 				],
 				"fixed": [
-					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -2595,7 +1526,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::virt-v2v-bash-completion",
+				"name": "virt:rhel::libguestfs-bash-completion",
 				"architectures": [
 					"noarch"
 				]
@@ -2604,11 +1535,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 					}
 				],
 				"fixed": [
-					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 				]
 			}
 		},
@@ -2616,7 +1547,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::netcf",
+				"name": "virt:rhel::nbdkit-python-plugin",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2627,11 +1558,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
 					}
 				],
 				"fixed": [
-					"0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -2639,7 +1570,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-secret",
+				"name": "virt:rhel::libguestfs-tools-c",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2650,11 +1581,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 					}
 				],
 				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 				]
 			}
 		},
@@ -2662,7 +1593,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::qemu-guest-agent",
+				"name": "virt:rhel::seabios",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.15.0-2.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2685,7 +1637,53 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-iscsi-direct",
+				"name": "virt:rhel::qemu-kvm-docs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::swtpm-tools-pkcs11",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-interface",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2701,50 +1699,6 @@
 				],
 				"fixed": [
 					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::libvirt-daemon",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::virt-v2v",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -2775,30 +1729,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-storage-rbd",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-block-curl",
+				"name": "virt:rhel::qemu-kvm-block-iscsi",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2821,7 +1752,97 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::nbdkit-devel",
+				"name": "virt:rhel::virt-v2v-man-pages-ja",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"1:1.42.0-19.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::swtpm-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-rsync",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::supermin-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-basic-filters",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2844,30 +1865,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-lock-sanlock",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "virt:rhel::qemu-kvm-core",
+				"name": "virt:rhel::qemu-img",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2883,6 +1881,52 @@
 				],
 				"fixed": [
 					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-server",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-ssh-plugin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -2913,7 +1957,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::qemu-kvm-block-iscsi",
+				"name": "virt:rhel::libguestfs-tools",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -2924,11 +1989,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -2936,20 +2001,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::sgabios",
+				"name": "virt:rhel::libvirt-daemon-driver-network",
 				"architectures": [
-					"x86_64"
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 					}
 				],
 				"fixed": [
-					"1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
 				]
 			}
 		},
@@ -2980,6 +2047,418 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "virt:rhel::swtpm-tools",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:0.7.0-1.20211109gitb79fd91.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::ruby-libguestfs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-tmpdisk-plugin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::hivex-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdfuse",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::python3-libvirt",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-1.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-gfs2",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-secret",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-config-network",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-qemu",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::ocaml-libguestfs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-curl-plugin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::supermin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:5.2.1-1.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-rbd",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::perl-Sys-Guestfs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-man-pages-ja",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-kvm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-wireshark",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "virt:rhel::virt-dib",
 				"architectures": [
 					"x86_64",
@@ -2996,6 +2475,207 @@
 				],
 				"fixed": [
 					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-ui-opengl",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-common",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-guest-agent",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-gzip-plugin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-core",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-dbus",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.0-2.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.3.0-2.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-linuxdisk-plugin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libguestfs-man-pages-uk",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::sgabios-bin",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"1:0.20170427git-3.module_el8.6.0+2880+7d9e3703"
 				]
 			}
 		},
@@ -3026,7 +2706,146 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "virt:rhel::libvirt-daemon-driver-nwfilter",
+				"name": "virt:rhel::ruby-hivex",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::qemu-kvm-core",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+					}
+				],
+				"fixed": [
+					"15:6.2.0-11.module_el8.6.0+3071+a07c0ea5.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::netcf-libs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:0.2.8-12.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::ocaml-libnbd-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.6.0-5.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-gzip-filter",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-tar-plugin",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-libs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -3042,6 +2861,187 @@
 				],
 				"fixed": [
 					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon-driver-storage-logical",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::perl-hivex",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::SLOF",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:20210217-1.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:20210217-1.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::ocaml-hivex-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::python3-hivex",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.3.18-23.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::nbdkit-vddk-plugin",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+					}
+				],
+				"fixed": [
+					"0:1.24.0-4.module_el8.6.0+2880+7d9e3703"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::libvirt-daemon",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-5.2.module_el8.6.0+3071+a07c0ea5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "virt:rhel::ocaml-libguestfs-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
+					}
+				],
+				"fixed": [
+					"1:1.44.0-5.module_el8.6.0+2880+7d9e3703.alma"
 				]
 			}
 		}

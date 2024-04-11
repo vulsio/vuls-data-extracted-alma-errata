@@ -15,7 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2168631"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,7 +27,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2209501"
+					"url": "https://bugzilla.redhat.com/2209497"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,7 +35,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4904"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,11 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
+					"url": "https://bugzilla.redhat.com/2168631"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2209497"
+					"url": "https://bugzilla.redhat.com/2209501"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -56,10 +60,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4035"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4904"
 				}
 			],
 			"published": "2023-07-12T00:00:00Z",
@@ -67,6 +67,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-31147",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-32067",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-4904",
 			"references": [
@@ -93,27 +111,54 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-31130"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-31147",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-31147"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-32067",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32067"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs-packaging-bundler",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2021.06-4.module_el8.7.0+3343+ea2b7901"
+					}
+				],
+				"fixed": [
+					"0:2021.06-4.module_el8.7.0+3343+ea2b7901"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.14.2-3.module_el8.8.0+3587+ee652244"
+					}
+				],
+				"fixed": [
+					"1:18.14.2-3.module_el8.8.0+3587+ee652244"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -246,51 +291,6 @@
 				],
 				"fixed": [
 					"0:2021.06-4.module_el8.7.0+3343+ea2b7901"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs-packaging-bundler",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2021.06-4.module_el8.7.0+3343+ea2b7901"
-					}
-				],
-				"fixed": [
-					"0:2021.06-4.module_el8.7.0+3343+ea2b7901"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:18.14.2-3.module_el8.8.0+3587+ee652244"
-					}
-				],
-				"fixed": [
-					"1:18.14.2-3.module_el8.8.0+3587+ee652244"
 				]
 			}
 		}
