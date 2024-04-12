@@ -15,19 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-4011"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-4010"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-4009"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-4011"
+					"url": "https://access.redhat.com/errata/RHSA-2022:1917"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-4010"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,23 +35,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-1917.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2022:1917"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2026059"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2026073"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2026074"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -68,6 +48,26 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2021-4009"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-4011"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2026074"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2022-1917.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2026073"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-4011"
 				}
 			],
 			"published": "2022-05-10T00:00:00Z",
@@ -75,24 +75,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2021-4010",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-4010"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-4011",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-4011"
-				}
-			]
-		},
 		{
 			"id": "CVE-2021-4008",
 			"references": [
@@ -110,6 +92,24 @@
 					"url": "https://vulners.com/cve/CVE-2021-4009"
 				}
 			]
+		},
+		{
+			"id": "CVE-2021-4010",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-4010"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4011",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-4011"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -117,22 +117,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-Xorg",
+				"name": "xorg-x11-server-devel",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"i686"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.20.11-5.el8"
+						"lt": "0:1.20.11-5.el8_6.2"
 					}
 				],
 				"fixed": [
-					"0:1.20.11-5.el8"
+					"0:1.20.11-5.el8_6.2"
 				]
 			}
 		},
@@ -140,32 +138,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-common",
+				"name": "xorg-x11-server-devel",
 				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-5.el8"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-5.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-source",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
@@ -207,29 +185,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-Xnest",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-5.el8"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-5.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "xorg-x11-server-Xdmx",
 				"architectures": [
 					"x86_64",
@@ -253,7 +208,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-Xephyr",
+				"name": "xorg-x11-server-Xorg",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -299,9 +254,29 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-devel",
+				"name": "xorg-x11-server-source",
 				"architectures": [
-					"i686",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-5.el8"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-5.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xnest",
+				"architectures": [
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -323,20 +298,45 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-devel",
+				"name": "xorg-x11-server-common",
 				"architectures": [
-					"i686"
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.20.11-5.el8_6.2"
+						"lt": "0:1.20.11-5.el8"
 					}
 				],
 				"fixed": [
-					"0:1.20.11-5.el8_6.2"
+					"0:1.20.11-5.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xephyr",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-5.el8"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-5.el8"
 				]
 			}
 		}
