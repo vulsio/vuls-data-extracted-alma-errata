@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:3585"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-24329"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-3585.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:3585"
 				}
 			],
 			"published": "2023-06-14T00:00:00Z",
@@ -46,6 +46,31 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3.11-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.11.2-2.el9_2.1"
+					}
+				],
+				"fixed": [
+					"0:3.11.2-2.el9_2.1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -180,31 +205,6 @@
 					"i686",
 					"ppc64le",
 					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.11.2-2.el9_2.1"
-					}
-				],
-				"fixed": [
-					"0:3.11.2-2.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3.11-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
 					"aarch64",
 					"s390x"
 				]
