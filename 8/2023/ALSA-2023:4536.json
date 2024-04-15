@@ -15,19 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2219841"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2023-4536.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30588"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30589"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
+					"url": "https://bugzilla.redhat.com/2219841"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,7 +43,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30589"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30588"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-30581",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-30581"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-30588",
 			"references": [
@@ -94,9 +85,90 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-30590"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-30581",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-30581"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs-full-i18n",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.16.1-1.module_el8.8.0+3595+0818e803"
+					}
+				],
+				"fixed": [
+					"1:18.16.1-1.module_el8.8.0+3595+0818e803"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.16.1-1.module_el8.8.0+3595+0818e803"
+					}
+				],
+				"fixed": [
+					"1:18.16.1-1.module_el8.8.0+3595+0818e803"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::npm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:9.5.1-1.18.16.1.1.module_el8.8.0+3595+0818e803"
+					}
+				],
+				"fixed": [
+					"1:9.5.1-1.18.16.1.1.module_el8.8.0+3595+0818e803"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -202,78 +274,6 @@
 				],
 				"fixed": [
 					"0:2021.06-4.module_el8.7.0+3343+ea2b7901"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs-full-i18n",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:18.16.1-1.module_el8.8.0+3595+0818e803"
-					}
-				],
-				"fixed": [
-					"1:18.16.1-1.module_el8.8.0+3595+0818e803"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:18.16.1-1.module_el8.8.0+3595+0818e803"
-					}
-				],
-				"fixed": [
-					"1:18.16.1-1.module_el8.8.0+3595+0818e803"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::npm",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:9.5.1-1.18.16.1.1.module_el8.8.0+3595+0818e803"
-					}
-				],
-				"fixed": [
-					"1:9.5.1-1.18.16.1.1.module_el8.8.0+3595+0818e803"
 				]
 			}
 		}
