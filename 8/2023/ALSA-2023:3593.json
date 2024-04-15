@@ -15,15 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2212615"
+					"url": "https://bugzilla.redhat.com/2192438"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2212617"
+					"url": "https://bugzilla.redhat.com/2213703"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,10 +43,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
 				},
 				{
@@ -55,11 +55,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2192438"
+					"url": "https://bugzilla.redhat.com/2212615"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2213703"
+					"url": "https://bugzilla.redhat.com/2212617"
 				}
 			],
 			"published": "2023-06-14T00:00:00Z",
@@ -67,6 +67,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-24936",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-29331",
 			"references": [
@@ -102,18 +111,33 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-24936",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-templates-7.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.0.107-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:7.0.107-1.el8_8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -166,7 +190,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-host",
+				"name": "dotnet-runtime-7.0",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -183,30 +207,6 @@
 				],
 				"fixed": [
 					"0:7.0.7-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.0.107-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:7.0.107-1.el8_8"
 				]
 			}
 		},
@@ -262,30 +262,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-templates-7.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.0.107-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:7.0.107-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "dotnet-sdk-7.0",
 				"architectures": [
 					"x86_64",
@@ -303,30 +279,6 @@
 				],
 				"fixed": [
 					"0:7.0.107-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "aspnetcore-runtime-7.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.0.7-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:7.0.7-1.el8_8"
 				]
 			}
 		},
@@ -382,7 +334,55 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-runtime-7.0",
+				"name": "dotnet-host",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.0.7-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:7.0.7-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.0.107-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:7.0.107-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "aspnetcore-runtime-7.0",
 				"architectures": [
 					"x86_64",
 					"aarch64",
