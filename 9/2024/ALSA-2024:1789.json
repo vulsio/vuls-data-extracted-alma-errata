@@ -15,23 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+					"url": "https://errata.almalinux.org/9/ALSA-2024-1789.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263896"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263909"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263911"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263917"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5517"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,19 +39,27 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5517"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-1789.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263917"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263909"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263914"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263896"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -67,7 +67,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263914"
+					"url": "https://bugzilla.redhat.com/2263911"
 				}
 			],
 			"published": "2024-04-11T00:00:00Z",
@@ -75,6 +75,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-50868",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-50868"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-5517",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5517"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-5679",
 			"references": [
@@ -110,24 +128,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-50868",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-50868"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-5517",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5517"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -135,31 +135,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-utils",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-14.el9_3.4"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-14.el9_3.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-chroot",
+				"name": "bind",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
@@ -189,6 +165,31 @@
 					"ppc64le",
 					"aarch64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-14.el9_3.4"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-14.el9_3.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-libs",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"i686"
 				]
 			},
 			"affected": {
@@ -270,6 +271,54 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "bind-dnssec-utils",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-14.el9_3.4"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-14.el9_3.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-chroot",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-14.el9_3.4"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-14.el9_3.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "bind-dyndb-ldap",
 				"architectures": [
 					"x86_64",
@@ -287,31 +336,6 @@
 				],
 				"fixed": [
 					"0:11.9-8.el9_3.3.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-libs",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-14.el9_3.4"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-14.el9_3.4"
 				]
 			}
 		},
@@ -347,30 +371,6 @@
 				"name": "bind-license",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-14.el9_3.4"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-14.el9_3.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"affected": {
