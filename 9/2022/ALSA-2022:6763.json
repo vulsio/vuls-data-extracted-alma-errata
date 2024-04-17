@@ -52,6 +52,15 @@
 	],
 	"vulnerabilities": [
 		{
+			"id": "CVE-2022-38178",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-38178"
+				}
+			]
+		},
+		{
 			"id": "CVE-2022-3080",
 			"references": [
 				{
@@ -68,15 +77,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-38177"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-38178",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-38178"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -84,7 +84,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-doc",
+				"name": "python3-bind",
 				"architectures": [
 					"noarch"
 				]
@@ -130,31 +130,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-utils",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-1.el9_0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-1.el9_0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-chroot",
+				"name": "bind",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
@@ -202,7 +178,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-bind",
+				"name": "bind-dnssec-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -244,7 +220,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind",
+				"name": "bind-utils",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-1.el9_0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-1.el9_0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-chroot",
 				"architectures": [
 					"x86_64",
 					"ppc64le",

@@ -15,11 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-25815"
+					"url": "https://access.redhat.com/errata/RHSA-2023:3246"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-22490"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-29007"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2168160"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,15 +39,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2188338"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2023-3246.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-23946"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,19 +47,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-25815"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2188337"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:3246"
+					"url": "https://bugzilla.redhat.com/2188338"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-22490"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2168160"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-23946"
 				}
 			],
 			"published": "2023-05-22T00:00:00Z",
@@ -67,6 +67,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-22490",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-22490"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-23946",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-23946"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-25652",
 			"references": [
@@ -93,24 +111,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-29007"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-22490",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-22490"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-23946",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-23946"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -118,12 +118,72 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "git",
+				"name": "git-all",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.3-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:2.39.3-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "git-instaweb",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.3-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:2.39.3-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "gitweb",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.3-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:2.39.3-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "git-gui",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -143,30 +203,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "git-daemon",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.3-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:2.39.3-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "git-credential-libsecret",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -214,7 +250,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "perl-Git-SVN",
+				"name": "git-svn",
 				"architectures": [
 					"noarch"
 				]
@@ -256,7 +292,31 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "gitk",
+				"name": "git",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.39.3-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:2.39.3-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "perl-Git",
 				"architectures": [
 					"noarch"
 				]
@@ -277,30 +337,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "git-gui",
+				"name": "git-credential-libsecret",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.3-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:2.39.3-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "gitweb",
-				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -343,7 +385,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "git-all",
+				"name": "gitk",
 				"architectures": [
 					"noarch"
 				]
@@ -364,28 +406,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "git-instaweb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.3-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:2.39.3-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "git-svn",
+				"name": "perl-Git-SVN",
 				"architectures": [
 					"noarch"
 				]
@@ -407,27 +428,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "git-core-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.39.3-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:2.39.3-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "perl-Git",
 				"architectures": [
 					"noarch"
 				]
