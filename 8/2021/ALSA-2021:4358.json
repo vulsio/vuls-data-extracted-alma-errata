@@ -36,6 +36,15 @@
 	],
 	"vulnerabilities": [
 		{
+			"id": "CVE-2021-35942",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-35942"
+				}
+			]
+		},
+		{
 			"id": "CVE-2021-27645",
 			"references": [
 				{
@@ -52,18 +61,51 @@
 					"url": "https://vulners.com/cve/CVE-2021-33574"
 				}
 			]
-		},
-		{
-			"id": "CVE-2021-35942",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-35942"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-utils",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.28-164.el8"
+					}
+				],
+				"fixed": [
+					"0:2.28-164.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "compat-libpthread-nonshared",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.28-164.el8"
+					}
+				],
+				"fixed": [
+					"0:2.28-164.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -135,48 +177,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "glibc-benchtests",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.28-164.el8"
-					}
-				],
-				"fixed": [
-					"0:2.28-164.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "glibc-utils",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.28-164.el8"
-					}
-				],
-				"fixed": [
-					"0:2.28-164.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "compat-libpthread-nonshared",
 				"architectures": [
 					"x86_64"
 				]
