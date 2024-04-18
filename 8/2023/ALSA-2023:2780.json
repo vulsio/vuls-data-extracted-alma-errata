@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2780"
+					"url": "https://errata.almalinux.org/8/ALSA-2023-2780.html"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -27,7 +27,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2124669"
+					"url": "https://bugzilla.redhat.com/2132867"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,15 +35,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2132872"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2161274"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-2780.html"
+					"url": "https://access.redhat.com/errata/RHSA-2023:2780"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,14 +51,40 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2132867"
+					"url": "https://bugzilla.redhat.com/2124669"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2132872"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2161274"
 				}
 			],
 			"published": "2023-05-16T00:00:00Z",
-			"modified": "2023-05-20T19:14:39Z"
+			"modified": "2023-05-20T19:14:40Z"
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-41715",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41715"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-41717",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41717"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-27664",
 			"references": [
@@ -93,24 +111,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2880"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-41715",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41715"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-41717",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41717"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -118,10 +118,58 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "osbuild-composer",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:75-1.el8.alma"
+					}
+				],
+				"fixed": [
+					"0:75-1.el8.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "osbuild-composer-worker",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:75-1.el8.alma"
+					}
+				],
+				"fixed": [
+					"0:75-1.el8.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "weldr-client",
 				"architectures": [
-					"x86_64",
 					"aarch64",
+					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -142,10 +190,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "osbuild-composer-worker",
+				"name": "osbuild-composer-core",
 				"architectures": [
-					"x86_64",
 					"aarch64",
+					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -168,56 +216,8 @@
 			"package": {
 				"name": "osbuild-composer-dnf-json",
 				"architectures": [
-					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:75-1.el8.alma"
-					}
-				],
-				"fixed": [
-					"0:75-1.el8.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "osbuild-composer",
-				"architectures": [
 					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:75-1.el8.alma"
-					}
-				],
-				"fixed": [
-					"0:75-1.el8.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "osbuild-composer-core",
-				"architectures": [
-					"x86_64",
-					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
