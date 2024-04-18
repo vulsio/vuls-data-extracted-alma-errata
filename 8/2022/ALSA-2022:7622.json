@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2022:7622"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-30698"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-30699"
 				},
 				{
@@ -28,14 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2022-7622.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2022:7622"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-30698"
 				}
 			],
 			"published": "2022-11-08T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-30698",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-30698"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-30699",
 			"references": [
 				{
@@ -60,9 +51,43 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-30699"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-30698",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-30698"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.16.2-2.el8"
+					}
+				],
+				"fixed": [
+					"0:1.16.2-2.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -118,31 +143,6 @@
 			"package": {
 				"name": "python3-unbound",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.16.2-2.el8"
-					}
-				],
-				"fixed": [
-					"0:1.16.2-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "unbound-devel",
-				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
