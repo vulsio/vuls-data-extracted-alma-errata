@@ -15,14 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2022-7288.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2022:7288"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-3602"
 				},
 				{
@@ -36,6 +28,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2139104"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2022-7288.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2022:7288"
 				}
 			],
 			"published": "2022-11-01T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-3786",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3786"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-3602",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-3602"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-3786",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3786"
 				}
 			]
 		}
@@ -67,12 +67,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "openssl",
+				"name": "openssl-libs",
 				"architectures": [
 					"x86_64",
-					"ppc64le",
+					"i686",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -91,12 +92,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "openssl-libs",
+				"name": "openssl-perl",
 				"architectures": [
-					"x86_64",
-					"i686",
-					"ppc64le",
 					"aarch64",
+					"ppc64le",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -118,8 +118,8 @@
 			"package": {
 				"name": "openssl-devel",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
+					"ppc64le",
 					"x86_64",
 					"i686",
 					"s390x"
@@ -141,12 +141,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "openssl-perl",
+				"name": "openssl",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
