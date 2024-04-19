@@ -15,15 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-12802"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-12803"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2020-4628.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-12802"
 				}
 			],
 			"published": "2020-11-03T12:21:42Z",
@@ -51,6 +51,29 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "libcmis",
+				"architectures": [
+					"x86_64",
+					"i686",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.5.2-1.el8"
+					}
+				],
+				"fixed": [
+					"0:0.5.2-1.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -90,29 +113,6 @@
 				],
 				"fixed": [
 					"1:6.3.6.2-3.el8.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "libcmis",
-				"architectures": [
-					"x86_64",
-					"i686",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.5.2-1.el8"
-					}
-				],
-				"fixed": [
-					"0:0.5.2-1.el8"
 				]
 			}
 		}
