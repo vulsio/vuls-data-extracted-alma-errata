@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-1629",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1629"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-1621",
 			"references": [
 				{
@@ -60,9 +51,41 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-1621"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-1629",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1629"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.1763-19.el8_6.2"
+					}
+				],
+				"fixed": [
+					"2:8.0.1763-19.el8_6.2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -135,29 +158,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "vim-common",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.0.1763-19.el8_6.2"
-					}
-				],
-				"fixed": [
-					"2:8.0.1763-19.el8_6.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-enhanced",
 				"architectures": [
 					"aarch64",
 					"x86_64",

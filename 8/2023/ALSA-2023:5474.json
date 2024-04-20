@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-5474.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:5474"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2239621"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-5474.html"
 				}
 			],
 			"published": "2023-10-05T00:00:00Z",
@@ -75,7 +75,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-pkcs11-devel",
+				"name": "bind-devel",
 				"architectures": [
 					"i686",
 					"aarch64",
@@ -100,7 +100,76 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind",
+				"name": "bind-pkcs11-utils",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-bind",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-utils",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-chroot",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -125,130 +194,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "bind-pkcs11",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-pkcs11-libs",
-				"architectures": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-libs",
-				"architectures": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-lite-devel",
-				"architectures": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-libs-lite",
-				"architectures": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-chroot",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -321,7 +266,82 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-devel",
+				"name": "bind-pkcs11-devel",
+				"architectures": [
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-pkcs11-libs",
+				"architectures": [
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-libs",
+				"architectures": [
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-libs-lite",
 				"architectures": [
 					"i686",
 					"aarch64",
@@ -367,7 +387,32 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-utils",
+				"name": "bind-lite-devel",
+				"architectures": [
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.11.36-8.el8_8.2"
+					}
+				],
+				"fixed": [
+					"32:9.11.36-8.el8_8.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -392,51 +437,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "bind-sdb",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-bind",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.11.36-8.el8_8.2"
-					}
-				],
-				"fixed": [
-					"32:9.11.36-8.el8_8.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-pkcs11-utils",
 				"architectures": [
 					"aarch64",
 					"x86_64",

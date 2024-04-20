@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2097310"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2104905"
 				},
 				{
@@ -40,10 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2081494"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2097310"
 				}
 			],
 			"published": "2022-08-03T00:00:00Z",
@@ -80,6 +80,30 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-libs",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"i686",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.1.1k-7.el8_6"
+					}
+				],
+				"fixed": [
+					"1:1.1.1k-7.el8_6"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -135,30 +159,6 @@
 				"architectures": [
 					"aarch64",
 					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.1.1k-7.el8_6"
-					}
-				],
-				"fixed": [
-					"1:1.1.1k-7.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "openssl-libs",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"i686",
 					"ppc64le"
 				]
 			},
