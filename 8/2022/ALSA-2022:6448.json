@@ -15,11 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105428"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:6448"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32214"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105426"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,7 +47,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105428"
+					"url": "https://bugzilla.redhat.com/2105430"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,19 +55,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105426"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105430"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32214"
 				}
 			],
 			"published": "2022-09-13T00:00:00Z",
@@ -67,24 +67,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-32212",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-32213",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-32214",
 			"references": [
@@ -111,9 +93,99 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-33987"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-32212",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32212"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32213",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:14::nodejs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:14.20.0-2.module_el8.6.0+3261+490666b3"
+					}
+				],
+				"fixed": [
+					"1:14.20.0-2.module_el8.6.0+3261+490666b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:14::npm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
+					}
+				],
+				"fixed": [
+					"1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:14::nodejs-full-i18n",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:14.20.0-2.module_el8.6.0+3261+490666b3"
+					}
+				],
+				"fixed": [
+					"1:14.20.0-2.module_el8.6.0+3261+490666b3"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -181,82 +253,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:14::npm",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
-					}
-				],
-				"fixed": [
-					"1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "nodejs:14::nodejs-devel",
 				"architectures": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:14.20.0-2.module_el8.6.0+3261+490666b3"
-					}
-				],
-				"fixed": [
-					"1:14.20.0-2.module_el8.6.0+3261+490666b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:14::nodejs",
-				"architectures": [
 					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:14.20.0-2.module_el8.6.0+3261+490666b3"
-					}
-				],
-				"fixed": [
-					"1:14.20.0-2.module_el8.6.0+3261+490666b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:14::nodejs-full-i18n",
-				"architectures": [
-					"aarch64",
-					"x86_64",
 					"ppc64le",
 					"s390x"
 				]

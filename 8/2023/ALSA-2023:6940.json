@@ -15,14 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-23527"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28625"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2153655"
 				},
 				{
@@ -36,10 +28,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:6940"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-23527"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28625"
 				}
 			],
 			"published": "2023-11-14T00:00:00Z",
-			"modified": "2023-11-23T10:19:16Z"
+			"modified": "2023-11-23T10:19:18Z"
 		}
 	],
 	"vulnerabilities": [
@@ -69,8 +69,32 @@
 			"package": {
 				"name": "mod_auth_openidc:2.3::cjose-devel",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
+					}
+				],
+				"fixed": [
+					"0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_openidc:2.3::cjose",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -93,8 +117,8 @@
 			"package": {
 				"name": "mod_auth_openidc:2.3::mod_auth_openidc",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -108,30 +132,6 @@
 				],
 				"fixed": [
 					"0:2.4.9.4-5.module_el8.9.0+3631+0ced13d7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mod_auth_openidc:2.3::cjose",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
-					}
-				],
-				"fixed": [
-					"0:0.6.1-4.module_el8.9.0+3631+0ced13d7"
 				]
 			}
 		}

@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2320"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2106671"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2319"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2320"
 				}
 			],
 			"published": "2022-11-15T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-2320",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2320"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-2319",
 			"references": [
 				{
@@ -60,9 +51,114 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2319"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-2320",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2320"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xdmx",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-11.el9"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xorg",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-11.el9"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xvfb",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-11.el9"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-common",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-11.el9"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-11.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -91,58 +187,10 @@
 				"name": "xorg-x11-server-devel",
 				"architectures": [
 					"i686",
+					"s390x",
 					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-11.el9"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-Xvfb",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-11.el9"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-Xorg",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -163,9 +211,9 @@
 			"package": {
 				"name": "xorg-x11-server-Xnest",
 				"architectures": [
-					"aarch64",
 					"ppc64le",
 					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -187,57 +235,9 @@
 			"package": {
 				"name": "xorg-x11-server-Xephyr",
 				"architectures": [
-					"aarch64",
 					"ppc64le",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-11.el9"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-Xdmx",
-				"architectures": [
 					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-11.el9"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-common",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
 					"s390x"
 				]
 			},

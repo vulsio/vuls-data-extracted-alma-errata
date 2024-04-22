@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-22939"
+					"url": "https://vulners.com/cve/CVE-2021-22930"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,11 +23,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32803"
+					"url": "https://vulners.com/cve/CVE-2021-23343"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32804"
+					"url": "https://vulners.com/cve/CVE-2021-32803"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,11 +35,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-22931"
+					"url": "https://vulners.com/cve/CVE-2021-22939"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-23343"
+					"url": "https://vulners.com/cve/CVE-2021-32804"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,7 +47,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-22930"
+					"url": "https://vulners.com/cve/CVE-2021-22931"
 				}
 			],
 			"published": "2021-09-21T12:33:58Z",
@@ -133,10 +133,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:12::nodejs-devel",
+				"name": "nodejs:12::nodejs-docs",
 				"architectures": [
-					"aarch64",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -155,7 +154,29 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:12::nodejs-devel",
+				"name": "nodejs:12::nodejs",
+				"architectures": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
+					}
+				],
+				"fixed": [
+					"1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:12::nodejs",
 				"architectures": [
 					"ppc64le"
 				]
@@ -169,49 +190,6 @@
 				],
 				"fixed": [
 					"1:12.22.5-1.module_el8.5.0+85+79a7b441"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:12::nodejs-nodemon",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.0.3-1.module_el8.4.0+2521+c668cc9f"
-					}
-				],
-				"fixed": [
-					"0:2.0.3-1.module_el8.4.0+2521+c668cc9f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:12::npm",
-				"architectures": [
-					"aarch64",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:6.14.14-1.12.22.5.1.module_el8.4.0+2529+af52a4c7"
-					}
-				],
-				"fixed": [
-					"1:6.14.14-1.12.22.5.1.module_el8.4.0+2529+af52a4c7"
 				]
 			}
 		},
@@ -240,63 +218,21 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:12::nodejs",
+				"name": "nodejs:12::npm",
 				"architectures": [
-					"ppc64le"
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:12.22.5-1.module_el8.5.0+85+79a7b441"
+						"lt": "1:6.14.14-1.12.22.5.1.module_el8.4.0+2529+af52a4c7"
 					}
 				],
 				"fixed": [
-					"1:12.22.5-1.module_el8.5.0+85+79a7b441"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:12::nodejs",
-				"architectures": [
-					"aarch64",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
-					}
-				],
-				"fixed": [
-					"1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:12::nodejs-packaging",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:17-3.module_el8.4.0+2224+b07ac28e"
-					}
-				],
-				"fixed": [
-					"0:17-3.module_el8.4.0+2224+b07ac28e"
+					"1:6.14.14-1.12.22.5.1.module_el8.4.0+2529+af52a4c7"
 				]
 			}
 		},
@@ -334,6 +270,27 @@
 				"type": "rpm",
 				"range": [
 					{
+						"lt": "0:17-3.module_el8.4.0+2224+b07ac28e"
+					}
+				],
+				"fixed": [
+					"0:17-3.module_el8.4.0+2224+b07ac28e"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:12::nodejs-packaging",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
 						"lt": "0:17-3.module_el8.4.0+2521+c668cc9f"
 					}
 				],
@@ -346,7 +303,50 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:12::nodejs-full-i18n",
+				"name": "nodejs:12::nodejs-nodemon",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.3-1.module_el8.4.0+2521+c668cc9f"
+					}
+				],
+				"fixed": [
+					"0:2.0.3-1.module_el8.4.0+2521+c668cc9f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:12::nodejs-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
+					}
+				],
+				"fixed": [
+					"1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:12::nodejs-devel",
 				"architectures": [
 					"ppc64le"
 				]
@@ -369,8 +369,8 @@
 			"package": {
 				"name": "nodejs:12::nodejs-full-i18n",
 				"architectures": [
-					"aarch64",
-					"x86_64"
+					"x86_64",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -389,20 +389,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:12::nodejs-docs",
+				"name": "nodejs:12::nodejs-full-i18n",
 				"architectures": [
-					"noarch"
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
+						"lt": "1:12.22.5-1.module_el8.5.0+85+79a7b441"
 					}
 				],
 				"fixed": [
-					"1:12.22.5-1.module_el8.4.0+2529+af52a4c7"
+					"1:12.22.5-1.module_el8.5.0+85+79a7b441"
 				]
 			}
 		}
