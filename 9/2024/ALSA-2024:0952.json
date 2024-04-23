@@ -15,7 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1546"
+					"url": "https://bugzilla.redhat.com/2265351"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2265352"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2265353"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2265355"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -27,35 +39,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1551"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1552"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2265355"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-0952.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:0952"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2265350"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2265351"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2265353"
+					"url": "https://bugzilla.redhat.com/2265349"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -67,7 +51,27 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1551"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1552"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-1550"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-0952.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:0952"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1546"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -75,11 +79,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2265349"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2265352"
+					"url": "https://bugzilla.redhat.com/2265350"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -91,6 +91,33 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2024-1552",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1552"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-1553",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1553"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-1546",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1546"
+				}
+			]
+		},
 		{
 			"id": "CVE-2024-1547",
 			"references": [
@@ -135,33 +162,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2024-1551"
 				}
 			]
-		},
-		{
-			"id": "CVE-2024-1552",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1552"
-				}
-			]
-		},
-		{
-			"id": "CVE-2024-1553",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1553"
-				}
-			]
-		},
-		{
-			"id": "CVE-2024-1546",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1546"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -169,12 +169,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "firefox",
+				"name": "firefox-x11",
 				"architectures": [
-					"ppc64le",
 					"x86_64",
-					"aarch64",
-					"s390x"
+					"s390x",
+					"ppc64le",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -193,12 +193,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "firefox-x11",
+				"name": "firefox",
 				"architectures": [
-					"ppc64le",
 					"x86_64",
-					"aarch64",
-					"s390x"
+					"s390x",
+					"ppc64le",
+					"aarch64"
 				]
 			},
 			"affected": {
