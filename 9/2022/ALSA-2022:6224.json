@@ -15,19 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2022:6224"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1473"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2081494"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2097310"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,7 +31,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2022-6224.html"
+					"url": "https://access.redhat.com/errata/RHSA-2022:6224"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1343"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1473"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,7 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2081494"
+					"url": "https://errata.almalinux.org/9/ALSA-2022-6224.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -52,14 +60,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2087913"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2097310"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1343"
 				}
 			],
 			"published": "2022-08-30T00:00:00Z",
@@ -67,6 +67,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-1292",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-1343",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1343"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-1473",
 			"references": [
@@ -93,24 +111,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-1292",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-1343",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1343"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -120,11 +120,11 @@
 			"package": {
 				"name": "openssl-devel",
 				"architectures": [
+					"ppc64le",
 					"i686",
 					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -145,11 +145,11 @@
 			"package": {
 				"name": "openssl-libs",
 				"architectures": [
+					"ppc64le",
 					"i686",
 					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -170,10 +170,10 @@
 			"package": {
 				"name": "openssl-perl",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -194,10 +194,10 @@
 			"package": {
 				"name": "openssl",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {

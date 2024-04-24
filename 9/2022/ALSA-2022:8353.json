@@ -39,19 +39,10 @@
 				}
 			],
 			"published": "2022-11-15T00:00:00Z",
-			"modified": "2022-11-17T22:22:16Z"
+			"modified": "2022-11-17T22:22:14Z"
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2021-28861",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-28861"
-				}
-			]
-		},
 		{
 			"id": "CVE-2015-20107",
 			"references": [
@@ -60,9 +51,64 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2015-20107"
 				}
 			]
+		},
+		{
+			"id": "CVE-2021-28861",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-28861"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python-unversioned-command",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.9.14-1.el9"
+					}
+				],
+				"fixed": [
+					"0:3.9.14-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-libs",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.9.14-1.el9"
+					}
+				],
+				"fixed": [
+					"0:3.9.14-1.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -97,8 +143,8 @@
 					"i686",
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -122,8 +168,8 @@
 					"i686",
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -147,8 +193,8 @@
 					"i686",
 					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"s390x",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -169,32 +215,11 @@
 			"package": {
 				"name": "python3-tkinter",
 				"architectures": [
+					"ppc64le",
 					"i686",
 					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.9.14-1.el9"
-					}
-				],
-				"fixed": [
-					"0:3.9.14-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python-unversioned-command",
-				"architectures": [
-					"noarch"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -215,34 +240,9 @@
 			"package": {
 				"name": "python3-devel",
 				"architectures": [
+					"ppc64le",
 					"i686",
 					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.9.14-1.el9"
-					}
-				],
-				"fixed": [
-					"0:3.9.14-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-libs",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
 					"aarch64",
 					"s390x"
 				]

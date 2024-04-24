@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2228038"
 				},
 				{
@@ -28,10 +24,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4634"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
 				}
 			],
 			"published": "2023-08-14T00:00:00Z",
-			"modified": "2023-08-15T09:01:01Z"
+			"modified": "2023-08-15T09:01:04Z"
 		}
 	],
 	"vulnerabilities": [
@@ -50,81 +50,33 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "clippy",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rustfmt",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-std-static-wasm32-wasi",
+				"name": "rust-src",
 				"architectures": [
 					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -185,9 +137,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-src",
+				"name": "rust-toolset",
 				"architectures": [
-					"noarch"
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -206,60 +161,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust",
+				"name": "rustfmt",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-analysis",
-				"architectures": [
 					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-doc",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"ppc64le",
-					"aarch64"
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -280,10 +187,10 @@
 			"package": {
 				"name": "cargo",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -302,12 +209,58 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-analyzer",
+				"name": "rust-std-static",
 				"architectures": [
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-doc",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-std-static-wasm32-wasi",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -347,13 +300,60 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-std-static",
+				"name": "clippy",
 				"architectures": [
-					"i686",
-					"x86_64",
-					"s390x",
 					"ppc64le",
-					"aarch64"
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-analysis",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-analyzer",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
