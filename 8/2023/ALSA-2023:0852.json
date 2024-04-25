@@ -15,22 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2161773"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2161774"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2161777"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2023-0852.html"
 				},
 				{
@@ -44,6 +28,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2161773"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2161774"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2161777"
 				}
 			],
 			"published": "2023-02-21T00:00:00Z",
@@ -86,6 +86,27 @@
 			"package": {
 				"name": "httpd:2.4::mod_md",
 				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+					}
+				],
+				"fixed": [
+					"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::mod_md",
+				"architectures": [
 					"x86_64",
 					"aarch64",
 					"ppc64le"
@@ -100,27 +121,6 @@
 				],
 				"fixed": [
 					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_md",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
-					}
-				],
-				"fixed": [
-					"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
 				]
 			}
 		},
@@ -196,12 +196,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-tools",
+				"name": "httpd:2.4::httpd-filesystem",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -220,9 +217,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-manual",
+				"name": "httpd:2.4::mod_session",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -337,9 +337,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-filesystem",
+				"name": "httpd:2.4::httpd-tools",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -358,12 +361,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_session",
+				"name": "httpd:2.4::httpd-manual",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {

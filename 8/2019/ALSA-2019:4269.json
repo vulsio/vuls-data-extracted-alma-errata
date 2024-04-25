@@ -40,6 +40,15 @@
 	],
 	"vulnerabilities": [
 		{
+			"id": "CVE-2019-9514",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-9514"
+				}
+			]
+		},
+		{
 			"id": "CVE-2019-16884",
 			"references": [
 				{
@@ -65,18 +74,30 @@
 					"url": "https://vulners.com/cve/CVE-2019-9512"
 				}
 			]
-		},
-		{
-			"id": "CVE-2019-9514",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-9514"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:1.0::oci-umount",
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.3.4-2.git87f9237.module_el8.4.0+2496+12421f43"
+					}
+				],
+				"fixed": [
+					"2:2.3.4-2.git87f9237.module_el8.4.0+2496+12421f43"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -123,48 +144,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:1.0::oci-umount",
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:2.3.4-2.git87f9237.module_el8.4.0+2496+12421f43"
-					}
-				],
-				"fixed": [
-					"2:2.3.4-2.git87f9237.module_el8.4.0+2496+12421f43"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:1.0::oci-systemd-hook",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:0.1.15-2.git2d0b8a3.module_el8.5.0+119+9a9ec082"
-					}
-				],
-				"fixed": [
-					"1:0.1.15-2.git2d0b8a3.module_el8.5.0+119+9a9ec082"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "container-tools:1.0::oci-systemd-hook",
 				"architectures": [
 					"x86_64"
@@ -200,6 +179,27 @@
 				],
 				"fixed": [
 					"1:0.1.15-2.git2d0b8a3.module_el8.4.0+2496+12421f43"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:1.0::oci-systemd-hook",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.1.15-2.git2d0b8a3.module_el8.5.0+119+9a9ec082"
+					}
+				],
+				"fixed": [
+					"1:0.1.15-2.git2d0b8a3.module_el8.5.0+119+9a9ec082"
 				]
 			}
 		}
