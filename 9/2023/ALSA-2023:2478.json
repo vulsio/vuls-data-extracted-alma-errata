@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-35252"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-43552"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:2478"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-35252"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-43552",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-43552"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-35252",
 			"references": [
 				{
@@ -60,9 +51,42 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-35252"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-43552",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-43552"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "curl",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.76.1-23.el9"
+					}
+				],
+				"fixed": [
+					"0:7.76.1-23.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -144,30 +168,6 @@
 				"name": "libcurl-minimal",
 				"architectures": [
 					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.76.1-23.el9"
-					}
-				],
-				"fixed": [
-					"0:7.76.1-23.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "curl",
-				"architectures": [
 					"x86_64",
 					"ppc64le",
 					"aarch64",

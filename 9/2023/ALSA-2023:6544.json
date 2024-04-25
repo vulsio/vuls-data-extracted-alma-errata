@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-38559",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38559"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-28879",
 			"references": [
 				{
@@ -60,9 +51,68 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28879"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-38559",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38559"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libgs",
+				"architectures": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-13.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-13.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -193,56 +243,6 @@
 					"aarch64",
 					"s390x",
 					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libgs",
-				"architectures": [
-					"ppc64le",
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ghostscript",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"i686"
 				]
 			},
 			"affected": {
