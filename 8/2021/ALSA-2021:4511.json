@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-22925"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2021-4511.html"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-22898"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-22925"
 				}
 			],
 			"published": "2021-11-09T09:38:13Z",
@@ -35,15 +35,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2021-22898",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-22898"
-				}
-			]
-		},
 		{
 			"id": "CVE-2021-22925",
 			"references": [
@@ -61,9 +52,42 @@
 					"url": "https://vulners.com/cve/CVE-2021-22876"
 				}
 			]
+		},
+		{
+			"id": "CVE-2021-22898",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-22898"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "libcurl-minimal",
+				"architectures": [
+					"x86_64",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.61.1-22.el8"
+					}
+				],
+				"fixed": [
+					"0:7.61.1-22.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -118,30 +142,6 @@
 			"package": {
 				"name": "curl",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.61.1-22.el8"
-					}
-				],
-				"fixed": [
-					"0:7.61.1-22.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "libcurl-minimal",
-				"architectures": [
-					"x86_64",
 					"x86_64",
 					"aarch64",
 					"ppc64le"
