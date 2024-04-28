@@ -19,22 +19,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:5259"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32091"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-38791"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2163609"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-32084"
 				},
 				{
@@ -52,6 +36,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2130105"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2163609"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:5259"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32091"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-38791"
 				}
 			],
 			"published": "2023-09-19T00:00:00Z",
@@ -125,7 +125,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-server-galera",
+				"name": "mariadb:10.3::mariadb-backup",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -149,7 +149,55 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-server",
+				"name": "mariadb:10.3::mariadb-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb:10.3::mariadb-gssapi-server",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb:10.3::mariadb-errmsg",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -241,7 +289,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-backup",
+				"name": "mariadb:10.3::mariadb-embedded",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -289,6 +337,30 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "mariadb:10.3::mariadb-oqgraph-engine",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "mariadb:10.3::galera",
 				"architectures": [
 					"x86_64",
@@ -313,7 +385,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-embedded",
+				"name": "mariadb:10.3::mariadb-server-galera",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -361,79 +433,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mariadb:10.3::mariadb-oqgraph-engine",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mariadb:10.3::mariadb-errmsg",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mariadb:10.3::mariadb-gssapi-server",
+				"name": "mariadb:10.3::mariadb-server",
 				"architectures": [
 					"x86_64",
 					"aarch64",
