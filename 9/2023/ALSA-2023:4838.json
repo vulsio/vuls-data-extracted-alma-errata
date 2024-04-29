@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2230495"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-4838.html"
 				},
 				{
@@ -24,14 +28,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32360"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2230495"
 				}
 			],
 			"published": "2023-08-29T00:00:00Z",
-			"modified": "2023-08-30T09:39:23Z"
+			"modified": "2023-08-30T09:39:25Z"
 		}
 	],
 	"vulnerabilities": [
@@ -50,12 +50,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "cups-ipptool",
+				"name": "cups-filesystem",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -74,11 +71,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "cups-client",
+				"name": "cups-devel",
 				"architectures": [
-					"x86_64",
 					"ppc64le",
+					"i686",
 					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -100,57 +98,9 @@
 			"package": {
 				"name": "cups-lpd",
 				"architectures": [
-					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.3.3op2-16.el9_2.1"
-					}
-				],
-				"fixed": [
-					"1:2.3.3op2-16.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "cups",
-				"architectures": [
 					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.3.3op2-16.el9_2.1"
-					}
-				],
-				"fixed": [
-					"1:2.3.3op2-16.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "cups-printerapp",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
 					"s390x"
 				]
 			},
@@ -172,10 +122,34 @@
 			"package": {
 				"name": "cups-libs",
 				"architectures": [
+					"aarch64",
 					"i686",
 					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.3.3op2-16.el9_2.1"
+					}
+				],
+				"fixed": [
+					"1:2.3.3op2-16.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-printerapp",
+				"architectures": [
 					"ppc64le",
 					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -195,12 +169,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "cups-devel",
+				"name": "cups-ipptool",
 				"architectures": [
-					"i686",
-					"x86_64",
 					"ppc64le",
 					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -220,9 +193,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "cups-filesystem",
+				"name": "cups-client",
 				"architectures": [
-					"noarch"
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.3.3op2-16.el9_2.1"
+					}
+				],
+				"fixed": [
+					"1:2.3.3op2-16.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "cups",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {

@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-35255"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-35256"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2130517"
 				},
 				{
@@ -28,18 +36,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:6963"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-35255"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-35256"
 				}
 			],
 			"published": "2022-10-18T00:00:00Z",
-			"modified": "2022-10-19T08:10:19Z"
+			"modified": "2022-10-19T08:10:22Z"
 		}
 	],
 	"vulnerabilities": [
@@ -67,12 +67,35 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs-libs",
+				"name": "npm",
 				"architectures": [
-					"i686",
-					"x86_64",
 					"ppc64le",
 					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:8.15.0-1.16.17.1.1.el9_0"
+					}
+				],
+				"fixed": [
+					"1:8.15.0-1.16.17.1.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-full-i18n",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -92,12 +115,34 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs-full-i18n",
+				"name": "nodejs-libs",
 				"architectures": [
-					"x86_64",
 					"ppc64le",
+					"i686",
 					"aarch64",
+					"x86_64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.17.1-1.el9_0"
+					}
+				],
+				"fixed": [
+					"1:16.17.1-1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-docs",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -118,55 +163,10 @@
 			"package": {
 				"name": "nodejs",
 				"architectures": [
-					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:16.17.1-1.el9_0"
-					}
-				],
-				"fixed": [
-					"1:16.17.1-1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "npm",
-				"architectures": [
 					"x86_64",
-					"ppc64le",
-					"aarch64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:8.15.0-1.16.17.1.1.el9_0"
-					}
-				],
-				"fixed": [
-					"1:8.15.0-1.16.17.1.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs-docs",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {

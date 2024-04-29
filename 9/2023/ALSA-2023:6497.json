@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-6497.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:6497"
 				},
 				{
@@ -28,10 +24,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2213748"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-6497.html"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
-			"modified": "2023-11-14T12:11:11Z"
+			"modified": "2023-11-14T12:11:10Z"
 		}
 	],
 	"vulnerabilities": [
@@ -46,31 +46,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libX11",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.7.0-8.el9"
-					}
-				],
-				"fixed": [
-					"0:1.7.0-8.el9"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -96,12 +71,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libX11-devel",
+				"name": "libX11-xcb",
 				"architectures": [
-					"i686",
-					"x86_64",
 					"ppc64le",
+					"i686",
 					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -121,12 +96,37 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libX11-xcb",
+				"name": "libX11-devel",
 				"architectures": [
-					"i686",
-					"x86_64",
 					"ppc64le",
+					"i686",
 					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.7.0-8.el9"
+					}
+				],
+				"fixed": [
+					"0:1.7.0-8.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libX11",
+				"architectures": [
+					"ppc64le",
+					"i686",
+					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},

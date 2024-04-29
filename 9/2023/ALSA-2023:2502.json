@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-2502.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:2502"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2132002"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-2502.html"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -67,6 +67,30 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "dhcp-client",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.4.2-18.b1.el9"
+					}
+				],
+				"fixed": [
+					"12:4.4.2-18.b1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "dhcp-common",
 				"architectures": [
 					"noarch"
@@ -88,12 +112,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "dhcp-client",
+				"name": "dhcp-server",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -114,34 +138,10 @@
 			"package": {
 				"name": "dhcp-relay",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "12:4.4.2-18.b1.el9"
-					}
-				],
-				"fixed": [
-					"12:4.4.2-18.b1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dhcp-server",
-				"architectures": [
 					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
