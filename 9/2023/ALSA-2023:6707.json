@@ -52,15 +52,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-1981",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-1981"
-				}
-			]
-		},
-		{
 			"id": "CVE-2021-3468",
 			"references": [
 				{
@@ -77,6 +68,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2021-3502"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-1981",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-1981"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -84,10 +84,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-tools",
+				"name": "avahi-glib",
 				"architectures": [
-					"aarch64",
+					"i686",
 					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.8-15.el9"
+					}
+				],
+				"fixed": [
+					"0:0.8-15.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-compat-libdns_sd",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
 					"s390x",
 					"ppc64le"
 				]
@@ -111,9 +137,58 @@
 				"name": "avahi-glib-devel",
 				"architectures": [
 					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.8-15.el9"
+					}
+				],
+				"fixed": [
+					"0:0.8-15.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-compat-libdns_sd-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.8-15.el9"
+					}
+				],
+				"fixed": [
+					"0:0.8-15.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-tools",
+				"architectures": [
+					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -133,13 +208,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-glib",
+				"name": "avahi-libs",
 				"architectures": [
 					"i686",
-					"aarch64",
 					"x86_64",
-					"s390x",
-					"ppc64le"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -183,38 +258,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-compat-libdns_sd",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.8-15.el9"
-					}
-				],
-				"fixed": [
-					"0:0.8-15.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "avahi-compat-howl-devel",
 				"architectures": [
 					"i686",
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -236,10 +286,10 @@
 				"name": "avahi-devel",
 				"architectures": [
 					"i686",
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -261,60 +311,10 @@
 				"name": "avahi-compat-howl",
 				"architectures": [
 					"i686",
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.8-15.el9"
-					}
-				],
-				"fixed": [
-					"0:0.8-15.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-compat-libdns_sd-devel",
-				"architectures": [
-					"i686",
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.8-15.el9"
-					}
-				],
-				"fixed": [
-					"0:0.8-15.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-libs",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
