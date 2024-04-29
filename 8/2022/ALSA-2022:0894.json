@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-0894.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2022-0261"
 				},
 				{
@@ -40,6 +36,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2022-0413"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2022-0894.html"
 				}
 			],
 			"published": "2022-03-15T09:11:53Z",
@@ -47,6 +47,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-0413",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2022-0413"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-0261",
 			"references": [
@@ -91,15 +100,6 @@
 					"url": "https://vulners.com/cve/CVE-2022-0392"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-0413",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-0413"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -107,6 +107,48 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "vim-enhanced",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.1763-16.el8_5.12"
+					}
+				],
+				"fixed": [
+					"2:8.0.1763-16.el8_5.12"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.1763-16.el8_5.13"
+					}
+				],
+				"fixed": [
+					"2:8.0.1763-16.el8_5.13"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "vim-common",
 				"architectures": [
 					"x86_64"
@@ -200,11 +242,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "2:8.0.1763-16.el8_5.12"
+						"lt": "2:8.0.1763-16.el8_5.13"
 					}
 				],
 				"fixed": [
-					"2:8.0.1763-16.el8_5.12"
+					"2:8.0.1763-16.el8_5.13"
 				]
 			}
 		},
@@ -221,11 +263,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "2:8.0.1763-16.el8_5.13"
+						"lt": "2:8.0.1763-16.el8_5.12"
 					}
 				],
 				"fixed": [
-					"2:8.0.1763-16.el8_5.13"
+					"2:8.0.1763-16.el8_5.12"
 				]
 			}
 		},
@@ -236,48 +278,6 @@
 				"name": "vim-minimal",
 				"architectures": [
 					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.0.1763-16.el8_5.13"
-					}
-				],
-				"fixed": [
-					"2:8.0.1763-16.el8_5.13"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-enhanced",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.0.1763-16.el8_5.12"
-					}
-				],
-				"fixed": [
-					"2:8.0.1763-16.el8_5.12"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-enhanced",
-				"architectures": [
 					"aarch64"
 				]
 			},
