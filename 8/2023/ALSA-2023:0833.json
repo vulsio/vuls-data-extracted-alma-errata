@@ -52,15 +52,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-45061",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-45061"
-				}
-			]
-		},
-		{
 			"id": "CVE-2020-10735",
 			"references": [
 				{
@@ -77,9 +68,43 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2021-28861"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-45061",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-45061"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-libs",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.6.8-48.el8_7.1.alma"
+					}
+				],
+				"fixed": [
+					"0:3.6.8-48.el8_7.1.alma"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -214,31 +239,6 @@
 					"i686",
 					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.6.8-48.el8_7.1.alma"
-					}
-				],
-				"fixed": [
-					"0:3.6.8-48.el8_7.1.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-libs",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
