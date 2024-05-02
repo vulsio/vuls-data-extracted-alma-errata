@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2021-1585.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2016-10228"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-25013"
 				},
 				{
@@ -28,14 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-3326"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-1585.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2016-10228"
 				}
 			],
 			"published": "2021-05-18T05:35:07Z",
@@ -43,6 +43,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10228",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2016-10228"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-25013",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-25013"
+				}
+			]
+		},
 		{
 			"id": "CVE-2019-9169",
 			"references": [
@@ -69,27 +87,30 @@
 					"url": "https://vulners.com/cve/CVE-2021-3326"
 				}
 			]
-		},
-		{
-			"id": "CVE-2016-10228",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2016-10228"
-				}
-			]
-		},
-		{
-			"id": "CVE-2019-25013",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-25013"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-benchtests",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.28-151.el8"
+					}
+				],
+				"fixed": [
+					"0:2.28-151.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -141,27 +162,6 @@
 				"name": "glibc-nss-devel",
 				"architectures": [
 					"i686",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.28-151.el8"
-					}
-				],
-				"fixed": [
-					"0:2.28-151.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "glibc-benchtests",
-				"architectures": [
 					"x86_64"
 				]
 			},
