@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-7714.html"
+					"url": "https://access.redhat.com/errata/RHSA-2023:7714"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,19 +23,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2247169"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5870"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2228111"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2247168"
+					"url": "https://bugzilla.redhat.com/2247169"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,7 +35,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:7714"
+					"url": "https://errata.almalinux.org/8/ALSA-2023-7714.html"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -52,6 +44,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5869"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2228111"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2247168"
 				}
 			],
 			"published": "2023-12-11T00:00:00Z",
@@ -59,24 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-5869",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5869"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-5870",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5870"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-39417",
 			"references": [
@@ -94,6 +76,24 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5868"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-5869",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5869"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-5870",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5870"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -101,12 +101,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:12::postgresql-server-devel",
+				"name": "postgresql:12::postgresql-test-rpm-macros",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -125,7 +122,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:12::postgresql-contrib",
+				"name": "postgresql:12::postgresql-server",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -193,6 +190,98 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "postgresql:12::pg_repack",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-3.module_el8.6.0+2758+4f4474df"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-3.module_el8.6.0+2758+4f4474df"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::pg_repack",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-3.module_el8.6.0+3094+eb237fb8"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-3.module_el8.6.0+3094+eb237fb8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::postgresql-test",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
+					}
+				],
+				"fixed": [
+					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::postgresql-server-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
+					}
+				],
+				"fixed": [
+					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "postgresql:12::postgresql-upgrade",
 				"architectures": [
 					"aarch64",
@@ -217,52 +306,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:12::postgresql-plperl",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
-					}
-				],
-				"fixed": [
-					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::postgresql-test-rpm-macros",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
-					}
-				],
-				"fixed": [
-					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::postgresql-test",
+				"name": "postgresql:12::postgresql-pltcl",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -310,7 +354,79 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:12::postgresql-plpython3",
+				"name": "postgresql:12::postgresql-contrib",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
+					}
+				],
+				"fixed": [
+					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::postgresql-static",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
+					}
+				],
+				"fixed": [
+					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::postgresql-plperl",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
+					}
+				],
+				"fixed": [
+					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:12::postgresql-docs",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -335,30 +451,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "postgresql:12::postgresql",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
-					}
-				],
-				"fixed": [
-					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::postgresql-pltcl",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -426,99 +518,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:12::postgresql-static",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
-					}
-				],
-				"fixed": [
-					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::postgresql-docs",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.17-1.module_el8.9.0+3704+f1f917ce"
-					}
-				],
-				"fixed": [
-					"0:12.17-1.module_el8.9.0+3704+f1f917ce"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::pg_repack",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.6-3.module_el8.6.0+2758+4f4474df"
-					}
-				],
-				"fixed": [
-					"0:1.4.6-3.module_el8.6.0+2758+4f4474df"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::pg_repack",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.6-3.module_el8.6.0+3094+eb237fb8"
-					}
-				],
-				"fixed": [
-					"0:1.4.6-3.module_el8.6.0+3094+eb237fb8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:12::postgresql-server",
+				"name": "postgresql:12::postgresql-plpython3",
 				"architectures": [
 					"aarch64",
 					"x86_64",
