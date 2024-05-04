@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2133688"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2139280"
 				},
 				{
@@ -31,7 +35,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-31630"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-31631"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,14 +47,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2133688"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2140200"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-31628"
 				},
 				{
@@ -59,7 +55,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-31631"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-31630"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2140200"
 				}
 			],
 			"published": "2023-05-16T00:00:00Z",
@@ -67,6 +67,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-37454",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-37454"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-31628",
 			"references": [
@@ -102,15 +111,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-31631"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-37454",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-37454"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -118,23 +118,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-xml",
+				"name": "php:7.4::libzip-tools",
 				"architectures": [
 					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+						"lt": "0:1.6.1-1.module_el8.6.0+2750+78feabcb"
 					}
 				],
 				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					"0:1.6.1-1.module_el8.6.0+2750+78feabcb"
 				]
 			}
 		},
@@ -142,11 +141,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-intl",
+				"name": "php:7.4::libzip-tools",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
 					"s390x"
 				]
 			},
@@ -154,11 +150,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+						"lt": "0:1.6.1-1.module_el8.6.0+3239+bedf0508"
 					}
 				],
 				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					"0:1.6.1-1.module_el8.6.0+3239+bedf0508"
 				]
 			}
 		},
@@ -167,559 +163,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "php:7.4::php-dbg",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-ffi",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pecl-xdebug",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.5-1.module_el8.6.0+2750+78feabcb"
-					}
-				],
-				"fixed": [
-					"0:2.9.5-1.module_el8.6.0+2750+78feabcb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pecl-xdebug",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.5-1.module_el8.6.0+3239+bedf0508"
-					}
-				],
-				"fixed": [
-					"0:2.9.5-1.module_el8.6.0+3239+bedf0508"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-odbc",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::libzip-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.1-1.module_el8.6.0+2750+78feabcb"
-					}
-				],
-				"fixed": [
-					"0:1.6.1-1.module_el8.6.0+2750+78feabcb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::libzip-devel",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.1-1.module_el8.6.0+3239+bedf0508"
-					}
-				],
-				"fixed": [
-					"0:1.6.1-1.module_el8.6.0+3239+bedf0508"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-soap",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pdo",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-xmlrpc",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::libzip-tools",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.1-1.module_el8.6.0+2750+78feabcb"
-					}
-				],
-				"fixed": [
-					"0:1.6.1-1.module_el8.6.0+2750+78feabcb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::libzip-tools",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.1-1.module_el8.6.0+3239+bedf0508"
-					}
-				],
-				"fixed": [
-					"0:1.6.1-1.module_el8.6.0+3239+bedf0508"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-ldap",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-cli",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-mbstring",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-gd",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pear",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.10.13-1.module_el8.6.0+3268+b150a051"
-					}
-				],
-				"fixed": [
-					"1:1.10.13-1.module_el8.6.0+3268+b150a051"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-embedded",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-gmp",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pecl-apcu-devel",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.18-1.module_el8.6.0+3239+bedf0508"
-					}
-				],
-				"fixed": [
-					"0:5.1.18-1.module_el8.6.0+3239+bedf0508"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pecl-apcu-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.18-1.module_el8.6.0+2750+78feabcb"
-					}
-				],
-				"fixed": [
-					"0:5.1.18-1.module_el8.6.0+2750+78feabcb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-common",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::libzip",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.1-1.module_el8.6.0+3239+bedf0508"
-					}
-				],
-				"fixed": [
-					"0:1.6.1-1.module_el8.6.0+3239+bedf0508"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::libzip",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.6.1-1.module_el8.6.0+2750+78feabcb"
-					}
-				],
-				"fixed": [
-					"0:1.6.1-1.module_el8.6.0+2750+78feabcb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-dba",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -767,7 +210,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-mysqlnd",
+				"name": "php:7.4::php-fpm",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -791,8 +234,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-pecl-rrd",
+				"name": "php:7.4::php-pgsql",
 				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -800,11 +246,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.0.1-1.module_el8.6.0+3239+bedf0508"
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
 					}
 				],
 				"fixed": [
-					"0:2.0.1-1.module_el8.6.0+3239+bedf0508"
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
 				]
 			}
 		},
@@ -812,22 +258,47 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-pecl-rrd",
+				"name": "php:7.4::php-process",
 				"architectures": [
 					"aarch64",
 					"x86_64",
-					"ppc64le"
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.0.1-1.module_el8.6.0+2750+78feabcb"
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
 					}
 				],
 				"fixed": [
-					"0:2.0.1-1.module_el8.6.0+2750+78feabcb"
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-enchant",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
 				]
 			}
 		},
@@ -836,6 +307,30 @@
 			"vulnerable": true,
 			"package": {
 				"name": "php:7.4::php-json",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-mbstring",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -903,98 +398,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-opcache",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pecl-apcu",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.18-1.module_el8.6.0+3239+bedf0508"
-					}
-				],
-				"fixed": [
-					"0:5.1.18-1.module_el8.6.0+3239+bedf0508"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-pecl-apcu",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.18-1.module_el8.6.0+2750+78feabcb"
-					}
-				],
-				"fixed": [
-					"0:5.1.18-1.module_el8.6.0+2750+78feabcb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "php:7.4::php-process",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-					}
-				],
-				"fixed": [
-					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "php:7.4::php-devel",
 				"architectures": [
 					"aarch64",
@@ -1012,6 +415,166 @@
 				],
 				"fixed": [
 					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::libzip",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.1-1.module_el8.6.0+3239+bedf0508"
+					}
+				],
+				"fixed": [
+					"0:1.6.1-1.module_el8.6.0+3239+bedf0508"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::libzip",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.1-1.module_el8.6.0+2750+78feabcb"
+					}
+				],
+				"fixed": [
+					"0:1.6.1-1.module_el8.6.0+2750+78feabcb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-soap",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-intl",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-ldap",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::libzip-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.1-1.module_el8.6.0+2750+78feabcb"
+					}
+				],
+				"fixed": [
+					"0:1.6.1-1.module_el8.6.0+2750+78feabcb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::libzip-devel",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.1-1.module_el8.6.0+3239+bedf0508"
+					}
+				],
+				"fixed": [
+					"0:1.6.1-1.module_el8.6.0+3239+bedf0508"
 				]
 			}
 		},
@@ -1043,7 +606,187 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-fpm",
+				"name": "php:7.4::php-pecl-apcu",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1.18-1.module_el8.6.0+2750+78feabcb"
+					}
+				],
+				"fixed": [
+					"0:5.1.18-1.module_el8.6.0+2750+78feabcb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-apcu",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1.18-1.module_el8.6.0+3239+bedf0508"
+					}
+				],
+				"fixed": [
+					"0:5.1.18-1.module_el8.6.0+3239+bedf0508"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-bcmath",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-mysqlnd",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-rrd",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.1-1.module_el8.6.0+2750+78feabcb"
+					}
+				],
+				"fixed": [
+					"0:2.0.1-1.module_el8.6.0+2750+78feabcb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-rrd",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.1-1.module_el8.6.0+3239+bedf0508"
+					}
+				],
+				"fixed": [
+					"0:2.0.1-1.module_el8.6.0+3239+bedf0508"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-xdebug",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.5-1.module_el8.6.0+2750+78feabcb"
+					}
+				],
+				"fixed": [
+					"0:2.9.5-1.module_el8.6.0+2750+78feabcb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-xdebug",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.5-1.module_el8.6.0+3239+bedf0508"
+					}
+				],
+				"fixed": [
+					"0:2.9.5-1.module_el8.6.0+3239+bedf0508"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-gd",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -1088,7 +831,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-pgsql",
+				"name": "php:7.4::php-xml",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -1112,7 +855,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-enchant",
+				"name": "php:7.4::php-pdo",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -1136,7 +879,264 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "php:7.4::php-bcmath",
+				"name": "php:7.4::php-gmp",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-ffi",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pear",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.10.13-1.module_el8.6.0+3268+b150a051"
+					}
+				],
+				"fixed": [
+					"1:1.10.13-1.module_el8.6.0+3268+b150a051"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-dba",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-apcu-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1.18-1.module_el8.6.0+2750+78feabcb"
+					}
+				],
+				"fixed": [
+					"0:5.1.18-1.module_el8.6.0+2750+78feabcb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-pecl-apcu-devel",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1.18-1.module_el8.6.0+3239+bedf0508"
+					}
+				],
+				"fixed": [
+					"0:5.1.18-1.module_el8.6.0+3239+bedf0508"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-xmlrpc",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-common",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-opcache",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-cli",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-odbc",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+					}
+				],
+				"fixed": [
+					"0:7.4.33-1.module_el8.8.0+3477+f828cbb0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "php:7.4::php-embedded",
 				"architectures": [
 					"aarch64",
 					"x86_64",
