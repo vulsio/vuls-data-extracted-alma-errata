@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-35255",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-35255"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-35256",
 			"references": [
 				{
@@ -60,9 +51,66 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-35256"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-35255",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-35255"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:16::nodejs-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
+					}
+				],
+				"fixed": [
+					"1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:16::npm",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:8.15.0-1.16.17.1.1.module_el8.6.0+3328+2e4711d7"
+					}
+				],
+				"fixed": [
+					"1:8.15.0-1.16.17.1.1.module_el8.6.0+3328+2e4711d7"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -171,54 +219,6 @@
 				],
 				"fixed": [
 					"1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:16::nodejs-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
-					}
-				],
-				"fixed": [
-					"1:16.17.1-1.module_el8.6.0+3328+2e4711d7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:16::npm",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:8.15.0-1.16.17.1.1.module_el8.6.0+3328+2e4711d7"
-					}
-				],
-				"fixed": [
-					"1:8.15.0-1.16.17.1.1.module_el8.6.0+3328+2e4711d7"
 				]
 			}
 		}
