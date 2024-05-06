@@ -15,11 +15,27 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2168631"
+					"url": "https://errata.almalinux.org/9/ALSA-2023-2655.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-24807"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2172204"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2165824"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2172190"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:2655"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,18 +47,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2165824"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2172204"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-2655.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-23918"
 				},
 				{
@@ -51,19 +55,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2171935"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2655"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-23920"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-24807"
+					"url": "https://bugzilla.redhat.com/2168631"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2171935"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -75,6 +75,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-23918",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-23918"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-23920",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-23920"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-23936",
 			"references": [
@@ -110,27 +128,54 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-4904"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-23918",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-23918"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-23920",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-23920"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "npm",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:8.19.3-1.16.19.1.1.el9_2"
+					}
+				],
+				"fixed": [
+					"1:8.19.3-1.16.19.1.1.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-docs",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.19.1-1.el9_2"
+					}
+				],
+				"fixed": [
+					"1:16.19.1-1.el9_2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -190,51 +235,6 @@
 					"aarch64",
 					"x86_64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:16.19.1-1.el9_2"
-					}
-				],
-				"fixed": [
-					"1:16.19.1-1.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "npm",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:8.19.3-1.16.19.1.1.el9_2"
-					}
-				],
-				"fixed": [
-					"1:8.19.3-1.16.19.1.1.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs-docs",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
