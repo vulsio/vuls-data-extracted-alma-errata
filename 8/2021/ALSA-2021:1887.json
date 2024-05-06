@@ -32,15 +32,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-25275",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-25275"
-				}
-			]
-		},
-		{
 			"id": "CVE-2020-24386",
 			"references": [
 				{
@@ -48,9 +39,39 @@
 					"url": "https://vulners.com/cve/CVE-2020-24386"
 				}
 			]
+		},
+		{
+			"id": "CVE-2020-25275",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-25275"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dovecot-mysql",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.3.8-9.el8"
+					}
+				],
+				"fixed": [
+					"1:2.3.8-9.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -122,27 +143,6 @@
 				"name": "dovecot-devel",
 				"architectures": [
 					"i686",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.3.8-9.el8"
-					}
-				],
-				"fixed": [
-					"1:2.3.8-9.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dovecot-mysql",
-				"architectures": [
 					"x86_64"
 				]
 			},

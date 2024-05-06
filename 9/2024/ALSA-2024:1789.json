@@ -15,22 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263909"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263914"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-1789.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
 				},
 				{
@@ -39,15 +23,27 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263917"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5517"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:1789"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263896"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263909"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263917"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-1789.html"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,7 +55,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263911"
+					"url": "https://bugzilla.redhat.com/2263914"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:1789"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -67,7 +67,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263896"
+					"url": "https://bugzilla.redhat.com/2263911"
 				}
 			],
 			"published": "2024-04-11T00:00:00Z",
@@ -75,6 +75,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-6516",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-4408",
 			"references": [
@@ -119,60 +128,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-6516",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
-				}
-			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-license",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-14.el9_3.4"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-14.el9_3.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-dnssec-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-14.el9_3.4"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-14.el9_3.4"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -270,9 +228,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-bind",
+				"name": "bind-devel",
 				"architectures": [
-					"noarch"
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -291,12 +253,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind",
+				"name": "python3-bind",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -364,13 +323,54 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-devel",
+				"name": "bind-license",
 				"architectures": [
-					"i686",
-					"x86_64",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-14.el9_3.4"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-14.el9_3.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind",
+				"architectures": [
 					"ppc64le",
 					"aarch64",
+					"x86_64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-14.el9_3.4"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-14.el9_3.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-dnssec-doc",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
