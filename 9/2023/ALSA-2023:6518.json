@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28101"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2179219"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28100"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28101"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
@@ -63,6 +63,56 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "flatpak-libs",
+				"architectures": [
+					"ppc64le",
+					"i686",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.12.8-1.el9"
+					}
+				],
+				"fixed": [
+					"0:1.12.8-1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "flatpak-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.12.8-1.el9"
+					}
+				],
+				"fixed": [
+					"0:1.12.8-1.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -119,56 +169,6 @@
 					"i686",
 					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.12.8-1.el9"
-					}
-				],
-				"fixed": [
-					"0:1.12.8-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "flatpak-libs",
-				"architectures": [
-					"ppc64le",
-					"i686",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.12.8-1.el9"
-					}
-				],
-				"fixed": [
-					"0:1.12.8-1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "flatpak-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
 					"s390x"
 				]
 			},

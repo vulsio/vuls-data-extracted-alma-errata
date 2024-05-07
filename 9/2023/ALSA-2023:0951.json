@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4379"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4378"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,11 +23,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2152548"
+					"url": "https://bugzilla.redhat.com/2119048"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2152807"
+					"url": "https://bugzilla.redhat.com/2152548"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,19 +47,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2161713"
+					"url": "https://bugzilla.redhat.com/2152807"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4378"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2119048"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4379"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2150999"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2161713"
 				}
 			],
 			"published": "2023-02-28T00:00:00Z",
@@ -67,15 +67,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-0179",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0179"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-2873",
 			"references": [
@@ -111,33 +102,18 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-4379"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-0179",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0179"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-162.18.1.el9_1"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-162.18.1.el9_1"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -166,10 +142,32 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-libs",
+				"name": "kernel-abi-stablelists",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-162.18.1.el9_1"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-162.18.1.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-modules",
 				"architectures": [
 					"aarch64",
 					"x86_64",
+					"s390x",
 					"ppc64le"
 				]
 			},
@@ -189,7 +187,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-perf",
+				"name": "kernel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-162.18.1.el9_1"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-162.18.1.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-core",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -234,35 +256,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-core",
+				"name": "kernel-cross-headers",
 				"architectures": [
-					"aarch64",
 					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-162.18.1.el9_1"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-162.18.1.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debug-devel-matched",
-				"architectures": [
 					"ppc64le",
 					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -282,12 +280,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-modules-extra",
+				"name": "kernel-zfcpdump-devel",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {
@@ -327,7 +322,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debug-modules",
+				"name": "kernel-debug-core",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -351,11 +346,10 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debug-modules-extra",
+				"name": "kernel-tools-libs",
 				"architectures": [
 					"aarch64",
 					"x86_64",
-					"s390x",
 					"ppc64le"
 				]
 			},
@@ -375,8 +369,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-zfcpdump-modules",
+				"name": "kernel-devel",
 				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -396,9 +393,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-doc",
+				"name": "python3-perf",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -417,9 +417,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-abi-stablelists",
+				"name": "bpftool",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -462,12 +465,54 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-modules",
+				"name": "kernel-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-162.18.1.el9_1"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-162.18.1.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-modules-extra",
 				"architectures": [
 					"aarch64",
 					"x86_64",
 					"s390x",
 					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-162.18.1.el9_1"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-162.18.1.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-zfcpdump-core",
+				"architectures": [
+					"s390x"
 				]
 			},
 			"affected": {
@@ -509,7 +554,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-zfcpdump-devel",
+				"name": "kernel-debug-devel-matched",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-162.18.1.el9_1"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-162.18.1.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-zfcpdump-modules",
 				"architectures": [
 					"s390x"
 				]
@@ -530,7 +599,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bpftool",
+				"name": "perf",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-162.18.1.el9_1"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-162.18.1.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debug-modules",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -575,51 +668,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-cross-headers",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-162.18.1.el9_1"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-162.18.1.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-zfcpdump-core",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-162.18.1.el9_1"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-162.18.1.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "kernel-debug-devel",
 				"architectures": [
 					"ppc64le",
@@ -644,12 +692,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "perf",
+				"name": "kernel-debug-modules-extra",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
 					"x86_64",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -669,54 +717,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-tools",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-162.18.1.el9_1"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-162.18.1.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debug-core",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-162.18.1.el9_1"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-162.18.1.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel",
 				"architectures": [
 					"aarch64",
 					"x86_64",
