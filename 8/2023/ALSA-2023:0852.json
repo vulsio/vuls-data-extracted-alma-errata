@@ -52,15 +52,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-37436",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
-				}
-			]
-		},
-		{
 			"id": "CVE-2006-20001",
 			"references": [
 				{
@@ -77,6 +68,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-36760"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-37436",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-37436"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -84,23 +84,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_ldap",
+				"name": "httpd:2.4::mod_md",
 				"architectures": [
 					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+						"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
 					}
 				],
 				"fixed": [
-					"0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
 				]
 			}
 		},
@@ -108,11 +107,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_ssl",
+				"name": "httpd:2.4::mod_md",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
 					"s390x"
 				]
 			},
@@ -120,35 +116,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+						"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
 					}
 				],
 				"fixed": [
-					"1:2.4.37-51.module_el8.7.0+3405+9516b832.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_session",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
-					}
-				],
-				"fixed": [
-					"0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+					"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
 				]
 			}
 		},
@@ -182,27 +154,6 @@
 			"package": {
 				"name": "httpd:2.4::mod_http2",
 				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.15.7-5.module_el8.6.0+3031+fb177b09"
-					}
-				],
-				"fixed": [
-					"0:1.15.7-5.module_el8.6.0+3031+fb177b09"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_http2",
-				"architectures": [
 					"aarch64",
 					"x86_64",
 					"ppc64le"
@@ -224,7 +175,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-tools",
+				"name": "httpd:2.4::mod_http2",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.15.7-5.module_el8.6.0+3031+fb177b09"
+					}
+				],
+				"fixed": [
+					"0:1.15.7-5.module_el8.6.0+3031+fb177b09"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::httpd-devel",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -248,7 +220,31 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-devel",
+				"name": "httpd:2.4::mod_session",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::httpd-tools",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -314,6 +310,30 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "httpd:2.4::mod_ldap",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.37-51.module_el8.7.0+3405+9516b832.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "httpd:2.4::httpd",
 				"architectures": [
 					"aarch64",
@@ -338,31 +358,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_md",
+				"name": "httpd:2.4::mod_ssl",
 				"architectures": [
 					"aarch64",
 					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-					}
-				],
-				"fixed": [
-					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_md",
-				"architectures": [
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -370,11 +370,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+						"lt": "1:2.4.37-51.module_el8.7.0+3405+9516b832.1"
 					}
 				],
 				"fixed": [
-					"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+					"1:2.4.37-51.module_el8.7.0+3405+9516b832.1"
 				]
 			}
 		}
