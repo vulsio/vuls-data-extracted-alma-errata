@@ -15,14 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-35938"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-35939"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/1964114"
 				},
 				{
@@ -44,6 +36,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2021-35937"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-35938"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-35939"
 				}
 			],
 			"published": "2024-02-01T00:00:00Z",
@@ -51,6 +51,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2021-35939",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-35939"
+				}
+			]
+		},
 		{
 			"id": "CVE-2021-35937",
 			"references": [
@@ -68,43 +77,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2021-35938"
 				}
 			]
-		},
-		{
-			"id": "CVE-2021-35939",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-35939"
-				}
-			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rpm-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.3-28.el8_9"
-					}
-				],
-				"fixed": [
-					"0:4.14.3-28.el8_9"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -130,7 +105,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rpm-plugin-systemd-inhibit",
+				"name": "rpm-plugin-ima",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -156,30 +131,6 @@
 			"package": {
 				"name": "rpm-plugin-fapolicyd",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.3-28.el8_9"
-					}
-				],
-				"fixed": [
-					"0:4.14.3-28.el8_9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rpm-plugin-selinux",
-				"architectures": [
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -202,8 +153,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rpm-plugin-ima",
+				"name": "rpm-devel",
 				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -250,9 +202,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rpm-libs",
+				"name": "rpm-plugin-syslog",
 				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -275,9 +226,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rpm-build-libs",
+				"name": "rpm-build",
 				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -303,6 +253,30 @@
 				"name": "rpm-cron",
 				"architectures": [
 					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.3-28.el8_9"
+					}
+				],
+				"fixed": [
+					"0:4.14.3-28.el8_9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rpm-plugin-selinux",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -369,7 +343,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rpm-plugin-syslog",
+				"name": "rpm-plugin-systemd-inhibit",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -393,10 +367,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rpm-build",
+				"name": "rpm-build-libs",
 				"architectures": [
-					"aarch64",
+					"i686",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -419,6 +394,31 @@
 			"package": {
 				"name": "rpm-sign",
 				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.3-28.el8_9"
+					}
+				],
+				"fixed": [
+					"0:4.14.3-28.el8_9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rpm-libs",
+				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",

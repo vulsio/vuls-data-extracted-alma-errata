@@ -15,6 +15,18 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:0533"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5981"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-0553"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-0567"
 				},
 				{
@@ -32,25 +44,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-0533.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:0533"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5981"
-				},
+				}
+			],
+			"published": "2024-01-29T00:00:00Z",
+			"modified": "2024-01-29T16:57:49Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-0553",
+			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-0553"
 				}
-			],
-			"published": "2024-01-29T00:00:00Z",
-			"modified": "2024-01-29T16:57:50Z"
-		}
-	],
-	"vulnerabilities": [
+			]
+		},
 		{
 			"id": "CVE-2024-0567",
 			"references": [
@@ -68,43 +77,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5981"
 				}
 			]
-		},
-		{
-			"id": "CVE-2024-0553",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-0553"
-				}
-			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "gnutls-dane",
-				"architectures": [
-					"ppc64le",
-					"i686",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.7.6-23.el9_3.3"
-					}
-				],
-				"fixed": [
-					"0:3.7.6-23.el9_3.3"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -135,10 +110,10 @@
 			"package": {
 				"name": "gnutls",
 				"architectures": [
-					"aarch64",
 					"i686",
-					"x86_64",
 					"s390x",
+					"x86_64",
+					"aarch64",
 					"ppc64le"
 				]
 			},
@@ -158,10 +133,10 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "gnutls-c++",
+				"name": "gnutls-dane",
 				"architectures": [
-					"ppc64le",
 					"i686",
+					"ppc64le",
 					"aarch64",
 					"x86_64",
 					"s390x"
@@ -185,8 +160,33 @@
 			"package": {
 				"name": "gnutls-devel",
 				"architectures": [
-					"ppc64le",
 					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.7.6-23.el9_3.3"
+					}
+				],
+				"fixed": [
+					"0:3.7.6-23.el9_3.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "gnutls-c++",
+				"architectures": [
+					"i686",
+					"ppc64le",
 					"aarch64",
 					"x86_64",
 					"s390x"
