@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2025721"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-2570.html"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2020-17049"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2025721"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -50,12 +50,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "krb5-workstation",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.1-8.el9"
+					}
+				],
+				"fixed": [
+					"0:1.20.1-8.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "krb5-devel",
 				"architectures": [
 					"i686",
-					"ppc64le",
 					"aarch64",
 					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -78,10 +102,10 @@
 				"name": "krb5-libs",
 				"architectures": [
 					"i686",
-					"s390x",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {
@@ -103,10 +127,10 @@
 				"name": "libkadm5",
 				"architectures": [
 					"i686",
-					"s390x",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {
@@ -128,10 +152,10 @@
 				"name": "krb5-server",
 				"architectures": [
 					"i686",
-					"s390x",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {
@@ -153,10 +177,10 @@
 				"name": "krb5-pkinit",
 				"architectures": [
 					"i686",
-					"s390x",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {
@@ -178,34 +202,10 @@
 				"name": "krb5-server-ldap",
 				"architectures": [
 					"i686",
-					"s390x",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.1-8.el9"
-					}
-				],
-				"fixed": [
-					"0:1.20.1-8.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "krb5-workstation",
-				"architectures": [
-					"s390x",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {

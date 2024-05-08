@@ -15,11 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:3923"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29404"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29404"
+					"url": "https://bugzilla.redhat.com/2217569"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29405"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,11 +39,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2217569"
+					"url": "https://errata.almalinux.org/9/ALSA-2023-3923.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-3923.html"
+					"url": "https://access.redhat.com/errata/RHSA-2023:3923"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -48,10 +52,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-29403"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29405"
 				}
 			],
 			"published": "2023-06-29T00:00:00Z",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-29405",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29405"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-29402",
 			"references": [
@@ -94,6 +85,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-29404"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-29405",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29405"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -101,9 +101,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "golang-src",
+				"name": "golang",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -124,9 +127,9 @@
 			"package": {
 				"name": "go-toolset",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
 					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -148,33 +151,9 @@
 			"package": {
 				"name": "golang-bin",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.19.10-1.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.19.10-1.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "golang",
-				"architectures": [
 					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -258,6 +237,27 @@
 			"vulnerable": true,
 			"package": {
 				"name": "golang-misc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.19.10-1.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.19.10-1.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-src",
 				"architectures": [
 					"noarch"
 				]
