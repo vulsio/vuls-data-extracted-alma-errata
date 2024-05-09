@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2019-2799.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-9511"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-9513"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-9516"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2019-2799.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-9511"
 				}
 			],
 			"published": "2019-09-17T08:45:10Z",
@@ -35,15 +35,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2019-9511",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-9511"
-				}
-			]
-		},
 		{
 			"id": "CVE-2019-9513",
 			"references": [
@@ -61,6 +52,15 @@
 					"url": "https://vulners.com/cve/CVE-2019-9516"
 				}
 			]
+		},
+		{
+			"id": "CVE-2019-9511",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-9511"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -68,6 +68,27 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "nginx:1.14::nginx-filesystem",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+					}
+				],
+				"fixed": [
+					"1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "nginx:1.14::nginx-mod-stream",
 				"architectures": [
 					"x86_64"
@@ -259,6 +280,27 @@
 			"package": {
 				"name": "nginx:1.14::nginx-mod-http-image-filter",
 				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+					}
+				],
+				"fixed": [
+					"1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx:1.14::nginx-mod-http-image-filter",
+				"architectures": [
 					"ppc64le"
 				]
 			},
@@ -292,27 +334,6 @@
 				],
 				"fixed": [
 					"1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx:1.14::nginx-mod-http-image-filter",
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
-					}
-				],
-				"fixed": [
-					"1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
 				]
 			}
 		},
@@ -406,27 +427,6 @@
 			"package": {
 				"name": "nginx:1.14::nginx",
 				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
-					}
-				],
-				"fixed": [
-					"1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx:1.14::nginx",
-				"architectures": [
 					"aarch64"
 				]
 			},
@@ -467,9 +467,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx:1.14::nginx-filesystem",
+				"name": "nginx:1.14::nginx",
 				"architectures": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"affected": {
