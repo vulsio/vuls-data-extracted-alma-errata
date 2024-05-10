@@ -15,6 +15,18 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-41771"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-41772"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2022-23772"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2022-23773"
 				},
 				{
@@ -32,18 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-39293"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-41771"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-41772"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-23772"
 				}
 			],
 			"published": "2022-05-10T06:29:31Z",
@@ -51,33 +51,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-23772",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-23772"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-23773",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-23773"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-23806",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-23806"
-				}
-			]
-		},
 		{
 			"id": "CVE-2021-38297",
 			"references": [
@@ -113,6 +86,33 @@
 					"url": "https://vulners.com/cve/CVE-2021-41772"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-23772",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2022-23772"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-23773",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2022-23773"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-23806",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2022-23806"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -120,9 +120,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang-docs",
+				"name": "go-toolset:rhel8::go-toolset",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -134,6 +136,27 @@
 				],
 				"fixed": [
 					"0:1.17.7-1.module_el8.6.0+2736+ec10aba8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "go-toolset:rhel8::delve",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.7.2-1.module_el8.6.0+2736+ec10aba8"
+					}
+				],
+				"fixed": [
+					"0:1.7.2-1.module_el8.6.0+2736+ec10aba8"
 				]
 			}
 		},
@@ -229,27 +252,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang-race",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.17.7-1.module_el8.6.0+2736+ec10aba8"
-					}
-				],
-				"fixed": [
-					"0:1.17.7-1.module_el8.6.0+2736+ec10aba8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "go-toolset:rhel8::golang-tests",
 				"architectures": [
 					"noarch"
@@ -271,11 +273,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::go-toolset",
+				"name": "go-toolset:rhel8::golang-docs",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -294,7 +294,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::delve",
+				"name": "go-toolset:rhel8::golang-race",
 				"architectures": [
 					"x86_64"
 				]
@@ -303,11 +303,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.7.2-1.module_el8.6.0+2736+ec10aba8"
+						"lt": "0:1.17.7-1.module_el8.6.0+2736+ec10aba8"
 					}
 				],
 				"fixed": [
-					"0:1.7.2-1.module_el8.6.0+2736+ec10aba8"
+					"0:1.17.7-1.module_el8.6.0+2736+ec10aba8"
 				]
 			}
 		}
