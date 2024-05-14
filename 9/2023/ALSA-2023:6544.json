@@ -15,18 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38559"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2184585"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2224367"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-6544.html"
 				},
 				{
@@ -36,6 +24,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28879"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38559"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2184585"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2224367"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-28879",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28879"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-38559",
 			"references": [
 				{
@@ -60,9 +51,117 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-38559"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-28879",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28879"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-13.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript-tools-printing",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-13.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript-tools-dvipdf",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-13.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libgs-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-13.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -91,57 +190,9 @@
 				"name": "libgs",
 				"architectures": [
 					"i686",
-					"aarch64",
-					"ppc64le",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ghostscript-tools-dvipdf",
-				"architectures": [
-					"aarch64",
 					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ghostscript-x11",
-				"architectures": [
 					"aarch64",
-					"ppc64le",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -163,9 +214,9 @@
 			"package": {
 				"name": "ghostscript-tools-fonts",
 				"architectures": [
-					"aarch64",
-					"ppc64le",
 					"x86_64",
+					"ppc64le",
+					"aarch64",
 					"s390x",
 					"i686"
 				]
@@ -186,59 +237,8 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ghostscript",
+				"name": "ghostscript-x11",
 				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ghostscript-tools-printing",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libgs-devel",
-				"architectures": [
-					"i686",
 					"x86_64",
 					"ppc64le",
 					"aarch64",
