@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2188543"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-2653.html"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-2203"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2188543"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -46,6 +46,31 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "webkit2gtk3",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.38.5-1.el9_2.1"
+					}
+				],
+				"fixed": [
+					"0:2.38.5-1.el9_2.1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -101,31 +126,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "webkit2gtk3-jsc",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.38.5-1.el9_2.1"
-					}
-				],
-				"fixed": [
-					"0:2.38.5-1.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "webkit2gtk3",
 				"architectures": [
 					"i686",
 					"x86_64",
