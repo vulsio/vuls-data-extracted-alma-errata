@@ -15,11 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-5362.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-25883"
+					"url": "https://access.redhat.com/errata/RHSA-2023:5362"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,19 +27,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2230956"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:5362"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32559"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2216475"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,7 +35,23 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-5362.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-25883"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2216475"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2230955"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2230956"
 				}
 			],
 			"published": "2023-09-26T00:00:00Z",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-32002",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-32006",
 			"references": [
@@ -94,9 +85,66 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-25883"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-32002",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::npm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:9.6.7-1.18.17.1.1.module_el8.8.0+3613+1ed8c91d"
+					}
+				],
+				"fixed": [
+					"1:9.6.7-1.18.17.1.1.module_el8.8.0+3613+1ed8c91d"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.17.1-1.module_el8.8.0+3613+1ed8c91d"
+					}
+				],
+				"fixed": [
+					"1:18.17.1-1.module_el8.8.0+3613+1ed8c91d"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -210,54 +258,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "nodejs:18::nodejs-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:18.17.1-1.module_el8.8.0+3613+1ed8c91d"
-					}
-				],
-				"fixed": [
-					"1:18.17.1-1.module_el8.8.0+3613+1ed8c91d"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::npm",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:9.6.7-1.18.17.1.1.module_el8.8.0+3613+1ed8c91d"
-					}
-				],
-				"fixed": [
-					"1:9.6.7-1.18.17.1.1.module_el8.8.0+3613+1ed8c91d"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
