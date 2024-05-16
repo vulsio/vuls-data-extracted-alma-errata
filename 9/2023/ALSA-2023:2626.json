@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-48339"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-48338"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,11 +23,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-48337"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:2626"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-48338"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-48339"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -48,10 +52,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-2626.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-48337"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -59,6 +59,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-48337",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-48337"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-48338",
 			"references": [
@@ -85,18 +94,54 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-2491"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-48337",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-48337"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:27.2-8.el9_2.1"
+					}
+				],
+				"fixed": [
+					"1:27.2-8.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-filesystem",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:27.2-8.el9_2.1"
+					}
+				],
+				"fixed": [
+					"1:27.2-8.el9_2.1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -155,51 +200,6 @@
 					"ppc64le",
 					"aarch64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:27.2-8.el9_2.1"
-					}
-				],
-				"fixed": [
-					"1:27.2-8.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "emacs",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:27.2-8.el9_2.1"
-					}
-				],
-				"fixed": [
-					"1:27.2-8.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "emacs-filesystem",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
