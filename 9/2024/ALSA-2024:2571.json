@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3758"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2223762"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-2571.html"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:2571"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3758"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2223762"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -50,7 +50,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-proxy",
+				"name": "sssd-krb5-common",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -74,7 +74,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-sss",
+				"name": "sssd-polkit-rules",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -98,7 +98,55 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-krb5",
+				"name": "libsss_autofs",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-kcm",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-winbind-idmap",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -146,7 +194,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd",
+				"name": "sssd-common",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -170,33 +218,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-idp",
+				"name": "python3-libipa_hbac",
 				"architectures": [
 					"ppc64le",
-					"aarch64",
+					"s390x",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-sssdconfig",
-				"architectures": [
-					"noarch"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -216,152 +243,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "libipa_hbac",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-passkey",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-ad",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-tools",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-sss-murmur",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-client",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libsss_simpleifp",
 				"architectures": [
 					"i686",
 					"ppc64le",
@@ -411,6 +292,199 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "sssd-passkey",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-libsss_nss_idmap",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-tools",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-ad",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-sss-murmur",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-idp",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libsss_simpleifp",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "libsss_idmap",
 				"architectures": [
 					"i686",
@@ -436,7 +510,79 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "sssd-krb5",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "sssd-ldap",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-ipa",
+				"architectures": [
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-nfs-idmap",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -485,150 +631,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-krb5-common",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libsss_autofs",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-libipa_hbac",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-polkit-rules",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-winbind-idmap",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "sssd-common",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "libsss_nss_idmap-devel",
 				"architectures": [
 					"i686",
@@ -654,8 +656,30 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-nfs-idmap",
+				"name": "python3-sssdconfig",
 				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.4-6.el9_4"
+					}
+				],
+				"fixed": [
+					"0:2.9.4-6.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "sssd-client",
+				"architectures": [
+					"i686",
 					"ppc64le",
 					"s390x",
 					"x86_64",
@@ -678,31 +702,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-ipa",
-				"architectures": [
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.9.4-6.el9_4"
-					}
-				],
-				"fixed": [
-					"0:2.9.4-6.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libsss_sudo",
+				"name": "python3-sss",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -750,7 +750,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "sssd-kcm",
+				"name": "libsss_sudo",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -774,7 +774,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-libsss_nss_idmap",
+				"name": "sssd-proxy",
 				"architectures": [
 					"ppc64le",
 					"s390x",
