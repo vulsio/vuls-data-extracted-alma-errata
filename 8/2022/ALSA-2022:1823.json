@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32792"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-39191"
 				},
 				{
@@ -32,6 +28,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-32791"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-32792"
 				}
 			],
 			"published": "2022-05-10T06:30:32Z",
@@ -39,15 +39,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2021-39191",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-39191"
-				}
-			]
-		},
 		{
 			"id": "CVE-2021-32786",
 			"references": [
@@ -74,9 +65,41 @@
 					"url": "https://vulners.com/cve/CVE-2021-32792"
 				}
 			]
+		},
+		{
+			"id": "CVE-2021-39191",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-39191"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_openidc:2.3::cjose",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.6.1-2.module_el8.6.0+2868+44838709"
+					}
+				],
+				"fixed": [
+					"0:0.6.1-2.module_el8.6.0+2868+44838709"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -120,29 +143,6 @@
 				],
 				"fixed": [
 					"0:2.3.7-11.module_el8.6.0+2868+44838709"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mod_auth_openidc:2.3::cjose",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.6.1-2.module_el8.6.0+2868+44838709"
-					}
-				],
-				"fixed": [
-					"0:0.6.1-2.module_el8.6.0+2868+44838709"
 				]
 			}
 		}
