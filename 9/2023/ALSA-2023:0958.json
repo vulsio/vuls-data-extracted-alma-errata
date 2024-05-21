@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-47024"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2163613"
 				},
 				{
@@ -28,10 +24,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:0958"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-47024"
 				}
 			],
 			"published": "2023-02-28T00:00:00Z",
-			"modified": "2023-02-28T18:13:20Z"
+			"modified": "2023-02-28T18:13:19Z"
 		}
 	],
 	"vulnerabilities": [
@@ -50,11 +50,59 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "vim-enhanced",
+				"name": "vim-common",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
 					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.2637-20.el9_1"
+					}
+				],
+				"fixed": [
+					"2:8.2.2637-20.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.2637-20.el9_1"
+					}
+				],
+				"fixed": [
+					"2:8.2.2637-20.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-X11",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -97,58 +145,10 @@
 			"package": {
 				"name": "vim-minimal",
 				"architectures": [
+					"x86_64",
 					"ppc64le",
 					"s390x",
-					"x86_64",
 					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.2.2637-20.el9_1"
-					}
-				],
-				"fixed": [
-					"2:8.2.2637-20.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-common",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.2.2637-20.el9_1"
-					}
-				],
-				"fixed": [
-					"2:8.2.2637-20.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-X11",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
 				]
 			},
 			"affected": {

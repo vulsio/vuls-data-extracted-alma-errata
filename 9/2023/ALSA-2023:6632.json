@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2215945"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-6632.html"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-4641"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2215945"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
@@ -50,12 +50,37 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "shadow-utils-subid",
+				"name": "shadow-utils-subid-devel",
 				"architectures": [
 					"i686",
 					"ppc64le",
-					"s390x",
 					"x86_64",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:4.9-8.el9"
+					}
+				],
+				"fixed": [
+					"2:4.9-8.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "shadow-utils-subid",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"s390x",
 					"aarch64"
 				]
 			},
@@ -77,35 +102,10 @@
 			"package": {
 				"name": "shadow-utils",
 				"architectures": [
+					"x86_64",
 					"ppc64le",
 					"s390x",
-					"x86_64",
 					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.9-8.el9"
-					}
-				],
-				"fixed": [
-					"2:4.9-8.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "shadow-utils-subid-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"affected": {
