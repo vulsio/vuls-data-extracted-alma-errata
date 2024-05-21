@@ -15,15 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2022-5242.html"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1154"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1420"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2077734"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1629"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,15 +27,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-0554"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-0943"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1629"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1420"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,7 +39,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1154"
+					"url": "https://bugzilla.redhat.com/2083924"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2022-5242.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-0943"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,11 +55,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2083924"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-0554"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2058483"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2077734"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -131,6 +131,30 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.2637-16.el9_0.2"
+					}
+				],
+				"fixed": [
+					"2:8.2.2637-16.el9_0.2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -205,30 +229,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "vim-minimal",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:8.2.2637-16.el9_0.2"
-					}
-				],
-				"fixed": [
-					"2:8.2.2637-16.el9_0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "vim-common",
 				"architectures": [
 					"aarch64",
 					"x86_64",

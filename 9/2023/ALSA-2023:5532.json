@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2230948"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2230955"
 				},
 				{
@@ -44,6 +40,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32559"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2230948"
 				}
 			],
 			"published": "2023-10-09T00:00:00Z",
@@ -51,6 +51,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-32006",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-32559",
 			"references": [
@@ -68,18 +77,34 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-32006",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-libs",
+				"architectures": [
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.20.2-1.el9_2"
+					}
+				],
+				"fixed": [
+					"1:16.20.2-1.el9_2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -155,31 +180,6 @@
 			"package": {
 				"name": "nodejs",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:16.20.2-1.el9_2"
-					}
-				],
-				"fixed": [
-					"1:16.20.2-1.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs-libs",
-				"architectures": [
-					"i686",
 					"aarch64",
 					"x86_64",
 					"ppc64le",

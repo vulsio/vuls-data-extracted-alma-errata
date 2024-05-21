@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-4099.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:4099"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-2828"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2216227"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-4099.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:4099"
 				}
 			],
 			"published": "2023-07-17T00:00:00Z",
@@ -50,13 +50,58 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-libs",
+				"name": "bind",
 				"architectures": [
 					"aarch64",
 					"x86_64",
 					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-devel",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"x86_64",
 					"s390x",
-					"i686"
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-bind",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -78,30 +123,6 @@
 				"name": "bind-dnssec-doc",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-chroot",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
 				]
 			},
 			"affected": {
@@ -168,7 +189,53 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind",
+				"name": "bind-libs",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-license",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-chroot",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -193,73 +260,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "bind-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-devel",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"x86_64",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-bind",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-license",
 				"architectures": [
 					"noarch"
 				]
