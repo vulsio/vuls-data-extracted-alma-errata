@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-2463.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:2463"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2222672"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-2463.html"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -50,83 +50,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-libs",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:252-32.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:252-32.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "systemd",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:252-32.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:252-32.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "systemd-rpm-macros",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:252-32.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:252-32.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "systemd-udev",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
 				]
 			},
 			"affected": {
@@ -193,10 +119,37 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-boot-unsigned",
+				"name": "systemd-devel",
 				"architectures": [
+					"i686",
+					"aarch64",
 					"x86_64",
-					"aarch64"
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:252-32.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:252-32.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "systemd-journal-remote",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -240,33 +193,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-journal-remote",
+				"name": "systemd-udev",
 				"architectures": [
-					"aarch64",
 					"x86_64",
 					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:252-32.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:252-32.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rhel-net-naming-sysattrs",
-				"architectures": [
-					"noarch"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -309,13 +241,81 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-devel",
+				"name": "systemd-boot-unsigned",
+				"architectures": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:252-32.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:252-32.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rhel-net-naming-sysattrs",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:252-32.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:252-32.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "systemd-libs",
 				"architectures": [
 					"i686",
-					"aarch64",
 					"x86_64",
 					"ppc64le",
-					"s390x"
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:252-32.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:252-32.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "systemd",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
