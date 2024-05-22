@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2161777"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-0970.html"
 				},
 				{
@@ -44,6 +40,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2161774"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2161777"
 				}
 			],
 			"published": "2023-02-28T00:00:00Z",
@@ -84,9 +84,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd-manual",
+				"name": "httpd-devel",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -105,7 +108,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd-tools",
+				"name": "httpd-core",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -122,6 +125,54 @@
 				],
 				"fixed": [
 					"0:2.4.53-7.el9_1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_session",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-7.el9_1.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-7.el9_1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ssl",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.53-7.el9_1.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.53-7.el9_1.1"
 				]
 			}
 		},
@@ -177,7 +228,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd-filesystem",
+				"name": "httpd-manual",
 				"architectures": [
 					"noarch"
 				]
@@ -198,31 +249,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.53-7.el9_1.1"
-					}
-				],
-				"fixed": [
-					"0:2.4.53-7.el9_1.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd-core",
+				"name": "httpd-tools",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -270,30 +297,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "mod_session",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.53-7.el9_1.1"
-					}
-				],
-				"fixed": [
-					"0:2.4.53-7.el9_1.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "mod_ldap",
 				"architectures": [
 					"aarch64",
@@ -318,23 +321,20 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "mod_ssl",
+				"name": "httpd-filesystem",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:2.4.53-7.el9_1.1"
+						"lt": "0:2.4.53-7.el9_1.1"
 					}
 				],
 				"fixed": [
-					"1:2.4.53-7.el9_1.1"
+					"0:2.4.53-7.el9_1.1"
 				]
 			}
 		}
