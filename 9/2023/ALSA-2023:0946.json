@@ -19,14 +19,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2164497"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4304"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2164487"
 				},
 				{
@@ -35,23 +27,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2164500"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0215"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0401"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2164492"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-0946.html"
+					"url": "https://bugzilla.redhat.com/2164488"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2164497"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2164500"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,11 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4203"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4450"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-4450"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0215"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -75,15 +63,27 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2164440"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2164488"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2164494"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-0946.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4203"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-4304"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0401"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2164440"
 				}
 			],
 			"published": "2023-02-28T00:00:00Z",
@@ -91,6 +91,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-0217",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-0217"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-0286",
 			"references": [
@@ -153,42 +162,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-0216"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-0217",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-0217"
-				}
-			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "openssl",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:3.0.1-47.el9_1"
-					}
-				],
-				"fixed": [
-					"1:3.0.1-47.el9_1"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -245,6 +221,30 @@
 				"name": "openssl-libs",
 				"architectures": [
 					"i686",
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:3.0.1-47.el9_1"
+					}
+				],
+				"fixed": [
+					"1:3.0.1-47.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl",
+				"architectures": [
 					"x86_64",
 					"ppc64le",
 					"s390x",

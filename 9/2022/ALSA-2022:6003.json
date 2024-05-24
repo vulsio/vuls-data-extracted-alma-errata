@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2022-6003.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:6003"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2070220"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2022-6003.html"
 				}
 			],
 			"published": "2022-08-09T00:00:00Z",
@@ -67,11 +67,8 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools",
+				"name": "kernel-zfcpdump-devel",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
 					"s390x"
 				]
 			},
@@ -91,7 +88,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debug-modules",
+				"name": "kernel",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -138,11 +135,8 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-headers",
+				"name": "kernel-zfcpdump-devel-matched",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
 					"s390x"
 				]
 			},
@@ -162,7 +156,28 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-core",
+				"name": "kernel-zfcpdump-modules",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debug",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -207,8 +222,128 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-zfcpdump-devel",
+				"name": "kernel-doc",
 				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-cross-headers",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-modules",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debug-modules-extra",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -276,8 +411,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-zfcpdump-modules",
+				"name": "kernel-modules-extra",
 				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -297,30 +435,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-libs",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-modules-extra",
+				"name": "kernel-core",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -365,55 +480,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debug-devel-matched",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "perf",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
+				"name": "kernel-devel-matched",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -458,55 +525,52 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "kernel-zfcpdump",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debug-devel-matched",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.14.0-70.22.1.el9_0"
+					}
+				],
+				"fixed": [
+					"0:5.14.0-70.22.1.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "bpftool",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debug-modules-extra",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-modules",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -554,7 +618,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debug",
+				"name": "kernel-tools",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -578,9 +642,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-zfcpdump",
+				"name": "kernel-tools-libs",
 				"architectures": [
-					"s390x"
+					"aarch64",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -599,28 +665,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-cross-headers",
+				"name": "kernel-debug-modules",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -644,56 +689,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-devel-matched",
+				"name": "perf",
 				"architectures": [
 					"aarch64",
 					"x86_64",
 					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.14.0-70.22.1.el9_0"
-					}
-				],
-				"fixed": [
-					"0:5.14.0-70.22.1.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-zfcpdump-devel-matched",
-				"architectures": [
 					"s390x"
 				]
 			},
