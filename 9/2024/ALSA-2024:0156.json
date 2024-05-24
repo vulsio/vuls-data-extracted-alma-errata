@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2255386"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2257566"
 				},
 				{
@@ -40,10 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2255384"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2255386"
 				}
 			],
 			"published": "2024-01-10T00:00:00Z",
@@ -84,10 +84,33 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "aspnetcore-runtime-6.0",
+				"name": "dotnet-sdk-6.0",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.126-1.el9_3"
+					}
+				],
+				"fixed": [
+					"0:6.0.126-1.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-apphost-pack-6.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -109,8 +132,31 @@
 			"package": {
 				"name": "dotnet-targeting-pack-6.0",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.26-1.el9_3"
+					}
+				],
+				"fixed": [
+					"0:6.0.26-1.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "aspnetcore-runtime-6.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -132,8 +178,8 @@
 			"package": {
 				"name": "dotnet-templates-6.0",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -155,100 +201,8 @@
 			"package": {
 				"name": "aspnetcore-targeting-pack-6.0",
 				"architectures": [
+					"x86_64",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.26-1.el9_3"
-					}
-				],
-				"fixed": [
-					"0:6.0.26-1.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-sdk-6.0-source-built-artifacts",
-				"architectures": [
-					"x86_64",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.126-1.el9_3"
-					}
-				],
-				"fixed": [
-					"0:6.0.126-1.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-sdk-6.0",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.126-1.el9_3"
-					}
-				],
-				"fixed": [
-					"0:6.0.126-1.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-runtime-6.0",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.26-1.el9_3"
-					}
-				],
-				"fixed": [
-					"0:6.0.26-1.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-apphost-pack-6.0",
-				"architectures": [
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -270,8 +224,8 @@
 			"package": {
 				"name": "dotnet-hostfxr-6.0",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -284,6 +238,52 @@
 				],
 				"fixed": [
 					"0:6.0.26-1.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-runtime-6.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.26-1.el9_3"
+					}
+				],
+				"fixed": [
+					"0:6.0.26-1.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-sdk-6.0-source-built-artifacts",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.126-1.el9_3"
+					}
+				],
+				"fixed": [
+					"0:6.0.126-1.el9_3"
 				]
 			}
 		}
