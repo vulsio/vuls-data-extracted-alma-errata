@@ -15,19 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2020-4751.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-0196"
+					"url": "https://vulners.com/cve/CVE-2019-0197"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-10082"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-10092"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,11 +31,23 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-10098"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-1934"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2020-4751.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2018-17189"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-0197"
+					"url": "https://vulners.com/cve/CVE-2019-0196"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,11 +55,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-10098"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-1934"
+					"url": "https://vulners.com/cve/CVE-2019-10092"
 				}
 			],
 			"published": "2020-11-03T12:33:02Z",
@@ -63,6 +63,33 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2019-0197",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-0197"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10092",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-10092"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10097",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-10097"
+				}
+			]
+		},
 		{
 			"id": "CVE-2020-1934",
 			"references": [
@@ -100,11 +127,11 @@
 			]
 		},
 		{
-			"id": "CVE-2019-10092",
+			"id": "CVE-2019-10098",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-10092"
+					"url": "https://vulners.com/cve/CVE-2019-10098"
 				}
 			]
 		},
@@ -125,36 +152,30 @@
 					"url": "https://vulners.com/cve/CVE-2018-17189"
 				}
 			]
-		},
-		{
-			"id": "CVE-2019-0197",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-0197"
-				}
-			]
-		},
-		{
-			"id": "CVE-2019-10097",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-10097"
-				}
-			]
-		},
-		{
-			"id": "CVE-2019-10098",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-10098"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::mod_md",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
+					}
+				],
+				"fixed": [
+					"1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -174,27 +195,6 @@
 				],
 				"fixed": [
 					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_md",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
-					}
-				],
-				"fixed": [
-					"1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
 				]
 			}
 		}
