@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2154362"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-2127.html"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-38023"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2154362"
 				}
 			],
 			"published": "2023-05-04T00:00:00Z",
@@ -50,53 +50,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libsmbclient",
-				"architectures": [
-					"x86_64",
-					"i686",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.16.4-103.el9_1"
-					}
-				],
-				"fixed": [
-					"0:4.16.4-103.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "samba-pidl",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.16.4-103.el9_1"
-					}
-				],
-				"fixed": [
-					"0:4.16.4-103.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "samba-test",
+				"name": "samba-test-libs",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -144,9 +98,10 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-common-tools",
+				"name": "libsmbclient",
 				"architectures": [
 					"x86_64",
+					"i686",
 					"ppc64le",
 					"s390x",
 					"aarch64"
@@ -168,7 +123,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-libs",
+				"name": "python3-samba",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -193,12 +148,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba",
+				"name": "samba-common",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -266,13 +218,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-devel",
+				"name": "samba-winbind-modules",
 				"architectures": [
 					"i686",
-					"aarch64",
 					"x86_64",
+					"ppc64le",
 					"s390x",
-					"ppc64le"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -291,8 +243,34 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-test-libs",
+				"name": "samba-common-libs",
 				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.16.4-103.el9_1"
+					}
+				],
+				"fixed": [
+					"0:4.16.4-103.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "samba-devel",
+				"architectures": [
+					"i686",
 					"aarch64",
 					"x86_64",
 					"s390x",
@@ -363,52 +341,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-winexe",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.16.4-103.el9_1"
-					}
-				],
-				"fixed": [
-					"0:4.16.4-103.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "samba-winbind-modules",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.16.4-103.el9_1"
-					}
-				],
-				"fixed": [
-					"0:4.16.4-103.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "samba-client-libs",
 				"architectures": [
 					"x86_64",
@@ -434,7 +366,55 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-common",
+				"name": "samba-common-tools",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.16.4-103.el9_1"
+					}
+				],
+				"fixed": [
+					"0:4.16.4-103.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "samba",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.16.4-103.el9_1"
+					}
+				],
+				"fixed": [
+					"0:4.16.4-103.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "samba-pidl",
 				"architectures": [
 					"noarch"
 				]
@@ -455,11 +435,37 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ctdb",
+				"name": "libwbclient-devel",
 				"architectures": [
-					"ppc64le",
+					"i686",
+					"aarch64",
+					"x86_64",
 					"s390x",
-					"x86_64"
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.16.4-103.el9_1"
+					}
+				],
+				"fixed": [
+					"0:4.16.4-103.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "samba-test",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -526,6 +532,27 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "samba-winexe",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.16.4-103.el9_1"
+					}
+				],
+				"fixed": [
+					"0:4.16.4-103.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "libwbclient",
 				"architectures": [
 					"x86_64",
@@ -551,7 +578,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-samba",
+				"name": "samba-libs",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -576,38 +603,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "samba-common-libs",
+				"name": "ctdb",
 				"architectures": [
-					"i686",
-					"x86_64",
 					"ppc64le",
 					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.16.4-103.el9_1"
-					}
-				],
-				"fixed": [
-					"0:4.16.4-103.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libwbclient-devel",
-				"architectures": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
+					"x86_64"
 				]
 			},
 			"affected": {
