@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2268046"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-2548.html"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2265513"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2268046"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2024-1753",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-1753"
-				}
-			]
-		},
-		{
 			"id": "CVE-2024-24786",
 			"references": [
 				{
@@ -60,33 +51,18 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2024-24786"
 				}
 			]
+		},
+		{
+			"id": "CVE-2024-1753",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-1753"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "podman-plugins",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "4:4.9.4-3.el9_4"
-					}
-				],
-				"fixed": [
-					"4:4.9.4-3.el9_4"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -161,6 +137,30 @@
 			"vulnerable": true,
 			"package": {
 				"name": "podman",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "4:4.9.4-3.el9_4"
+					}
+				],
+				"fixed": [
+					"4:4.9.4-3.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "podman-plugins",
 				"architectures": [
 					"ppc64le",
 					"x86_64",
