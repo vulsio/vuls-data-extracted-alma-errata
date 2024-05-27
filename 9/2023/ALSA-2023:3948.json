@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-3948.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:3948"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2213087"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-3948.html"
 				}
 			],
 			"published": "2023-06-29T00:00:00Z",
@@ -46,6 +46,28 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "open-vm-tools",
+				"architectures": [
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.1.5-1.el9_2.1.alma"
+					}
+				],
+				"fixed": [
+					"0:12.1.5-1.el9_2.1.alma"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -118,28 +140,6 @@
 				"name": "open-vm-tools-sdmp",
 				"architectures": [
 					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.1.5-1.el9_2.1.alma"
-					}
-				],
-				"fixed": [
-					"0:12.1.5-1.el9_2.1.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "open-vm-tools",
-				"architectures": [
-					"x86_64",
-					"aarch64"
 				]
 			},
 			"affected": {
