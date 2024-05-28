@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-45803"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-52323"
 				},
 				{
@@ -40,10 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:2132"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-45803"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -84,9 +84,30 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-ibm-vpc",
+				"name": "fence-virtd",
 				"architectures": [
-					"noarch"
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-virt",
+				"architectures": [
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -108,93 +129,6 @@
 				"name": "fence-agents-common",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-virtd-tcp",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-ibm-powervs",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-kubevirt",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-virtd",
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -256,9 +190,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-virtd-multicast",
+				"name": "fence-agents-ibm-vpc",
 				"architectures": [
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -277,7 +211,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-virt",
+				"name": "fence-agents-kubevirt",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-virtd-tcp",
 				"architectures": [
 					"x86_64"
 				]
@@ -319,7 +277,28 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-virsh",
+				"name": "fence-agents-lpar",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-ibm-powervs",
 				"architectures": [
 					"noarch"
 				]
@@ -361,7 +340,28 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-lpar",
+				"name": "fence-virtd-multicast",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-virsh",
 				"architectures": [
 					"noarch"
 				]
