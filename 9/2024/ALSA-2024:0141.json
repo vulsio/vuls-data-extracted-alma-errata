@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2242828"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-0141.html"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5455"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2242828"
 				}
 			],
 			"published": "2024-01-10T00:00:00Z",
@@ -46,54 +46,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ipa-client-epn",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.2-5.el9_3.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.10.2-5.el9_3.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ipa-server",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.2-5.el9_3.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.10.2-5.el9_3.alma.1"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -119,7 +71,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ipa-server-common",
+				"name": "ipa-common",
 				"architectures": [
 					"noarch"
 				]
@@ -161,11 +113,32 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ipa-server-trust-ad",
+				"name": "ipa-client-common",
 				"architectures": [
-					"x86_64",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.2-5.el9_3.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.10.2-5.el9_3.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ipa-client-epn",
+				"architectures": [
 					"aarch64",
 					"ppc64le",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -185,7 +158,52 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ipa-common",
+				"name": "ipa-server",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.2-5.el9_3.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.10.2-5.el9_3.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-ipaserver",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.2-5.el9_3.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.10.2-5.el9_3.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ipa-server-common",
 				"architectures": [
 					"noarch"
 				]
@@ -248,11 +266,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ipa-client-samba",
+				"name": "ipa-client",
 				"architectures": [
-					"x86_64",
 					"aarch64",
 					"ppc64le",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -272,53 +290,35 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-ipaserver",
+				"name": "ipa-client-samba",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.2-5.el9_3.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.10.2-5.el9_3.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ipa-client-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.2-5.el9_3.alma.1"
-					}
-				],
-				"fixed": [
-					"0:4.10.2-5.el9_3.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ipa-client",
-				"architectures": [
-					"x86_64",
 					"aarch64",
 					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.2-5.el9_3.alma.1"
+					}
+				],
+				"fixed": [
+					"0:4.10.2-5.el9_3.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ipa-server-trust-ad",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
 					"s390x"
 				]
 			},
