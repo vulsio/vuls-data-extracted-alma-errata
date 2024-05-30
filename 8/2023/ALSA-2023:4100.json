@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-4100.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4100"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2216227"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-4100.html"
 				}
 			],
 			"published": "2023-07-17T00:00:00Z",
@@ -50,9 +50,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16-license",
+				"name": "bind9.16-dnssec-utils",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -71,7 +74,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16",
+				"name": "bind9.16-chroot",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -140,6 +143,27 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "bind9.16-license",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-0.14.el8_8.1.alma"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-0.14.el8_8.1.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "bind9.16-devel",
 				"architectures": [
 					"i686",
@@ -165,31 +189,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16-dnssec-utils",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-0.14.el8_8.1.alma"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-0.14.el8_8.1.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind9.16-chroot",
+				"name": "bind9.16",
 				"architectures": [
 					"x86_64",
 					"aarch64",

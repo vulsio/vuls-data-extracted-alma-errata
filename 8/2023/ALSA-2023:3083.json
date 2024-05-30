@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-3083.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:3083"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2178492"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-3083.html"
 				}
 			],
 			"published": "2023-05-16T00:00:00Z",
@@ -109,9 +109,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang-race",
+				"name": "go-toolset:rhel8::golang",
 				"architectures": [
-					"x86_64"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -123,27 +126,6 @@
 				],
 				"fixed": [
 					"0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "go-toolset:rhel8::delve",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.9.1-1.module_el8.8.0+3471+a62632a0"
-					}
-				],
-				"fixed": [
-					"0:1.9.1-1.module_el8.8.0+3471+a62632a0"
 				]
 			}
 		},
@@ -193,12 +175,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::go-toolset",
+				"name": "go-toolset:rhel8::golang-race",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -241,7 +220,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang",
+				"name": "go-toolset:rhel8::go-toolset",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -258,6 +237,27 @@
 				],
 				"fixed": [
 					"0:1.19.6-1.module_el8.8.0+3558+75c9cb88"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "go-toolset:rhel8::delve",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.9.1-1.module_el8.8.0+3471+a62632a0"
+					}
+				],
+				"fixed": [
+					"0:1.9.1-1.module_el8.8.0+3471+a62632a0"
 				]
 			}
 		}
