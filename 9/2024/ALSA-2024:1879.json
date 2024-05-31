@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2269228"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-1879.html"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2269084"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2269228"
 				}
 			],
 			"published": "2024-04-18T00:00:00Z",
@@ -63,31 +63,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "gnutls-dane",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.7.6-23.el9_3.4"
-					}
-				],
-				"fixed": [
-					"0:3.7.6-23.el9_3.4"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -169,9 +144,34 @@
 				"name": "gnutls",
 				"architectures": [
 					"i686",
-					"ppc64le",
-					"x86_64",
 					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.7.6-23.el9_3.4"
+					}
+				],
+				"fixed": [
+					"0:3.7.6-23.el9_3.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "gnutls-dane",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
