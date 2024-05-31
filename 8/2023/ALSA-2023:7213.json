@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2245910"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2245916"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2023-7213.html"
 				},
 				{
@@ -28,14 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-46847"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2245910"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2245916"
 				}
 			],
 			"published": "2023-11-14T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-46847",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-46847"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-46846",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-46846"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-46847",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-46847"
 				}
 			]
 		}
@@ -69,8 +69,8 @@
 			"package": {
 				"name": "squid:4::squid",
 				"architectures": [
-					"x86_64",
 					"aarch64",
+					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -93,18 +93,20 @@
 			"package": {
 				"name": "squid:4::libecap-devel",
 				"architectures": [
-					"s390x"
+					"aarch64",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.0.1-2.module_el8.6.0+3048+383bc947"
+						"lt": "0:1.0.1-2.module_el8.6.0+2741+01592ae8"
 					}
 				],
 				"fixed": [
-					"0:1.0.1-2.module_el8.6.0+3048+383bc947"
+					"0:1.0.1-2.module_el8.6.0+2741+01592ae8"
 				]
 			}
 		},
@@ -114,43 +116,18 @@
 			"package": {
 				"name": "squid:4::libecap-devel",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"s390x"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.0.1-2.module_el8.6.0+2741+01592ae8"
+						"lt": "0:1.0.1-2.module_el8.6.0+3048+383bc947"
 					}
 				],
 				"fixed": [
-					"0:1.0.1-2.module_el8.6.0+2741+01592ae8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "squid:4::libecap",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0.1-2.module_el8.6.0+2741+01592ae8"
-					}
-				],
-				"fixed": [
-					"0:1.0.1-2.module_el8.6.0+2741+01592ae8"
+					"0:1.0.1-2.module_el8.6.0+3048+383bc947"
 				]
 			}
 		},
@@ -172,6 +149,29 @@
 				],
 				"fixed": [
 					"0:1.0.1-2.module_el8.6.0+3048+383bc947"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "squid:4::libecap",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0.1-2.module_el8.6.0+2741+01592ae8"
+					}
+				],
+				"fixed": [
+					"0:1.0.1-2.module_el8.6.0+2741+01592ae8"
 				]
 			}
 		}

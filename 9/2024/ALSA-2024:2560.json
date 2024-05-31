@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-2560.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:2560"
 				},
 				{
@@ -32,14 +36,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2270115"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-2560.html"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
-			"modified": "2024-05-07T15:05:30Z"
+			"modified": "2024-05-07T15:05:47Z"
 		}
 	],
 	"vulnerabilities": [
@@ -67,10 +67,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt-daemon-driver-qemu",
+				"name": "libvirt-daemon-config-nwfilter",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -90,7 +91,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt-devel",
+				"name": "libvirt-daemon-driver-storage",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-nwfilter",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -116,224 +141,9 @@
 			"package": {
 				"name": "libvirt-daemon-driver-storage-iscsi",
 				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-storage-logical",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-client-qemu",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-storage-mpath",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-libs",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-log",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-interface",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-nwfilter",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-common",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-secret",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -355,104 +165,9 @@
 			"package": {
 				"name": "libvirt-daemon-driver-storage-scsi",
 				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-plugin-lockd",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-kvm",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-nodedev",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-storage-core",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -475,8 +190,8 @@
 				"name": "libvirt-docs",
 				"architectures": [
 					"x86_64",
-					"aarch64",
 					"ppc64le",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -496,83 +211,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt-daemon-config-network",
+				"name": "libvirt-daemon-common",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-storage",
-				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-client",
-				"architectures": [
 					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-network",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -594,9 +237,9 @@
 			"package": {
 				"name": "libvirt-daemon-lock",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -616,35 +259,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt-daemon-config-nwfilter",
+				"name": "libvirt-libs",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.0.0-6.2.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:10.0.0-6.2.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libvirt-daemon-driver-storage-disk",
-				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -666,9 +285,9 @@
 			"package": {
 				"name": "libvirt-nss",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -688,11 +307,82 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt-daemon-proxy",
+				"name": "libvirt-daemon-driver-secret",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-qemu",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-interface",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-storage-rbd",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -735,11 +425,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt-daemon-driver-storage-rbd",
+				"name": "libvirt-daemon-plugin-lockd",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -759,11 +449,34 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libvirt",
+				"name": "libvirt-daemon-driver-network",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-kvm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -785,9 +498,296 @@
 			"package": {
 				"name": "libvirt-daemon",
 				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-client",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-storage-disk",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-client-qemu",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-devel",
+				"architectures": [
+					"x86_64",
 					"ppc64le",
 					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-nodedev",
+				"architectures": [
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-storage-mpath",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-config-network",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-storage-core",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-log",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-proxy",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.0.0-6.2.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:10.0.0-6.2.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libvirt-daemon-driver-storage-logical",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},

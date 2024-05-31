@@ -15,14 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-4513.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-36084"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-36085"
 				},
 				{
@@ -32,13 +24,30 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-36087"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2021-4513.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-36084"
 				}
 			],
 			"published": "2021-11-09T09:39:50Z",
-			"modified": "2021-11-12T10:21:01Z"
+			"modified": "2023-03-13T16:33:57Z"
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2021-36084",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-36084"
+				}
+			]
+		},
 		{
 			"id": "CVE-2021-36085",
 			"references": [
@@ -65,15 +74,6 @@
 					"url": "https://vulners.com/cve/CVE-2021-36087"
 				}
 			]
-		},
-		{
-			"id": "CVE-2021-36084",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-36084"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -84,8 +84,8 @@
 				"name": "libsepol-static",
 				"architectures": [
 					"x86_64",
-					"i686",
 					"aarch64",
+					"i686",
 					"ppc64le"
 				]
 			},
@@ -107,6 +107,7 @@
 			"package": {
 				"name": "libsepol",
 				"architectures": [
+					"x86_64",
 					"x86_64",
 					"i686",
 					"aarch64",
@@ -131,8 +132,9 @@
 			"package": {
 				"name": "libsepol-devel",
 				"architectures": [
-					"x86_64",
 					"i686",
+					"x86_64",
+					"x86_64",
 					"aarch64",
 					"ppc64le"
 				]

@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28321"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28322"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4354"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28321"
 				}
 			],
 			"published": "2023-08-01T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-28321",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-28321"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-28322",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-28322"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28321",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-28321"
 				}
 			]
 		}
@@ -67,11 +67,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "libcurl",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.76.1-23.el9_2.2"
+					}
+				],
+				"fixed": [
+					"0:7.76.1-23.el9_2.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "curl-minimal",
 				"architectures": [
-					"aarch64",
-					"x86_64",
 					"ppc64le",
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -93,9 +118,9 @@
 			"package": {
 				"name": "curl",
 				"architectures": [
-					"aarch64",
-					"x86_64",
 					"ppc64le",
+					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -118,9 +143,9 @@
 				"name": "libcurl-devel",
 				"architectures": [
 					"i686",
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -143,34 +168,9 @@
 				"name": "libcurl-minimal",
 				"architectures": [
 					"i686",
-					"aarch64",
-					"x86_64",
 					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.76.1-23.el9_2.2"
-					}
-				],
-				"fixed": [
-					"0:7.76.1-23.el9_2.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libcurl",
-				"architectures": [
-					"i686",
-					"aarch64",
 					"x86_64",
-					"ppc64le",
+					"aarch64",
 					"s390x"
 				]
 			},
