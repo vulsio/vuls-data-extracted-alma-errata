@@ -15,14 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-7253.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:7253"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-36049"
 				},
 				{
@@ -36,6 +28,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2248883"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-7253.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:7253"
 				}
 			],
 			"published": "2023-11-15T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-36049",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-36049"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-36558",
 			"references": [
 				{
@@ -60,9 +51,90 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-36558"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-36049",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-36049"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-templates-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.100-2.el9_3"
+					}
+				],
+				"fixed": [
+					"0:8.0.100-2.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-sdk-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.100-2.el9_3"
+					}
+				],
+				"fixed": [
+					"0:8.0.100-2.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-hostfxr-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.0-2.el9_3"
+					}
+				],
+				"fixed": [
+					"0:8.0.0-2.el9_3"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -115,11 +187,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-sdk-8.0-source-built-artifacts",
+				"name": "dotnet-targeting-pack-8.0",
 				"architectures": [
 					"x86_64",
-					"ppc64le",
 					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -127,11 +199,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:8.0.100-2.el9_3"
+						"lt": "0:8.0.0-2.el9_3"
 					}
 				],
 				"fixed": [
-					"0:8.0.100-2.el9_3"
+					"0:8.0.0-2.el9_3"
 				]
 			}
 		},
@@ -163,78 +235,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-templates-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.100-2.el9_3"
-					}
-				],
-				"fixed": [
-					"0:8.0.100-2.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-host",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-2.el9_3"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-2.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-sdk-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.100-2.el9_3"
-					}
-				],
-				"fixed": [
-					"0:8.0.100-2.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "netstandard-targeting-pack-2.1",
 				"architectures": [
 					"x86_64",
@@ -252,30 +252,6 @@
 				],
 				"fixed": [
 					"0:8.0.100-2.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-hostfxr-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.0-2.el9_3"
-					}
-				],
-				"fixed": [
-					"0:8.0.0-2.el9_3"
 				]
 			}
 		},
@@ -307,7 +283,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-targeting-pack-8.0",
+				"name": "dotnet-host",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -324,6 +300,30 @@
 				],
 				"fixed": [
 					"0:8.0.0-2.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-sdk-8.0-source-built-artifacts",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.100-2.el9_3"
+					}
+				],
+				"fixed": [
+					"0:8.0.100-2.el9_3"
 				]
 			}
 		}
