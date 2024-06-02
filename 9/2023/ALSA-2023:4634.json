@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-4634.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4634"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2228038"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-4634.html"
 				}
 			],
 			"published": "2023-08-14T00:00:00Z",
@@ -71,7 +71,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-gdb",
+				"name": "rust-debugger-common",
 				"architectures": [
 					"noarch"
 				]
@@ -92,7 +92,49 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-debugger-common",
+				"name": "rust-std-static-wasm32-unknown-unknown",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-src",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-lldb",
 				"architectures": [
 					"noarch"
 				]
@@ -137,7 +179,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rustfmt",
+				"name": "rust-analyzer",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -161,33 +203,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-std-static-wasm32-unknown-unknown",
+				"name": "rust-gdb",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "clippy",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
 				]
 			},
 			"affected": {
@@ -207,51 +225,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "rust-toolset",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-src",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-doc",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -299,9 +272,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-lldb",
+				"name": "rust-std-static",
 				"architectures": [
-					"noarch"
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -320,9 +297,32 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-std-static",
+				"name": "rust-doc",
 				"architectures": [
-					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "clippy",
+				"architectures": [
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -369,7 +369,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-analyzer",
+				"name": "rustfmt",
 				"architectures": [
 					"x86_64",
 					"aarch64",
