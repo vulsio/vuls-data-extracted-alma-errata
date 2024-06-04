@@ -15,27 +15,27 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263909"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263917"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-1789.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263897"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:1789"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-50868"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263896"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,19 +47,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263917"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-50868"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -67,7 +55,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263909"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263896"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263897"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:1789"
 				}
 			],
 			"published": "2024-04-11T00:00:00Z",
@@ -75,24 +75,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-4408",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-50387",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-50868",
 			"references": [
@@ -128,6 +110,24 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-4408",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-50387",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -135,7 +135,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-bind",
+				"name": "bind-dnssec-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -156,9 +156,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-doc",
+				"name": "bind",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -201,12 +204,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-chroot",
+				"name": "bind-libs",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x"
+					"s390x",
+					"i686"
 				]
 			},
 			"affected": {
@@ -225,12 +229,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-utils",
+				"name": "bind-devel",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
+					"i686",
 					"aarch64",
-					"s390x"
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -270,7 +275,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind",
+				"name": "bind-chroot",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
@@ -318,13 +323,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-libs",
+				"name": "bind-utils",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"s390x",
-					"i686"
+					"s390x"
 				]
 			},
 			"affected": {
@@ -364,13 +368,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-devel",
+				"name": "python3-bind",
 				"architectures": [
-					"i686",
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
