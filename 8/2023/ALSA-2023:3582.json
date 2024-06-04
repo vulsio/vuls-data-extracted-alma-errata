@@ -15,31 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2212618"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-3582.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:3582"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29337"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,6 +31,26 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-3582.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29337"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-33128"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2212618"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2213703"
 				}
 			],
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-29331",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-29337",
 			"references": [
@@ -94,9 +85,41 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-24936"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-29331",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29331"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-sdk-6.0",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.118-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:6.0.118-1.el8_8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -125,52 +148,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "aspnetcore-targeting-pack-6.0",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.18-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:6.0.18-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-runtime-6.0",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.18-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:6.0.18-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-hostfxr-6.0",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -239,29 +216,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-targeting-pack-6.0",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.0.18-1.el8_8"
-					}
-				],
-				"fixed": [
-					"0:6.0.18-1.el8_8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "dotnet-sdk-6.0-source-built-artifacts",
 				"architectures": [
 					"x86_64",
@@ -285,7 +239,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-sdk-6.0",
+				"name": "dotnet-hostfxr-6.0",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -296,11 +250,57 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:6.0.118-1.el8_8"
+						"lt": "0:6.0.18-1.el8_8"
 					}
 				],
 				"fixed": [
-					"0:6.0.118-1.el8_8"
+					"0:6.0.18-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-runtime-6.0",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.18-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:6.0.18-1.el8_8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-targeting-pack-6.0",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0.18-1.el8_8"
+					}
+				],
+				"fixed": [
+					"0:6.0.18-1.el8_8"
 				]
 			}
 		}
