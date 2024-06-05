@@ -15,15 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5517"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,7 +23,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263911"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263914"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263917"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,15 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263896"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263914"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263917"
+					"url": "https://bugzilla.redhat.com/2263909"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -63,11 +59,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-50387"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2263909"
+					"url": "https://bugzilla.redhat.com/2263896"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2263911"
 				}
 			],
 			"published": "2024-04-11T00:00:00Z",
@@ -75,6 +75,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-6516",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4408",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-50387",
 			"references": [
@@ -110,24 +128,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5679"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-6516",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6516"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-4408",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-4408"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -135,9 +135,13 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16-doc",
+				"name": "bind9.16-libs",
 				"architectures": [
-					"noarch"
+					"i686",
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -205,31 +209,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-0.16.el8_9.2.alma.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-0.16.el8_9.2.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "bind9.16-utils",
+				"name": "bind9.16-chroot",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -295,9 +275,29 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16-libs",
+				"name": "bind9.16-doc",
 				"architectures": [
-					"i686",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-0.16.el8_9.2.alma.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-0.16.el8_9.2.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "bind9.16",
+				"architectures": [
 					"aarch64",
 					"x86_64",
 					"ppc64le",
@@ -320,7 +320,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "bind9.16-chroot",
+				"name": "bind9.16-utils",
 				"architectures": [
 					"aarch64",
 					"x86_64",
