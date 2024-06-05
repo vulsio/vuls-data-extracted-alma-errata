@@ -15,11 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2151756"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:2257"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-4283"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2151755"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46341"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,23 +39,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2151760"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-2257.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46340"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46343"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2257"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2151761"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2151756"
+					"url": "https://bugzilla.redhat.com/2151755"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -55,19 +59,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46340"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2151761"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2151758"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2151760"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46341"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46343"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -75,6 +75,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-46341",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-46341"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-46342",
 			"references": [
@@ -119,18 +128,75 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-46340"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-46341",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-46341"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "tigervnc-license",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.12.0-13.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.12.0-13.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "tigervnc-selinux",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.12.0-13.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.12.0-13.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "tigervnc-server-module",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.12.0-13.el9_2"
+					}
+				],
+				"fixed": [
+					"0:1.12.0-13.el9_2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -210,72 +276,6 @@
 				"name": "tigervnc-icons",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.12.0-13.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.12.0-13.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "tigervnc-license",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.12.0-13.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.12.0-13.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "tigervnc-selinux",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.12.0-13.el9_2"
-					}
-				],
-				"fixed": [
-					"0:1.12.0-13.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "tigervnc-server-module",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"affected": {

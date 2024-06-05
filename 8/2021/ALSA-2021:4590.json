@@ -15,11 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-4590.html"
+					"url": "https://vulners.com/cve/CVE-2021-42574"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-42574"
+					"url": "https://errata.almalinux.org/8/ALSA-2021-4590.html"
 				}
 			],
 			"published": "2021-11-10T08:37:57Z",
@@ -38,6 +38,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::cargo-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+					}
+				],
+				"fixed": [
+					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -63,70 +84,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-lldb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-					}
-				],
-				"fixed": [
-					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "rust-toolset:rhel8::rust-gdb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-					}
-				],
-				"fixed": [
-					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-debugger-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-					}
-				],
-				"fixed": [
-					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-src",
 				"architectures": [
 					"noarch"
 				]
@@ -210,49 +168,70 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "rust-toolset:rhel8::rust-std-static",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+					}
+				],
+				"fixed": [
+					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-src",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+					}
+				],
+				"fixed": [
+					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+					}
+				],
+				"fixed": [
+					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "rust-toolset:rhel8::cargo",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-					}
-				],
-				"fixed": [
-					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-doc",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-					}
-				],
-				"fixed": [
-					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rls",
 				"architectures": [
 					"x86_64"
 				]
@@ -294,28 +273,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-std-static",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-					}
-				],
-				"fixed": [
-					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::cargo-doc",
+				"name": "rust-toolset:rhel8::rust-debugger-common",
 				"architectures": [
 					"noarch"
 				]
@@ -336,7 +294,49 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust",
+				"name": "rust-toolset:rhel8::rust-lldb",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+					}
+				],
+				"fixed": [
+					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-doc",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+					}
+				],
+				"fixed": [
+					"0:1.54.0-3.module_el8.5.0+2599+d655d86c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rls",
 				"architectures": [
 					"x86_64"
 				]
