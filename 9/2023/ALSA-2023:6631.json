@@ -52,6 +52,15 @@
 	],
 	"vulnerabilities": [
 		{
+			"id": "CVE-2023-29499",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-29499"
+				}
+			]
+		},
+		{
 			"id": "CVE-2023-32611",
 			"references": [
 				{
@@ -68,18 +77,55 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32665"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-29499",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-29499"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.68.4-11.el9"
+					}
+				],
+				"fixed": [
+					"0:2.68.4-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.68.4-11.el9"
+					}
+				],
+				"fixed": [
+					"0:2.68.4-11.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -140,52 +186,6 @@
 					"x86_64",
 					"s390x",
 					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.68.4-11.el9"
-					}
-				],
-				"fixed": [
-					"0:2.68.4-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "glib2-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.68.4-11.el9"
-					}
-				],
-				"fixed": [
-					"0:2.68.4-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "glib2-doc",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
