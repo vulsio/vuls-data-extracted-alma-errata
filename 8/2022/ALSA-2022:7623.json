@@ -50,7 +50,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dovecot",
+				"name": "dovecot-devel",
 				"architectures": [
 					"i686",
 					"aarch64",
@@ -75,10 +75,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dovecot-pgsql",
+				"name": "dovecot",
 				"architectures": [
-					"aarch64",
+					"i686",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -101,8 +102,32 @@
 			"package": {
 				"name": "dovecot-pigeonhole",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.3.16-3.el8"
+					}
+				],
+				"fixed": [
+					"1:2.3.16-3.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dovecot-pgsql",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -125,31 +150,6 @@
 			"package": {
 				"name": "dovecot-mysql",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.3.16-3.el8"
-					}
-				],
-				"fixed": [
-					"1:2.3.16-3.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dovecot-devel",
-				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
