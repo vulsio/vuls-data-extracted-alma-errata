@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-5823.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:5823"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2064769"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2022-5823.html"
 				}
 			],
 			"published": "2022-08-02T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-0996",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-0996"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-0918",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-0918"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0996",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-0996"
 				}
 			]
 		}
@@ -69,8 +69,31 @@
 			"package": {
 				"name": "389-ds:1.4::389-ds-base",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
+					}
+				],
+				"fixed": [
+					"0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds:1.4::389-ds-base-snmp",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le"
 				]
 			},
@@ -92,8 +115,31 @@
 			"package": {
 				"name": "389-ds:1.4::389-ds-base-libs",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
+					}
+				],
+				"fixed": [
+					"0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds:1.4::389-ds-base-legacy-tools",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le"
 				]
 			},
@@ -134,56 +180,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "389-ds:1.4::389-ds-base-legacy-tools",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
-					}
-				],
-				"fixed": [
-					"0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "389-ds:1.4::389-ds-base-snmp",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
-					}
-				],
-				"fixed": [
-					"0:1.4.3.28-7.module_el8.6.0+3071+d20b1d7c"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "389-ds:1.4::389-ds-base-devel",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le"
 				]
 			},

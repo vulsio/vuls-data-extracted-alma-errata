@@ -15,15 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:0607"
+					"url": "https://access.redhat.com/security/cve/CVE-2024-0229"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-21885"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2256540"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -35,7 +31,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2024-0607.html"
+					"url": "https://bugzilla.redhat.com/2257691"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:0607"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,15 +43,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-0229"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-21886"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2257691"
+					"url": "https://bugzilla.redhat.com/2256540"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2024-0607.html"
 				}
 			],
 			"published": "2024-01-30T00:00:00Z",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2024-21886",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-21886"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-6816",
 			"references": [
@@ -94,6 +85,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2024-21885"
 				}
 			]
+		},
+		{
+			"id": "CVE-2024-21886",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-21886"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -101,58 +101,34 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "tigervnc-server",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.13.1-2.el8_9.7.alma.1"
+					}
+				],
+				"fixed": [
+					"0:1.13.1-2.el8_9.7.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "tigervnc-server-module",
 				"architectures": [
-					"aarch64",
 					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.13.1-2.el8_9.7.alma.1"
-					}
-				],
-				"fixed": [
-					"0:1.13.1-2.el8_9.7.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "tigervnc-server-minimal",
-				"architectures": [
 					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.13.1-2.el8_9.7.alma.1"
-					}
-				],
-				"fixed": [
-					"0:1.13.1-2.el8_9.7.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "tigervnc",
-				"architectures": [
-					"aarch64",
-					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -236,10 +212,34 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "tigervnc-server",
+				"name": "tigervnc-server-minimal",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.13.1-2.el8_9.7.alma.1"
+					}
+				],
+				"fixed": [
+					"0:1.13.1-2.el8_9.7.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "tigervnc",
+				"architectures": [
+					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
