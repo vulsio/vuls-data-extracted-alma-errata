@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:7784"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5868"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2228111"
 				},
 				{
@@ -23,19 +31,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2247170"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-7784.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:7784"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-39417"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5868"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -44,10 +48,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5870"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2247170"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -101,7 +101,55 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-upgrade",
+				"name": "postgresql-plperl",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.13-1.el9_3"
+					}
+				],
+				"fixed": [
+					"0:13.13-1.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-pltcl",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.13-1.el9_3"
+					}
+				],
+				"fixed": [
+					"0:13.13-1.el9_3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-contrib",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
@@ -149,7 +197,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-static",
+				"name": "postgresql-server-devel",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -197,60 +245,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-private-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:13.13-1.el9_3"
-					}
-				],
-				"fixed": [
-					"0:13.13-1.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "postgresql-test",
 				"architectures": [
 					"aarch64",
 					"x86_64",
 					"s390x",
 					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:13.13-1.el9_3"
-					}
-				],
-				"fixed": [
-					"0:13.13-1.el9_3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-contrib",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"affected": {
@@ -293,12 +293,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql",
+				"name": "postgresql-static",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -341,12 +341,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-pltcl",
+				"name": "postgresql-private-devel",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
 					"aarch64",
-					"s390x"
+					"x86_64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -365,7 +365,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-plperl",
+				"name": "postgresql-upgrade",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
@@ -413,12 +413,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-server-devel",
+				"name": "postgresql",
 				"architectures": [
-					"aarch64",
 					"x86_64",
-					"s390x",
-					"ppc64le"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
