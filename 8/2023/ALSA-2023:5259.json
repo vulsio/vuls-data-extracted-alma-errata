@@ -15,7 +15,27 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2106042"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2130105"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2163609"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-5259.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:5259"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32091"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -27,31 +47,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-5259.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-32084"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32091"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-47015"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2106042"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2130105"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2163609"
 				}
 			],
 			"published": "2023-09-19T00:00:00Z",
@@ -59,15 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-32084",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32084"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-32091",
 			"references": [
@@ -94,6 +85,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-47015"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-32084",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32084"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -101,7 +101,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::galera",
+				"name": "mariadb:10.3::mariadb-backup",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -113,11 +113,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:25.3.37-1.module_el8.8.0+3609+204d4ab0"
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
 					}
 				],
 				"fixed": [
-					"0:25.3.37-1.module_el8.8.0+3609+204d4ab0"
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
 				]
 			}
 		},
@@ -149,7 +149,31 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-test",
+				"name": "mariadb:10.3::mariadb-devel",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb:10.3::mariadb-server",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -221,30 +245,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-common",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "mariadb:10.3::mariadb",
 				"architectures": [
 					"x86_64",
@@ -269,7 +269,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-backup",
+				"name": "mariadb:10.3::mariadb-embedded-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -293,7 +293,55 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-server",
+				"name": "mariadb:10.3::galera",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:25.3.37-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"0:25.3.37-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb:10.3::mariadb-embedded",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb:10.3::mariadb-common",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -318,6 +366,30 @@
 			"vulnerable": true,
 			"package": {
 				"name": "mariadb:10.3::mariadb-server-utils",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+					}
+				],
+				"fixed": [
+					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb:10.3::mariadb-oqgraph-engine",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -385,79 +457,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "mariadb:10.3::mariadb-embedded",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mariadb:10.3::mariadb-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mariadb:10.3::mariadb-embedded-devel",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-					}
-				],
-				"fixed": [
-					"3:10.3.39-1.module_el8.8.0+3609+204d4ab0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mariadb:10.3::mariadb-oqgraph-engine",
+				"name": "mariadb:10.3::mariadb-test",
 				"architectures": [
 					"x86_64",
 					"aarch64",
