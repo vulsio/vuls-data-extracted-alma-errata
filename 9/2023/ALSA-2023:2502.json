@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-2929",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2929"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-2928",
 			"references": [
 				{
@@ -60,9 +51,42 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2928"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-2929",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2929"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp-server",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.4.2-18.b1.el9"
+					}
+				],
+				"fixed": [
+					"12:4.4.2-18.b1.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -90,10 +114,10 @@
 			"package": {
 				"name": "dhcp-client",
 				"architectures": [
-					"ppc64le",
 					"x86_64",
-					"s390x",
-					"aarch64"
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -114,34 +138,10 @@
 			"package": {
 				"name": "dhcp-relay",
 				"architectures": [
-					"ppc64le",
 					"x86_64",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "12:4.4.2-18.b1.el9"
-					}
-				],
-				"fixed": [
-					"12:4.4.2-18.b1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dhcp-server",
-				"architectures": [
+					"aarch64",
 					"ppc64le",
-					"x86_64",
-					"s390x",
-					"aarch64"
+					"s390x"
 				]
 			},
 			"affected": {
