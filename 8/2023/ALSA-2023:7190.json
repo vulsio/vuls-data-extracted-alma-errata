@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-7190.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:7190"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2185911"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-7190.html"
 				}
 			],
 			"published": "2023-11-14T00:00:00Z",
@@ -46,6 +46,31 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-compat-howl",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7-21.el8"
+					}
+				],
+				"fixed": [
+					"0:0.7-21.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -75,7 +100,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-devel",
+				"name": "avahi-compat-howl-devel",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -125,7 +150,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-tools",
+				"name": "python3-avahi",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -199,7 +224,32 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-compat-howl-devel",
+				"name": "avahi-compat-libdns_sd",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7-21.el8"
+					}
+				],
+				"fixed": [
+					"0:0.7-21.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "avahi-ui-devel",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -249,7 +299,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-ui-gtk3",
+				"name": "avahi-devel",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -323,9 +373,8 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-compat-libdns_sd",
+				"name": "avahi-tools",
 				"architectures": [
-					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
@@ -348,57 +397,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "avahi-ui-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7-21.el8"
-					}
-				],
-				"fixed": [
-					"0:0.7-21.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-gobject",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.7-21.el8"
-					}
-				],
-				"fixed": [
-					"0:0.7-21.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "avahi-compat-howl",
+				"name": "avahi-ui-gtk3",
 				"architectures": [
 					"i686",
 					"x86_64",
@@ -448,8 +447,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-avahi",
+				"name": "avahi-gobject",
 				"architectures": [
+					"i686",
 					"x86_64",
 					"aarch64",
 					"ppc64le",
