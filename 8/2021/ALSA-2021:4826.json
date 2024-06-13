@@ -15,15 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-4826.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-42096"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-42097"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2021-4826.html"
 				}
 			],
 			"published": "2021-11-23T20:17:35Z",
@@ -51,6 +51,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman:2.1::mailman",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:2.1.29-12.module_el8.5.0+26+48d4c9ee.2"
+					}
+				],
+				"fixed": [
+					"3:2.1.29-12.module_el8.5.0+26+48d4c9ee.2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -90,27 +111,6 @@
 				],
 				"fixed": [
 					"3:2.1.29-12.module_el8.5.0+2602+327eb9f3.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "mailman:2.1::mailman",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "3:2.1.29-12.module_el8.5.0+26+48d4c9ee.2"
-					}
-				],
-				"fixed": [
-					"3:2.1.29-12.module_el8.5.0+26+48d4c9ee.2"
 				]
 			}
 		}
