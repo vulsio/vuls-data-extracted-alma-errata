@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-5711.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:5711"
 				},
 				{
@@ -28,10 +24,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2242803"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-5711.html"
 				}
 			],
 			"published": "2023-10-16T00:00:00Z",
-			"modified": "2023-10-17T07:12:06Z"
+			"modified": "2023-10-17T07:12:08Z"
 		}
 	],
 	"vulnerabilities": [
@@ -46,27 +46,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx-filesystem",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.20.1-14.el9_2.1.alma.1"
-					}
-				],
-				"fixed": [
-					"1:1.20.1-14.el9_2.1.alma.1"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -119,7 +98,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-image-filter",
+				"name": "nginx-mod-stream",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -167,12 +146,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-devel",
+				"name": "nginx-all-modules",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -191,9 +167,33 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-all-modules",
+				"name": "nginx-filesystem",
 				"architectures": [
 					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.20.1-14.el9_2.1.alma.1"
+					}
+				],
+				"fixed": [
+					"1:1.20.1-14.el9_2.1.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-http-image-filter",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -260,12 +260,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-stream",
+				"name": "nginx-mod-devel",
 				"architectures": [
 					"ppc64le",
-					"aarch64",
+					"s390x",
 					"x86_64",
-					"s390x"
+					"aarch64"
 				]
 			},
 			"affected": {

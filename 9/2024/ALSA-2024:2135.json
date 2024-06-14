@@ -15,18 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2218486"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2222351"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2247283"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-3019"
 				},
 				{
@@ -35,11 +23,19 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-42467"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5088"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-5088"
+					"url": "https://bugzilla.redhat.com/2247283"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2222351"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2238291"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -55,11 +51,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-42467"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-6683"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2238291"
+					"url": "https://bugzilla.redhat.com/2218486"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -67,15 +67,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-3255",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3255"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-42467",
 			"references": [
@@ -111,6 +102,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-3019"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-3255",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3255"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -118,12 +118,98 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-guest-agent",
+				"name": "qemu-kvm-device-usb-redirect",
 				"architectures": [
-					"ppc64le",
+					"aarch64",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "17:8.2.0-11.el9_4"
+					}
+				],
+				"fixed": [
+					"17:8.2.0-11.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-audio-pa",
+				"architectures": [
 					"aarch64",
 					"x86_64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "17:8.2.0-11.el9_4"
+					}
+				],
+				"fixed": [
+					"17:8.2.0-11.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-block-rbd",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "17:8.2.0-11.el9_4"
+					}
+				],
+				"fixed": [
+					"17:8.2.0-11.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-ui-opengl",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "17:8.2.0-11.el9_4"
+					}
+				],
+				"fixed": [
+					"17:8.2.0-11.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-device-display-virtio-vga",
+				"architectures": [
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -166,51 +252,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-block-curl",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "17:8.2.0-11.el9_4"
-					}
-				],
-				"fixed": [
-					"17:8.2.0-11.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qemu-kvm-ui-egl-headless",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "17:8.2.0-11.el9_4"
-					}
-				],
-				"fixed": [
-					"17:8.2.0-11.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qemu-kvm-core",
+				"name": "qemu-kvm-device-display-virtio-gpu",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -256,32 +298,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-pr-helper",
+				"name": "qemu-kvm-device-display-virtio-gpu-ccw",
 				"architectures": [
-					"aarch64",
-					"x86_64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "17:8.2.0-11.el9_4"
-					}
-				],
-				"fixed": [
-					"17:8.2.0-11.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qemu-kvm-ui-opengl",
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -323,7 +342,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-device-display-virtio-gpu",
+				"name": "qemu-kvm",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -369,7 +388,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-device-usb-host",
+				"name": "qemu-kvm-core",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -392,8 +411,10 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-device-display-virtio-gpu-ccw",
+				"name": "qemu-pr-helper",
 				"architectures": [
+					"aarch64",
+					"x86_64",
 					"s390x"
 				]
 			},
@@ -435,32 +456,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-block-rbd",
+				"name": "qemu-kvm-block-curl",
 				"architectures": [
 					"aarch64",
 					"x86_64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "17:8.2.0-11.el9_4"
-					}
-				],
-				"fixed": [
-					"17:8.2.0-11.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qemu-kvm-device-display-virtio-vga",
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -502,29 +502,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-device-usb-redirect",
-				"architectures": [
-					"aarch64",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "17:8.2.0-11.el9_4"
-					}
-				],
-				"fixed": [
-					"17:8.2.0-11.el9_4"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qemu-kvm",
+				"name": "qemu-kvm-device-usb-host",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -547,8 +525,30 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qemu-kvm-audio-pa",
+				"name": "qemu-kvm-ui-egl-headless",
 				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "17:8.2.0-11.el9_4"
+					}
+				],
+				"fixed": [
+					"17:8.2.0-11.el9_4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-guest-agent",
+				"architectures": [
+					"ppc64le",
 					"aarch64",
 					"x86_64",
 					"s390x"
