@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2024-3345.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:3345"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2279697"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2024-3345.html"
 				}
 			],
 			"published": "2024-05-23T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2024-30045",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-30045"
-				}
-			]
-		},
-		{
 			"id": "CVE-2024-30046",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-30046"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-30045",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-30045"
 				}
 			]
 		}
@@ -91,7 +91,31 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-hostfxr-8.0",
+				"name": "dotnet-sdk-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.105-1.el8_10"
+					}
+				],
+				"fixed": [
+					"0:8.0.105-1.el8_10"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-apphost-pack-8.0",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -116,102 +140,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "aspnetcore-targeting-pack-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.5-1.el8_10"
-					}
-				],
-				"fixed": [
-					"0:8.0.5-1.el8_10"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "aspnetcore-runtime-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.5-1.el8_10"
-					}
-				],
-				"fixed": [
-					"0:8.0.5-1.el8_10"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "netstandard-targeting-pack-2.1",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.105-1.el8_10"
-					}
-				],
-				"fixed": [
-					"0:8.0.105-1.el8_10"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-runtime-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.5-1.el8_10"
-					}
-				],
-				"fixed": [
-					"0:8.0.5-1.el8_10"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-apphost-pack-8.0",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -283,54 +211,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-targeting-pack-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.5-1.el8_10"
-					}
-				],
-				"fixed": [
-					"0:8.0.5-1.el8_10"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "aspnetcore-runtime-dbg-8.0",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.0.5-1.el8_10"
-					}
-				],
-				"fixed": [
-					"0:8.0.5-1.el8_10"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "dotnet-templates-8.0",
 				"architectures": [
 					"x86_64",
@@ -379,7 +259,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-sdk-8.0",
+				"name": "netstandard-targeting-pack-2.1",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -396,6 +276,54 @@
 				],
 				"fixed": [
 					"0:8.0.105-1.el8_10"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-runtime-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.5-1.el8_10"
+					}
+				],
+				"fixed": [
+					"0:8.0.5-1.el8_10"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-hostfxr-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.5-1.el8_10"
+					}
+				],
+				"fixed": [
+					"0:8.0.5-1.el8_10"
 				]
 			}
 		},
@@ -420,6 +348,78 @@
 				],
 				"fixed": [
 					"0:8.0.105-1.el8_10"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "aspnetcore-runtime-dbg-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.5-1.el8_10"
+					}
+				],
+				"fixed": [
+					"0:8.0.5-1.el8_10"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-targeting-pack-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.5-1.el8_10"
+					}
+				],
+				"fixed": [
+					"0:8.0.5-1.el8_10"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "aspnetcore-runtime-8.0",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.0.5-1.el8_10"
+					}
+				],
+				"fixed": [
+					"0:8.0.5-1.el8_10"
 				]
 			}
 		}
