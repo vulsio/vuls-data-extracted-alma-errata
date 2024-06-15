@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41903"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2162055"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-23521"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41903"
 				}
 			],
 			"published": "2023-02-06T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-41903",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41903"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-23521",
 			"references": [
 				{
@@ -60,51 +51,18 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-23521"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-41903",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41903"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "perl-Git-SVN",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.31.1-3.el8_7"
-					}
-				],
-				"fixed": [
-					"0:2.31.1-3.el8_7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "git-core-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.31.1-3.el8_7"
-					}
-				],
-				"fixed": [
-					"0:2.31.1-3.el8_7"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -151,54 +109,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "git-daemon",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.31.1-3.el8_7"
-					}
-				],
-				"fixed": [
-					"0:2.31.1-3.el8_7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "git-core",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.31.1-3.el8_7"
-					}
-				],
-				"fixed": [
-					"0:2.31.1-3.el8_7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "git-email",
 				"architectures": [
 					"noarch"
@@ -220,7 +130,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "perl-Git",
+				"name": "git-core-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -283,7 +193,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "git-svn",
+				"name": "gitweb",
 				"architectures": [
 					"noarch"
 				]
@@ -304,7 +214,73 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "gitweb",
+				"name": "git-core",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.31.1-3.el8_7"
+					}
+				],
+				"fixed": [
+					"0:2.31.1-3.el8_7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "perl-Git-SVN",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.31.1-3.el8_7"
+					}
+				],
+				"fixed": [
+					"0:2.31.1-3.el8_7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "perl-Git",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.31.1-3.el8_7"
+					}
+				],
+				"fixed": [
+					"0:2.31.1-3.el8_7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "git-svn",
 				"architectures": [
 					"noarch"
 				]
@@ -350,6 +326,30 @@
 			"vulnerable": true,
 			"package": {
 				"name": "git-subtree",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.31.1-3.el8_7"
+					}
+				],
+				"fixed": [
+					"0:2.31.1-3.el8_7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "git-daemon",
 				"architectures": [
 					"x86_64",
 					"aarch64",

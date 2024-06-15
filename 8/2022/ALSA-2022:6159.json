@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2099306"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2022-6159.html"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2099300"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2099306"
 				}
 			],
 			"published": "2022-08-24T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-32208",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32208"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-32206",
 			"references": [
 				{
@@ -60,33 +51,18 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-32206"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-32208",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32208"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "libcurl-minimal",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.61.1-22.el8_6.4"
-					}
-				],
-				"fixed": [
-					"0:7.61.1-22.el8_6.4"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -142,6 +118,30 @@
 				"architectures": [
 					"x86_64",
 					"i686",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.61.1-22.el8_6.4"
+					}
+				],
+				"fixed": [
+					"0:7.61.1-22.el8_6.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "libcurl-minimal",
+				"architectures": [
+					"i686",
+					"x86_64",
 					"aarch64",
 					"ppc64le"
 				]
