@@ -15,7 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-27982"
+					"url": "https://bugzilla.redhat.com/2275392"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2024-2780.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:2780"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,15 +31,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2268639"
+					"url": "https://access.redhat.com/security/cve/CVE-2024-28182"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2272764"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2270559"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:2780"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -43,7 +51,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-28182"
+					"url": "https://access.redhat.com/security/cve/CVE-2024-27982"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,15 +59,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2272764"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2275392"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2024-2780.html"
+					"url": "https://bugzilla.redhat.com/2268639"
 				}
 			],
 			"published": "2024-05-09T00:00:00Z",
@@ -67,15 +67,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2024-27982",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-27982"
-				}
-			]
-		},
 		{
 			"id": "CVE-2024-27983",
 			"references": [
@@ -111,9 +102,66 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2024-25629"
 				}
 			]
+		},
+		{
+			"id": "CVE-2024-27982",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-27982"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::npm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:10.5.0-1.18.20.2.1.module_el8.9.0+3828+c9fa9644"
+					}
+				],
+				"fixed": [
+					"1:10.5.0-1.18.20.2.1.module_el8.9.0+3828+c9fa9644"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.20.2-1.module_el8.9.0+3828+c9fa9644"
+					}
+				],
+				"fixed": [
+					"1:18.20.2-1.module_el8.9.0+3828+c9fa9644"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -227,54 +275,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "nodejs:18::nodejs-full-i18n",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:18.20.2-1.module_el8.9.0+3828+c9fa9644"
-					}
-				],
-				"fixed": [
-					"1:18.20.2-1.module_el8.9.0+3828+c9fa9644"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::npm",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:10.5.0-1.18.20.2.1.module_el8.9.0+3828+c9fa9644"
-					}
-				],
-				"fixed": [
-					"1:10.5.0-1.18.20.2.1.module_el8.9.0+3828+c9fa9644"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
