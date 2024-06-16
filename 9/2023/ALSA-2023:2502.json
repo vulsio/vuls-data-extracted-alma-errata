@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-2928",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2928"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-2929",
 			"references": [
 				{
@@ -60,9 +51,63 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2929"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-2928",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2928"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp-common",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.4.2-18.b1.el9"
+					}
+				],
+				"fixed": [
+					"12:4.4.2-18.b1.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp-server",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.4.2-18.b1.el9"
+					}
+				],
+				"fixed": [
+					"12:4.4.2-18.b1.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -92,51 +137,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "dhcp-client",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "12:4.4.2-18.b1.el9"
-					}
-				],
-				"fixed": [
-					"12:4.4.2-18.b1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dhcp-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "12:4.4.2-18.b1.el9"
-					}
-				],
-				"fixed": [
-					"12:4.4.2-18.b1.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dhcp-server",
 				"architectures": [
 					"aarch64",
 					"ppc64le",
