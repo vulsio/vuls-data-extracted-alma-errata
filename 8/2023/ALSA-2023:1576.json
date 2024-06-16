@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2113825"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2165722"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-41862"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2113825"
 				}
 			],
 			"published": "2023-04-04T00:00:00Z",
@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-41862",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41862"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-2625",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2625"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-41862",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41862"
 				}
 			]
 		}
@@ -67,7 +67,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:13::postgresql",
+				"name": "postgresql:13::postgresql-plpython3",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -115,51 +115,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:13::postgres-decoderbufs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.10.0-2.module_el8.6.0+2760+1746ec94"
-					}
-				],
-				"fixed": [
-					"0:0.10.0-2.module_el8.6.0+2760+1746ec94"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:13::postgres-decoderbufs",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.10.0-2.module_el8.6.0+3095+ee60d910"
-					}
-				],
-				"fixed": [
-					"0:0.10.0-2.module_el8.6.0+3095+ee60d910"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:13::postgresql-test",
+				"name": "postgresql:13::postgresql-pltcl",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -275,7 +231,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:13::postgresql-plpython3",
+				"name": "postgresql:13::postgresql-upgrade-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -299,7 +255,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:13::postgresql-upgrade",
+				"name": "postgresql:13::postgresql-test",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -316,6 +272,50 @@
 				],
 				"fixed": [
 					"0:13.10-1.module_el8.7.0+3498+cb1ef3c6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:13::pg_repack",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-3.module_el8.6.0+2760+1746ec94"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-3.module_el8.6.0+2760+1746ec94"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:13::pg_repack",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-3.module_el8.6.0+3095+ee60d910"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-3.module_el8.6.0+3095+ee60d910"
 				]
 			}
 		},
@@ -395,7 +395,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:13::postgresql-upgrade-devel",
+				"name": "postgresql:13::postgresql",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -412,50 +412,6 @@
 				],
 				"fixed": [
 					"0:13.10-1.module_el8.7.0+3498+cb1ef3c6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:13::pg_repack",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.6-3.module_el8.6.0+2760+1746ec94"
-					}
-				],
-				"fixed": [
-					"0:1.4.6-3.module_el8.6.0+2760+1746ec94"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:13::pg_repack",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.6-3.module_el8.6.0+3095+ee60d910"
-					}
-				],
-				"fixed": [
-					"0:1.4.6-3.module_el8.6.0+3095+ee60d910"
 				]
 			}
 		},
@@ -484,7 +440,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:13::postgresql-pltcl",
+				"name": "postgresql:13::postgresql-upgrade",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -501,6 +457,50 @@
 				],
 				"fixed": [
 					"0:13.10-1.module_el8.7.0+3498+cb1ef3c6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:13::postgres-decoderbufs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.10.0-2.module_el8.6.0+2760+1746ec94"
+					}
+				],
+				"fixed": [
+					"0:0.10.0-2.module_el8.6.0+2760+1746ec94"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:13::postgres-decoderbufs",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.10.0-2.module_el8.6.0+3095+ee60d910"
+					}
+				],
+				"fixed": [
+					"0:0.10.0-2.module_el8.6.0+3095+ee60d910"
 				]
 			}
 		}
