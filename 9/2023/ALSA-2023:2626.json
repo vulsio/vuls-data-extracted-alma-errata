@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2171988"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2192873"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-48338"
 				},
 				{
@@ -23,11 +31,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2171989"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-2491"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2192873"
+					"url": "https://bugzilla.redhat.com/2171987"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2171989"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -40,18 +52,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-48337"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-2491"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2171987"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2171988"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -97,6 +97,30 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-nox",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:27.2-8.el9_2.1"
+					}
+				],
+				"fixed": [
+					"1:27.2-8.el9_2.1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -171,30 +195,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "emacs-common",
-				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:27.2-8.el9_2.1"
-					}
-				],
-				"fixed": [
-					"1:27.2-8.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "emacs-nox",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
