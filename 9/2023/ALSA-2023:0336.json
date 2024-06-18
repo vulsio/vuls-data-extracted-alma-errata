@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3821"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2139327"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-0336.html"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:0336"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3821"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2139327"
 				}
 			],
 			"published": "2023-01-23T00:00:00Z",
@@ -50,12 +50,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-container",
+				"name": "systemd-journal-remote",
 				"architectures": [
-					"i686",
-					"aarch64",
 					"ppc64le",
 					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -75,10 +74,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-resolved",
+				"name": "systemd",
 				"architectures": [
-					"aarch64",
+					"i686",
 					"ppc64le",
+					"aarch64",
 					"x86_64",
 					"s390x"
 				]
@@ -101,8 +101,8 @@
 			"package": {
 				"name": "systemd-pam",
 				"architectures": [
-					"aarch64",
 					"ppc64le",
+					"aarch64",
 					"x86_64",
 					"s390x"
 				]
@@ -123,7 +123,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-journal-remote",
+				"name": "systemd-resolved",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:250-12.el9_1.1"
+					}
+				],
+				"fixed": [
+					"0:250-12.el9_1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "systemd-oomd",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -149,10 +173,10 @@
 			"package": {
 				"name": "systemd-devel",
 				"architectures": [
-					"ppc64le",
 					"i686",
-					"aarch64",
+					"ppc64le",
 					"x86_64",
+					"aarch64",
 					"s390x"
 				]
 			},
@@ -175,8 +199,8 @@
 				"name": "systemd-libs",
 				"architectures": [
 					"i686",
-					"aarch64",
 					"ppc64le",
+					"aarch64",
 					"x86_64",
 					"s390x"
 				]
@@ -218,11 +242,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd",
+				"name": "systemd-container",
 				"architectures": [
 					"i686",
-					"aarch64",
 					"ppc64le",
+					"aarch64",
 					"x86_64",
 					"s390x"
 				]
@@ -245,32 +269,8 @@
 			"package": {
 				"name": "systemd-udev",
 				"architectures": [
-					"aarch64",
 					"ppc64le",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:250-12.el9_1.1"
-					}
-				],
-				"fixed": [
-					"0:250-12.el9_1.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "systemd-oomd",
-				"architectures": [
 					"aarch64",
-					"ppc64le",
 					"x86_64",
 					"s390x"
 				]

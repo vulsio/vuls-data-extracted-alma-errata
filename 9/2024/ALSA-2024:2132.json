@@ -15,6 +15,18 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-52323"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-22195"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2246840"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2257028"
 				},
 				{
@@ -32,25 +44,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-45803"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-52323"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-22195"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2246840"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
-			"modified": "2024-05-07T15:08:06Z"
+			"modified": "2024-05-07T15:08:04Z"
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2024-22195",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-22195"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-45803",
 			"references": [
@@ -68,105 +77,9 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-52323"
 				}
 			]
-		},
-		{
-			"id": "CVE-2024-22195",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-22195"
-				}
-			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-emerson",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-ipdu",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-all",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-azure-arm",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -192,7 +105,49 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-hpblade",
+				"name": "fence-virtd",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-virtd-multicast",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-ibmblade",
 				"architectures": [
 					"noarch"
 				]
@@ -213,9 +168,10 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-ilo2",
+				"name": "fence-agents-openstack",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -234,9 +190,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-vmware-rest",
+				"name": "fence-virt",
 				"architectures": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -255,49 +211,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-cisco-mds",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-apc-snmp",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-intelmodular",
+				"name": "fence-agents-ifmib",
 				"architectures": [
 					"noarch"
 				]
@@ -339,6 +253,216 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "fence-agents-bladecenter",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-mpath",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-rhevm",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-heuristics-ping",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-aws",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-cisco-ucs",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-zvm",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-virsh",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-hpblade",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-ilo-mp",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "fence-agents-eaton-snmp",
 				"architectures": [
 					"noarch"
@@ -360,9 +484,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ha-cloud-support",
+				"name": "fence-agents-ipdu",
 				"architectures": [
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -381,7 +505,49 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-common",
+				"name": "fence-agents-apc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-sbd",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-lpar",
 				"architectures": [
 					"noarch"
 				]
@@ -424,93 +590,8 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-virtd-cpg",
+				"name": "fence-virtd-libvirt",
 				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-virtd-multicast",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-ipmilan",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-amt-ws",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-openstack",
-				"architectures": [
-					"ppc64le",
 					"x86_64"
 				]
 			},
@@ -551,7 +632,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-scsi",
+				"name": "fence-agents-ilo-moonshot",
 				"architectures": [
 					"noarch"
 				]
@@ -572,7 +653,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-bladecenter",
+				"name": "fence-agents-ipmilan",
 				"architectures": [
 					"noarch"
 				]
@@ -593,72 +674,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-rhevm",
+				"name": "fence-agents-apc-snmp",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-rsb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-aliyun",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-aws",
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -678,48 +696,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "fence-agents-brocade",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-apc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-ibm-vpc",
 				"architectures": [
 					"noarch"
 				]
@@ -761,28 +737,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-virtd-libvirt",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-sbd",
+				"name": "fence-agents-cisco-mds",
 				"architectures": [
 					"noarch"
 				]
@@ -803,7 +758,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-drac5",
+				"name": "fence-agents-vmware-rest",
 				"architectures": [
 					"noarch"
 				]
@@ -824,7 +779,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-ifmib",
+				"name": "fence-agents-vmware-soap",
 				"architectures": [
 					"noarch"
 				]
@@ -845,7 +800,28 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-cisco-ucs",
+				"name": "fence-agents-rsb",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-amt-ws",
 				"architectures": [
 					"noarch"
 				]
@@ -887,11 +863,158 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-kubevirt",
+				"name": "fence-agents-ibm-vpc",
 				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-scsi",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-azure-arm",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-virtd-cpg",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-emerson",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-virtd-tcp",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-ilo2",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-kdump",
+				"architectures": [
+					"x86_64",
 					"ppc64le",
 					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -911,9 +1034,120 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-virt",
+				"name": "fence-agents-intelmodular",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-kubevirt",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-redfish",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-aliyun",
 				"architectures": [
 					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ha-cloud-support",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.10.0-62.el9"
+					}
+				],
+				"fixed": [
+					"0:4.10.0-62.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fence-agents-drac5",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -974,7 +1208,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-ilo-moonshot",
+				"name": "fence-agents-common",
 				"architectures": [
 					"noarch"
 				]
@@ -995,246 +1229,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fence-agents-heuristics-ping",
+				"name": "fence-agents-all",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-virsh",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-virtd",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-mpath",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-redfish",
-				"architectures": [
-					"ppc64le",
 					"x86_64",
+					"ppc64le",
 					"aarch64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-vmware-soap",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-ibmblade",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-kdump",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-zvm",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-virtd-tcp",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-ilo-mp",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.10.0-62.el9"
-					}
-				],
-				"fixed": [
-					"0:4.10.0-62.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "fence-agents-lpar",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
