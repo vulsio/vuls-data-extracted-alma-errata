@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-30550"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105070"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2022-8208.html"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:8208"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-30550"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105070"
 				}
 			],
 			"published": "2022-11-15T00:00:00Z",
@@ -46,6 +46,31 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dovecot-devel",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.3.16-7.el9"
+					}
+				],
+				"fixed": [
+					"1:2.3.16-7.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -129,31 +154,6 @@
 					"aarch64",
 					"x86_64",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.3.16-7.el9"
-					}
-				],
-				"fixed": [
-					"1:2.3.16-7.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dovecot-devel",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"s390x",
-					"x86_64",
-					"aarch64"
 				]
 			},
 			"affected": {
