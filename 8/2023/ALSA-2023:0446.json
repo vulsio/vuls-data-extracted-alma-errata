@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2132868"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2132872"
 				},
 				{
@@ -40,10 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2132867"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2132868"
 				}
 			],
 			"published": "2023-01-25T00:00:00Z",
@@ -51,6 +51,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-41715",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-41715"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-2879",
 			"references": [
@@ -68,15 +77,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2880"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-41715",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-41715"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -84,7 +84,49 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang-bin",
+				"name": "go-toolset:rhel8::golang-src",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
+					}
+				],
+				"fixed": [
+					"0:1.18.9-1.module_el8.7.0+3397+4350156d"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "go-toolset:rhel8::golang-docs",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
+					}
+				],
+				"fixed": [
+					"0:1.18.9-1.module_el8.7.0+3397+4350156d"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "go-toolset:rhel8::go-toolset",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -108,7 +150,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang-src",
+				"name": "go-toolset:rhel8::golang-tests",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
+					}
+				],
+				"fixed": [
+					"0:1.18.9-1.module_el8.7.0+3397+4350156d"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "go-toolset:rhel8::golang-misc",
 				"architectures": [
 					"noarch"
 				]
@@ -171,30 +234,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::go-toolset",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
-					}
-				],
-				"fixed": [
-					"0:1.18.9-1.module_el8.7.0+3397+4350156d"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "go-toolset:rhel8::golang",
 				"architectures": [
 					"x86_64",
@@ -219,51 +258,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "go-toolset:rhel8::golang-docs",
+				"name": "go-toolset:rhel8::golang-bin",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
-					}
-				],
-				"fixed": [
-					"0:1.18.9-1.module_el8.7.0+3397+4350156d"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "go-toolset:rhel8::golang-tests",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.18.9-1.module_el8.7.0+3397+4350156d"
-					}
-				],
-				"fixed": [
-					"0:1.18.9-1.module_el8.7.0+3397+4350156d"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "go-toolset:rhel8::golang-misc",
-				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
