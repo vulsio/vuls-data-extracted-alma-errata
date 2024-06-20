@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-27043"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2196183"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-0466.html"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:0466"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-27043"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2196183"
 				}
 			],
 			"published": "2024-01-25T00:00:00Z",
@@ -50,13 +50,113 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-test",
+				"name": "python3-libs",
 				"architectures": [
 					"i686",
 					"x86_64",
 					"ppc64le",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.9.18-1.el9_3.1"
+					}
+				],
+				"fixed": [
+					"0:3.9.18-1.el9_3.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"s390x",
 					"aarch64",
-					"s390x"
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.9.18-1.el9_3.1"
+					}
+				],
+				"fixed": [
+					"0:3.9.18-1.el9_3.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-idle",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.9.18-1.el9_3.1"
+					}
+				],
+				"fixed": [
+					"0:3.9.18-1.el9_3.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-debug",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.9.18-1.el9_3.1"
+					}
+				],
+				"fixed": [
+					"0:3.9.18-1.el9_3.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-test",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -99,10 +199,10 @@
 				"name": "python3-devel",
 				"architectures": [
 					"i686",
-					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"s390x",
-					"ppc64le"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -123,111 +223,11 @@
 			"package": {
 				"name": "python3-tkinter",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.9.18-1.el9_3.1"
-					}
-				],
-				"fixed": [
-					"0:3.9.18-1.el9_3.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-libs",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.9.18-1.el9_3.1"
-					}
-				],
-				"fixed": [
-					"0:3.9.18-1.el9_3.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3",
-				"architectures": [
 					"ppc64le",
 					"aarch64",
 					"x86_64",
 					"s390x",
 					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.9.18-1.el9_3.1"
-					}
-				],
-				"fixed": [
-					"0:3.9.18-1.el9_3.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-idle",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.9.18-1.el9_3.1"
-					}
-				],
-				"fixed": [
-					"0:3.9.18-1.el9_3.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-debug",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"ppc64le",
-					"aarch64",
-					"s390x"
 				]
 			},
 			"affected": {
