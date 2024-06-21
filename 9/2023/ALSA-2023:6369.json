@@ -15,35 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:6369"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-33285"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-37369"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38197"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2208135"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2212747"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2232173"
+					"url": "https://bugzilla.redhat.com/2222767"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,7 +23,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32573"
+					"url": "https://access.redhat.com/security/cve/CVE-2023-33285"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-37369"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2208135"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,7 +39,27 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2222767"
+					"url": "https://bugzilla.redhat.com/2232173"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:6369"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32573"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38197"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2212747"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
@@ -67,6 +67,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-37369",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-37369"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-38197",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38197"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-32573",
 			"references": [
@@ -93,24 +111,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-34410"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-37369",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-37369"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-38197",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38197"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -118,7 +118,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-qtbase-mysql",
+				"name": "qt5-qtbase",
 				"architectures": [
 					"i686",
 					"ppc64le",
@@ -143,20 +143,24 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-rpm-macros",
+				"name": "qt5-qtbase-mysql",
 				"architectures": [
-					"noarch"
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:5.15.9-1.el9"
+						"lt": "0:5.15.9-7.el9"
 					}
 				],
 				"fixed": [
-					"0:5.15.9-1.el9"
+					"0:5.15.9-7.el9"
 				]
 			}
 		},
@@ -189,32 +193,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-qtbase-gui",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.9-7.el9"
-					}
-				],
-				"fixed": [
-					"0:5.15.9-7.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qt5-devel",
+				"name": "qt5-srpm-macros",
 				"architectures": [
 					"noarch"
 				]
@@ -260,6 +239,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "qt5-qtbase-postgresql",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.9-7.el9"
+					}
+				],
+				"fixed": [
+					"0:5.15.9-7.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "qt5",
 				"architectures": [
 					"noarch"
@@ -281,7 +285,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-qtbase-odbc",
+				"name": "qt5-qtbase-gui",
 				"architectures": [
 					"i686",
 					"ppc64le",
@@ -331,28 +335,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-qtbase-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.9-7.el9"
-					}
-				],
-				"fixed": [
-					"0:5.15.9-7.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "qt5-srpm-macros",
+				"name": "qt5-rpm-macros",
 				"architectures": [
 					"noarch"
 				]
@@ -373,24 +356,20 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-qtbase-postgresql",
+				"name": "qt5-devel",
 				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:5.15.9-7.el9"
+						"lt": "0:5.15.9-1.el9"
 					}
 				],
 				"fixed": [
-					"0:5.15.9-7.el9"
+					"0:5.15.9-1.el9"
 				]
 			}
 		},
@@ -423,13 +402,34 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "qt5-qtbase",
+				"name": "qt5-qtbase-odbc",
 				"architectures": [
 					"i686",
 					"ppc64le",
 					"aarch64",
 					"x86_64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.9-7.el9"
+					}
+				],
+				"fixed": [
+					"0:5.15.9-7.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "qt5-qtbase-common",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
