@@ -15,7 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-2975"
+					"url": "https://bugzilla.redhat.com/2248616"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2257571"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2258502"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -27,23 +35,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-2447.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2024:2447"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3446"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-0727"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2227852"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-6129"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -55,7 +55,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2248616"
+					"url": "https://errata.almalinux.org/9/ALSA-2024-2447.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-2975"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-0727"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -63,19 +71,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3446"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-5678"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-6129"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2257571"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2258502"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -83,6 +83,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-3446",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3446"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-3817",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-3817"
+				}
+			]
+		},
 		{
 			"id": "CVE-2023-5678",
 			"references": [
@@ -127,27 +145,34 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-2975"
 				}
 			]
-		},
-		{
-			"id": "CVE-2023-3446",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3446"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-3817",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-3817"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-devel",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:3.0.7-27.el9"
+					}
+				],
+				"fixed": [
+					"1:3.0.7-27.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -207,31 +232,6 @@
 					"ppc64le",
 					"s390x",
 					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:3.0.7-27.el9"
-					}
-				],
-				"fixed": [
-					"1:3.0.7-27.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "openssl-devel",
-				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
 				]
 			},
 			"affected": {
