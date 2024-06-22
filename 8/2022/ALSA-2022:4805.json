@@ -15,11 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-4805.html"
+					"url": "https://vulners.com/cve/CVE-2022-1552"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-1552"
+					"url": "https://errata.almalinux.org/8/ALSA-2022-4805.html"
 				}
 			],
 			"published": "2022-05-30T11:39:32Z",
@@ -38,6 +38,50 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:10::postgresql-server-devel",
+				"architectures": [
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.21-2.module_el8.6.0+2901+a6abf8d9"
+					}
+				],
+				"fixed": [
+					"0:10.21-2.module_el8.6.0+2901+a6abf8d9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:10::postgresql-test",
+				"architectures": [
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.21-2.module_el8.6.0+2901+a6abf8d9"
+					}
+				],
+				"fixed": [
+					"0:10.21-2.module_el8.6.0+2901+a6abf8d9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -86,7 +130,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:10::postgresql-contrib",
+				"name": "postgresql:10::postgresql-server",
 				"architectures": [
 					"x86_64",
 					"ppc64le"
@@ -130,28 +174,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:10::postgresql-server-devel",
-				"architectures": [
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.21-2.module_el8.6.0+2901+a6abf8d9"
-					}
-				],
-				"fixed": [
-					"0:10.21-2.module_el8.6.0+2901+a6abf8d9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "postgresql:10::postgresql",
 				"architectures": [
 					"x86_64",
@@ -174,7 +196,29 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:10::postgresql-test",
+				"name": "postgresql:10::postgresql-plpython3",
+				"architectures": [
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.21-2.module_el8.6.0+2901+a6abf8d9"
+					}
+				],
+				"fixed": [
+					"0:10.21-2.module_el8.6.0+2901+a6abf8d9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql:10::postgresql-pltcl",
 				"architectures": [
 					"x86_64",
 					"ppc64le"
@@ -240,7 +284,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql:10::postgresql-server",
+				"name": "postgresql:10::postgresql-contrib",
 				"architectures": [
 					"x86_64",
 					"ppc64le"
@@ -263,50 +307,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "postgresql:10::postgresql-test-rpm-macros",
-				"architectures": [
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.21-2.module_el8.6.0+2901+a6abf8d9"
-					}
-				],
-				"fixed": [
-					"0:10.21-2.module_el8.6.0+2901+a6abf8d9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:10::postgresql-plpython3",
-				"architectures": [
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.21-2.module_el8.6.0+2901+a6abf8d9"
-					}
-				],
-				"fixed": [
-					"0:10.21-2.module_el8.6.0+2901+a6abf8d9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql:10::postgresql-pltcl",
 				"architectures": [
 					"x86_64",
 					"ppc64le"
