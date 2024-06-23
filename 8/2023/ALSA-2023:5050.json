@@ -71,7 +71,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_http2",
+				"name": "httpd:2.4::httpd-manual",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+					}
+				],
+				"fixed": [
+					"0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::mod_session",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -83,11 +104,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.15.7-8.module_el8.8.0+3554+ec1058a7.3"
+						"lt": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
 					}
 				],
 				"fixed": [
-					"0:1.15.7-8.module_el8.8.0+3554+ec1058a7.3"
+					"0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
 				]
 			}
 		},
@@ -119,31 +140,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::mod_md",
+				"name": "httpd:2.4::mod_proxy_html",
 				"architectures": [
 					"x86_64",
 					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-					}
-				],
-				"fixed": [
-					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_md",
-				"architectures": [
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -151,11 +152,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+						"lt": "1:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
 					}
 				],
 				"fixed": [
-					"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+					"1:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
 				]
 			}
 		},
@@ -211,28 +212,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd:2.4::httpd-manual",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-					}
-				],
-				"fixed": [
-					"0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_session",
+				"name": "httpd:2.4::mod_http2",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -244,11 +224,55 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+						"lt": "0:1.15.7-8.module_el8.8.0+3554+ec1058a7.3"
 					}
 				],
 				"fixed": [
-					"0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
+					"0:1.15.7-8.module_el8.8.0+3554+ec1058a7.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::mod_md",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+					}
+				],
+				"fixed": [
+					"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd:2.4::mod_md",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+					}
+				],
+				"fixed": [
+					"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
 				]
 			}
 		},
@@ -273,30 +297,6 @@
 				],
 				"fixed": [
 					"0:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd:2.4::mod_proxy_html",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
-					}
-				],
-				"fixed": [
-					"1:2.4.37-56.module_el8.8.0+3605+a3cf1030.7"
 				]
 			}
 		},
