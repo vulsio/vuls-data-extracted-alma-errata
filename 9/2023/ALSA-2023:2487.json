@@ -23,19 +23,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2120699"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2129904"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2120687"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2120701"
+					"url": "https://bugzilla.redhat.com/2129904"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -52,6 +44,14 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-34302"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2120699"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2120701"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -59,24 +59,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-34302",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-34302"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-34303",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-34303"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-3287",
 			"references": [
@@ -94,6 +76,24 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-34301"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-34302",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-34302"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-34303",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-34303"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -101,35 +101,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "fwupd",
-				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.8.10-2.el9.alma"
-					}
-				],
-				"fixed": [
-					"0:1.8.10-2.el9.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "fwupd-devel",
 				"architectures": [
 					"x86_64",
-					"aarch64",
 					"s390x",
+					"aarch64",
 					"ppc64le"
 				]
 			},
@@ -151,9 +127,33 @@
 			"package": {
 				"name": "fwupd-plugin-flashrom",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
+					"ppc64le",
 					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.8.10-2.el9.alma"
+					}
+				],
+				"fixed": [
+					"0:1.8.10-2.el9.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "fwupd",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {

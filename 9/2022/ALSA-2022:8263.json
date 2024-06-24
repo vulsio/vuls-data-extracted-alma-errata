@@ -15,22 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2022-8263.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2022:8263"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-3839"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2132"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-28199"
 				},
 				{
@@ -44,6 +28,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2123549"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2022-8263.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2022:8263"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-3839"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2132"
 				}
 			],
 			"published": "2022-11-15T00:00:00Z",
@@ -51,6 +51,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2021-3839",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-3839"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-2132",
 			"references": [
@@ -68,18 +77,32 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-28199"
 				}
 			]
-		},
-		{
-			"id": "CVE-2021-3839",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2021-3839"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dpdk-tools",
+				"architectures": [
+					"aarch64",
+					"ppc64le",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:21.11.2-1.el9_1"
+					}
+				],
+				"fixed": [
+					"2:21.11.2-1.el9_1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -107,31 +130,8 @@
 			"package": {
 				"name": "dpdk-devel",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:21.11.2-1.el9_1"
-					}
-				],
-				"fixed": [
-					"2:21.11.2-1.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dpdk-tools",
-				"architectures": [
 					"ppc64le",
-					"aarch64",
 					"x86_64"
 				]
 			},
@@ -153,8 +153,8 @@
 			"package": {
 				"name": "dpdk",
 				"architectures": [
-					"ppc64le",
 					"aarch64",
+					"ppc64le",
 					"x86_64"
 				]
 			},
