@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-4099.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4099"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2216227"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-4099.html"
 				}
 			],
 			"published": "2023-07-17T00:00:00Z",
@@ -50,9 +50,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-license",
+				"name": "bind-devel",
 				"architectures": [
-					"noarch"
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -71,9 +75,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-doc",
+				"name": "bind-dnssec-utils",
 				"architectures": [
-					"noarch"
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -141,73 +148,6 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-bind",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9_2.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9_2.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "bind-chroot",
 				"architectures": [
 					"ppc64le",
@@ -256,12 +196,72 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-utils",
+				"name": "bind-doc",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-bind",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-license",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9_2.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9_2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-dnssec-doc",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {

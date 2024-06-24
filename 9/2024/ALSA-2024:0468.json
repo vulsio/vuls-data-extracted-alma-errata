@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-0468.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:0468"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-4001"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2224951"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-0468.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:0468"
 				}
 			],
 			"published": "2024-01-25T00:00:00Z",
@@ -50,11 +50,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-tools-extra",
+				"name": "grub2-tools-efi",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"aarch64"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -73,9 +71,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-efi-aa64-modules",
+				"name": "grub2-ppc64le",
 				"architectures": [
-					"noarch"
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -157,7 +155,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-tools-minimal",
+				"name": "grub2-tools-extra",
 				"architectures": [
 					"x86_64",
 					"ppc64le",
@@ -180,9 +178,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-pc",
+				"name": "grub2-ppc64le-modules",
 				"architectures": [
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -201,10 +199,8 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-tools",
+				"name": "grub2-efi-aa64-cdboot",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
 					"aarch64"
 				]
 			},
@@ -245,28 +241,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.06-70.el9_3.2.alma.1"
-					}
-				],
-				"fixed": [
-					"1:2.06-70.el9_3.2.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "grub2-ppc64le-modules",
+				"name": "grub2-efi-aa64-modules",
 				"architectures": [
 					"noarch"
 				]
@@ -308,7 +283,28 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-tools-efi",
+				"name": "grub2-common",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.06-70.el9_3.2.alma.1"
+					}
+				],
+				"fixed": [
+					"1:2.06-70.el9_3.2.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "grub2-pc",
 				"architectures": [
 					"x86_64"
 				]
@@ -329,9 +325,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-ppc64le",
+				"name": "grub2-tools-minimal",
 				"architectures": [
-					"ppc64le"
+					"x86_64",
+					"ppc64le",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -350,8 +348,10 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "grub2-efi-aa64-cdboot",
+				"name": "grub2-tools",
 				"architectures": [
+					"x86_64",
+					"ppc64le",
 					"aarch64"
 				]
 			},
