@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-2319",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2319"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-2320",
 			"references": [
 				{
@@ -60,9 +51,43 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2320"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-2319",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2319"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-devel",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"s390x",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.11-11.el9"
+					}
+				],
+				"fixed": [
+					"0:1.20.11-11.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -214,31 +239,6 @@
 				"name": "xorg-x11-server-source",
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.11-11.el9"
-					}
-				],
-				"fixed": [
-					"0:1.20.11-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"s390x",
-					"ppc64le"
 				]
 			},
 			"affected": {
