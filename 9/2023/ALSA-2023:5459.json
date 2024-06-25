@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-5459.html"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:5459"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2217798"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-5459.html"
 				}
 			],
 			"published": "2023-10-05T00:00:00Z",
@@ -46,31 +46,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libgs-devel",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"s390x",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-10.el9_2"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-10.el9_2"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -99,9 +74,9 @@
 				"name": "libgs",
 				"architectures": [
 					"i686",
+					"x86_64",
 					"aarch64",
 					"ppc64le",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -121,11 +96,36 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ghostscript-tools-printing",
+				"name": "ghostscript-tools-fonts",
 				"architectures": [
+					"x86_64",
 					"aarch64",
 					"ppc64le",
+					"s390x",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-10.el9_2"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-10.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript",
+				"architectures": [
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x",
 					"i686"
 				]
@@ -148,9 +148,9 @@
 			"package": {
 				"name": "ghostscript-x11",
 				"architectures": [
+					"x86_64",
 					"aarch64",
 					"ppc64le",
-					"x86_64",
 					"s390x"
 				]
 			},
@@ -170,36 +170,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ghostscript",
+				"name": "ghostscript-tools-printing",
 				"architectures": [
+					"x86_64",
 					"aarch64",
 					"ppc64le",
-					"x86_64",
-					"s390x",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.54.0-10.el9_2"
-					}
-				],
-				"fixed": [
-					"0:9.54.0-10.el9_2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ghostscript-tools-fonts",
-				"architectures": [
-					"aarch64",
-					"ppc64le",
-					"x86_64",
 					"s390x",
 					"i686"
 				]
@@ -222,9 +197,34 @@
 			"package": {
 				"name": "ghostscript-tools-dvipdf",
 				"architectures": [
+					"x86_64",
 					"aarch64",
 					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.54.0-10.el9_2"
+					}
+				],
+				"fixed": [
+					"0:9.54.0-10.el9_2"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libgs-devel",
+				"architectures": [
+					"i686",
 					"x86_64",
+					"ppc64le",
+					"aarch64",
 					"s390x"
 				]
 			},
