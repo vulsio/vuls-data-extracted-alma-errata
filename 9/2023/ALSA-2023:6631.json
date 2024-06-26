@@ -15,22 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32611"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32665"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2211827"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2211828"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2211829"
 				},
 				{
@@ -44,6 +28,22 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-29499"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32611"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32665"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2211827"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2211828"
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
@@ -51,15 +51,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2023-32665",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-32665"
-				}
-			]
-		},
 		{
 			"id": "CVE-2023-29499",
 			"references": [
@@ -77,6 +68,15 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32611"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-32665",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-32665"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -84,13 +84,63 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "glib2",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.68.4-11.el9"
+					}
+				],
+				"fixed": [
+					"0:2.68.4-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-static",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"x86_64",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.68.4-11.el9"
+					}
+				],
+				"fixed": [
+					"0:2.68.4-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "glib2-devel",
 				"architectures": [
 					"i686",
-					"x86_64",
+					"aarch64",
 					"ppc64le",
-					"s390x",
-					"aarch64"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -132,59 +182,9 @@
 			"package": {
 				"name": "glib2-tests",
 				"architectures": [
-					"x86_64",
-					"ppc64le",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.68.4-11.el9"
-					}
-				],
-				"fixed": [
-					"0:2.68.4-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "glib2",
-				"architectures": [
-					"i686",
 					"aarch64",
-					"x86_64",
 					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.68.4-11.el9"
-					}
-				],
-				"fixed": [
-					"0:2.68.4-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "glib2-static",
-				"architectures": [
-					"i686",
 					"x86_64",
-					"ppc64le",
-					"aarch64",
 					"s390x"
 				]
 			},
