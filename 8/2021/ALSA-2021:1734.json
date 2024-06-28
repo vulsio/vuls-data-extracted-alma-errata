@@ -15,6 +15,18 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-20233"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2021-1734.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-14372"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-25632"
 				},
 				{
@@ -32,18 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-20225"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-20233"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-1734.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-14372"
 				}
 			],
 			"published": "2021-05-18T05:57:10Z",
@@ -51,6 +51,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2020-25647",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-25647"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-27749",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-27749"
+				}
+			]
+		},
 		{
 			"id": "CVE-2020-27779",
 			"references": [
@@ -95,27 +113,51 @@
 					"url": "https://vulners.com/cve/CVE-2020-25632"
 				}
 			]
-		},
-		{
-			"id": "CVE-2020-25647",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-25647"
-				}
-			]
-		},
-		{
-			"id": "CVE-2020-27749",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-27749"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "shim-unsigned-aarch64",
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:15-7.el8_1.alma"
+					}
+				],
+				"fixed": [
+					"0:15-7.el8_1.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "shim-ia32",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:15.4-2.el8_1.alma"
+					}
+				],
+				"fixed": [
+					"0:15.4-2.el8_1.alma"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -165,48 +207,6 @@
 				"name": "shim-aa64",
 				"architectures": [
 					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:15.4-2.el8_1.alma"
-					}
-				],
-				"fixed": [
-					"0:15.4-2.el8_1.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "shim-unsigned-aarch64",
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:15-7.el8_1.alma"
-					}
-				],
-				"fixed": [
-					"0:15-7.el8_1.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "shim-ia32",
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
