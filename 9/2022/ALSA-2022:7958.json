@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2100862"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2022-7958.html"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2211"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2100862"
 				}
 			],
 			"published": "2022-11-15T00:00:00Z",
@@ -46,6 +46,52 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "lua-guestfs",
+				"architectures": [
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.48.4-2.el9.alma"
+					}
+				],
+				"fixed": [
+					"1:1.48.4-2.el9.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "ocaml-libguestfs",
+				"architectures": [
+					"s390x",
+					"x86_64",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.48.4-2.el9.alma"
+					}
+				],
+				"fixed": [
+					"1:1.48.4-2.el9.alma"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -73,7 +119,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libguestfs-xfs",
+				"name": "libguestfs-rescue",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -96,7 +142,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "perl-Sys-Guestfs",
+				"name": "libguestfs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -184,51 +230,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libguestfs-man-pages-uk",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.48.4-2.el9.alma"
-					}
-				],
-				"fixed": [
-					"1:1.48.4-2.el9.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libguestfs",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.48.4-2.el9.alma"
-					}
-				],
-				"fixed": [
-					"1:1.48.4-2.el9.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "lua-guestfs",
+				"name": "php-libguestfs",
 				"architectures": [
 					"s390x",
 					"x86_64",
@@ -274,7 +276,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libguestfs-devel",
+				"name": "libguestfs-gobject",
 				"architectures": [
 					"s390x",
 					"x86_64",
@@ -297,11 +299,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "ocaml-libguestfs-devel",
+				"name": "libguestfs-man-pages-uk",
 				"architectures": [
-					"s390x",
-					"x86_64",
-					"aarch64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -320,11 +320,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "php-libguestfs",
+				"name": "libguestfs-man-pages-ja",
 				"architectures": [
-					"s390x",
-					"x86_64",
-					"aarch64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -343,7 +341,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libguestfs-rescue",
+				"name": "libguestfs-xfs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -389,7 +387,30 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libguestfs-gobject",
+				"name": "perl-Sys-Guestfs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.48.4-2.el9.alma"
+					}
+				],
+				"fixed": [
+					"1:1.48.4-2.el9.alma"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libguestfs-devel",
 				"architectures": [
 					"s390x",
 					"x86_64",
@@ -435,28 +456,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libguestfs-man-pages-ja",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.48.4-2.el9.alma"
-					}
-				],
-				"fixed": [
-					"1:1.48.4-2.el9.alma"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "ocaml-libguestfs",
+				"name": "ocaml-libguestfs-devel",
 				"architectures": [
 					"s390x",
 					"x86_64",
