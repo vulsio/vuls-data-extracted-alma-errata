@@ -15,15 +15,15 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2588"
+					"url": "https://bugzilla.redhat.com/2114849"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-29900"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-23825"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2039448"
+					"url": "https://bugzilla.redhat.com/2090226"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -31,7 +31,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-7134.html"
+					"url": "https://bugzilla.redhat.com/2039448"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-0494"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-29900"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,7 +47,23 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2114849"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-23816"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2588"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2066819"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2103148"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2022-7134.html"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -48,30 +72,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-1353"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-23816"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2066819"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2090226"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2103148"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-0494"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-23825"
 				}
 			],
 			"published": "2022-10-25T00:00:00Z",
@@ -79,33 +79,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-2588",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2588"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-29900",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-29900"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-29901",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-29901"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-0494",
 			"references": [
@@ -141,6 +114,33 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-23825"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-2588",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2588"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-29900",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-29900"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-29901",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-29901"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -169,7 +169,91 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "kernel-rt",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
+					}
+				],
+				"fixed": [
+					"0:4.18.0-372.32.1.rt7.189.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "kernel-rt-debug-kvm",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
+					}
+				],
+				"fixed": [
+					"0:4.18.0-372.32.1.rt7.189.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-rt-debug-modules-extra",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
+					}
+				],
+				"fixed": [
+					"0:4.18.0-372.32.1.rt7.189.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-rt-debug-devel",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
+					}
+				],
+				"fixed": [
+					"0:4.18.0-372.32.1.rt7.189.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-rt-debug",
 				"architectures": [
 					"x86_64"
 				]
@@ -232,27 +316,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-rt-debug-devel",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
-					}
-				],
-				"fixed": [
-					"0:4.18.0-372.32.1.rt7.189.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "kernel-rt-kvm",
 				"architectures": [
 					"x86_64"
@@ -275,69 +338,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-rt-devel",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
-					}
-				],
-				"fixed": [
-					"0:4.18.0-372.32.1.rt7.189.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-rt",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
-					}
-				],
-				"fixed": [
-					"0:4.18.0-372.32.1.rt7.189.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-rt-debug-modules-extra",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.18.0-372.32.1.rt7.189.el8_6"
-					}
-				],
-				"fixed": [
-					"0:4.18.0-372.32.1.rt7.189.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-rt-debug",
 				"architectures": [
 					"x86_64"
 				]
