@@ -15,11 +15,11 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-1894.html"
+					"url": "https://vulners.com/cve/CVE-2022-21658"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-21658"
+					"url": "https://errata.almalinux.org/8/ALSA-2022-1894.html"
 				}
 			],
 			"published": "2022-05-10T08:06:44Z",
@@ -42,9 +42,11 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-gdb",
+				"name": "rust-toolset:rhel8::cargo",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -63,11 +65,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rls",
+				"name": "rust-toolset:rhel8::rust-src",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -109,9 +109,55 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-src",
+				"name": "rust-toolset:rhel8::rust-toolset",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
+					}
+				],
+				"fixed": [
+					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-gdb",
 				"architectures": [
 					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
+					}
+				],
+				"fixed": [
+					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -176,7 +222,51 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::cargo",
+				"name": "rust-toolset:rhel8::cargo-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
+					}
+				],
+				"fixed": [
+					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rustfmt",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
+					}
+				],
+				"fixed": [
+					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rls",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -243,117 +333,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-toolset",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
-					}
-				],
-				"fixed": [
-					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
-					}
-				],
-				"fixed": [
-					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rustfmt",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
-					}
-				],
-				"fixed": [
-					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-lldb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
-					}
-				],
-				"fixed": [
-					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::cargo-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
-					}
-				],
-				"fixed": [
-					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "rust-toolset:rhel8::rust-analysis",
 				"architectures": [
 					"aarch64",
@@ -382,6 +361,27 @@
 					"aarch64",
 					"x86_64",
 					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.58.1-1.module_el8.6.0+2748+176088b3"
+					}
+				],
+				"fixed": [
+					"0:1.58.1-1.module_el8.6.0+2748+176088b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-lldb",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {

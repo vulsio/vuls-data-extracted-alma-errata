@@ -15,6 +15,18 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-32066"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-41817"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-41819"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2022-0543.html"
 				},
 				{
@@ -28,18 +40,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-31810"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32066"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-41817"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-41819"
 				}
 			],
 			"published": "2022-02-16T08:26:13Z",
@@ -47,6 +47,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2021-31810",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-31810"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32066",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-32066"
+				}
+			]
+		},
 		{
 			"id": "CVE-2021-41817",
 			"references": [
@@ -82,24 +100,6 @@
 					"url": "https://vulners.com/cve/CVE-2021-31799"
 				}
 			]
-		},
-		{
-			"id": "CVE-2021-31810",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-31810"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-32066",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32066"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -107,20 +107,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-abrt-doc",
+				"name": "ruby:2.6::ruby-libs",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"i686"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
+					"0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -128,7 +130,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-abrt-doc",
+				"name": "ruby:2.6::ruby-libs",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-power_assert",
 				"architectures": [
 					"noarch"
 				]
@@ -137,11 +160,74 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.3.0-4.module_el8.5.0+259+8cec6917"
+						"lt": "0:1.1.3-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:0.3.0-4.module_el8.5.0+259+8cec6917"
+					"0:1.1.3-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-power_assert",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.3-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:1.1.3-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-bson-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.5.0-1.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:4.5.0-1.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-bson-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -191,9 +277,52 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-bson",
+				"name": "ruby:2.6::rubygem-rake",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.3.3-108.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:12.3.3-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-rake",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:12.3.3-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:12.3.3-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::ruby",
 				"architectures": [
 					"aarch64",
+					"i686",
 					"x86_64"
 				]
 			},
@@ -201,11 +330,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:4.5.0-1.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:4.5.0-1.module_el8.5.0+2623+08a8ba32"
+					"0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -213,7 +342,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-bson",
+				"name": "ruby:2.6::ruby",
 				"architectures": [
 					"ppc64le"
 				]
@@ -222,11 +351,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
+					"0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -234,95 +363,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-minitest",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.11.3-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:5.11.3-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-minitest",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.11.3-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:5.11.3-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-openssl",
+				"name": "ruby:2.6::rubygem-mysql2",
 				"architectures": [
 					"aarch64",
-					"x86_64",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.1.2-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:2.1.2-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-openssl",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.1.2-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:2.1.2-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-mysql2-doc",
-				"architectures": [
-					"noarch"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -341,9 +385,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mysql2-doc",
+				"name": "ruby:2.6::rubygem-mysql2",
 				"architectures": [
-					"noarch"
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -355,176 +399,6 @@
 				],
 				"fixed": [
 					"0:0.5.2-1.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-io-console",
-				"architectures": [
-					"aarch64",
-					"i686",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.4.7-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:0.4.7-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-io-console",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.4.7-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:0.4.7-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygems-devel",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygems-devel",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-xmlrpc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.3.0-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:0.3.0-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-xmlrpc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.3.0-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:0.3.0-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-did_you_mean",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.0-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:1.3.0-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-did_you_mean",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.3.0-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:1.3.0-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -574,7 +448,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mongo-doc",
+				"name": "ruby:2.6::rubygem-did_you_mean",
 				"architectures": [
 					"noarch"
 				]
@@ -583,11 +457,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:1.3.0-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
+					"0:1.3.0-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -595,7 +469,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mongo-doc",
+				"name": "ruby:2.6::rubygem-did_you_mean",
 				"architectures": [
 					"noarch"
 				]
@@ -604,11 +478,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:1.3.0-108.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+					"0:1.3.0-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -616,22 +490,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-json",
+				"name": "ruby:2.6::rubygems-devel",
 				"architectures": [
-					"aarch64",
-					"i686",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.1.0-108.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:2.1.0-108.module_el8.5.0+2623+08a8ba32"
+					"0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -639,20 +511,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-json",
+				"name": "ruby:2.6::rubygems-devel",
 				"architectures": [
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.1.0-108.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:2.1.0-108.module_el8.5.0+250+ba22dbf7"
+					"0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -704,7 +576,91 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::ruby",
+				"name": "ruby:2.6::rubygem-pg-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-pg-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-abrt",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-abrt",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.3.0-4.module_el8.5.0+259+8cec6917"
+					}
+				],
+				"fixed": [
+					"0:0.3.0-4.module_el8.5.0+259+8cec6917"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::ruby-devel",
 				"architectures": [
 					"aarch64",
 					"i686",
@@ -727,7 +683,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::ruby",
+				"name": "ruby:2.6::ruby-devel",
 				"architectures": [
 					"ppc64le"
 				]
@@ -748,9 +704,54 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-bson-doc",
+				"name": "ruby:2.6::rubygem-json",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"i686",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.0-108.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:2.1.0-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-json",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.0-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:2.1.0-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-bson",
+				"architectures": [
+					"aarch64",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -769,9 +770,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-bson-doc",
+				"name": "ruby:2.6::rubygem-bson",
 				"architectures": [
-					"noarch"
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -790,7 +791,29 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::ruby-devel",
+				"name": "ruby:2.6::rubygem-pg",
+				"architectures": [
+					"aarch64",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-pg",
 				"architectures": [
 					"ppc64le"
 				]
@@ -799,11 +822,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
+					"0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -811,7 +834,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::ruby-devel",
+				"name": "ruby:2.6::rubygem-io-console",
 				"architectures": [
 					"aarch64",
 					"i686",
@@ -822,11 +845,53 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:0.4.7-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
+					"0:0.4.7-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-io-console",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.4.7-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:0.4.7-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-bundler",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.17.2-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:1.17.2-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -855,7 +920,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-bundler",
+				"name": "ruby:2.6::rubygem-mongo",
 				"architectures": [
 					"noarch"
 				]
@@ -864,11 +929,32 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.17.2-108.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:1.17.2-108.module_el8.5.0+250+ba22dbf7"
+					"0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-mongo",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -920,7 +1006,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-power_assert",
+				"name": "ruby:2.6::rubygem-mongo-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -929,11 +1015,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.1.3-108.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:1.1.3-108.module_el8.5.0+2623+08a8ba32"
+					"0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -941,7 +1027,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-power_assert",
+				"name": "ruby:2.6::rubygem-mongo-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -950,11 +1036,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.1.3-108.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:1.1.3-108.module_el8.5.0+250+ba22dbf7"
+					"0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -962,7 +1048,51 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-pg-doc",
+				"name": "ruby:2.6::rubygem-openssl",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.2-108.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:2.1.2-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-openssl",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.2-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:2.1.2-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::ruby-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -971,11 +1101,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+					"0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -983,7 +1113,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-pg-doc",
+				"name": "ruby:2.6::ruby-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -992,11 +1122,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+					"0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -1004,7 +1134,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-abrt",
+				"name": "ruby:2.6::rubygem-abrt-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -1025,7 +1155,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-abrt",
+				"name": "ruby:2.6::rubygem-abrt-doc",
 				"architectures": [
 					"noarch"
 				]
@@ -1039,218 +1169,6 @@
 				],
 				"fixed": [
 					"0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::ruby-libs",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::ruby-libs",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-rake",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.3.3-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:12.3.3-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-rake",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:12.3.3-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:12.3.3-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-irb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0.0-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:1.0.0-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygem-irb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0.0-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:1.0.0-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygems",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::rubygems",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::ruby-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
-					}
-				],
-				"fixed": [
-					"0:2.6.9-108.module_el8.5.0+2623+08a8ba32"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "ruby:2.6::ruby-doc",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
-					}
-				],
-				"fixed": [
-					"0:2.6.9-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -1300,7 +1218,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mongo",
+				"name": "ruby:2.6::rubygem-irb",
 				"architectures": [
 					"noarch"
 				]
@@ -1309,11 +1227,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:1.0.0-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
+					"0:1.0.0-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -1321,7 +1239,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mongo",
+				"name": "ruby:2.6::rubygem-irb",
 				"architectures": [
 					"noarch"
 				]
@@ -1330,11 +1248,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:1.0.0-108.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+					"0:1.0.0-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -1342,21 +1260,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-pg",
+				"name": "ruby:2.6::rubygem-xmlrpc",
 				"architectures": [
-					"aarch64",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+						"lt": "0:0.3.0-108.module_el8.5.0+2623+08a8ba32"
 					}
 				],
 				"fixed": [
-					"0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
+					"0:0.3.0-108.module_el8.5.0+2623+08a8ba32"
 				]
 			}
 		},
@@ -1364,20 +1281,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-pg",
+				"name": "ruby:2.6::rubygem-xmlrpc",
 				"architectures": [
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+						"lt": "0:0.3.0-108.module_el8.5.0+250+ba22dbf7"
 					}
 				],
 				"fixed": [
-					"0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+					"0:0.3.0-108.module_el8.5.0+250+ba22dbf7"
 				]
 			}
 		},
@@ -1385,10 +1302,93 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mysql2",
+				"name": "ruby:2.6::rubygem-minitest",
 				"architectures": [
-					"aarch64",
-					"x86_64"
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.11.3-108.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:5.11.3-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-minitest",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.11.3-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:5.11.3-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygems",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
+					}
+				],
+				"fixed": [
+					"0:3.0.3.1-108.module_el8.5.0+2623+08a8ba32"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygems",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
+					}
+				],
+				"fixed": [
+					"0:3.0.3.1-108.module_el8.5.0+250+ba22dbf7"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby:2.6::rubygem-mysql2-doc",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
@@ -1407,9 +1407,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "ruby:2.6::rubygem-mysql2",
+				"name": "ruby:2.6::rubygem-mysql2-doc",
 				"architectures": [
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
