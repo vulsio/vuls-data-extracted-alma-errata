@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-6448.html"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -24,6 +24,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-33987"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2102001"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105422"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2105428"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,19 +51,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-32213"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-32214"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2102001"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105422"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,7 +59,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2105428"
+					"url": "https://errata.almalinux.org/8/ALSA-2022-6448.html"
 				}
 			],
 			"published": "2022-09-13T00:00:00Z",
@@ -118,6 +118,27 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "nodejs:14::nodejs-packaging",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:23-3.module_el8.5.0+2618+8d46dafd"
+					}
+				],
+				"fixed": [
+					"0:23-3.module_el8.5.0+2618+8d46dafd"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "nodejs:14::nodejs-docs",
 				"architectures": [
 					"noarch"
@@ -139,34 +160,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nodejs:14::npm",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
-					}
-				],
-				"fixed": [
-					"1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "nodejs:14::nodejs-devel",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -189,8 +186,8 @@
 			"package": {
 				"name": "nodejs:14::nodejs",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -211,10 +208,34 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "nodejs:14::npm",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
+					}
+				],
+				"fixed": [
+					"1:6.14.17-1.14.20.0.2.module_el8.6.0+3261+490666b3"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "nodejs:14::nodejs-full-i18n",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -249,27 +270,6 @@
 				],
 				"fixed": [
 					"0:2.0.19-2.module_el8.6.0+3261+490666b3"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:14::nodejs-packaging",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:23-3.module_el8.5.0+2618+8d46dafd"
-					}
-				],
-				"fixed": [
-					"0:23-3.module_el8.5.0+2618+8d46dafd"
 				]
 			}
 		}
