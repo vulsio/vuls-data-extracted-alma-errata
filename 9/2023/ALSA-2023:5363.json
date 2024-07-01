@@ -19,10 +19,6 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-25883"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32006"
 				},
 				{
@@ -31,7 +27,11 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2230955"
+					"url": "https://bugzilla.redhat.com/2216475"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2230948"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,15 +39,15 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-25883"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-32002"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2216475"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2230948"
+					"url": "https://bugzilla.redhat.com/2230955"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -97,6 +97,27 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs:18::nodejs-packaging-bundler",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2021.06-4.module_el9.1.0+13+d9a595ea"
+					}
+				],
+				"fixed": [
+					"0:2021.06-4.module_el9.1.0+13+d9a595ea"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -240,27 +261,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "nodejs:18::nodejs-packaging",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2021.06-4.module_el9.1.0+13+d9a595ea"
-					}
-				],
-				"fixed": [
-					"0:2021.06-4.module_el9.1.0+13+d9a595ea"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "nodejs:18::nodejs-packaging-bundler",
 				"architectures": [
 					"noarch"
 				]
