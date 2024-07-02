@@ -44,20 +44,20 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-24736",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-24736"
-				}
-			]
-		},
-		{
 			"id": "CVE-2022-24735",
 			"references": [
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-24735"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-24736",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-24736"
 				}
 			]
 		}
@@ -67,12 +67,33 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "redis:6::redis-doc",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
+					}
+				],
+				"fixed": [
+					"0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "redis:6::redis-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -95,29 +116,8 @@
 				"architectures": [
 					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
-					}
-				],
-				"fixed": [
-					"0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "redis:6::redis-doc",
-				"architectures": [
-					"noarch"
+					"s390x",
+					"ppc64le"
 				]
 			},
 			"affected": {
