@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2024-2463.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:2463"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-7008"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2222672"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-2463.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:2463"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -50,12 +50,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-oomd",
+				"name": "systemd-pam",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
+					"s390x",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -74,12 +74,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-resolved",
+				"name": "systemd-oomd",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
+					"s390x",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -120,13 +120,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-devel",
+				"name": "systemd",
 				"architectures": [
 					"i686",
-					"aarch64",
+					"s390x",
 					"x86_64",
-					"ppc64le",
-					"s390x"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -169,12 +169,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-udev",
+				"name": "rhel-net-naming-sysattrs",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -193,12 +190,38 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-pam",
+				"name": "systemd-container",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
+					"i686",
+					"s390x",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:252-32.el9_4.alma.1"
+					}
+				],
+				"fixed": [
+					"0:252-32.el9_4.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "systemd-libs",
+				"architectures": [
+					"i686",
+					"s390x",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -238,9 +261,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "rhel-net-naming-sysattrs",
+				"name": "systemd-udev",
 				"architectures": [
-					"noarch"
+					"s390x",
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -259,13 +285,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-container",
+				"name": "systemd-resolved",
 				"architectures": [
-					"i686",
-					"ppc64le",
-					"aarch64",
+					"s390x",
 					"x86_64",
-					"s390x"
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -284,37 +309,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "systemd-libs",
+				"name": "systemd-devel",
 				"architectures": [
 					"i686",
-					"ppc64le",
 					"aarch64",
 					"x86_64",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:252-32.el9_4.alma.1"
-					}
-				],
-				"fixed": [
-					"0:252-32.el9_4.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "systemd",
-				"architectures": [
-					"i686",
 					"ppc64le",
-					"aarch64",
-					"x86_64",
 					"s390x"
 				]
 			},
