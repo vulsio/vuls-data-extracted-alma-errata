@@ -15,6 +15,14 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2137723"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2139104"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2022-7288.html"
 				},
 				{
@@ -28,18 +36,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-3786"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2137723"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2139104"
 				}
 			],
 			"published": "2022-11-01T00:00:00Z",
-			"modified": "2022-11-02T10:22:48Z"
+			"modified": "2023-03-13T16:35:52Z"
 		}
 	],
 	"vulnerabilities": [
@@ -67,35 +67,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "openssl-perl",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:3.0.1-43.el9_0"
-					}
-				],
-				"fixed": [
-					"1:3.0.1-43.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
 				"name": "openssl-devel",
 				"architectures": [
-					"aarch64",
 					"x86_64",
 					"i686",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -116,12 +92,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "openssl",
+				"name": "openssl-perl",
 				"architectures": [
-					"s390x",
 					"x86_64",
 					"aarch64",
-					"ppc64le"
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -142,11 +118,35 @@
 			"package": {
 				"name": "openssl-libs",
 				"architectures": [
-					"s390x",
+					"ppc64le",
 					"x86_64",
 					"i686",
-					"aarch64",
-					"ppc64le"
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:3.0.1-43.el9_0"
+					}
+				],
+				"fixed": [
+					"1:3.0.1-43.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
