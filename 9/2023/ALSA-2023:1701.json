@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-1701.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:1701"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2167815"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-1701.html"
 				}
 			],
 			"published": "2023-04-11T00:00:00Z",
@@ -46,6 +46,30 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "curl-minimal",
+				"architectures": [
+					"ppc64le",
+					"x86_64",
+					"s390x",
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.76.1-19.el9_1.2"
+					}
+				],
+				"fixed": [
+					"0:7.76.1-19.el9_1.2"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -126,30 +150,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "curl",
-				"architectures": [
-					"ppc64le",
-					"x86_64",
-					"s390x",
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.76.1-19.el9_1.2"
-					}
-				],
-				"fixed": [
-					"0:7.76.1-19.el9_1.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "curl-minimal",
 				"architectures": [
 					"ppc64le",
 					"x86_64",

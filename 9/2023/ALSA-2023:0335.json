@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2133618"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-0335.html"
 				},
 				{
@@ -44,6 +40,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2133617"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2133618"
 				}
 			],
 			"published": "2023-01-23T00:00:00Z",
@@ -51,15 +51,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2022-42012",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-42012"
-				}
-			]
-		},
 		{
 			"id": "CVE-2022-42010",
 			"references": [
@@ -77,9 +68,87 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-42011"
 				}
 			]
+		},
+		{
+			"id": "CVE-2022-42012",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-42012"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dbus-daemon",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.12.20-7.el9_1"
+					}
+				],
+				"fixed": [
+					"1:1.12.20-7.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dbus-x11",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.12.20-7.el9_1"
+					}
+				],
+				"fixed": [
+					"1:1.12.20-7.el9_1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "dbus-common",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.12.20-7.el9_1"
+					}
+				],
+				"fixed": [
+					"1:1.12.20-7.el9_1"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -164,75 +233,6 @@
 					"aarch64",
 					"ppc64le",
 					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.12.20-7.el9_1"
-					}
-				],
-				"fixed": [
-					"1:1.12.20-7.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dbus-daemon",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.12.20-7.el9_1"
-					}
-				],
-				"fixed": [
-					"1:1.12.20-7.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dbus-x11",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.12.20-7.el9_1"
-					}
-				],
-				"fixed": [
-					"1:1.12.20-7.el9_1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "dbus-common",
-				"architectures": [
-					"noarch"
 				]
 			},
 			"affected": {
