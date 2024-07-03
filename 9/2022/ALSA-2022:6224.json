@@ -15,15 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2022-6224.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2022:6224"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1473"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2068"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -39,7 +43,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+					"url": "https://errata.almalinux.org/9/ALSA-2022-6224.html"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -47,11 +51,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2068"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1473"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -67,6 +67,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-1292",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-1343",
 			"references": [
@@ -102,15 +111,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2097"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-1292",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1292"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -118,11 +118,35 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
+				"name": "openssl",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:3.0.1-41.el9_0"
+					}
+				],
+				"fixed": [
+					"1:3.0.1-41.el9_0"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
 				"name": "openssl-devel",
 				"architectures": [
 					"i686",
-					"x86_64",
 					"aarch64",
+					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -146,8 +170,8 @@
 				"name": "openssl-libs",
 				"architectures": [
 					"i686",
-					"x86_64",
 					"aarch64",
+					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -170,32 +194,8 @@
 			"package": {
 				"name": "openssl-perl",
 				"architectures": [
-					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:3.0.1-41.el9_0"
-					}
-				],
-				"fixed": [
-					"1:3.0.1-41.el9_0"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "openssl",
-				"architectures": [
 					"x86_64",
-					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
