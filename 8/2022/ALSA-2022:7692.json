@@ -15,7 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-7692.html"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-22824"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -23,31 +23,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2044464"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2044488"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2022:7692"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-22823"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2044467"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2044479"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2044484"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-22827"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -59,7 +35,7 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-22824"
+					"url": "https://access.redhat.com/security/cve/CVE-2022-22823"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -67,15 +43,39 @@
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2044457"
+					"url": "https://errata.almalinux.org/8/ALSA-2022-7692.html"
 				},
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-22827"
+					"url": "https://access.redhat.com/errata/RHSA-2022:7692"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2044488"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2044467"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2044484"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2044464"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2044479"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2044455"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2044457"
 				}
 			],
 			"published": "2022-11-08T00:00:00Z",
@@ -83,6 +83,33 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-22823",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-22823"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22824",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-22824"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22825",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-22825"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-22826",
 			"references": [
@@ -118,36 +145,34 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-22822"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-22823",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-22823"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-22824",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-22824"
-				}
-			]
-		},
-		{
-			"id": "CVE-2022-22825",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-22825"
-				}
-			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "xmlrpc-c-c++",
+				"architectures": [
+					"i686",
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.51.0-8.el8"
+					}
+				],
+				"fixed": [
+					"0:1.51.0-8.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -228,31 +253,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "xmlrpc-c-client++",
-				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.51.0-8.el8"
-					}
-				],
-				"fixed": [
-					"0:1.51.0-8.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "xmlrpc-c-c++",
 				"architectures": [
 					"i686",
 					"x86_64",
