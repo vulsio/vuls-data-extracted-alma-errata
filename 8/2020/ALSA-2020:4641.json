@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2019-20907"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2020-14422"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2019-20477"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2019-20907"
 				}
 			],
 			"published": "2020-11-03T12:23:02Z",
@@ -43,15 +43,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2020-1747",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2020-1747"
-				}
-			]
-		},
 		{
 			"id": "CVE-2020-8492",
 			"references": [
@@ -87,6 +78,15 @@
 					"url": "https://vulners.com/cve/CVE-2020-14422"
 				}
 			]
+		},
+		{
+			"id": "CVE-2020-1747",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2020-1747"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -94,7 +94,49 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python38:3.8::python38-psycopg2",
+				"name": "python38:3.8::python38-chardet",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.0.4-19.module_el8.6.0+2778+cd494b30"
+					}
+				],
+				"fixed": [
+					"0:3.0.4-19.module_el8.6.0+2778+cd494b30"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python38:3.8::python38-pytz",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2019.3-3.module_el8.6.0+2778+cd494b30"
+					}
+				],
+				"fixed": [
+					"0:2019.3-3.module_el8.6.0+2778+cd494b30"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python38:3.8::python38-psycopg2-doc",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -110,29 +152,6 @@
 				],
 				"fixed": [
 					"0:2.8.4-4.module_el8.6.0+2778+cd494b30"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python38:3.8::python38-mod_wsgi",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.6.8-3.module_el8.6.0+2778+cd494b30"
-					}
-				],
-				"fixed": [
-					"0:4.6.8-3.module_el8.6.0+2778+cd494b30"
 				]
 			}
 		},
@@ -184,68 +203,20 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python38:3.8::python38-Cython",
+				"name": "python38:3.8::python38-asn1crypto",
 				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
+					"noarch"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:0.29.14-4.module_el8.6.0+2778+cd494b30"
+						"lt": "0:1.2.0-3.module_el8.6.0+2778+cd494b30"
 					}
 				],
 				"fixed": [
-					"0:0.29.14-4.module_el8.6.0+2778+cd494b30"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python38:3.8::python38-psycopg2-tests",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.8.4-4.module_el8.6.0+2778+cd494b30"
-					}
-				],
-				"fixed": [
-					"0:2.8.4-4.module_el8.6.0+2778+cd494b30"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python38:3.8::python38-psycopg2-doc",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.8.4-4.module_el8.6.0+2778+cd494b30"
-					}
-				],
-				"fixed": [
-					"0:2.8.4-4.module_el8.6.0+2778+cd494b30"
+					"0:1.2.0-3.module_el8.6.0+2778+cd494b30"
 				]
 			}
 		},
@@ -269,6 +240,52 @@
 				],
 				"fixed": [
 					"0:1.1.1-6.module_el8.6.0+2778+cd494b30"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python38:3.8::python38-Cython",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.29.14-4.module_el8.6.0+2778+cd494b30"
+					}
+				],
+				"fixed": [
+					"0:0.29.14-4.module_el8.6.0+2778+cd494b30"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "python38:3.8::python38-mod_wsgi",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.6.8-3.module_el8.6.0+2778+cd494b30"
+					}
+				],
+				"fixed": [
+					"0:4.6.8-3.module_el8.6.0+2778+cd494b30"
 				]
 			}
 		},
@@ -318,20 +335,22 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "python38:3.8::python38-asn1crypto",
+				"name": "python38:3.8::python38-psycopg2-tests",
 				"architectures": [
-					"noarch"
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.2.0-3.module_el8.6.0+2778+cd494b30"
+						"lt": "0:2.8.4-4.module_el8.6.0+2778+cd494b30"
 					}
 				],
 				"fixed": [
-					"0:1.2.0-3.module_el8.6.0+2778+cd494b30"
+					"0:2.8.4-4.module_el8.6.0+2778+cd494b30"
 				]
 			}
 		},
@@ -353,27 +372,6 @@
 				],
 				"fixed": [
 					"0:2.19-3.module_el8.6.0+2778+cd494b30"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python38:3.8::python38-chardet",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.0.4-19.module_el8.6.0+2778+cd494b30"
-					}
-				],
-				"fixed": [
-					"0:3.0.4-19.module_el8.6.0+2778+cd494b30"
 				]
 			}
 		},
@@ -404,6 +402,29 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
+				"name": "python38:3.8::python38-psycopg2",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.8.4-4.module_el8.6.0+2778+cd494b30"
+					}
+				],
+				"fixed": [
+					"0:2.8.4-4.module_el8.6.0+2778+cd494b30"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
 				"name": "python38:3.8::python38-cffi",
 				"architectures": [
 					"x86_64",
@@ -420,27 +441,6 @@
 				],
 				"fixed": [
 					"0:1.13.2-3.module_el8.6.0+2778+cd494b30"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "python38:3.8::python38-pytz",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2019.3-3.module_el8.6.0+2778+cd494b30"
-					}
-				],
-				"fixed": [
-					"0:2019.3-3.module_el8.6.0+2778+cd494b30"
 				]
 			}
 		}
