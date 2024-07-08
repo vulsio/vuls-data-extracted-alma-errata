@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2022-2200.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2022-23267"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2022-29145"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2022-2200.html"
 				}
 			],
 			"published": "2022-05-11T13:22:02Z",
@@ -35,6 +35,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23267",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2022-23267"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-29117",
 			"references": [
@@ -52,15 +61,6 @@
 					"url": "https://vulners.com/cve/CVE-2022-29145"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-23267",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2022-23267"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -68,7 +68,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-apphost-pack-5.0",
+				"name": "dotnet-sdk-5.0-source-built-artifacts",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.214-1.el8_6"
+					}
+				],
+				"fixed": [
+					"0:5.0.214-1.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-hostfxr-5.0",
 				"architectures": [
 					"x86_64"
 				]
@@ -110,7 +131,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-hostfxr-5.0",
+				"name": "dotnet-sdk-5.0",
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.214-1.el8_6"
+					}
+				],
+				"fixed": [
+					"0:5.0.214-1.el8_6"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "dotnet-runtime-5.0",
 				"architectures": [
 					"x86_64"
 				]
@@ -152,27 +194,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-runtime-5.0",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.0.17-1.el8_6"
-					}
-				],
-				"fixed": [
-					"0:5.0.17-1.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "dotnet-templates-5.0",
 				"architectures": [
 					"x86_64"
@@ -194,7 +215,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-targeting-pack-5.0",
+				"name": "dotnet-apphost-pack-5.0",
 				"architectures": [
 					"x86_64"
 				]
@@ -215,7 +236,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "dotnet-sdk-5.0-source-built-artifacts",
+				"name": "dotnet-targeting-pack-5.0",
 				"architectures": [
 					"x86_64"
 				]
@@ -224,32 +245,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:5.0.214-1.el8_6"
+						"lt": "0:5.0.17-1.el8_6"
 					}
 				],
 				"fixed": [
-					"0:5.0.214-1.el8_6"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "dotnet-sdk-5.0",
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.0.214-1.el8_6"
-					}
-				],
-				"fixed": [
-					"0:5.0.214-1.el8_6"
+					"0:5.0.17-1.el8_6"
 				]
 			}
 		}
