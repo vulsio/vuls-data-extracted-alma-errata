@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:4235"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-2199"
 				},
 				{
@@ -36,6 +32,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2024-4235.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:4235"
 				}
 			],
 			"published": "2024-07-02T00:00:00Z",
@@ -63,6 +63,54 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds:1.4::389-ds-base-legacy-tools",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
+					}
+				],
+				"fixed": [
+					"0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds:1.4::389-ds-base-libs",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
+					}
+				],
+				"fixed": [
+					"0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -137,54 +185,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "389-ds:1.4::389-ds-base",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
-					}
-				],
-				"fixed": [
-					"0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "389-ds:1.4::389-ds-base-legacy-tools",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
-					}
-				],
-				"fixed": [
-					"0:1.4.3.39-7.module_el8.10.0+3864+d8eec553"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "389-ds:1.4::389-ds-base-libs",
 				"architectures": [
 					"x86_64",
 					"aarch64",
