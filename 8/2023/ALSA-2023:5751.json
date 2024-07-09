@@ -15,18 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2243805"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2023-5751.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:5751"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2023-22025"
 				},
 				{
@@ -36,6 +24,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2243627"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2243805"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2023-5751.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:5751"
 				}
 			],
 			"published": "2023-10-18T00:00:00Z",
@@ -44,15 +44,6 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-22081",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-22081"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-22025",
 			"references": [
 				{
@@ -60,9 +51,113 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2023-22025"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-22081",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-22081"
+				}
+			]
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-17-openjdk-jmods-slowdebug",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:17.0.9.0.9-2.el8"
+					}
+				],
+				"fixed": [
+					"1:17.0.9.0.9-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-17-openjdk-static-libs-fastdebug",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:17.0.9.0.9-2.el8"
+					}
+				],
+				"fixed": [
+					"1:17.0.9.0.9-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-17-openjdk-demo",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:17.0.9.0.9-2.el8"
+					}
+				],
+				"fixed": [
+					"1:17.0.9.0.9-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-17-openjdk-javadoc",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:17.0.9.0.9-2.el8"
+					}
+				],
+				"fixed": [
+					"1:17.0.9.0.9-2.el8"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -114,78 +209,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:17.0.9.0.9-2.el8"
-					}
-				],
-				"fixed": [
-					"1:17.0.9.0.9-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-17-openjdk-javadoc",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:17.0.9.0.9-2.el8"
-					}
-				],
-				"fixed": [
-					"1:17.0.9.0.9-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-17-openjdk-jmods-fastdebug",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:17.0.9.0.9-2.el8"
-					}
-				],
-				"fixed": [
-					"1:17.0.9.0.9-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-17-openjdk-static-libs-fastdebug",
+				"name": "java-17-openjdk-headless-fastdebug",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -256,10 +280,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-headless",
+				"name": "java-17-openjdk-slowdebug",
 				"architectures": [
-					"x86_64",
 					"aarch64",
+					"x86_64",
 					"ppc64le",
 					"s390x"
 				]
@@ -280,10 +304,10 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-jmods-slowdebug",
+				"name": "java-17-openjdk",
 				"architectures": [
-					"aarch64",
 					"x86_64",
+					"aarch64",
 					"ppc64le",
 					"s390x"
 				]
@@ -327,54 +351,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-demo-fastdebug",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:17.0.9.0.9-2.el8"
-					}
-				],
-				"fixed": [
-					"1:17.0.9.0.9-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-17-openjdk-demo-slowdebug",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:17.0.9.0.9-2.el8"
-					}
-				],
-				"fixed": [
-					"1:17.0.9.0.9-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-17-openjdk-slowdebug",
+				"name": "java-17-openjdk-headless-slowdebug",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -446,7 +423,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-jmods",
+				"name": "java-17-openjdk-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -470,7 +447,30 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-headless-fastdebug",
+				"name": "java-17-openjdk-jmods-fastdebug",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:17.0.9.0.9-2.el8"
+					}
+				],
+				"fixed": [
+					"1:17.0.9.0.9-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-17-openjdk-demo-fastdebug",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -516,7 +516,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-headless-slowdebug",
+				"name": "java-17-openjdk-demo-slowdebug",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -540,7 +540,31 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "java-17-openjdk-demo",
+				"name": "java-17-openjdk-headless",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:17.0.9.0.9-2.el8"
+					}
+				],
+				"fixed": [
+					"1:17.0.9.0.9-2.el8"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "java-17-openjdk-jmods",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -565,30 +589,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "java-17-openjdk-javadoc-zip",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:17.0.9.0.9-2.el8"
-					}
-				],
-				"fixed": [
-					"1:17.0.9.0.9-2.el8"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "java-17-openjdk-devel",
 				"architectures": [
 					"x86_64",
 					"aarch64",
