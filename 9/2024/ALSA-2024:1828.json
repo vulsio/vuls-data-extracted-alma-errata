@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2024-21068"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2274975"
 				},
 				{
@@ -40,10 +44,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2024-21012"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2024-21068"
 				}
 			],
 			"published": "2024-04-18T00:00:00Z",
@@ -84,7 +84,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk",
+				"name": "java-21-openjdk-javadoc",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -108,7 +108,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-jmods",
+				"name": "java-21-openjdk-demo",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -132,11 +132,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-devel-fastdebug",
+				"name": "java-21-openjdk-jmods-slowdebug",
 				"architectures": [
 					"x86_64",
 					"aarch64",
-					"ppc64le"
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -155,7 +156,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-jmods-fastdebug",
+				"name": "java-21-openjdk-headless-fastdebug",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -202,7 +203,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-src",
+				"name": "java-21-openjdk-jmods",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -226,11 +227,11 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-javadoc",
+				"name": "java-21-openjdk-demo-slowdebug",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
 					"x86_64",
+					"aarch64",
+					"ppc64le",
 					"s390x"
 				]
 			},
@@ -250,11 +251,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-headless-fastdebug",
+				"name": "java-21-openjdk-headless-slowdebug",
 				"architectures": [
 					"x86_64",
 					"aarch64",
-					"ppc64le"
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -273,7 +275,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-src-fastdebug",
+				"name": "java-21-openjdk-src-slowdebug",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:21.0.3.0.9-1.el9.alma.1"
+					}
+				],
+				"fixed": [
+					"1:21.0.3.0.9-1.el9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "java-21-openjdk-fastdebug",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -344,7 +370,31 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-demo",
+				"name": "java-21-openjdk-src",
+				"architectures": [
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:21.0.3.0.9-1.el9.alma.1"
+					}
+				],
+				"fixed": [
+					"1:21.0.3.0.9-1.el9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "java-21-openjdk-devel",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -440,7 +490,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-fastdebug",
+				"name": "java-21-openjdk-jmods-fastdebug",
 				"architectures": [
 					"x86_64",
 					"aarch64",
@@ -463,31 +513,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-demo-slowdebug",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:21.0.3.0.9-1.el9.alma.1"
-					}
-				],
-				"fixed": [
-					"1:21.0.3.0.9-1.el9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "java-21-openjdk-devel",
+				"name": "java-21-openjdk",
 				"architectures": [
 					"ppc64le",
 					"aarch64",
@@ -511,12 +537,34 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "java-21-openjdk-jmods-slowdebug",
+				"name": "java-21-openjdk-src-fastdebug",
 				"architectures": [
 					"x86_64",
 					"aarch64",
-					"ppc64le",
-					"s390x"
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:21.0.3.0.9-1.el9.alma.1"
+					}
+				],
+				"fixed": [
+					"1:21.0.3.0.9-1.el9.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "java-21-openjdk-devel-fastdebug",
+				"architectures": [
+					"x86_64",
+					"aarch64",
+					"ppc64le"
 				]
 			},
 			"affected": {
@@ -540,54 +588,6 @@
 					"x86_64",
 					"aarch64",
 					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:21.0.3.0.9-1.el9.alma.1"
-					}
-				],
-				"fixed": [
-					"1:21.0.3.0.9-1.el9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "java-21-openjdk-headless-slowdebug",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:21.0.3.0.9-1.el9.alma.1"
-					}
-				],
-				"fixed": [
-					"1:21.0.3.0.9-1.el9.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "java-21-openjdk-src-slowdebug",
-				"architectures": [
-					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
 				]
 			},
 			"affected": {
