@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:2478"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-35252"
 				},
 				{
@@ -32,10 +36,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2023-2478.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2478"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -67,38 +67,12 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "libcurl",
+				"name": "curl-minimal",
 				"architectures": [
-					"i686",
-					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.76.1-23.el9"
-					}
-				],
-				"fixed": [
-					"0:7.76.1-23.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "libcurl-minimal",
-				"architectures": [
-					"i686",
 					"x86_64",
-					"aarch64",
-					"ppc64le",
-					"s390x"
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -119,10 +93,10 @@
 			"package": {
 				"name": "curl",
 				"architectures": [
-					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
+					"x86_64",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -141,12 +115,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "curl-minimal",
+				"name": "libcurl",
 				"architectures": [
-					"x86_64",
-					"aarch64",
 					"ppc64le",
-					"s390x"
+					"i686",
+					"x86_64",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -172,6 +147,31 @@
 					"aarch64",
 					"x86_64",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.76.1-23.el9"
+					}
+				],
+				"fixed": [
+					"0:7.76.1-23.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "libcurl-minimal",
+				"architectures": [
+					"ppc64le",
+					"i686",
+					"x86_64",
+					"s390x",
+					"aarch64"
 				]
 			},
 			"affected": {
