@@ -15,19 +15,19 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2228038"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/8/ALSA-2023-4635.html"
 				},
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/errata/RHSA-2023:4635"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2228038"
 				}
 			],
 			"published": "2023-08-14T00:00:00Z",
@@ -46,6 +46,73 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-lldb",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-std-static-wasm32-unknown-unknown",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:8",
 			"vulnerable": true,
@@ -74,12 +141,9 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::cargo",
+				"name": "rust-toolset:rhel8::rust-src",
 				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -146,72 +210,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-debugger-common",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-gdb",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-std-static-wasm32-unknown-unknown",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rustfmt",
+				"name": "rust-toolset:rhel8::cargo",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -235,7 +234,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-src",
+				"name": "rust-toolset:rhel8::rust-debugger-common",
 				"architectures": [
 					"noarch"
 				]
@@ -256,9 +255,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-lldb",
+				"name": "rust-toolset:rhel8::rust-toolset",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -301,30 +303,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-					}
-				],
-				"fixed": [
-					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-toolset:rhel8::rust-toolset",
+				"name": "rust-toolset:rhel8::rustfmt",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -378,6 +357,27 @@
 					"x86_64",
 					"ppc64le",
 					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+					}
+				],
+				"fixed": [
+					"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-toolset:rhel8::rust-gdb",
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
