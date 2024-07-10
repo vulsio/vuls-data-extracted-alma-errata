@@ -15,18 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32687"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-41099"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/8/ALSA-2021-3918.html"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-32626"
 				},
 				{
@@ -40,6 +28,18 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://vulners.com/cve/CVE-2021-32675"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-32687"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-41099"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2021-3918.html"
 				}
 			],
 			"published": "2021-10-19T13:14:11Z",
@@ -47,33 +47,6 @@
 		}
 	],
 	"vulnerabilities": [
-		{
-			"id": "CVE-2021-32675",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32675"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-32687",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-32687"
-				}
-			]
-		},
-		{
-			"id": "CVE-2021-41099",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://vulners.com/cve/CVE-2021-41099"
-				}
-			]
-		},
 		{
 			"id": "CVE-2021-32626",
 			"references": [
@@ -100,6 +73,33 @@
 					"url": "https://vulners.com/cve/CVE-2021-32628"
 				}
 			]
+		},
+		{
+			"id": "CVE-2021-32675",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-32675"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32687",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-32687"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-41099",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://vulners.com/cve/CVE-2021-41099"
+				}
+			]
 		}
 	],
 	"detection": [
@@ -107,7 +107,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "redis:5::redis-devel",
+				"name": "redis:5::redis",
 				"architectures": [
 					"aarch64",
 					"x86_64"
@@ -122,27 +122,6 @@
 				],
 				"fixed": [
 					"0:5.0.3-5.module_el8.4.0+2583+b9845322"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "redis:5::redis-devel",
-				"architectures": [
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.0.3-5.module_el8.5.0+66+fc19ec12"
-					}
-				],
-				"fixed": [
-					"0:5.0.3-5.module_el8.5.0+66+fc19ec12"
 				]
 			}
 		},
@@ -164,28 +143,6 @@
 				],
 				"fixed": [
 					"0:5.0.3-5.module_el8.5.0+66+fc19ec12"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "redis:5::redis",
-				"architectures": [
-					"aarch64",
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.0.3-5.module_el8.4.0+2583+b9845322"
-					}
-				],
-				"fixed": [
-					"0:5.0.3-5.module_el8.4.0+2583+b9845322"
 				]
 			}
 		},
@@ -207,6 +164,49 @@
 				],
 				"fixed": [
 					"0:5.0.3-5.module_el8.4.0+2583+b9845322"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "redis:5::redis-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.3-5.module_el8.4.0+2583+b9845322"
+					}
+				],
+				"fixed": [
+					"0:5.0.3-5.module_el8.4.0+2583+b9845322"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "redis:5::redis-devel",
+				"architectures": [
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.3-5.module_el8.5.0+66+fc19ec12"
+					}
+				],
+				"fixed": [
+					"0:5.0.3-5.module_el8.5.0+66+fc19ec12"
 				]
 			}
 		}

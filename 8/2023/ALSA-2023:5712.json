@@ -50,9 +50,12 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx:1.20::nginx-all-modules",
+				"name": "nginx:1.20::nginx-mod-devel",
 				"architectures": [
-					"noarch"
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -95,7 +98,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx:1.20::nginx-mod-http-xslt-filter",
+				"name": "nginx:1.20::nginx-mod-http-image-filter",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -119,7 +122,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx:1.20::nginx-mod-http-image-filter",
+				"name": "nginx:1.20::nginx-mod-stream",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -188,30 +191,6 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx:1.20::nginx-mod-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
-					}
-				],
-				"fixed": [
-					"1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
 				"name": "nginx:1.20::nginx-mod-mail",
 				"architectures": [
 					"aarch64",
@@ -236,7 +215,28 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx:1.20::nginx-mod-stream",
+				"name": "nginx:1.20::nginx-all-modules",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
+					}
+				],
+				"fixed": [
+					"1:1.20.1-1.module_el8.8.0+3624+abf02be4.1.alma.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx:1.20::nginx-mod-http-xslt-filter",
 				"architectures": [
 					"aarch64",
 					"x86_64",
