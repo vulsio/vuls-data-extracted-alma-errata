@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-27191"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-29162"
 				},
 				{
@@ -44,6 +40,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-1708"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-27191"
 				}
 			],
 			"published": "2022-11-08T00:00:00Z",
@@ -51,6 +51,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-1708",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1708"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-27191",
 			"references": [
@@ -68,15 +77,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-29162"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-1708",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-1708"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -84,49 +84,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::udica",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.2.6-3.module_el8.6.0+2886+d33c3efb"
-					}
-				],
-				"fixed": [
-					"0:0.2.6-3.module_el8.6.0+2886+d33c3efb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::udica",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.2.6-3.module_el8.6.0+3137+d33c3efb"
-					}
-				],
-				"fixed": [
-					"0:0.2.6-3.module_el8.6.0+3137+d33c3efb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::podman-gvproxy",
+				"name": "container-tools:4.0::conmon",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -138,11 +96,35 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+						"lt": "2:2.1.4-1.module_el8.7.0+3344+5bcd850f"
 					}
 				],
 				"fixed": [
-					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+					"2:2.1.4-1.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::toolbox",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		},
@@ -167,122 +149,6 @@
 				],
 				"fixed": [
 					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::criu",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
-					}
-				],
-				"fixed": [
-					"0:3.15-3.module_el8.6.0+3137+d33c3efb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::criu",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
-					}
-				],
-				"fixed": [
-					"0:3.15-3.module_el8.6.0+2877+8e437bf5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::containers-common",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:1-35.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:1-35.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::containernetworking-plugins",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.1.1-2.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"1:1.1.1-2.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::buildah",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		},
@@ -334,121 +200,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::skopeo-tests",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:1.6.2-5.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:1.6.2-5.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::cockpit-podman",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:46-1.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"0:46-1.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::podman-tests",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::podman",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::crit",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
-					}
-				],
-				"fixed": [
-					"0:3.15-3.module_el8.6.0+3137+d33c3efb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::crit",
+				"name": "container-tools:4.0::criu",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -471,7 +223,72 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::buildah-tests",
+				"name": "container-tools:4.0::criu",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
+					}
+				],
+				"fixed": [
+					"0:3.15-3.module_el8.6.0+3137+d33c3efb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::python3-criu",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+					}
+				],
+				"fixed": [
+					"0:3.15-3.module_el8.6.0+2877+8e437bf5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::python3-criu",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
+					}
+				],
+				"fixed": [
+					"0:3.15-3.module_el8.6.0+3137+d33c3efb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::aardvark-dns",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -483,11 +300,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
+						"lt": "2:1.0.1-35.module_el8.7.0+3344+5bcd850f"
 					}
 				],
 				"fixed": [
-					"1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
+					"2:1.0.1-35.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		},
@@ -519,7 +336,169 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::criu-devel",
+				"name": "container-tools:4.0::python3-podman",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.0.0-1.module_el8.6.0+2877+8e437bf5"
+					}
+				],
+				"fixed": [
+					"0:4.0.0-1.module_el8.6.0+2877+8e437bf5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::containers-common",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:1-35.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"2:1-35.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::cockpit-podman",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:46-1.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"0:46-1.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::runc",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.1.4-1.module_el8.7.0+3344+484dae7b"
+					}
+				],
+				"fixed": [
+					"1:1.1.4-1.module_el8.7.0+3344+484dae7b"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::fuse-overlayfs",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.9-1.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"0:1.9-1.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::toolbox-tests",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::podman",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::libslirp",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -530,11 +509,170 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+						"lt": "0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
 					}
 				],
 				"fixed": [
-					"0:3.15-3.module_el8.6.0+2877+8e437bf5"
+					"0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::libslirp",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::buildah-tests",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::skopeo",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:1.6.2-5.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"2:1.6.2-5.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::oci-seccomp-bpf-hook",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.5-1.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"0:1.2.5-1.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::udica",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.2.6-3.module_el8.6.0+2886+d33c3efb"
+					}
+				],
+				"fixed": [
+					"0:0.2.6-3.module_el8.6.0+2886+d33c3efb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::udica",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.2.6-3.module_el8.6.0+3137+d33c3efb"
+					}
+				],
+				"fixed": [
+					"0:0.2.6-3.module_el8.6.0+3137+d33c3efb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::podman-remote",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		},
@@ -563,7 +701,30 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::conmon",
+				"name": "container-tools:4.0::criu-devel",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+					}
+				],
+				"fixed": [
+					"0:3.15-3.module_el8.6.0+2877+8e437bf5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::podman-catatonit",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -575,11 +736,80 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "2:2.1.4-1.module_el8.7.0+3344+5bcd850f"
+						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
 					}
 				],
 				"fixed": [
-					"2:2.1.4-1.module_el8.7.0+3344+5bcd850f"
+					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::podman-docker",
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::podman-gvproxy",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::buildah",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
+					}
+				],
+				"fixed": [
+					"1:1.24.5-2.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		},
@@ -632,7 +862,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::aardvark-dns",
+				"name": "container-tools:4.0::containernetworking-plugins",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -644,11 +874,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "2:1.0.1-35.module_el8.7.0+3344+5bcd850f"
+						"lt": "1:1.1.1-2.module_el8.7.0+3344+5bcd850f"
 					}
 				],
 				"fixed": [
-					"2:1.0.1-35.module_el8.7.0+3344+5bcd850f"
+					"1:1.1.1-2.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		},
@@ -656,76 +886,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::podman-docker",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::oci-seccomp-bpf-hook",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.2.5-1.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"0:1.2.5-1.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::toolbox-tests",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::criu-libs",
+				"name": "container-tools:4.0::libslirp-devel",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -736,11 +897,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+						"lt": "0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
 					}
 				],
 				"fixed": [
-					"0:3.15-3.module_el8.6.0+2877+8e437bf5"
+					"0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
 				]
 			}
 		},
@@ -748,7 +909,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::criu-libs",
+				"name": "container-tools:4.0::libslirp-devel",
 				"architectures": [
 					"s390x"
 				]
@@ -757,11 +918,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
+						"lt": "0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
 					}
 				],
 				"fixed": [
-					"0:3.15-3.module_el8.6.0+3137+d33c3efb"
+					"0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
 				]
 			}
 		},
@@ -769,28 +930,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::python3-podman",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.0.0-1.module_el8.6.0+2877+8e437bf5"
-					}
-				],
-				"fixed": [
-					"0:4.0.0-1.module_el8.6.0+2877+8e437bf5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::skopeo",
+				"name": "container-tools:4.0::skopeo-tests",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -814,191 +954,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::libslirp",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
-					}
-				],
-				"fixed": [
-					"0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::libslirp",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
-					}
-				],
-				"fixed": [
-					"0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::toolbox",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"0:0.0.99.3-0.5.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::runc",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.1.4-1.module_el8.7.0+3344+484dae7b"
-					}
-				],
-				"fixed": [
-					"1:1.1.4-1.module_el8.7.0+3344+484dae7b"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::podman-remote",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::podman-catatonit",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le",
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-					}
-				],
-				"fixed": [
-					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::libslirp-devel",
-				"architectures": [
-					"aarch64",
-					"x86_64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
-					}
-				],
-				"fixed": [
-					"0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::libslirp-devel",
-				"architectures": [
-					"s390x"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
-					}
-				],
-				"fixed": [
-					"0:4.4.0-1.module_el8.6.0+3137+d33c3efb"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:8",
-			"vulnerable": true,
-			"package": {
-				"name": "container-tools:4.0::python3-criu",
+				"name": "container-tools:4.0::criu-libs",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -1021,7 +977,7 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::python3-criu",
+				"name": "container-tools:4.0::criu-libs",
 				"architectures": [
 					"s390x"
 				]
@@ -1042,7 +998,51 @@
 			"ecosystem": "alma:8",
 			"vulnerable": true,
 			"package": {
-				"name": "container-tools:4.0::fuse-overlayfs",
+				"name": "container-tools:4.0::crit",
+				"architectures": [
+					"aarch64",
+					"x86_64",
+					"ppc64le"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15-3.module_el8.6.0+2877+8e437bf5"
+					}
+				],
+				"fixed": [
+					"0:3.15-3.module_el8.6.0+2877+8e437bf5"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::crit",
+				"architectures": [
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15-3.module_el8.6.0+3137+d33c3efb"
+					}
+				],
+				"fixed": [
+					"0:3.15-3.module_el8.6.0+3137+d33c3efb"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:8",
+			"vulnerable": true,
+			"package": {
+				"name": "container-tools:4.0::podman-tests",
 				"architectures": [
 					"aarch64",
 					"x86_64",
@@ -1054,11 +1054,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.9-1.module_el8.7.0+3344+5bcd850f"
+						"lt": "2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
 					}
 				],
 				"fixed": [
-					"0:1.9-1.module_el8.7.0+3344+5bcd850f"
+					"2:4.0.2-8.module_el8.7.0+3344+5bcd850f"
 				]
 			}
 		}
