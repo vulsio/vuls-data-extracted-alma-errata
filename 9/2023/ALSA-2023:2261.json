@@ -15,27 +15,7 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2164032"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2164038"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://errata.almalinux.org/9/ALSA-2023-2261.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2023:2261"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-2795"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-3924"
 				},
 				{
 					"source": "errata.almalinux.org",
@@ -51,7 +31,27 @@
 				},
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2164032"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2023-2261.html"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-3924"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2164038"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://bugzilla.redhat.com/2164039"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2023:2261"
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
@@ -59,6 +59,15 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2795",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-2795"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-3094",
 			"references": [
@@ -85,15 +94,6 @@
 					"url": "https://access.redhat.com/security/cve/CVE-2022-3924"
 				}
 			]
-		},
-		{
-			"id": "CVE-2022-2795",
-			"references": [
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/security/cve/CVE-2022-2795"
-				}
-			]
 		}
 	],
 	"detection": [
@@ -101,12 +101,9 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-utils",
+				"name": "bind-license",
 				"architectures": [
-					"ppc64le",
-					"s390x",
-					"aarch64",
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -125,13 +122,34 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-devel",
+				"name": "python3-bind",
 				"architectures": [
-					"ppc64le",
-					"aarch64",
-					"x86_64",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-libs",
+				"architectures": [
 					"i686",
-					"s390x"
+					"ppc64le",
+					"s390x",
+					"aarch64",
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -171,7 +189,7 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-chroot",
+				"name": "bind-utils",
 				"architectures": [
 					"ppc64le",
 					"s390x",
@@ -195,9 +213,29 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-libs",
+				"name": "bind-doc",
 				"architectures": [
-					"i686",
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.23-11.el9"
+					}
+				],
+				"fixed": [
+					"32:9.16.23-11.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-chroot",
+				"architectures": [
 					"ppc64le",
 					"s390x",
 					"aarch64",
@@ -268,51 +306,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-doc",
+				"name": "bind-devel",
 				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-license",
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.23-11.el9"
-					}
-				],
-				"fixed": [
-					"32:9.16.23-11.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-bind",
-				"architectures": [
-					"noarch"
+					"ppc64le",
+					"aarch64",
+					"x86_64",
+					"i686",
+					"s390x"
 				]
 			},
 			"affected": {
