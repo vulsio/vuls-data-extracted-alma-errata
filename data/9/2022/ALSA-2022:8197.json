@@ -1,0 +1,651 @@
+{
+	"id": "ALSA-2022:8197",
+	"advisories": [
+		{
+			"id": "ALSA-2022:8197",
+			"title": "Moderate: php security, bug fix, and enhancement update",
+			"description": "PHP is an HTML-embedded scripting language commonly used with the Apache HTTP Server.\n\nThe following packages have been upgraded to a later upstream version: php (8.0.20). (BZ#2095752)\n\nSecurity Fix(es):\n\n* php: Use after free due to php_filter_float() failing for ints (CVE-2021-21708)\n* php: Uninitialized array in pg_query_params() leading to RCE (CVE-2022-31625)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "errata.almalinux.org",
+					"vendor": "Moderate"
+				}
+			],
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2022:8197"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-21708"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-31625"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2055879"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2098521"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2022-8197.html"
+				}
+			],
+			"published": "2022-11-15T00:00:00Z",
+			"modified": "2022-11-18T03:44:53Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-21708",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2021-21708"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31625",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-31625"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-fpm",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-gmp",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-mysqlnd",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-pdo",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-dba",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-embedded",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-mbstring",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-xml",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-odbc",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-gd",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-soap",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-common",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-ldap",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-snmp",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-enchant",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-bcmath",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-process",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-ffi",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-intl",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-pgsql",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-opcache",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-cli",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-devel",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-dbg",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.0.20-3.el9"
+								}
+							],
+							"fixed": [
+								"0:8.0.20-3.el9"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

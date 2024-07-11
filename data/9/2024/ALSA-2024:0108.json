@@ -1,0 +1,345 @@
+{
+	"id": "ALSA-2024:0108",
+	"advisories": [
+		{
+			"id": "ALSA-2024:0108",
+			"title": "Moderate: nss security update",
+			"description": "Network Security Services (NSS) is a set of libraries designed to support the cross-platform development of security-enabled client and server applications.\n\nSecurity Fix(es):\n\n* nss: timing attack against RSA decryption (CVE-2023-5388)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "errata.almalinux.org",
+					"vendor": "Moderate"
+				}
+			],
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:0108"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5388"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2243644"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/9/ALSA-2024-0108.html"
+				}
+			],
+			"published": "2024-01-10T00:00:00Z",
+			"modified": "2024-01-11T16:32:06Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-5388",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-5388"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-util-devel",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nspr",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.35.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:4.35.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-util",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-tools",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-devel",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-softokn-freebl-devel",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-softokn-devel",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-softokn",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nspr-devel",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.35.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:4.35.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-sysinit",
+							"architectures": [
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nss-softokn-freebl",
+							"architectures": [
+								"i686",
+								"aarch64",
+								"x86_64",
+								"s390x",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.90.0-4.el9_3"
+								}
+							],
+							"fixed": [
+								"0:3.90.0-4.el9_3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

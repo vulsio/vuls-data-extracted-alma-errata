@@ -1,0 +1,184 @@
+{
+	"id": "ALSA-2022:5319",
+	"advisories": [
+		{
+			"id": "ALSA-2022:5319",
+			"title": "Moderate: vim security update",
+			"description": "Vim (Vi IMproved) is an updated and improved version of the vi editor.\nSecurity Fix(es):\n* vim: heap buffer overflow (CVE-2022-1621)\n* vim: buffer over-read (CVE-2022-1629)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "errata.almalinux.org",
+					"vendor": "Moderate"
+				}
+			],
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2022:5319"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1621"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1629"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2083924"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2083931"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2022-5319.html"
+				}
+			],
+			"published": "2022-06-30T00:00:00Z",
+			"modified": "2022-08-05T09:18:16Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-1621",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1621"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-1629",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2022-1629"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-X11",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:8.0.1763-19.el8_6.2"
+								}
+							],
+							"fixed": [
+								"2:8.0.1763-19.el8_6.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-minimal",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:8.0.1763-19.el8_6.2"
+								}
+							],
+							"fixed": [
+								"2:8.0.1763-19.el8_6.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-filesystem",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:8.0.1763-19.el8_6.2"
+								}
+							],
+							"fixed": [
+								"2:8.0.1763-19.el8_6.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-enhanced",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:8.0.1763-19.el8_6.2"
+								}
+							],
+							"fixed": [
+								"2:8.0.1763-19.el8_6.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-common",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:8.0.1763-19.el8_6.2"
+								}
+							],
+							"fixed": [
+								"2:8.0.1763-19.el8_6.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

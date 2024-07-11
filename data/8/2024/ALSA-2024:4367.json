@@ -1,0 +1,391 @@
+{
+	"id": "ALSA-2024:4367",
+	"advisories": [
+		{
+			"id": "ALSA-2024:4367",
+			"title": "Important: pki-core security update",
+			"description": "The Public Key Infrastructure (PKI) Core contains fundamental packages required by AlmaLinux Certificate System.\n\nSecurity Fix(es):\n\n* dogtag ca: token authentication bypass vulnerability (CVE-2023-4727)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "errata.almalinux.org",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:4367"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-4727"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2232218"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://errata.almalinux.org/8/ALSA-2024-4367.html"
+				}
+			],
+			"published": "2024-07-08T00:00:00Z",
+			"modified": "2024-07-08T19:24:14Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-4727",
+			"references": [
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2023-4727"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::python3-idm-pki",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-base",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-tomcatjss",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.8.0-1.module_el8.10.0+3801+17b19a60"
+								}
+							],
+							"fixed": [
+								"0:7.8.0-1.module_el8.10.0+3801+17b19a60"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-ldapjdk-javadoc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.24.0-1.module_el8.10.0+3801+17b19a60"
+								}
+							],
+							"fixed": [
+								"0:4.24.0-1.module_el8.10.0+3801+17b19a60"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-acme",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-server",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::resteasy",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.26-7.module_el8.10.0+3808+9d4ab1fb"
+								}
+							],
+							"fixed": [
+								"0:3.0.26-7.module_el8.10.0+3808+9d4ab1fb"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-jss-javadoc",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le",
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.0-1.module_el8.10.0+3801+17b19a60"
+								}
+							],
+							"fixed": [
+								"0:4.11.0-1.module_el8.10.0+3801+17b19a60"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-kra",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-ca",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-ldapjdk",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.24.0-1.module_el8.10.0+3801+17b19a60"
+								}
+							],
+							"fixed": [
+								"0:4.24.0-1.module_el8.10.0+3801+17b19a60"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-symkey",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le",
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-jss",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le",
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.0-1.module_el8.10.0+3801+17b19a60"
+								}
+							],
+							"fixed": [
+								"0:4.11.0-1.module_el8.10.0+3801+17b19a60"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-base-java",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::resteasy-javadoc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.26-7.module_el8.10.0+3808+9d4ab1fb"
+								}
+							],
+							"fixed": [
+								"0:3.0.26-7.module_el8.10.0+3808+9d4ab1fb"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pki-core:10.6::idm-pki-tools",
+							"architectures": [
+								"x86_64",
+								"aarch64",
+								"ppc64le",
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+								}
+							],
+							"fixed": [
+								"0:10.15.1-1.module_el8.10.0+3868+cdab0fd8"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}
