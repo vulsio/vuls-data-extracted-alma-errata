@@ -15,6 +15,10 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
+					"url": "https://access.redhat.com/errata/RHSA-2024:2512"
+				},
+				{
+					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2022-48554"
 				},
 				{
@@ -24,10 +28,6 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2024-2512.html"
-				},
-				{
-					"source": "errata.almalinux.org",
-					"url": "https://access.redhat.com/errata/RHSA-2024:2512"
 				}
 			],
 			"published": "2024-04-30T00:00:00Z",
@@ -46,31 +46,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "file-devel",
-				"architectures": [
-					"i686",
-					"s390x",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.39-16.el9"
-					}
-				],
-				"fixed": [
-					"0:5.39-16.el9"
-				]
-			}
-		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -96,12 +71,13 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "file",
+				"name": "file-libs",
 				"architectures": [
-					"ppc64le",
+					"i686",
 					"x86_64",
-					"s390x",
-					"aarch64"
+					"ppc64le",
+					"aarch64",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -120,13 +96,37 @@
 			"ecosystem": "alma:9",
 			"vulnerable": true,
 			"package": {
-				"name": "file-libs",
+				"name": "file",
+				"architectures": [
+					"x86_64",
+					"ppc64le",
+					"aarch64",
+					"s390x"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.39-16.el9"
+					}
+				],
+				"fixed": [
+					"0:5.39-16.el9"
+				]
+			}
+		},
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "file-devel",
 				"architectures": [
 					"ppc64le",
-					"x86_64",
+					"aarch64",
 					"i686",
-					"s390x",
-					"aarch64"
+					"x86_64",
+					"s390x"
 				]
 			},
 			"affected": {

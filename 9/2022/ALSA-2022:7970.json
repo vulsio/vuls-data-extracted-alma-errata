@@ -15,10 +15,6 @@
 			"references": [
 				{
 					"source": "errata.almalinux.org",
-					"url": "https://bugzilla.redhat.com/2049429"
-				},
-				{
-					"source": "errata.almalinux.org",
 					"url": "https://errata.almalinux.org/9/ALSA-2022-7970.html"
 				},
 				{
@@ -28,6 +24,10 @@
 				{
 					"source": "errata.almalinux.org",
 					"url": "https://access.redhat.com/security/cve/CVE-2021-22570"
+				},
+				{
+					"source": "errata.almalinux.org",
+					"url": "https://bugzilla.redhat.com/2049429"
 				}
 			],
 			"published": "2022-11-15T00:00:00Z",
@@ -46,6 +46,31 @@
 		}
 	],
 	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"vulnerable": true,
+			"package": {
+				"name": "protobuf",
+				"architectures": [
+					"i686",
+					"ppc64le",
+					"s390x",
+					"aarch64",
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.14.0-13.el9"
+					}
+				],
+				"fixed": [
+					"0:3.14.0-13.el9"
+				]
+			}
+		},
 		{
 			"ecosystem": "alma:9",
 			"vulnerable": true,
@@ -75,9 +100,9 @@
 				"architectures": [
 					"i686",
 					"ppc64le",
+					"s390x",
 					"aarch64",
-					"x86_64",
-					"s390x"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -98,11 +123,11 @@
 			"package": {
 				"name": "protobuf-devel",
 				"architectures": [
-					"i686",
-					"s390x",
-					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
+					"x86_64",
+					"i686",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -123,11 +148,11 @@
 			"package": {
 				"name": "protobuf-compiler",
 				"architectures": [
-					"i686",
-					"s390x",
-					"x86_64",
+					"ppc64le",
 					"aarch64",
-					"ppc64le"
+					"x86_64",
+					"i686",
+					"s390x"
 				]
 			},
 			"affected": {
@@ -148,35 +173,10 @@
 			"package": {
 				"name": "protobuf-lite-devel",
 				"architectures": [
-					"i686",
-					"s390x",
-					"x86_64",
-					"aarch64",
-					"ppc64le"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.14.0-13.el9"
-					}
-				],
-				"fixed": [
-					"0:3.14.0-13.el9"
-				]
-			}
-		},
-		{
-			"ecosystem": "alma:9",
-			"vulnerable": true,
-			"package": {
-				"name": "protobuf",
-				"architectures": [
-					"i686",
 					"ppc64le",
 					"aarch64",
 					"x86_64",
+					"i686",
 					"s390x"
 				]
 			},
