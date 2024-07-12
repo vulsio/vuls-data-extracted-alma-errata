@@ -79,7 +79,7 @@
 				}
 			],
 			"published": "2024-04-08T00:00:00Z",
-			"modified": "2024-04-09T14:51:32Z"
+			"modified": "2024-04-09T14:51:33Z"
 		}
 	],
 	"vulnerabilities": [
@@ -159,9 +159,9 @@
 							"name": "nodejs:20::nodejs",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -182,9 +182,9 @@
 							"name": "nodejs:20::nodejs-devel",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -222,20 +222,23 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "nodejs:20::nodejs-packaging",
+							"name": "nodejs:20::nodejs-full-i18n",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2021.06-4.module_el9.3.0+48+1cf146a1"
+									"lt": "1:20.11.1-1.module_el9.3.0+88+29afeaa2"
 								}
 							],
 							"fixed": [
-								"0:2021.06-4.module_el9.3.0+48+1cf146a1"
+								"1:20.11.1-1.module_el9.3.0+88+29afeaa2"
 							]
 						}
 					},
@@ -256,6 +259,26 @@
 							],
 							"fixed": [
 								"0:3.0.1-1.module_el9.3.0+47+c33bc288"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs:20::nodejs-packaging",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2021.06-4.module_el9.3.0+48+1cf146a1"
+								}
+							],
+							"fixed": [
+								"0:2021.06-4.module_el9.3.0+48+1cf146a1"
 							]
 						}
 					},
@@ -285,9 +308,9 @@
 							"name": "nodejs:20::npm",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -299,29 +322,6 @@
 							],
 							"fixed": [
 								"1:10.2.4-1.20.11.1.1.module_el9.3.0+88+29afeaa2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "nodejs:20::nodejs-full-i18n",
-							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x",
-								"ppc64le"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:20.11.1-1.module_el9.3.0+88+29afeaa2"
-								}
-							],
-							"fixed": [
-								"1:20.11.1-1.module_el9.3.0+88+29afeaa2"
 							]
 						}
 					}

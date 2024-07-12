@@ -31,7 +31,7 @@
 				}
 			],
 			"published": "2024-07-08T00:00:00Z",
-			"modified": "2024-07-09T12:30:04Z"
+			"modified": "2024-07-09T12:30:05Z"
 		}
 	],
 	"vulnerabilities": [
@@ -51,6 +51,29 @@
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "podman",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "4:4.9.4-5.el9_4"
+								}
+							],
+							"fixed": [
+								"4:4.9.4-5.el9_4"
+							]
+						}
+					},
 					{
 						"vulnerable": true,
 						"package": {
@@ -74,12 +97,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "podman",
+							"name": "podman-plugins",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -100,9 +123,9 @@
 							"name": "podman-remote",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -123,32 +146,9 @@
 							"name": "podman-tests",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "4:4.9.4-5.el9_4"
-								}
-							],
-							"fixed": [
-								"4:4.9.4-5.el9_4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "podman-plugins",
-							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {

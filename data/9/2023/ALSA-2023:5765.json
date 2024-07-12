@@ -31,7 +31,7 @@
 				}
 			],
 			"published": "2023-10-17T00:00:00Z",
-			"modified": "2023-10-17T15:18:50Z"
+			"modified": "2023-10-17T15:18:51Z"
 		}
 	],
 	"vulnerabilities": [
@@ -51,6 +51,29 @@
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:16.20.2-3.el9_2"
+								}
+							],
+							"fixed": [
+								"1:16.20.2-3.el9_2"
+							]
+						}
+					},
 					{
 						"vulnerable": true,
 						"package": {
@@ -74,36 +97,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "nodejs-libs",
-							"architectures": [
-								"i686",
-								"aarch64",
-								"x86_64",
-								"s390x",
-								"ppc64le"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.20.2-3.el9_2"
-								}
-							],
-							"fixed": [
-								"1:16.20.2-3.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "nodejs-full-i18n",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -121,12 +120,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "nodejs",
+							"name": "nodejs-libs",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"i686",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -147,9 +147,9 @@
 							"name": "npm",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {

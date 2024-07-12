@@ -39,7 +39,7 @@
 				}
 			],
 			"published": "2023-11-07T00:00:00Z",
-			"modified": "2023-11-14T12:10:52Z"
+			"modified": "2023-11-14T12:11:39Z"
 		}
 	],
 	"vulnerabilities": [
@@ -71,9 +71,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cups-filesystem",
+							"name": "cups",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -94,9 +97,9 @@
 							"name": "cups-client",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -114,12 +117,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cups-printerapp",
+							"name": "cups-devel",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"i686",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -137,12 +141,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cups",
+							"name": "cups-filesystem",
 							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x",
-								"ppc64le"
+								"noarch"
 							]
 						},
 						"affected": {
@@ -163,9 +164,33 @@
 							"name": "cups-ipptool",
 							"architectures": [
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.3.3op2-21.el9"
+								}
+							],
+							"fixed": [
+								"1:2.3.3op2-21.el9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cups-libs",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -186,33 +211,9 @@
 							"name": "cups-lpd",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x",
-								"ppc64le"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.3.3op2-21.el9"
-								}
-							],
-							"fixed": [
-								"1:2.3.3op2-21.el9"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "cups-libs",
-							"architectures": [
-								"i686",
 								"ppc64le",
-								"aarch64",
-								"x86_64",
-								"s390x"
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -230,13 +231,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cups-devel",
+							"name": "cups-printerapp",
 							"architectures": [
-								"i686",
 								"aarch64",
-								"x86_64",
+								"ppc64le",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {

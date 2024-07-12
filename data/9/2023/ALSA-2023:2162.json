@@ -39,7 +39,7 @@
 				}
 			],
 			"published": "2023-05-09T00:00:00Z",
-			"modified": "2023-05-11T16:34:36Z"
+			"modified": "2023-05-11T16:34:33Z"
 		}
 	],
 	"vulnerabilities": [
@@ -71,11 +71,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-tools",
+							"name": "qemu-guest-agent",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x"
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -93,11 +94,78 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-usb-host",
+							"name": "qemu-img",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x"
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-audio-pa",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-block-curl",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -118,27 +186,7 @@
 							"name": "qemu-kvm-block-rbd",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-ui-egl-headless",
-							"architectures": [
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -157,28 +205,10 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-display-virtio-gpu-ccw",
+							"name": "qemu-kvm-common",
 							"architectures": [
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-ui-opengl",
-							"architectures": [
+								"aarch64",
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -197,8 +227,10 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-usb-redirect",
+							"name": "qemu-kvm-core",
 							"architectures": [
+								"aarch64",
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -220,31 +252,8 @@
 							"name": "qemu-kvm-device-display-virtio-gpu",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-img",
-							"architectures": [
-								"aarch64",
-								"x86_64",
 								"s390x",
-								"ppc64le"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -262,32 +271,8 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-core",
+							"name": "qemu-kvm-device-display-virtio-gpu-ccw",
 							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-pr-helper",
-							"architectures": [
-								"aarch64",
-								"x86_64",
 								"s390x"
 							]
 						},
@@ -327,11 +312,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-common",
+							"name": "qemu-kvm-device-display-virtio-vga",
 							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x"
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -349,78 +332,31 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-audio-pa",
+							"name": "qemu-kvm-device-usb-host",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-block-curl",
-							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm",
-							"architectures": [
-								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:7.2.0-14.el9_2"
-								}
-							],
-							"fixed": [
-								"17:7.2.0-14.el9_2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-guest-agent",
-							"architectures": [
-								"aarch64",
-								"x86_64",
 								"s390x",
-								"ppc64le"
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-usb-redirect",
+							"architectures": [
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -441,8 +377,8 @@
 							"name": "qemu-kvm-docs",
 							"architectures": [
 								"aarch64",
-								"x86_64",
-								"s390x"
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
@@ -460,8 +396,72 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-display-virtio-vga",
+							"name": "qemu-kvm-tools",
 							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-ui-egl-headless",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-ui-opengl",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-pr-helper",
+							"architectures": [
+								"aarch64",
+								"s390x",
 								"x86_64"
 							]
 						},
