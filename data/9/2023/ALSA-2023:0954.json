@@ -118,9 +118,8 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "systemd-libs",
+							"name": "systemd-pam",
 							"architectures": [
-								"i686",
 								"ppc64le",
 								"aarch64",
 								"x86_64",
@@ -142,9 +141,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "systemd-rpm-macros",
+							"name": "systemd-oomd",
 							"architectures": [
-								"noarch"
+								"ppc64le",
+								"aarch64",
+								"x86_64",
+								"s390x"
 							]
 						},
 						"affected": {
@@ -232,6 +234,30 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "systemd-libs",
+							"architectures": [
+								"i686",
+								"ppc64le",
+								"aarch64",
+								"x86_64",
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:250-12.el9_1.3"
+								}
+							],
+							"fixed": [
+								"0:250-12.el9_1.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "systemd-container",
 							"architectures": [
 								"i686",
@@ -256,35 +282,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "systemd-pam",
+							"name": "systemd-rpm-macros",
 							"architectures": [
-								"ppc64le",
-								"aarch64",
-								"x86_64",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:250-12.el9_1.3"
-								}
-							],
-							"fixed": [
-								"0:250-12.el9_1.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "systemd-oomd",
-							"architectures": [
-								"ppc64le",
-								"aarch64",
-								"x86_64",
-								"s390x"
+								"noarch"
 							]
 						},
 						"affected": {
