@@ -1,0 +1,82 @@
+{
+	"id": "ALSA-2021:1598",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2021:1598",
+				"title": "Moderate: bluez security update",
+				"description": "The bluez packages contain the following utilities for use in Bluetooth applications: hcitool, hciattach, hciconfig, bluetoothd, l2ping, start scripts (AlmaLinux), and pcmcia configuration files. \n\nSecurity Fix(es):\n\n* bluez: double free in gatttool client disconnect callback handler in src/shared/att.c could lead to DoS or RCE (CVE-2020-27153)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2021-1598.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://vulners.com/cve/CVE-2020-27153"
+					}
+				],
+				"published": "2021-05-18T05:37:07Z",
+				"modified": "2021-08-11T08:54:00Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2020-27153",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://vulners.com/cve/CVE-2020-27153"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bluez-libs-devel",
+							"architectures": [
+								"i686",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.52-4.el8.alma"
+								}
+							],
+							"fixed": [
+								"0:5.52-4.el8.alma"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

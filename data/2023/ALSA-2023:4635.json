@@ -1,0 +1,400 @@
+{
+	"id": "ALSA-2023:4635",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2023:4635",
+				"title": "Important: rust-toolset:rhel8 security update",
+				"description": "Rust Toolset provides the Rust programming language compiler rustc, the cargo build tool and dependency manager, and required libraries. \n\nSecurity Fix(es):\n\n* rust-cargo: cargo does not respect the umask when extracting dependencies (CVE-2023-38497)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2023:4635"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2228038"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2023-4635.html"
+					}
+				],
+				"published": "2023-08-14T00:00:00Z",
+				"modified": "2023-08-15T22:26:58Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-38497",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-38497"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::cargo",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::clippy",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-analysis",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-analyzer",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-debugger-common",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-doc",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-gdb",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-lldb",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-src",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-std-static",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-std-static-wasm32-unknown-unknown",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-std-static-wasm32-wasi",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rust-toolset",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-toolset:rhel8::rustfmt",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+								}
+							],
+							"fixed": [
+								"0:1.66.1-2.module_el8.8.0+3604+b9bee1fc"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

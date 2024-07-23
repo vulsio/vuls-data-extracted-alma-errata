@@ -1,0 +1,478 @@
+{
+	"id": "ALSA-2023:5094",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2023:5094",
+				"title": "Important: qemu-kvm security and bug fix update",
+				"description": "Kernel-based Virtual Machine (KVM) is a full virtualization solution for Linux on a variety of architectures. The qemu-kvm packages provide the user-space component for running virtual machines that use KVM.\n\nSecurity Fix(es):\n\n* QEMU: VNC: improper I/O watch removal in TLS handshake can lead to remote unauthenticated denial of service (CVE-2023-3354)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* [qemu-kvm] rhel guest failed boot with multi disks on error Failed to start udev Wait for Complete Device Initialization (BZ#2211923)\n* [almalinux9.2] hotplug/hotunplug mlx vdpa device to the occupied addr port, then qemu core dump occurs after shutdown guest (BZ#2227721)",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2023:5094"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-3354"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2216478"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2023-5094.html"
+					}
+				],
+				"published": "2023-09-12T00:00:00Z",
+				"modified": "2023-09-15T13:41:48Z"
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-3354",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-3354"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-guest-agent",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-img",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-audio-pa",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-block-curl",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-block-rbd",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-common",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-core",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-display-virtio-gpu",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-display-virtio-gpu-ccw",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-display-virtio-gpu-pci",
+							"architectures": [
+								"aarch64",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-display-virtio-vga",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-usb-host",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-device-usb-redirect",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-docs",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-tools",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-ui-egl-headless",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-ui-opengl",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-pr-helper",
+							"architectures": [
+								"aarch64",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "17:7.2.0-14.el9_2.5.alma.1"
+								}
+							],
+							"fixed": [
+								"17:7.2.0-14.el9_2.5.alma.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

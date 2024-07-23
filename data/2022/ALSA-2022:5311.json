@@ -1,0 +1,115 @@
+{
+	"id": "ALSA-2022:5311",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2022:5311",
+				"title": "Moderate: libgcrypt security update",
+				"description": "The libgcrypt library provides general-purpose implementations of various cryptographic algorithms.\nSecurity Fix(es):\n* libgcrypt: ElGamal implementation allows plaintext recovery (CVE-2021-40528)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2022:5311"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2021-40528"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2002816"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2022-5311.html"
+					}
+				],
+				"published": "2022-06-30T00:00:00Z",
+				"modified": "2022-07-21T17:42:26Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2021-40528",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2021-40528"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.8.5-7.el8_6"
+								}
+							],
+							"fixed": [
+								"0:1.8.5-7.el8_6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt-devel",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.8.5-7.el8_6"
+								}
+							],
+							"fixed": [
+								"0:1.8.5-7.el8_6"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}
