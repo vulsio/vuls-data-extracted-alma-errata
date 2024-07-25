@@ -1,0 +1,194 @@
+{
+	"id": "ALSA-2024:4749",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:4749",
+				"title": "Moderate: edk2 security update",
+				"description": "EDK (Embedded Development Kit) is a project to enable UEFI support for Virtual Machines. This package contains a sample 64-bit UEFI firmware for QEMU and KVM. \n\nSecurity Fix(es):\n\n* EDK2: integer overflow in CreateHob() could lead to HOB OOB R/W (CVE-2022-36765)\n* edk2: Predictable TCP Initial Sequence Numbers (CVE-2023-45236)\n* edk2: Use of a Weak PseudoRandom Number Generator (CVE-2023-45237)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:4749"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2022-36765"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-45236"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-45237"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2257584"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2258703"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2258706"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2024-4749.html"
+					}
+				],
+				"published": "2024-07-23T00:00:00Z",
+				"modified": "2024-07-25T08:35:20Z"
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2022-36765",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2022-36765"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-45236",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-45236"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-45237",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-45237"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-aarch64",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20231122-6.el9_4.2"
+								}
+							],
+							"fixed": [
+								"0:20231122-6.el9_4.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-ovmf",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20231122-6.el9_4.2"
+								}
+							],
+							"fixed": [
+								"0:20231122-6.el9_4.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools",
+							"architectures": [
+								"aarch64",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20231122-6.el9_4.2"
+								}
+							],
+							"fixed": [
+								"0:20231122-6.el9_4.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools-doc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20231122-6.el9_4.2"
+								}
+							],
+							"fixed": [
+								"0:20231122-6.el9_4.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

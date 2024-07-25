@@ -1,38 +1,38 @@
 {
-	"id": "ALSA-2023:6316",
+	"id": "ALSA-2024:4756",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:6316",
-				"title": "Low: pcs security, bug fix, and enhancement update",
-				"description": "The pcs packages provide a command-line configuration system for the Pacemaker and Corosync utilities.\n\nSecurity Fix(es):\n\n* decode-uri-component: improper input validation resulting in DoS (CVE-2022-38900)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:4756",
+				"title": "Moderate: libuv security update",
+				"description": "libuv is a multi-platform support library with a focus on asynchronous I/O. \n\nSecurity Fix(es):\n\n* libuv: Improper Domain Lookup that potentially leads to SSRF attacks (CVE-2024-24806)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Low"
+						"vendor": "Moderate"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:6316"
+						"url": "https://access.redhat.com/errata/RHSA-2024:4756"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-38900"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24806"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2170644"
+						"url": "https://bugzilla.redhat.com/2263292"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2023-6316.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-4756.html"
 					}
 				],
-				"published": "2023-11-07T00:00:00Z",
-				"modified": "2023-11-14T12:05:29Z"
+				"published": "2024-07-23T00:00:00Z",
+				"modified": "2024-07-24T15:07:18Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -42,11 +42,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-38900",
+				"id": "CVE-2024-24806",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-38900"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24806"
 					}
 				]
 			},
@@ -64,9 +64,10 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "pcs",
+							"name": "libuv",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -76,20 +77,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:0.11.6-3.el9"
+									"lt": "1:1.42.0-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:0.11.6-3.el9"
+								"1:1.42.0-2.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "pcs-snmp",
+							"name": "libuv-devel",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -99,11 +101,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:0.11.6-3.el9"
+									"lt": "1:1.42.0-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:0.11.6-3.el9"
+								"1:1.42.0-2.el9_4"
 							]
 						}
 					}
