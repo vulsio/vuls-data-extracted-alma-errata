@@ -1,0 +1,354 @@
+{
+	"id": "ALSA-2024:5193",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:5193",
+				"title": "Important: httpd:2.4 security update",
+				"description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\n\nSecurity Fix(es):\n\n* httpd: Security issues via?backend applications whose response headers are malicious or exploitable (CVE-2024-38476)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:5193"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-38476"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2295015"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-5193.html"
+					}
+				],
+				"published": "2024-08-12T00:00:00Z",
+				"modified": "2024-08-12T08:10:18Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-38476",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-38476"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::httpd",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::httpd-devel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::httpd-filesystem",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::httpd-manual",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::httpd-tools",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_http2",
+							"architectures": [
+								"aarch64",
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.15.7-10.module_el8.10.0+3832+564e7653"
+								}
+							],
+							"fixed": [
+								"0:1.15.7-10.module_el8.10.0+3832+564e7653"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_http2",
+							"architectures": [
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.15.7-10.module_el8.10.0+3872+9b8ab21e"
+								}
+							],
+							"fixed": [
+								"0:1.15.7-10.module_el8.10.0+3872+9b8ab21e"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_ldap",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_md",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+								}
+							],
+							"fixed": [
+								"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_md",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+								}
+							],
+							"fixed": [
+								"1:2.0.8-8.module_el8.6.0+3031+fb177b09"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_proxy_html",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"1:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_session",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"0:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd:2.4::mod_ssl",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+								}
+							],
+							"fixed": [
+								"1:2.4.37-65.module_el8.10.0+3874+c2064c23.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}
