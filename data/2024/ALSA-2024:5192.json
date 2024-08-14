@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2023:2502",
+	"id": "ALSA-2024:5192",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:2502",
-				"title": "Moderate: dhcp security and enhancement update",
-				"description": "The Dynamic Host Configuration Protocol (DHCP) is a protocol that allows individual devices on an IP network to get their own network configuration information, including an IP address, a subnet mask, and a broadcast address. The dhcp packages provide a relay agent and ISC DHCP service required to enable and administer DHCP on a network.\n\nSecurity Fix(es):\n\n* dhcp: option refcount overflow when leasequery is enabled leading to dhcpd abort (CVE-2022-2928)\n* dhcp: DHCP memory leak (CVE-2022-2929)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:5192",
+				"title": "Moderate: 389-ds-base security update",
+				"description": "389 Directory Server is an LDAP version 3 (LDAPv3) compliant server. The base packages include the Lightweight Directory Access Protocol (LDAP) server and command-line utilities for server administration.\n\nSecurity Fix(es):\n\n* 389-ds-base: Malformed userPassword hash may cause Denial of Service (CVE-2024-5953)\n* 389-ds-base: unauthenticated user can trigger a DoS by sending a specific extended search request (CVE-2024-6237)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,31 +16,31 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:2502"
+						"url": "https://access.redhat.com/errata/RHSA-2024:5192"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-2928"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-5953"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-2929"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6237"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2132001"
+						"url": "https://bugzilla.redhat.com/2292104"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2132002"
+						"url": "https://bugzilla.redhat.com/2293579"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2023-2502.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-5192.html"
 					}
 				],
-				"published": "2023-05-09T00:00:00Z",
-				"modified": "2023-05-12T02:31:39Z"
+				"published": "2024-08-12T00:00:00Z",
+				"modified": "2024-08-13T06:44:14Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -50,11 +50,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-2928",
+				"id": "CVE-2024-5953",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-2928"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-5953"
 					}
 				]
 			},
@@ -64,11 +64,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-2929",
+				"id": "CVE-2024-6237",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-2929"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6237"
 					}
 				]
 			},
@@ -86,7 +86,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dhcp-client",
+							"name": "389-ds-base",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -98,18 +98,64 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "12:4.4.2-18.b1.el9"
+									"lt": "0:2.4.5-9.el9_4"
 								}
 							],
 							"fixed": [
-								"12:4.4.2-18.b1.el9"
+								"0:2.4.5-9.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dhcp-common",
+							"name": "389-ds-base-devel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.5-9.el9_4"
+								}
+							],
+							"fixed": [
+								"0:2.4.5-9.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "389-ds-base-libs",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.5-9.el9_4"
+								}
+							],
+							"fixed": [
+								"0:2.4.5-9.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-lib389",
 							"architectures": [
 								"noarch"
 							]
@@ -118,57 +164,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "12:4.4.2-18.b1.el9"
+									"lt": "0:2.4.5-9.el9_4"
 								}
 							],
 							"fixed": [
-								"12:4.4.2-18.b1.el9"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "dhcp-relay",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "12:4.4.2-18.b1.el9"
-								}
-							],
-							"fixed": [
-								"12:4.4.2-18.b1.el9"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "dhcp-server",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "12:4.4.2-18.b1.el9"
-								}
-							],
-							"fixed": [
-								"12:4.4.2-18.b1.el9"
+								"0:2.4.5-9.el9_4"
 							]
 						}
 					}
