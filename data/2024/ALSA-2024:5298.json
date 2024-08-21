@@ -1,0 +1,92 @@
+{
+	"id": "ALSA-2024:5298",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:5298",
+				"title": "Moderate: gnome-shell security update",
+				"description": "GNOME Shell acts as a compositing manager for the desktop, and displays both application windows and other objects. It provides core interface functions like switching windows, launching applications, and notifications. It takes advantage of the capabilities of modern graphics hardware and introduces innovative user interface concepts. \n\nSecurity Fix(es):\n\n* gnome-shell: code execution in portal helper (CVE-2024-36472)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:5298"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-36472"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2283750"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-5298.html"
+					}
+				],
+				"published": "2024-08-13T00:00:00Z",
+				"modified": "2024-08-21T12:08:50Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-36472",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-36472"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnome-shell",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.32.2-56.el8_10"
+								}
+							],
+							"fixed": [
+								"0:3.32.2-56.el8_10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

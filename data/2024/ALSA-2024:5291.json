@@ -1,0 +1,159 @@
+{
+	"id": "ALSA-2024:5291",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:5291",
+				"title": "Moderate: grafana security update",
+				"description": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB & OpenTSDB. \n\nSecurity Fix(es):\n\n* golang: net: malformed DNS message can cause infinite loop (CVE-2024-24788)\n* golang: archive/zip: Incorrect handling of certain ZIP files (CVE-2024-24789)\n* golang: net/netip: Unexpected behavior from Is methods for IPv4-mapped IPv6 addresses (CVE-2024-24790)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:5291"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24788"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24789"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24790"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2279814"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2292668"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2292787"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-5291.html"
+					}
+				],
+				"published": "2024-08-13T00:00:00Z",
+				"modified": "2024-08-21T11:59:57Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-24788",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24788"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24789",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24789"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24790",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24790"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:9.2.10-17.el8_10"
+								}
+							],
+							"fixed": [
+								"0:9.2.10-17.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana-selinux",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:9.2.10-17.el8_10"
+								}
+							],
+							"fixed": [
+								"0:9.2.10-17.el8_10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}

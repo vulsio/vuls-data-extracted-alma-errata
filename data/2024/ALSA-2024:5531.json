@@ -1,0 +1,109 @@
+{
+	"id": "ALSA-2024:5531",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:5531",
+				"title": "Important: python3.12-setuptools security update",
+				"description": "Setuptools is a collection of enhancements to the Python 3 distutils that allow you to more easily build and distribute Python 3 packages, especially ones that have dependencies on other packages.  This package also contains the runtime components of setuptools, necessary to execute the software that requires pkg_resources.\n\nSecurity Fix(es):\n\n* pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools (CVE-2024-6345)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:5531"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6345"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2297771"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-5531.html"
+					}
+				],
+				"published": "2024-08-19T00:00:00Z",
+				"modified": "2024-08-21T12:36:59Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-6345",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6345"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3.12-setuptools",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:68.2.2-4.el8_10"
+								}
+							],
+							"fixed": [
+								"0:68.2.2-4.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3.12-setuptools-wheel",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:68.2.2-4.el8_10"
+								}
+							],
+							"fixed": [
+								"0:68.2.2-4.el8_10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "alma-errata"
+}
