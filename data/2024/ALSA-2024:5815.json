@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2023:6570",
+	"id": "ALSA-2024:5815",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:6570",
-				"title": "Moderate: tomcat security and bug fix update",
-				"description": "Apache Tomcat is a servlet container for the Java Servlet and JavaServer Pages (JSP) technologies.\n\nSecurity Fix(es):\n\n* Apache Commons FileUpload: FileUpload DoS with excessive parts (CVE-2023-24998)\n* tomcat: not including the secure attribute causes information disclosure (CVE-2023-28708)\n* tomcat: Fix for CVE-2023-24998 was incomplete (CVE-2023-28709)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:5815",
+				"title": "Moderate: nodejs:20 security update",
+				"description": "Node.js is a software development platform for building fast and scalable network applications in the JavaScript programming language. \n\nSecurity Fix(es):\n\n* nodejs: Bypass network import restriction via data URL (CVE-2024-22020)\n* nodejs: fs.lstat bypasses permission model (CVE-2024-22018)\n* nodejs: fs.fchown/fchmod bypasses permission model (CVE-2024-36137)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,39 +16,39 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:6570"
+						"url": "https://access.redhat.com/errata/RHSA-2024:5815"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-24998"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-22018"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28708"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-22020"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28709"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-36137"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2172298"
+						"url": "https://bugzilla.redhat.com/2296417"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2180856"
+						"url": "https://bugzilla.redhat.com/2296990"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2210321"
+						"url": "https://bugzilla.redhat.com/2299281"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2023-6570.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-5815.html"
 					}
 				],
-				"published": "2023-11-07T00:00:00Z",
-				"modified": "2023-11-14T12:13:42Z"
+				"published": "2024-08-26T00:00:00Z",
+				"modified": "2024-08-26T18:11:11Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -58,11 +58,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24998",
+				"id": "CVE-2024-22018",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-24998"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-22018"
 					}
 				]
 			},
@@ -72,11 +72,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-28708",
+				"id": "CVE-2024-22020",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28708"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-22020"
 					}
 				]
 			},
@@ -86,11 +86,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-28709",
+				"id": "CVE-2024-36137",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28709"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-36137"
 					}
 				]
 			},
@@ -108,47 +108,53 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat",
+							"name": "nodejs:20::nodejs",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-admin-webapps",
+							"name": "nodejs:20::nodejs-devel",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-docs-webapp",
+							"name": "nodejs:20::nodejs-docs",
 							"architectures": [
 								"noarch"
 							]
@@ -157,38 +163,41 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-el-3.0-api",
+							"name": "nodejs:20::nodejs-full-i18n",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"1:20.16.0-1.module_el9.4.0+107+dbd477e4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-jsp-2.3-api",
+							"name": "nodejs:20::nodejs-nodemon",
 							"architectures": [
 								"noarch"
 							]
@@ -197,18 +206,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:3.0.1-1.module_el9.3.0+47+c33bc288"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:3.0.1-1.module_el9.3.0+47+c33bc288"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-lib",
+							"name": "nodejs:20::nodejs-packaging",
 							"architectures": [
 								"noarch"
 							]
@@ -217,18 +226,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:2021.06-4.module_el9.3.0+88+29afeaa2"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:2021.06-4.module_el9.3.0+88+29afeaa2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-servlet-4.0-api",
+							"name": "nodejs:20::nodejs-packaging-bundler",
 							"architectures": [
 								"noarch"
 							]
@@ -237,31 +246,34 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:2021.06-4.module_el9.3.0+88+29afeaa2"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:2021.06-4.module_el9.3.0+88+29afeaa2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-webapps",
+							"name": "nodejs:20::npm",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "1:10.8.1-1.20.16.0.1.module_el9.4.0+107+dbd477e4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"1:10.8.1-1.20.16.0.1.module_el9.4.0+107+dbd477e4"
 							]
 						}
 					}
