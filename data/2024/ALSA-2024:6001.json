@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2024:4278",
+	"id": "ALSA-2024:6001",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:4278",
-				"title": "Important: qemu-kvm security update",
-				"description": "Kernel-based Virtual Machine (KVM) is a full virtualization solution for Linux on a variety of architectures. The qemu-kvm packages provide the user-space component for running virtual machines that use KVM.\n\nSecurity Fix(es):\n\n* qemu-kvm: QEMU: 'qemu-img info' leads to host file read/write (CVE-2024-4467)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:6001",
+				"title": "Important: postgresql:15 security update",
+				"description": "PostgreSQL is an advanced object-relational database management system (DBMS).\n\nSecurity Fix(es):\n\n* postgresql: PostgreSQL relation replacement during pg_dump executes arbitrary SQL (CVE-2024-7348)\n* postgresql: PostgreSQL pg_stats_ext and pg_stats_ext_exprs lack authorization checks (CVE-2024-4317)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s)\nlisted in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,55 +16,77 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:4278"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6001"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-4467"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-4317"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2278875"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-7348"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2024-4278.html"
+						"url": "https://bugzilla.redhat.com/2279935"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2303682"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-6001.html"
 					}
 				],
-				"published": "2024-07-02T00:00:00Z",
-				"modified": "2024-07-03T14:13:44Z"
+				"published": "2024-08-29T00:00:00Z",
+				"modified": "2024-08-29T13:39:12Z"
 			},
 			"ecosystems": [
-				"alma:9"
+				"alma:8"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2024-4467",
+				"id": "CVE-2024-4317",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-4467"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-4317"
 					}
 				]
 			},
 			"ecosystems": [
-				"alma:9"
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7348",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-7348"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
 			]
 		}
 	],
 	"detection": [
 		{
-			"ecosystem": "alma:9",
+			"ecosystem": "alma:8",
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-guest-agent",
+							"name": "postgresql:15::pg_repack",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -76,18 +98,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:1.4.8-1.module_el8.9.0+3706+885c732e"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:1.4.8-1.module_el8.9.0+3706+885c732e"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-img",
+							"name": "postgresql:15::pgaudit",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -99,20 +121,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:1.7.0-1.module_el8.9.0+3706+885c732e"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:1.7.0-1.module_el8.9.0+3706+885c732e"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm",
+							"name": "postgresql:15::postgres-decoderbufs",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -121,20 +144,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:1.9.7-1.Final.module_el8.9.0+3706+885c732e"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:1.9.7-1.Final.module_el8.9.0+3706+885c732e"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-audio-pa",
+							"name": "postgresql:15::postgresql",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -143,20 +167,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-block-blkio",
+							"name": "postgresql:15::postgresql-contrib",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -165,20 +190,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-block-curl",
+							"name": "postgresql:15::postgresql-docs",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -187,20 +213,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-block-rbd",
+							"name": "postgresql:15::postgresql-plperl",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -209,20 +236,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-common",
+							"name": "postgresql:15::postgresql-plpython3",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -231,20 +259,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-core",
+							"name": "postgresql:15::postgresql-pltcl",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -253,20 +282,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-display-virtio-gpu",
+							"name": "postgresql:15::postgresql-private-devel",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -275,81 +305,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-display-virtio-gpu-ccw",
-							"architectures": [
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:8.2.0-11.el9_4.4"
-								}
-							],
-							"fixed": [
-								"17:8.2.0-11.el9_4.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-device-display-virtio-gpu-pci",
+							"name": "postgresql:15::postgresql-private-libs",
 							"architectures": [
 								"aarch64",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:8.2.0-11.el9_4.4"
-								}
-							],
-							"fixed": [
-								"17:8.2.0-11.el9_4.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-device-display-virtio-vga",
-							"architectures": [
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:8.2.0-11.el9_4.4"
-								}
-							],
-							"fixed": [
-								"17:8.2.0-11.el9_4.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-device-usb-host",
-							"architectures": [
-								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -358,41 +328,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-device-usb-redirect",
+							"name": "postgresql:15::postgresql-server",
 							"architectures": [
 								"aarch64",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:8.2.0-11.el9_4.4"
-								}
-							],
-							"fixed": [
-								"17:8.2.0-11.el9_4.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-docs",
-							"architectures": [
-								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -401,20 +351,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-tools",
+							"name": "postgresql:15::postgresql-server-devel",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -423,60 +374,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "qemu-kvm-ui-egl-headless",
-							"architectures": [
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:8.2.0-11.el9_4.4"
-								}
-							],
-							"fixed": [
-								"17:8.2.0-11.el9_4.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-kvm-ui-opengl",
-							"architectures": [
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "17:8.2.0-11.el9_4.4"
-								}
-							],
-							"fixed": [
-								"17:8.2.0-11.el9_4.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "qemu-pr-helper",
+							"name": "postgresql:15::postgresql-static",
 							"architectures": [
 								"aarch64",
+								"ppc64le",
 								"s390x",
 								"x86_64"
 							]
@@ -485,11 +397,100 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "17:8.2.0-11.el9_4.4"
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
 								}
 							],
 							"fixed": [
-								"17:8.2.0-11.el9_4.4"
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql:15::postgresql-test",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
+								}
+							],
+							"fixed": [
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql:15::postgresql-test-rpm-macros",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
+								}
+							],
+							"fixed": [
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql:15::postgresql-upgrade",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
+								}
+							],
+							"fixed": [
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql:15::postgresql-upgrade-devel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:15.8-1.module_el8.10.0+3888+1aead837"
+								}
+							],
+							"fixed": [
+								"0:15.8-1.module_el8.10.0+3888+1aead837"
 							]
 						}
 					}

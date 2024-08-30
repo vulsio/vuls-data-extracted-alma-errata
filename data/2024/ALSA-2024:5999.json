@@ -1,38 +1,38 @@
 {
-	"id": "ALSA-2024:1310",
+	"id": "ALSA-2024:5999",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:1310",
-				"title": "Moderate: .NET 8.0 security update",
-				"description": ".NET is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.\n\nNew versions of .NET that address a security vulnerability are now available. The updated versions are .NET SDK 8.0.103 and .NET Runtime 8.0.3.\n\nSecurity Fix(es):\n\n* dotnet: DoS in .NET Core / YARP HTTP / 2 WebSocket support (CVE-2024-21392)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:5999",
+				"title": "Important: postgresql security update",
+				"description": "PostgreSQL is an advanced object-relational database management system (DBMS).\n\nSecurity Fix(es):\n\n* postgresql: PostgreSQL relation replacement during pg_dump executes arbitrary SQL (CVE-2024-7348)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s)\nlisted in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:1310"
+						"url": "https://access.redhat.com/errata/RHSA-2024:5999"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-21392"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-7348"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2268266"
+						"url": "https://bugzilla.redhat.com/2303682"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2024-1310.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-5999.html"
 					}
 				],
-				"published": "2024-03-13T00:00:00Z",
-				"modified": "2024-03-14T12:45:30Z"
+				"published": "2024-08-29T00:00:00Z",
+				"modified": "2024-08-29T13:54:02Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -42,11 +42,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2024-21392",
+				"id": "CVE-2024-7348",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-21392"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-7348"
 					}
 				]
 			},
@@ -64,7 +64,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "aspnetcore-runtime-8.0",
+							"name": "postgresql",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -76,18 +76,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "aspnetcore-runtime-dbg-8.0",
+							"name": "postgresql-contrib",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -99,18 +99,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "aspnetcore-targeting-pack-8.0",
+							"name": "postgresql-docs",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -122,18 +122,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-apphost-pack-8.0",
+							"name": "postgresql-plperl",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -145,18 +145,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-host",
+							"name": "postgresql-plpython3",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -168,18 +168,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-hostfxr-8.0",
+							"name": "postgresql-pltcl",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -191,18 +191,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-runtime-8.0",
+							"name": "postgresql-private-devel",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -214,18 +214,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-runtime-dbg-8.0",
+							"name": "postgresql-private-libs",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -237,18 +237,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-sdk-8.0",
+							"name": "postgresql-server",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -260,18 +260,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.103-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.103-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-sdk-8.0-source-built-artifacts",
+							"name": "postgresql-server-devel",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -283,18 +283,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.103-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.103-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-sdk-dbg-8.0",
+							"name": "postgresql-static",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -306,18 +306,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.103-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.103-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-targeting-pack-8.0",
+							"name": "postgresql-test",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -329,18 +329,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.3-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.3-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-templates-8.0",
+							"name": "postgresql-upgrade",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -352,18 +352,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.103-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.103-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "netstandard-targeting-pack-2.1",
+							"name": "postgresql-upgrade-devel",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -375,11 +375,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.0.103-2.el9_3"
+									"lt": "0:13.16-1.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.0.103-2.el9_3"
+								"0:13.16-1.el9_4"
 							]
 						}
 					}
