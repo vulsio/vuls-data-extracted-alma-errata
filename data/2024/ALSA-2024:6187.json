@@ -1,0 +1,97 @@
+{
+	"id": "ALSA-2024:6187",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:6187",
+				"title": "Moderate: gvisor-tap-vsock security update",
+				"description": "A replacement for libslirp and VPNKit, written in pure Go. It is based on the network stack of gVisor and is used to provide networking for podman-machine virtual machines. Compared to libslirp, gvisor-tap-vsock brings a configurable DNS server and dynamic port forwarding.\n\nSecurity Fix(es):\n\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:6187"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24783"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2268019"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6187.html"
+					}
+				],
+				"published": "2024-09-03T00:00:00Z",
+				"modified": "2024-09-03T13:25:37Z"
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-24783",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24783"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gvisor-tap-vsock",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "6:0.7.3-5.el9_4.alma.1"
+								}
+							],
+							"fixed": [
+								"6:0.7.3-5.el9_4.alma.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6187.json"
+		]
+	}
+}
