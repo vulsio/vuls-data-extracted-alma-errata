@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2023:6570",
+	"id": "ALSA-2024:6197",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:6570",
-				"title": "Moderate: tomcat security and bug fix update",
-				"description": "Apache Tomcat is a servlet container for the Java Servlet and JavaServer Pages (JSP) technologies.\n\nSecurity Fix(es):\n\n* Apache Commons FileUpload: FileUpload DoS with excessive parts (CVE-2023-24998)\n* tomcat: not including the secure attribute causes information disclosure (CVE-2023-28708)\n* tomcat: Fix for CVE-2023-24998 was incomplete (CVE-2023-28709)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:6197",
+				"title": "Moderate: ghostscript security update",
+				"description": "The Ghostscript suite contains utilities for rendering PostScript and PDF documents. Ghostscript translates PostScript code to common bitmap formats so that the code can be displayed or printed.\n\nSecurity Fix(es):\n\n* ghostscript: format string injection leads to shell command execution (SAFER bypass) (CVE-2024-29510)\n* ghostscript: path traversal and command execution due to path reduction (CVE-2024-33869)\n* ghostscript: path traversal to arbitrary files if the current directory is in the permitted paths (CVE-2024-33870)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,39 +16,39 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:6570"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6197"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-24998"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-29510"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28708"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-33869"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28709"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-33870"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2172298"
+						"url": "https://bugzilla.redhat.com/2293950"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2180856"
+						"url": "https://bugzilla.redhat.com/2293958"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2210321"
+						"url": "https://bugzilla.redhat.com/2293959"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2023-6570.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6197.html"
 					}
 				],
-				"published": "2023-11-07T00:00:00Z",
-				"modified": "2023-11-14T12:13:42Z"
+				"published": "2024-09-03T00:00:00Z",
+				"modified": "2024-09-04T08:17:52Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -58,11 +58,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24998",
+				"id": "CVE-2024-29510",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-24998"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-29510"
 					}
 				]
 			},
@@ -72,11 +72,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-28708",
+				"id": "CVE-2024-33869",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28708"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-33869"
 					}
 				]
 			},
@@ -86,11 +86,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-28709",
+				"id": "CVE-2024-33870",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28709"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-33870"
 					}
 				]
 			},
@@ -108,27 +108,31 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat",
+							"name": "ghostscript",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-admin-webapps",
+							"name": "ghostscript-doc",
 							"architectures": [
 								"noarch"
 							]
@@ -137,131 +141,153 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-docs-webapp",
+							"name": "ghostscript-tools-dvipdf",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-el-3.0-api",
+							"name": "ghostscript-tools-fonts",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-jsp-2.3-api",
+							"name": "ghostscript-tools-printing",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-lib",
+							"name": "ghostscript-x11",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-servlet-4.0-api",
+							"name": "libgs",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat-webapps",
+							"name": "libgs-devel",
 							"architectures": [
-								"noarch"
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:9.0.62-37.el9_3"
+									"lt": "0:9.54.0-17.el9_4"
 								}
 							],
 							"fixed": [
-								"1:9.0.62-37.el9_3"
+								"0:9.54.0-17.el9_4"
 							]
 						}
 					}
@@ -272,7 +298,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2023/ALSA-2023:6570.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6197.json"
 		]
 	}
 }

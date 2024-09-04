@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2024:6195",
+	"id": "ALSA-2024:6188",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:6195",
-				"title": "Moderate: skopeo security update",
-				"description": "The skopeo command lets you inspect images from container image registries, get images and image layers, and use signatures to create and verify files. \n\nSecurity Fix(es):\n\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:6188",
+				"title": "Moderate: runc security update",
+				"description": "The runC tool is a lightweight, portable implementation of the Open Container Format (OCF) that provides container runtime.\n\nSecurity Fix(es):\n\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,7 +16,7 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:6195"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6188"
 					},
 					{
 						"source": "errata.almalinux.org",
@@ -28,11 +28,11 @@
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2024-6195.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6188.html"
 					}
 				],
 				"published": "2024-09-03T00:00:00Z",
-				"modified": "2024-09-03T13:22:47Z"
+				"modified": "2024-09-04T08:22:18Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -64,7 +64,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "skopeo",
+							"name": "runc",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -76,34 +76,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "2:1.14.5-1.el9_4"
+									"lt": "4:1.1.12-4.el9_4"
 								}
 							],
 							"fixed": [
-								"2:1.14.5-1.el9_4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "skopeo-tests",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:1.14.5-1.el9_4"
-								}
-							],
-							"fixed": [
-								"2:1.14.5-1.el9_4"
+								"4:1.1.12-4.el9_4"
 							]
 						}
 					}
@@ -114,7 +91,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6195.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6188.json"
 		]
 	}
 }

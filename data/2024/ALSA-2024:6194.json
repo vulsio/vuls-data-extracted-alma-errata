@@ -1,46 +1,54 @@
 {
-	"id": "ALSA-2024:2548",
+	"id": "ALSA-2024:6194",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:2548",
-				"title": "Moderate: podman security and bug fix update",
-				"description": "The podman tool manages pods, container images, and containers. It is part of the libpod library, which is for applications that use container pods. Container pods is a concept in Kubernetes.\n\nSecurity Fixes:\n\n* podman: golang-protobuf: encoding/protojson, internal/encoding/json: infinite loop in protojson.Unmarshal when unmarshaling certain forms of invalid JSON (CVE-2024-24786)\n* podman: buildah: full container escape at build time (CVE-2024-1753)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fixes:\n\n* liveness probe not called by podman when using httpGet (JIRA:AlmaLinux-28633)\n* Unable to copy image from one virtual machine to another using \"podman image scp\" (JIRA:AlmaLinux-28629)\n* [v4.9] Backport two docker CLI compatibility fixes (JIRA:AlmaLinux-28636)\n* Issue in podman causing S2I to fail in overwriting ENTRYPOINT (JIRA:AlmaLinux-14922)\n* Need to backport podman fix for SIGSEGV in AlmaLinux 9.3/8.9 for UBI based containers (JIRA:AlmaLinux-26843)",
+				"id": "ALSA-2024:6194",
+				"title": "Important: podman security update",
+				"description": "The podman tool manages pods, container images, and containers. It is part of the libpod library, which is for applications that use container pods. Container pods is a concept in Kubernetes.\n\nSecurity Fix(es):\n\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n* go-retryablehttp: url might write sensitive information to log file (CVE-2024-6104)\n* gorilla/schema: Potential memory exhaustion attack due to sparse slice deserialization (CVE-2024-37298)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:2548"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6194"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-1753"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24783"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-24786"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-37298"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2265513"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6104"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2268046"
+						"url": "https://bugzilla.redhat.com/2268019"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2024-2548.html"
+						"url": "https://bugzilla.redhat.com/2294000"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2295010"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6194.html"
 					}
 				],
-				"published": "2024-04-30T00:00:00Z",
-				"modified": "2024-05-07T15:04:41Z"
+				"published": "2024-09-03T00:00:00Z",
+				"modified": "2024-09-04T08:19:30Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -50,11 +58,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2024-1753",
+				"id": "CVE-2024-24783",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-1753"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-24783"
 					}
 				]
 			},
@@ -64,11 +72,25 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-24786",
+				"id": "CVE-2024-37298",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-24786"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-37298"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6104",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6104"
 					}
 				]
 			},
@@ -98,11 +120,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "4:4.9.4-3.el9_4"
+									"lt": "4:4.9.4-10.el9_4"
 								}
 							],
 							"fixed": [
-								"4:4.9.4-3.el9_4"
+								"4:4.9.4-10.el9_4"
 							]
 						}
 					},
@@ -118,11 +140,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "4:4.9.4-3.el9_4"
+									"lt": "4:4.9.4-10.el9_4"
 								}
 							],
 							"fixed": [
-								"4:4.9.4-3.el9_4"
+								"4:4.9.4-10.el9_4"
 							]
 						}
 					},
@@ -141,11 +163,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "4:4.9.4-3.el9_4"
+									"lt": "4:4.9.4-10.el9_4"
 								}
 							],
 							"fixed": [
-								"4:4.9.4-3.el9_4"
+								"4:4.9.4-10.el9_4"
 							]
 						}
 					},
@@ -164,11 +186,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "4:4.9.4-3.el9_4"
+									"lt": "4:4.9.4-10.el9_4"
 								}
 							],
 							"fixed": [
-								"4:4.9.4-3.el9_4"
+								"4:4.9.4-10.el9_4"
 							]
 						}
 					},
@@ -187,11 +209,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "4:4.9.4-3.el9_4"
+									"lt": "4:4.9.4-10.el9_4"
 								}
 							],
 							"fixed": [
-								"4:4.9.4-3.el9_4"
+								"4:4.9.4-10.el9_4"
 							]
 						}
 					}
@@ -202,7 +224,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:2548.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6194.json"
 		]
 	}
 }

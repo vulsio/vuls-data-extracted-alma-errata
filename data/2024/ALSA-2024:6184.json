@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2022:7314",
+	"id": "ALSA-2024:6184",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2022:7314",
-				"title": "Moderate: zlib security update",
-				"description": "The zlib packages provide a general-purpose lossless data compression library that is used by many different programs.\n\nSecurity Fix(es):\n\n* zlib: a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field (CVE-2022-37434)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:6184",
+				"title": "Moderate: orc security update",
+				"description": "Orc is a library and set of tools for compiling and executing very simple programs that operate on arrays of data.  The \"language\" is a generic assembly language that represents many of the features available in SIMD architectures, including saturated addition and subtraction, and many arithmetic operations.\n\nSecurity Fix(es):\n\n* orc: Stack-based buffer overflow vulnerability in ORC (CVE-2024-40897)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,23 +16,23 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2022:7314"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6184"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-37434"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-40897"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2116639"
+						"url": "https://bugzilla.redhat.com/2300010"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2022-7314.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6184.html"
 					}
 				],
-				"published": "2022-11-02T00:00:00Z",
-				"modified": "2022-11-02T21:25:35Z"
+				"published": "2024-09-03T00:00:00Z",
+				"modified": "2024-09-04T09:13:15Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -42,11 +42,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-37434",
+				"id": "CVE-2024-40897",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-37434"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-40897"
 					}
 				]
 			},
@@ -64,7 +64,31 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "zlib",
+							"name": "orc",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.4.31-7.el9_4"
+								}
+							],
+							"fixed": [
+								"0:0.4.31-7.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "orc-compiler",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -76,57 +100,35 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.2.11-32.el9_0"
+									"lt": "0:0.4.31-7.el9_4"
 								}
 							],
 							"fixed": [
-								"0:1.2.11-32.el9_0"
+								"0:0.4.31-7.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "zlib-devel",
+							"name": "orc-devel",
 							"architectures": [
 								"aarch64",
 								"i686",
 								"ppc64le",
-								"s390x"
+								"s390x",
+								"x86_64"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.2.11-32.el9_0"
+									"lt": "0:0.4.31-7.el9_4"
 								}
 							],
 							"fixed": [
-								"0:1.2.11-32.el9_0"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "zlib-static",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.2.11-32.el9_0"
-								}
-							],
-							"fixed": [
-								"0:1.2.11-32.el9_0"
+								"0:0.4.31-7.el9_4"
 							]
 						}
 					}
@@ -137,7 +139,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2022/ALSA-2022:7314.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6184.json"
 		]
 	}
 }

@@ -1,11 +1,11 @@
 {
-	"id": "ALSA-2024:1130",
+	"id": "ALSA-2024:6166",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:1130",
-				"title": "Moderate: openssh security update",
-				"description": "OpenSSH is an SSH protocol implementation supported by a number of Linux, UNIX, and similar operating systems. It includes the core files necessary for both the OpenSSH client and server.\n\nSecurity Fix(es):\n\n* ssh: Prefix truncation attack on Binary Packet Protocol (BPP) (CVE-2023-48795)\n* openssh: potential command injection via shell metacharacters (CVE-2023-51385)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:6166",
+				"title": "Moderate: krb5 security update",
+				"description": "Kerberos is a network authentication system, which can improve the security of your network by eliminating the insecure practice of sending passwords over the network in unencrypted form. It allows clients and servers to authenticate to each other with the help of a trusted third party, the Kerberos key distribution center (KDC).\n\nSecurity Fix(es):\n\n* krb5: GSS message token handling (CVE-2024-37371)\n* krb5: GSS message token handling (CVE-2024-37370)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,31 +16,31 @@
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:1130"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6166"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-48795"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-37370"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-51385"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-37371"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2254210"
+						"url": "https://bugzilla.redhat.com/2294676"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2255271"
+						"url": "https://bugzilla.redhat.com/2294677"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2024-1130.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6166.html"
 					}
 				],
-				"published": "2024-03-05T00:00:00Z",
-				"modified": "2024-03-06T15:16:34Z"
+				"published": "2024-09-03T00:00:00Z",
+				"modified": "2024-09-04T08:26:05Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -50,11 +50,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-48795",
+				"id": "CVE-2024-37370",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-48795"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-37370"
 					}
 				]
 			},
@@ -64,11 +64,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-51385",
+				"id": "CVE-2024-37371",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-51385"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-37371"
 					}
 				]
 			},
@@ -86,9 +86,10 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssh",
+							"name": "krb5-devel",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -98,20 +99,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.7p1-34.el9_3.3"
+									"lt": "0:1.21.1-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.7p1-34.el9_3.3"
+								"0:1.21.1-2.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssh-askpass",
+							"name": "krb5-libs",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -121,20 +123,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.7p1-34.el9_3.3"
+									"lt": "0:1.21.1-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.7p1-34.el9_3.3"
+								"0:1.21.1-2.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssh-clients",
+							"name": "krb5-pkinit",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -144,20 +147,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.7p1-34.el9_3.3"
+									"lt": "0:1.21.1-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.7p1-34.el9_3.3"
+								"0:1.21.1-2.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssh-keycat",
+							"name": "krb5-server",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -167,20 +171,21 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.7p1-34.el9_3.3"
+									"lt": "0:1.21.1-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.7p1-34.el9_3.3"
+								"0:1.21.1-2.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssh-server",
+							"name": "krb5-server-ldap",
 							"architectures": [
 								"aarch64",
+								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -190,18 +195,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:8.7p1-34.el9_3.3"
+									"lt": "0:1.21.1-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:8.7p1-34.el9_3.3"
+								"0:1.21.1-2.el9_4"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "pam_ssh_agent_auth",
+							"name": "krb5-workstation",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -213,11 +218,35 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:0.10.4-5.34.el9_3.3"
+									"lt": "0:1.21.1-2.el9_4"
 								}
 							],
 							"fixed": [
-								"0:0.10.4-5.34.el9_3.3"
+								"0:1.21.1-2.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libkadm5",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.21.1-2.el9_4"
+								}
+							],
+							"fixed": [
+								"0:1.21.1-2.el9_4"
 							]
 						}
 					}
@@ -228,7 +257,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:1130.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6166.json"
 		]
 	}
 }
