@@ -1,38 +1,62 @@
 {
-	"id": "ALSA-2023:2987",
+	"id": "ALSA-2024:6784",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:2987",
-				"title": "Low: samba security, bug fix, and enhancement update",
-				"description": "Samba is an open-source implementation of the Server Message Block (SMB) protocol and the related Common Internet File System (CIFS) protocol, which allow PC-compatible machines to share files, printers, and various information.\n\nThe following packages have been upgraded to a later upstream version: samba (4.17.5). (BZ#2132051)\n\nSecurity Fix(es):\n\n* samba: GnuTLS gnutls_rnd() can fail and give predictable random values (CVE-2022-1615)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:6784",
+				"title": "Moderate: ruby:3.3 security update",
+				"description": "Ruby is an extensible, interpreted, object-oriented, scripting language. It has features to process text files and to perform system management tasks.\n\nSecurity Fix(es):\n\n* rexml: DoS vulnerability in REXML (CVE-2024-39908)\n* rexml: rubygem-rexml: DoS when parsing an XML having many specific characters such as whitespace character, >] and ]> (CVE-2024-41123)\n* rexml: DoS vulnerability in REXML (CVE-2024-41946)\n* rexml: DoS vulnerability in REXML (CVE-2024-43398)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Low"
+						"vendor": "Moderate"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:2987"
+						"url": "https://access.redhat.com/errata/RHSA-2024:6784"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1615"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-39908"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2122649"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-41123"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/8/ALSA-2023-2987.html"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-41946"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-43398"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2298243"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2302268"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2302272"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2307297"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-6784.html"
 					}
 				],
-				"published": "2023-05-16T00:00:00Z",
-				"modified": "2023-05-19T22:11:30Z"
+				"published": "2024-09-18T00:00:00Z",
+				"modified": "2024-09-19T16:41:09Z"
 			},
 			"ecosystems": [
 				"alma:8"
@@ -42,11 +66,53 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-1615",
+				"id": "CVE-2024-39908",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1615"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-39908"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41123",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-41123"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41946",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-41946"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-43398",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-43398"
 					}
 				]
 			},
@@ -64,30 +130,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "ctdb",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libnetapi",
+							"name": "ruby:3.3::ruby",
 							"architectures": [
 								"aarch64",
 								"i686",
@@ -100,18 +143,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "libnetapi-devel",
+							"name": "ruby:3.3::ruby-bundled-gems",
 							"architectures": [
 								"aarch64",
 								"i686",
@@ -124,278 +167,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "libsmbclient",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libsmbclient-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libwbclient",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libwbclient-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "python3-samba",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "python3-samba-dc",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "python3-samba-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "python3-samba-test",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-client",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-client-libs",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-common",
+							"name": "ruby:3.3::ruby-default-gems",
 							"architectures": [
 								"noarch"
 							]
@@ -404,18 +187,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "samba-common-libs",
+							"name": "ruby:3.3::ruby-devel",
 							"architectures": [
 								"aarch64",
 								"i686",
@@ -428,182 +211,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "samba-common-tools",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-dc-libs",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-dcerpc",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-krb5-printing",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-ldb-ldap-modules",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-libs",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-pidl",
+							"name": "ruby:3.3::ruby-doc",
 							"architectures": [
 								"noarch"
 							]
@@ -612,202 +231,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "samba-test",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-test-libs",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-tools",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-usershares",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-vfs-iouring",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-winbind",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-winbind-clients",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-winbind-krb5-locator",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.17.5-2.el8"
-								}
-							],
-							"fixed": [
-								"0:4.17.5-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "samba-winbind-modules",
+							"name": "ruby:3.3::ruby-libs",
 							"architectures": [
 								"aarch64",
 								"i686",
@@ -820,19 +255,63 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.3.5-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "samba-winexe",
+							"name": "ruby:3.3::rubygem-abrt",
 							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.4.0-1.module_el8.10.0+3799+191214cc"
+								}
+							],
+							"fixed": [
+								"0:0.4.0-1.module_el8.10.0+3799+191214cc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-abrt-doc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.4.0-1.module_el8.10.0+3799+191214cc"
+								}
+							],
+							"fixed": [
+								"0:0.4.0-1.module_el8.10.0+3799+191214cc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-bigdecimal",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -840,11 +319,457 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.17.5-2.el8"
+									"lt": "0:3.1.5-3.module_el8.10.0+3894+6d587c81"
 								}
 							],
 							"fixed": [
-								"0:4.17.5-2.el8"
+								"0:3.1.5-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-bundler",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.16-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:2.5.16-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-io-console",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.7.1-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:0.7.1-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-irb",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.13.1-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:1.13.1-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-json",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.1-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:2.7.1-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-minitest",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.20.0-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:5.20.0-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-mysql2",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.5.5-1.module_el8.10.0+3799+191214cc"
+								}
+							],
+							"fixed": [
+								"0:0.5.5-1.module_el8.10.0+3799+191214cc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-mysql2-doc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.5.5-1.module_el8.10.0+3799+191214cc"
+								}
+							],
+							"fixed": [
+								"0:0.5.5-1.module_el8.10.0+3799+191214cc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-pg",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.5.4-1.module_el8.10.0+3799+191214cc"
+								}
+							],
+							"fixed": [
+								"0:1.5.4-1.module_el8.10.0+3799+191214cc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-pg-doc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.5.4-1.module_el8.10.0+3799+191214cc"
+								}
+							],
+							"fixed": [
+								"0:1.5.4-1.module_el8.10.0+3799+191214cc"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-power_assert",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.3-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:2.0.3-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-psych",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.2-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:5.1.2-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-racc",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.7.3-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:1.7.3-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-rake",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:13.1.0-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:13.1.0-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-rbs",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.0-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:3.4.0-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-rdoc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.6.3.1-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:6.6.3.1-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-rexml",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.3.6-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:3.3.6-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-rss",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.3.1-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:0.3.1-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-test-unit",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.1-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:3.6.1-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygem-typeprof",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.21.9-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:0.21.9-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygems",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.5.16-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:3.5.16-3.module_el8.10.0+3894+6d587c81"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby:3.3::rubygems-devel",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.5.16-3.module_el8.10.0+3894+6d587c81"
+								}
+							],
+							"fixed": [
+								"0:3.5.16-3.module_el8.10.0+3894+6d587c81"
 							]
 						}
 					}
@@ -855,7 +780,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/8/2023/ALSA-2023:2987.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:6784.json"
 		]
 	}
 }
