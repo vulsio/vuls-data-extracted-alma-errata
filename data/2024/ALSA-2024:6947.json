@@ -1,0 +1,120 @@
+{
+	"id": "ALSA-2024:6947",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:6947",
+				"title": "Important: grafana security update",
+				"description": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB & OpenTSDB. \n\nSecurity Fix(es):\n\n* encoding/gob: golang: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion (CVE-2024-34156)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:6947"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-34156"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2310528"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2024-6947.html"
+					}
+				],
+				"published": "2024-09-23T00:00:00Z",
+				"modified": "2024-09-24T09:31:38Z"
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-34156",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-34156"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:9.2.10-17.el9_4"
+								}
+							],
+							"fixed": [
+								"0:9.2.10-17.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana-selinux",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:9.2.10-17.el9_4"
+								}
+							],
+							"fixed": [
+								"0:9.2.10-17.el9_4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6947.json"
+		]
+	}
+}

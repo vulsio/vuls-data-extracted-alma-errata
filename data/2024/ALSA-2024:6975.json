@@ -1,0 +1,286 @@
+{
+	"id": "ALSA-2024:6975",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:6975",
+				"title": "Moderate: python3 security update",
+				"description": "Python is an interpreted, interactive, object-oriented programming language, which includes modules, classes, exceptions, very high level dynamic data types and dynamic typing. Python supports interfaces to many system calls and libraries, as well as to various windowing systems.\n\nSecurity Fix(es):\n\n* python: incorrect IPv4 and IPv6 private ranges (CVE-2024-4032)\n* cpython: python: email module doesn't properly quotes newlines in email headers, allowing header injection (CVE-2024-6923)\n* python: cpython: tarfile: ReDos via excessive backtracking while parsing header values (CVE-2024-6232)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:6975"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-4032"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6232"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6923"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2292921"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2302255"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2309426"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-6975.html"
+					}
+				],
+				"published": "2024-09-24T00:00:00Z",
+				"modified": "2024-09-24T14:01:31Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-4032",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-4032"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6232",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6232"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6923",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-6923"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "platform-python",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "platform-python-debug",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "platform-python-devel",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-idle",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-libs",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-test",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-tkinter",
+							"architectures": [
+								"aarch64",
+								"i686",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.6.8-67.el8_10.alma.1"
+								}
+							],
+							"fixed": [
+								"0:3.6.8-67.el8_10.alma.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:6975.json"
+		]
+	}
+}

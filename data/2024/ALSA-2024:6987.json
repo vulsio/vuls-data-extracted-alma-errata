@@ -1,0 +1,250 @@
+{
+	"id": "ALSA-2024:6987",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:6987",
+				"title": "Moderate: emacs security update",
+				"description": "GNU Emacs is a powerful, customizable, self-documenting text editor. It provides special code editing features, a scripting language (elisp), and the capability to read e-mail and news.\n\nSecurity Fix(es):\n\n* emacs: Gnus treats inline MIME contents as trusted (CVE-2024-30203)\n* emacs: Org mode considers contents of remote files to be trusted (CVE-2024-30205)\n* emacs: org-link-expand-abbrev: Do not evaluate arbitrary unsafe Elisp code (CVE-2024-39331)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:6987"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-30203"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-30205"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-39331"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2280296"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2280298"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2293942"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-6987.html"
+					}
+				],
+				"published": "2024-09-24T00:00:00Z",
+				"modified": "2024-09-24T11:27:54Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-30203",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-30203"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-30205",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-30205"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-39331",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-39331"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:26.1-12.el8_10"
+								}
+							],
+							"fixed": [
+								"1:26.1-12.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-common",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:26.1-12.el8_10"
+								}
+							],
+							"fixed": [
+								"1:26.1-12.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-filesystem",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:26.1-12.el8_10"
+								}
+							],
+							"fixed": [
+								"1:26.1-12.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-lucid",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:26.1-12.el8_10"
+								}
+							],
+							"fixed": [
+								"1:26.1-12.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-nox",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:26.1-12.el8_10"
+								}
+							],
+							"fixed": [
+								"1:26.1-12.el8_10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-terminal",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:26.1-12.el8_10"
+								}
+							],
+							"fixed": [
+								"1:26.1-12.el8_10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:6987.json"
+		]
+	}
+}
