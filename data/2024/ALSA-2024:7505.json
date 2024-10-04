@@ -1,0 +1,208 @@
+{
+	"id": "ALSA-2024:7505",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:7505",
+				"title": "Important: firefox security update",
+				"description": "Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.\n\nSecurity Fix(es):\n\n* firefox: 115.16/128.3 ESR ()\n* firefox: thunderbird: Memory safety bugs fixed in Firefox 131, Firefox ESR 115.16, Firefox ESR 128.3, Thunderbird 131, and Thunderbird 128.3 (CVE-2024-9401)\n* firefox: thunderbird: Memory safety bugs fixed in Firefox 131, Firefox ESR 128.3, Thunderbird 131, and Thunderbird 128.3 (CVE-2024-9402)\n* firefox: thunderbird: Cross-origin access to PDF contents through multipart responses (CVE-2024-9393)\n* firefox: thunderbird: Cross-origin access to JSON contents through multipart responses (CVE-2024-9394)\n* firefox: thunderbird: Compromised content process can bypass site isolation (CVE-2024-9392)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:7505"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9392"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9393"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9394"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9401"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9402"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2315950"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2315951"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2315956"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2315957"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2315959"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2024-7505.html"
+					}
+				],
+				"published": "2024-10-02T00:00:00Z",
+				"modified": "2024-10-04T05:27:10Z"
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-9392",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9392"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9393",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9393"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9394",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9394"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9401",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9401"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9402",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9402"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:128.3.0-1.el9_4.alma.1"
+								}
+							],
+							"fixed": [
+								"0:128.3.0-1.el9_4.alma.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-x11",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:128.3.0-1.el9_4.alma.1"
+								}
+							],
+							"fixed": [
+								"0:128.3.0-1.el9_4.alma.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:7505.json"
+		]
+	}
+}
