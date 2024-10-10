@@ -1,30 +1,38 @@
 {
-	"id": "ALSA-2021:4326",
+	"id": "ALSA-2024:7848",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2021:4326",
-				"title": "Moderate: libX11 security update",
-				"description": "The libX11 packages contain the core X11 protocol client library.\n\nSecurity Fix(es):\n\n* libX11: missing request length checks (CVE-2021-31535)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:7848",
+				"title": "Low: openssl security update",
+				"description": "OpenSSL is a toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full-strength general-purpose cryptography library.\n\nSecurity Fix(es):\n\n* openssl: SSL_select_next_proto buffer overread (CVE-2024-5535)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "Low"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/8/ALSA-2021-4326.html"
+						"url": "https://access.redhat.com/errata/RHSA-2024:7848"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-31535"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-5535"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2294581"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-7848.html"
 					}
 				],
-				"published": "2021-11-09T09:01:07Z",
-				"modified": "2021-11-12T10:20:56Z"
+				"published": "2024-10-09T00:00:00Z",
+				"modified": "2024-10-10T11:24:00Z"
 			},
 			"ecosystems": [
 				"alma:8"
@@ -34,11 +42,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-31535",
+				"id": "CVE-2024-5535",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-31535"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-5535"
 					}
 				]
 			},
@@ -56,11 +64,11 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "libX11",
+							"name": "openssl",
 							"architectures": [
 								"aarch64",
-								"i686",
 								"ppc64le",
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -68,42 +76,23 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.6.8-5.el8"
+									"lt": "1:1.1.1k-14.el8_6"
 								}
 							],
 							"fixed": [
-								"0:1.6.8-5.el8"
+								"1:1.1.1k-14.el8_6"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "libX11-common",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.6.8-5.el8"
-								}
-							],
-							"fixed": [
-								"0:1.6.8-5.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libX11-devel",
+							"name": "openssl-devel",
 							"architectures": [
 								"aarch64",
 								"i686",
 								"ppc64le",
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -111,22 +100,23 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.6.8-5.el8"
+									"lt": "1:1.1.1k-14.el8_6"
 								}
 							],
 							"fixed": [
-								"0:1.6.8-5.el8"
+								"1:1.1.1k-14.el8_6"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "libX11-xcb",
+							"name": "openssl-libs",
 							"architectures": [
 								"aarch64",
 								"i686",
 								"ppc64le",
+								"s390x",
 								"x86_64"
 							]
 						},
@@ -134,11 +124,34 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.6.8-5.el8"
+									"lt": "1:1.1.1k-14.el8_6"
 								}
 							],
 							"fixed": [
-								"0:1.6.8-5.el8"
+								"1:1.1.1k-14.el8_6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-perl",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.1.1k-14.el8_6"
+								}
+							],
+							"fixed": [
+								"1:1.1.1k-14.el8_6"
 							]
 						}
 					}
@@ -149,7 +162,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/8/2021/ALSA-2021:4326.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:7848.json"
 		]
 	}
 }
