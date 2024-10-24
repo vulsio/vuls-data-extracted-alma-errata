@@ -1,70 +1,70 @@
 {
-	"id": "ALSA-2024:6195",
+	"id": "ALSA-2024:8353",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:6195",
-				"title": "Moderate: skopeo security update",
-				"description": "The skopeo command lets you inspect images from container image registries, get images and image layers, and use signatures to create and verify files. \n\nSecurity Fix(es):\n\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:8353",
+				"title": "Important: NetworkManager-libreswan security update",
+				"description": "This package contains software for integrating the libreswan VPN software with NetworkManager and the GNOME desktop\n\nSecurity Fix(es):\n\n* NetworkManager-libreswan: Local privilege escalation via leftupdown (CVE-2024-9050)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:6195"
+						"url": "https://access.redhat.com/errata/RHSA-2024:8353"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-24783"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9050"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2268019"
+						"url": "https://bugzilla.redhat.com/2313828"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2024-6195.html"
+						"url": "https://errata.almalinux.org/8/ALSA-2024-8353.html"
 					}
 				],
-				"published": "2024-09-03T00:00:00Z",
-				"modified": "2024-09-03T13:22:47Z"
+				"published": "2024-10-23T00:00:00Z",
+				"modified": "2024-10-24T08:49:12Z"
 			},
 			"ecosystems": [
-				"alma:9"
+				"alma:8"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2024-24783",
+				"id": "CVE-2024-9050",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2024-24783"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9050"
 					}
 				]
 			},
 			"ecosystems": [
-				"alma:9"
+				"alma:8"
 			]
 		}
 	],
 	"detection": [
 		{
-			"ecosystem": "alma:9",
+			"ecosystem": "alma:8",
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "skopeo",
+							"name": "NetworkManager-libreswan",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -76,18 +76,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "2:1.14.5-1.el9_4"
+									"lt": "0:1.2.10-7.el8_10"
 								}
 							],
 							"fixed": [
-								"2:1.14.5-1.el9_4"
+								"0:1.2.10-7.el8_10"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "skopeo-tests",
+							"name": "NetworkManager-libreswan-gnome",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -99,11 +99,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "2:1.14.5-1.el9_4"
+									"lt": "0:1.2.10-7.el8_10"
 								}
 							],
 							"fixed": [
-								"2:1.14.5-1.el9_4"
+								"0:1.2.10-7.el8_10"
 							]
 						}
 					}
@@ -114,7 +114,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:6195.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:8353.json"
 		]
 	}
 }
