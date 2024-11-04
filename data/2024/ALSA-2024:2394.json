@@ -1,0 +1,2885 @@
+{
+	"id": "ALSA-2024:2394",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:2394",
+				"title": "Important: kernel security, bug fix, and enhancement update",
+				"description": "The kernel packages contain the Linux kernel, the core of any Linux operating system.  \n\nSecurity Fix(es):  \n\n  * kernel: GSM multiplexing race condition leads to privilege escalation (CVE-2023-6546)\n  * kernel: multiple use-after-free vulnerabilities (CVE-2024-1086, CVE-2023-3567, CVE-2023-4133, CVE-2023-6932, CVE-2023-39198, CVE-2023-51043, CVE-2023-51779, CVE-2023-51780, CVE-2024-1085, CVE-2024-26582)\n  * kernel: Bluetooth BR/EDR PIN Pairing procedure is vulnerable to an impersonation attack (CVE-2020-26555)\n  * kernel: memcg does not limit the number of POSIX file locks allowing memory exhaustion (CVE-2022-0480)\n  * kernel: multiple NULL pointer dereference vulnerabilities (CVE-2022-38096, CVE-2023-6622, CVE-2023-6915, CVE-2023-42754, CVE-2023-46862, CVE-2023-52574, CVE-2024-0841, CVE-2023-52448)\n  * kernel: integer overflow in l2cap_config_req() in net/bluetooth/l2cap_core.c (CVE-2022-45934)\n  * kernel: netfilter: nf_tables: out-of-bounds access in nf_tables_newtable() (CVE-2023-6040)\n  * kernel: GC's deletion of an SKB races with unix_stream_read_generic() leading to UAF (CVE-2023-6531)\n  * kernel: Out of boundary write in perf_read_group() as result of overflow a perf_event's read_size (CVE-2023-6931)\n  * kernel: Bluetooth Forward and Future Secrecy Attacks and Defenses (CVE-2023-24023)\n  * kernel: irdma: Improper access control (CVE-2023-25775)\n  * Kernel: double free in hci_conn_cleanup of the bluetooth subsystem (CVE-2023-28464)\n  * kernel: Bluetooth: HCI: global out-of-bounds access in net/bluetooth/hci_sync.c (CVE-2023-28866)\n  * kernel: race condition between HCIUARTSETPROTO and HCIUARTGETPROTO in hci_uart_tty_ioctl (CVE-2023-31083)\n  * kernel: multiple out-of-bounds read vulnerabilities (CVE-2023-37453, CVE-2023-39189, CVE-2023-39193, CVE-2023-6121, CVE-2023-39194)\n  * kernel: netfilter: race condition between IPSET_CMD_ADD and IPSET_CMD_SWAP (CVE-2023-42756)\n  * kernel: lib/kobject.c vulnerable to fill_kobj_path out-of-bounds write (CVE-2023-45863)\n  * kernel: smb: client: fix potential OOBs in smb2_parse_contexts() (CVE-2023-52434)\n  * kernel: mm/sparsemem: fix race in accessing memory_section->usage (CVE-2023-52489)\n  * kernel: net: fix possible store tearing in neigh_periodic_work() (CVE-2023-52522)\n  * kernel: multiple memory leak vulnerabilities (CVE-2023-52529, CVE-2023-52581)\n  * kernel: net: bridge: data races indata-races in br_handle_frame_finish() (CVE-2023-52578)\n  * kernel: net/core: kernel crash in ETH_P_1588 flow dissector (CVE-2023-52580)\n  * kernel: net/sched: act_ct: fix skb leak and crash on ooo frags (CVE-2023-52610)\n  * kernel: CIFS Filesystem Decryption Improper Input Validation Remote Code Execution Vulnerability in function receive_encrypted_standard of client (CVE-2024-0565)\n  * kernel: tls: race between async notify and socket close (CVE-2024-26583)\n  * kernel: tls: handle backlogging of crypto requests (CVE-2024-26584)\n  * kernel: tls: race between tx work scheduling and socket close (CVE-2024-26585)\n  * kernel: mlxsw: spectrum_acl_tcam: Fix stack corruption (CVE-2024-26586)\n  * kernel: i2c: i801: Fix block process call transactions (CVE-2024-26593)\n  * kernel: sched/membarrier: reduce the ability to hammer on sys_membarrier (CVE-2024-26602)\n  * kernel: netfilter: nf_tables: reject QUEUE/DROP verdict parameters (CVE-2024-26609)\n  * kernel: local dos vulnerability in scatterwalk_copychunks (CVE-2023-6176)\n  * kernel: perf/x86/lbr: Filter vsyscall addresses (CVE-2023-52476)\n  * kernel: netfilter: nf_tables: disallow timeout for anonymous sets (CVE-2023-52620)\n  * kernel: ip6_tunnel: fix NEXTHDR_FRAGMENT handling in ip6_tnl_parse_tlv_enc_lim() (CVE-2024-26633)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.  \n\nAdditional Changes:  \n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:2394"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/1918601"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2049700"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2133452"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2151959"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2177759"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2185519"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2188102"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2210024"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2213132"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2218332"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2219359"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2221039"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2221463"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2221702"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2226777"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2226787"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2226788"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2231410"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2239845"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2239848"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2244720"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2246980"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2250043"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2252731"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2253034"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2253632"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2254961"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2254982"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2255283"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2255498"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2256490"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2256822"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2257682"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2258013"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2258518"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2260005"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2262126"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2262127"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265285"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265517"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265518"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265519"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265520"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265645"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265646"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2265653"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267041"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267695"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267750"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267758"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267760"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267761"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267788"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2267795"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2269189"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2269217"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2270080"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2270118"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2270883"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/9/ALSA-2024-2394.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2020-26555.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2022-0480.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2022-38096.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2022-45934.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-24023.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-25775.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-28464.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-28866.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-31083.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-3567.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-37453.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39189.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39193.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39194.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39198.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-4133.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-42754.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-42756.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-45863.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-46862.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-51043.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-51779.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-51780.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52434.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52448.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52450.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52476.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52489.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52522.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52529.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52574.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52578.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52580.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52581.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52597.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52610.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52620.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6040.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6121.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6176.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6531.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6546.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6622.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6915.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6931.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6932.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-0565.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-0841.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-1085.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-1086.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-25744.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26582.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26583.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26584.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26585.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26586.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26593.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26602.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26609.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26633.html"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26671.html"
+					}
+				],
+				"published": "2024-04-30T00:00:00Z",
+				"modified": "2024-11-03T22:05:23Z"
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2020-26555",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2020-26555.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2022-0480",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2022-0480.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2022-38096",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2022-38096.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2022-45934",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2022-45934.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-24023",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-24023.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-25775",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-25775.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-28464",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-28464.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-28866",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-28866.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-31083",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-31083.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-3567",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-3567.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-37453",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-37453.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-39189",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39189.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-39193",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39193.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-39194",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39194.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-39198",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-39198.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-4133",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-4133.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-42754",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-42754.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-42756",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-42756.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-45863",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-45863.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-46862",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-46862.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-51043",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-51043.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-51779",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-51779.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-51780",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-51780.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52434",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52434.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52448",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52448.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52450",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52450.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52476",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52476.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52489",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52489.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52522",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52522.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52529",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52529.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52574",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52574.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52578",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52578.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52580",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52580.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52581",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52581.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52597",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52597.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52610",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52610.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-52620",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-52620.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6040",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6040.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6121",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6121.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6176",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6176.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6531",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6531.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6546",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6546.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6622",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6622.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6915",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6915.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6931",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6931.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-6932",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2023-6932.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-0565",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-0565.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-0841",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-0841.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-1085",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-1085.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-1086",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-1086.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-25744",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-25744.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26582",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26582.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26583",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26583.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26584",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26584.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26585",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26585.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26586",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26586.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26593",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26593.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26602",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26602.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26609",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26609.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26633",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26633.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26671",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://www.redhat.com/security/data/cve/CVE-2024-26671.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:9"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:9",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "bpftool",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.3.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:7.3.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-core",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug-core",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug-devel",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug-devel-matched",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug-modules",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug-modules-core",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-debug-modules-extra",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-devel",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-devel-matched",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-modules",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-modules-core",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-64k-modules-extra",
+							"architectures": [
+								"aarch64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-abi-stablelists",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-core",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-cross-headers",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-core",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-devel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-devel-matched",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-modules",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-modules-core",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-modules-extra",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-debug-uki-virt",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-devel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-devel-matched",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-doc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-modules",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-modules-core",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-modules-extra",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-devel",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-modules",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-modules-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-modules-extra",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-devel",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-modules",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-modules-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-modules-extra",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-tools",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-tools-libs",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-tools-libs-devel",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-uki-virt",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump-core",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump-devel",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump-devel-matched",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump-modules",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump-modules-core",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-zfcpdump-modules-extra",
+							"architectures": [
+								"s390x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "libperf",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "python3-perf",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "rtla",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "rv",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-427.13.1.el9_4"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-427.13.1.el9_4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:2394.json"
+		]
+	}
+}
