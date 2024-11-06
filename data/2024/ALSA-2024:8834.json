@@ -1,0 +1,100 @@
+{
+	"id": "ALSA-2024:8834",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:8834",
+				"title": "Important: python-gevent security update",
+				"description": "gevent is a coroutine-based Python networking library that uses greenlet to provide a high-level synchronous API on top of libevent event loop. Features include: * convenient API around greenlets * familiar synchronization primitives (gevent.event, gevent.queue) * socket module that cooperates * WSGI server on top of libevent-http * DNS requests done through libevent-dns * monkey patching utility to get pure Python modules to cooperate  \n\nSecurity Fix(es):  \n\n  * python-gevent: privilege escalation via a crafted script to the WSGIServer component (CVE-2023-41419)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:8834"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-41419"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2240651"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-8834.html"
+					}
+				],
+				"published": "2024-11-05T00:00:00Z",
+				"modified": "2024-11-06T10:11:50Z"
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-41419",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-41419"
+					}
+				]
+			},
+			"ecosystems": [
+				"alma:8"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "alma:8",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "python3-gevent",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.2.2-5.el8_10"
+								}
+							],
+							"fixed": [
+								"0:1.2.2-5.el8_10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:8834.json"
+		]
+	}
+}
