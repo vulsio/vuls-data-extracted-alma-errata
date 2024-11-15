@@ -1,38 +1,38 @@
 {
-	"id": "ALSA-2022:7720",
+	"id": "ALSA-2024:9540",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2022:7720",
-				"title": "Moderate: e2fsprogs security and bug fix update",
-				"description": "The e2fsprogs packages provide a number of utilities for creating, checking, modifying, and correcting the ext2, ext3, and ext4 file systems.\n\nSecurity Fix(es):\n\n* e2fsprogs: out-of-bounds read/write via crafted filesystem (CVE-2022-1304)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:9540",
+				"title": "Important: tigervnc security update",
+				"description": "Virtual Network Computing (VNC) is a remote display system which allows users to view a computing desktop environment not only on the machine where it is running, but from anywhere on the Internet and from a wide variety of machine architectures. TigerVNC is a suite of VNC servers and clients.  \n\nSecurity Fix(es):  \n\n  * xorg-x11-server: tigervnc: heap-based buffer overflow privilege escalation vulnerability (CVE-2024-9632)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2022:7720"
+						"url": "https://access.redhat.com/errata/RHSA-2024:9540"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1304"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9632"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2069726"
+						"url": "https://bugzilla.redhat.com/2317233"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/8/ALSA-2022-7720.html"
+						"url": "https://errata.almalinux.org/8/ALSA-2024-9540.html"
 					}
 				],
-				"published": "2022-11-08T00:00:00Z",
-				"modified": "2022-11-11T20:04:05Z"
+				"published": "2024-11-13T00:00:00Z",
+				"modified": "2024-11-15T12:49:28Z"
 			},
 			"ecosystems": [
 				"alma:8"
@@ -42,11 +42,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-1304",
+				"id": "CVE-2024-9632",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1304"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-9632"
 					}
 				]
 			},
@@ -67,7 +67,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "e2fsprogs",
+							"name": "tigervnc",
 							"architectures": [
 								"aarch64",
 								"ppc64le",
@@ -79,11 +79,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					},
@@ -93,24 +93,20 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "e2fsprogs-devel",
+							"name": "tigervnc-icons",
 							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
+								"noarch"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					},
@@ -120,24 +116,20 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "e2fsprogs-libs",
+							"name": "tigervnc-license",
 							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
+								"noarch"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					},
@@ -147,24 +139,20 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "libcom_err",
+							"name": "tigervnc-selinux",
 							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
+								"noarch"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					},
@@ -174,10 +162,9 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "libcom_err-devel",
+							"name": "tigervnc-server",
 							"architectures": [
 								"aarch64",
-								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -187,11 +174,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					},
@@ -201,10 +188,9 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "libss",
+							"name": "tigervnc-server-minimal",
 							"architectures": [
 								"aarch64",
-								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -214,11 +200,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					},
@@ -228,10 +214,9 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "libss-devel",
+							"name": "tigervnc-server-module",
 							"architectures": [
 								"aarch64",
-								"i686",
 								"ppc64le",
 								"s390x",
 								"x86_64"
@@ -241,11 +226,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.45.6-5.el8"
+									"lt": "0:1.13.1-14.el8_10"
 								}
 							],
 							"fixed": [
-								"0:1.45.6-5.el8"
+								"0:1.13.1-14.el8_10"
 							]
 						}
 					}
@@ -256,7 +241,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/8/2022/ALSA-2022:7720.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:9540.json"
 		]
 	}
 }
