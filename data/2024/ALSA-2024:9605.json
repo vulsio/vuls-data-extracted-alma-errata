@@ -1,78 +1,50 @@
 {
-	"id": "ALSA-2023:3723",
+	"id": "ALSA-2024:9605",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:3723",
-				"title": "Important: kernel security and bug fix update",
-				"description": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: use-after-free vulnerability in the perf_group_detach function of the Linux Kernel Performance Events (CVE-2023-2235)\n* kernel: netfilter: use-after-free in nf_tables when processing batch requests can lead to privilege escalation (CVE-2023-32233)\n* Kernel: bluetooth: Unauthorized management command execution (CVE-2023-2002)\n* kernel: OOB access in the Linux kernel's XFS subsystem (CVE-2023-2124)\n* kernel: i2c: out-of-bounds write in xgene_slimpro_i2c_xfer() (CVE-2023-2194)\n* kernel: tls: race condition in do_tls_getsockopt may lead to use-after-free or NULL pointer dereference (CVE-2023-28466)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* Intel QAT Update - (kernel changes) (BZ#2176846)\n* RPL-P IOTG/RPL-S IOTG: cpu frequency issues (BZ#2178857)\n* In FIPS mode, kernel does not transition into error state when RCT or APT health tests fail (BZ#2181727)\n* Kernel BUG in iwlmvm wifi driver when used Mesh systems (BZ#2186723)\n* Azure AlmaLinux 9 Backport upstream commit 93827a0a36396f2fd6368a54a020f420c8916e9b [KVM: VMX: Fix crash due to uninitialized current_vmcs] (BZ#2186822)\n* AlmaLinux 9 blktests nvme/047 lead kernel NULL pointer (BZ#2187536)\n* Single Node Openshift cluster becomes unreachable after running less than 2 hours (BZ#2187709)\n* kernel[-rt]: task deadline_test:1778 blocked for more than 622 seconds (BZ#2188655)\n* fix page end in filemap_get_read_batch (BZ#2189349)\n* AlmaLinux 9.2 hwpoison: data loss when memory error occurs on hugetlb pagecache (BZ#2192348)\n* wdat_wdt watchdog timeout triggered unexpectedly (BZ#2192585)\n* ice: high CPU usage with GNSS or ptp4l (BZ#2203154)\n* AlmaLinux 9 \"smpboot: Scheduler frequency invariance went wobbly, disabling!\" on nohz_full CPUs after long run (BZ#2203178)\n* Dying percpu kworkers cause issues on isolated CPUs [almalinux-9] (BZ#2203229)\n* FJ9.2 Bug: [REG] NFS infinite loop of COMMIT call and NFS4ERR_DELAY reply. (BZ#2203335)\n* perf errors - \"event syntax error: 'unc_p_delayed_c_state_abort_core5'\" b'_ value too big for format, maximum is 255' (BZ#2207471)\n* AlmaLinux 9: Invalid character detected by rpminspect in Documentation/translations/zh_CN/process/magic-number.rst (BZ#2208242)\n* cifs: backport small patches to bring us close to 9.1 - backport commit aea02fc40a7f cifs: fix wrong unlock before return from cifs_tree_connect (BZ#2209045)\n* AlmaLinux 9 x86_64, kdump 2nd kernel will randomly panic on \"kvm-08-guest25.hv2\" (BZ#2210614)",
+				"id": "ALSA-2024:9605",
+				"title": "Moderate: kernel security update",
+				"description": "The kernel packages contain the Linux kernel, the core of any Linux operating system.  \n\nSecurity Fix(es):  \n\n  * kernel: net: nexthop: Initialize all fields in dumped nexthops (CVE-2024-42283)\n  * kernel: iommufd: Require drivers to supply the cache_invalidate_user ops (CVE-2024-46824)\n  * kernel: mptcp: pm: Fix uaf in __timer_delete_sync (CVE-2024-46858)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Important"
+						"vendor": "moderate"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:3723"
+						"url": "https://access.redhat.com/errata/RHSA-2024:9605"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2002"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-42283"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2124"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-46824"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2194"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-46858"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2235"
+						"url": "https://bugzilla.redhat.com/2315176"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28466"
+						"url": "https://bugzilla.redhat.com/2315210"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-32233"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2179000"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2187308"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2187439"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2188396"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2192589"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2196105"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2023-3723.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-9605.html"
 					}
 				],
-				"published": "2023-06-21T00:00:00Z",
-				"modified": "2023-07-11T20:32:25Z"
+				"published": "2024-11-14T00:00:00Z",
+				"modified": "2024-11-20T15:31:07Z"
 			},
 			"ecosystems": [
 				"alma:9"
@@ -82,11 +54,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-2002",
+				"id": "CVE-2024-42283",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2002"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-42283"
 					}
 				]
 			},
@@ -96,11 +68,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-2124",
+				"id": "CVE-2024-46824",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2124"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-46824"
 					}
 				]
 			},
@@ -110,53 +82,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-2194",
+				"id": "CVE-2024-46858",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2194"
-					}
-				]
-			},
-			"ecosystems": [
-				"alma:9"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-2235",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-2235"
-					}
-				]
-			},
-			"ecosystems": [
-				"alma:9"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-28466",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-28466"
-					}
-				]
-			},
-			"ecosystems": [
-				"alma:9"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-32233",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-32233"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-46858"
 					}
 				]
 			},
@@ -189,11 +119,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:7.0.0-284.18.1.el9_2"
+									"lt": "0:7.4.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:7.0.0-284.18.1.el9_2"
+								"0:7.4.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -215,11 +145,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -238,11 +168,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -261,11 +191,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -284,11 +214,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -307,11 +237,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -330,11 +260,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -353,11 +283,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -376,11 +306,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -399,11 +329,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -422,11 +352,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -445,11 +375,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -468,11 +398,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -491,11 +421,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -514,11 +444,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -537,11 +467,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -560,11 +490,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -586,11 +516,37 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-cross-headers",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -612,11 +568,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -638,11 +594,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -664,11 +620,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -690,11 +646,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -716,11 +672,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -742,11 +698,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -768,11 +724,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -791,11 +747,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -817,11 +773,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -843,11 +799,60 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-doc",
+							"architectures": [
+								"noarch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -869,11 +874,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -895,11 +900,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -921,11 +926,287 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-devel",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-modules",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-modules-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-debug-modules-extra",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-devel",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-modules",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-modules-core",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-rt-modules-extra",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -947,11 +1228,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -972,11 +1253,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -997,11 +1278,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1020,11 +1301,34 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "kernel-uki-virt-addons",
+							"architectures": [
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1043,11 +1347,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1066,11 +1370,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1089,11 +1393,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1112,11 +1416,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1135,11 +1439,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1158,11 +1462,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1181,11 +1485,37 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "libperf",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1207,11 +1537,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1233,11 +1563,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					},
@@ -1259,11 +1589,37 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.14.0-284.18.1.el9_2"
+									"lt": "0:5.14.0-503.14.1.el9_5"
 								}
 							],
 							"fixed": [
-								"0:5.14.0-284.18.1.el9_2"
+								"0:5.14.0-503.14.1.el9_5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "rv",
+							"architectures": [
+								"aarch64",
+								"ppc64le",
+								"s390x",
+								"x86_64"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.0-503.14.1.el9_5"
+								}
+							],
+							"fixed": [
+								"0:5.14.0-503.14.1.el9_5"
 							]
 						}
 					}
@@ -1274,7 +1630,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2023/ALSA-2023:3723.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:9605.json"
 		]
 	}
 }
