@@ -26,8 +26,10 @@
 				"published": "2021-11-09T08:54:06Z",
 				"modified": "2021-11-12T17:54:17Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -42,42 +44,48 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "rust-toolset:rhel8::rust-toolset",
-							"architectures": [
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.54.0-1.module_el8.5.0+2599+d655d86c"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "rust-toolset:rhel8::rust-toolset",
+									"architectures": [
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.54.0-1.module_el8.5.0+2599+d655d86c"
+										}
+									],
+									"fixed": [
+										"0:1.54.0-1.module_el8.5.0+2599+d655d86c"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.54.0-1.module_el8.5.0+2599+d655d86c"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

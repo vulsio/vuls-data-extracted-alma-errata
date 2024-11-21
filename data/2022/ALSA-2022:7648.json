@@ -74,8 +74,10 @@
 				"published": "2022-11-08T00:00:00Z",
 				"modified": "2022-11-11T21:33:48Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -90,8 +92,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -104,8 +108,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -118,8 +124,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -132,8 +140,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -146,8 +156,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -160,45 +172,51 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "grafana-pcp",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.2.0-2.el8"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "grafana-pcp",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.2.0-2.el8"
+										}
+									],
+									"fixed": [
+										"0:3.2.0-2.el8"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.2.0-2.el8"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

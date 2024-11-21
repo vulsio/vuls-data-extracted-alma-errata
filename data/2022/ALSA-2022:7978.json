@@ -42,8 +42,10 @@
 				"published": "2022-11-15T00:00:00Z",
 				"modified": "2022-11-18T05:24:22Z"
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
@@ -58,8 +60,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -72,72 +76,78 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:9",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "gimp",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:2.99.8-3.el9"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "gimp",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:2.99.8-3.el9"
+										}
+									],
+									"fixed": [
+										"2:2.99.8-3.el9"
+									]
 								}
-							],
-							"fixed": [
-								"2:2.99.8-3.el9"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "gimp-libs",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:2.99.8-3.el9"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "gimp-libs",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:2.99.8-3.el9"
+										}
+									],
+									"fixed": [
+										"2:2.99.8-3.el9"
+									]
 								}
-							],
-							"fixed": [
-								"2:2.99.8-3.el9"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

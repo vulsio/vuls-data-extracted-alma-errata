@@ -34,8 +34,10 @@
 				"published": "2022-11-15T00:00:00Z",
 				"modified": "2022-11-18T05:38:04Z"
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
@@ -50,67 +52,73 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:9",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "guestfs-tools",
-							"architectures": [
-								"aarch64",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.48.2-5.el9"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "guestfs-tools",
+									"architectures": [
+										"aarch64",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.48.2-5.el9"
+										}
+									],
+									"fixed": [
+										"0:1.48.2-5.el9"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.48.2-5.el9"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "virt-win-reg",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.48.2-5.el9"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "virt-win-reg",
+									"architectures": [
+										"noarch"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.48.2-5.el9"
+										}
+									],
+									"fixed": [
+										"0:1.48.2-5.el9"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.48.2-5.el9"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

@@ -34,8 +34,10 @@
 				"published": "2023-05-16T00:00:00Z",
 				"modified": "2023-05-19T22:09:09Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -50,65 +52,71 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql-jdbc",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:42.2.14-2.el8"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql-jdbc",
+									"architectures": [
+										"noarch"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:42.2.14-2.el8"
+										}
+									],
+									"fixed": [
+										"0:42.2.14-2.el8"
+									]
 								}
-							],
-							"fixed": [
-								"0:42.2.14-2.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql-jdbc-javadoc",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:42.2.14-2.el8"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql-jdbc-javadoc",
+									"architectures": [
+										"noarch"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:42.2.14-2.el8"
+										}
+									],
+									"fixed": [
+										"0:42.2.14-2.el8"
+									]
 								}
-							],
-							"fixed": [
-								"0:42.2.14-2.el8"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

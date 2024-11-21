@@ -34,8 +34,10 @@
 				"published": "2023-09-18T00:00:00Z",
 				"modified": "2023-09-20T11:51:06Z"
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
@@ -50,68 +52,74 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:9",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "frr",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.3.1-5.el9_2.2.alma"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "frr",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.3.1-5.el9_2.2.alma"
+										}
+									],
+									"fixed": [
+										"0:8.3.1-5.el9_2.2.alma"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.3.1-5.el9_2.2.alma"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "frr-selinux",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.3.1-5.el9_2.2.alma"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "frr-selinux",
+									"architectures": [
+										"noarch"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.3.1-5.el9_2.2.alma"
+										}
+									],
+									"fixed": [
+										"0:8.3.1-5.el9_2.2.alma"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.3.1-5.el9_2.2.alma"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

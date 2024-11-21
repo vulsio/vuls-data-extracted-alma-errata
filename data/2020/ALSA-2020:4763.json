@@ -30,8 +30,10 @@
 				"published": "2020-11-03T12:33:59Z",
 				"modified": "2021-08-11T08:54:00Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -46,8 +48,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -60,66 +64,72 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dovecot",
-							"architectures": [
-								"i686"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.3.8-4.el8"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dovecot",
+									"architectures": [
+										"i686"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:2.3.8-4.el8"
+										}
+									],
+									"fixed": [
+										"1:2.3.8-4.el8"
+									]
 								}
-							],
-							"fixed": [
-								"1:2.3.8-4.el8"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dovecot-devel",
-							"architectures": [
-								"i686",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.3.8-4.el8"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dovecot-devel",
+									"architectures": [
+										"i686",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:2.3.8-4.el8"
+										}
+									],
+									"fixed": [
+										"1:2.3.8-4.el8"
+									]
 								}
-							],
-							"fixed": [
-								"1:2.3.8-4.el8"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

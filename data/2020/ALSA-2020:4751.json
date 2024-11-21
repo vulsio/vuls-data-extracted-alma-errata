@@ -62,8 +62,10 @@
 				"published": "2020-11-03T12:33:02Z",
 				"modified": "2022-01-26T07:27:23Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -78,8 +80,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -92,8 +96,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -106,8 +112,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -120,8 +128,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -134,8 +144,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -148,8 +160,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -162,8 +176,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -176,8 +192,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -190,8 +208,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -204,66 +224,72 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "httpd:2.4::mod_md",
-							"architectures": [
-								"aarch64",
-								"ppc64le"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "httpd:2.4::mod_md",
+									"architectures": [
+										"aarch64",
+										"ppc64le"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+										}
+									],
+									"fixed": [
+										"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+									]
 								}
-							],
-							"fixed": [
-								"1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "httpd:2.4::mod_md",
-							"architectures": [
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "httpd:2.4::mod_md",
+									"architectures": [
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
+										}
+									],
+									"fixed": [
+										"1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
+									]
 								}
-							],
-							"fixed": [
-								"1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

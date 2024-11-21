@@ -42,8 +42,10 @@
 				"published": "2024-11-13T00:00:00Z",
 				"modified": "2024-11-14T08:09:33Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -58,8 +60,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		},
 		{
@@ -72,73 +76,79 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "libsoup",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.62.3-6.el8_10"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "libsoup",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.62.3-6.el8_10"
+										}
+									],
+									"fixed": [
+										"0:2.62.3-6.el8_10"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.62.3-6.el8_10"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "libsoup-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.62.3-6.el8_10"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "libsoup-devel",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.62.3-6.el8_10"
+										}
+									],
+									"fixed": [
+										"0:2.62.3-6.el8_10"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.62.3-6.el8_10"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

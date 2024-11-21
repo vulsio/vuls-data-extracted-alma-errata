@@ -26,8 +26,10 @@
 				"published": "2020-09-08T08:36:30Z",
 				"modified": "2023-03-13T16:34:27Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -42,73 +44,79 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "libcroco",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"i686",
-								"ppc64le",
-								"x86_64",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.6.12-4.el8_2.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "libcroco",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"i686",
+										"ppc64le",
+										"x86_64",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.6.12-4.el8_2.1"
+										}
+									],
+									"fixed": [
+										"0:0.6.12-4.el8_2.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.6.12-4.el8_2.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "libcroco-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.6.12-4.el8_2.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "libcroco-devel",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.6.12-4.el8_2.1"
+										}
+									],
+									"fixed": [
+										"0:0.6.12-4.el8_2.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.6.12-4.el8_2.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

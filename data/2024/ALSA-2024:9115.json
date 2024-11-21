@@ -66,8 +66,10 @@
 				"published": "2024-11-12T00:00:00Z",
 				"modified": "2024-11-19T06:30:46Z"
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
@@ -82,8 +84,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -96,8 +100,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -110,8 +116,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -124,8 +132,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -138,71 +148,77 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:9",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "grafana",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:10.2.6-4.el9"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "grafana",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:10.2.6-4.el9"
+										}
+									],
+									"fixed": [
+										"0:10.2.6-4.el9"
+									]
 								}
-							],
-							"fixed": [
-								"0:10.2.6-4.el9"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "grafana-selinux",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:10.2.6-4.el9"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "grafana-selinux",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:10.2.6-4.el9"
+										}
+									],
+									"fixed": [
+										"0:10.2.6-4.el9"
+									]
 								}
-							],
-							"fixed": [
-								"0:10.2.6-4.el9"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

@@ -34,8 +34,10 @@
 				"published": "2024-02-20T00:00:00Z",
 				"modified": "2024-02-22T19:52:37Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -50,65 +52,71 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "edk2-aarch64",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20220126gitbb1bba3d77-6.el8_9.3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "edk2-aarch64",
+									"architectures": [
+										"noarch"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20220126gitbb1bba3d77-6.el8_9.3"
+										}
+									],
+									"fixed": [
+										"0:20220126gitbb1bba3d77-6.el8_9.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20220126gitbb1bba3d77-6.el8_9.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "edk2-ovmf",
-							"architectures": [
-								"noarch"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20220126gitbb1bba3d77-6.el8_9.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "edk2-ovmf",
+									"architectures": [
+										"noarch"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20220126gitbb1bba3d77-6.el8_9.3"
+										}
+									],
+									"fixed": [
+										"0:20220126gitbb1bba3d77-6.el8_9.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20220126gitbb1bba3d77-6.el8_9.3"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

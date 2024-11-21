@@ -34,8 +34,10 @@
 				"published": "2023-12-14T00:00:00Z",
 				"modified": "2023-12-15T09:13:53Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -50,73 +52,79 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "gstreamer1-plugins-bad-free",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.16.1-2.el8_9.alma.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "gstreamer1-plugins-bad-free",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.16.1-2.el8_9.alma.1"
+										}
+									],
+									"fixed": [
+										"0:1.16.1-2.el8_9.alma.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.16.1-2.el8_9.alma.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "gstreamer1-plugins-bad-free-devel",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.16.1-2.el8_9.alma.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "gstreamer1-plugins-bad-free-devel",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.16.1-2.el8_9.alma.1"
+										}
+									],
+									"fixed": [
+										"0:1.16.1-2.el8_9.alma.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.16.1-2.el8_9.alma.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

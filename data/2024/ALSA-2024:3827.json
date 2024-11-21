@@ -50,8 +50,10 @@
 				"published": "2024-06-11T00:00:00Z",
 				"modified": "2024-06-13T13:22:49Z"
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
@@ -66,8 +68,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -80,8 +84,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		},
 		{
@@ -94,71 +100,77 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:9"
+			"segments": [
+				{
+					"ecosystem": "alma:9"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:9",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "buildah",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:1.33.7-2.el9_4"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "buildah",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:1.33.7-2.el9_4"
+										}
+									],
+									"fixed": [
+										"2:1.33.7-2.el9_4"
+									]
 								}
-							],
-							"fixed": [
-								"2:1.33.7-2.el9_4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "buildah-tests",
-							"architectures": [
-								"aarch64",
-								"ppc64le",
-								"s390x",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:1.33.7-2.el9_4"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "buildah-tests",
+									"architectures": [
+										"aarch64",
+										"ppc64le",
+										"s390x",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:1.33.7-2.el9_4"
+										}
+									],
+									"fixed": [
+										"2:1.33.7-2.el9_4"
+									]
 								}
-							],
-							"fixed": [
-								"2:1.33.7-2.el9_4"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

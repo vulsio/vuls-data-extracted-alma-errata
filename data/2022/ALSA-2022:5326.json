@@ -34,8 +34,10 @@
 				"published": "2022-06-30T00:00:00Z",
 				"modified": "2022-07-21T17:48:54Z"
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
@@ -50,45 +52,51 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"alma:8"
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "alma:8",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "compat-openssl10",
-							"architectures": [
-								"aarch64",
-								"i686",
-								"ppc64le",
-								"x86_64"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.0.2o-4.el8_6"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "compat-openssl10",
+									"architectures": [
+										"aarch64",
+										"i686",
+										"ppc64le",
+										"x86_64"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.0.2o-4.el8_6"
+										}
+									],
+									"fixed": [
+										"1:1.0.2o-4.el8_6"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.0.2o-4.el8_6"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {
