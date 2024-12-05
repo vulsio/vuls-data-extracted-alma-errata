@@ -1,38 +1,54 @@
 {
-	"id": "ALSA-2024:3270",
+	"id": "ALSA-2024:10832",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2024:3270",
-				"title": "Moderate: sssd security update",
-				"description": "The System Security Services Daemon (SSSD) service provides a set of daemons to manage access to remote directories and authentication mechanisms. It also provides the Name Service Switch (NSS) and the Pluggable Authentication Modules (PAM) interfaces toward the system, and a pluggable back-end system to connect to multiple different account sources.\n\nSecurity Fix(es):\n\n* sssd: Race condition during authorization leads to GPO policies functioning inconsistently (CVE-2023-3758)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+				"id": "ALSA-2024:10832",
+				"title": "Important: postgresql:13 security update",
+				"description": "PostgreSQL is an advanced object-relational database management system (DBMS).  \n\nSecurity Fix(es):  \n\n  * postgresql: PostgreSQL SET ROLE, SET SESSION AUTHORIZATION reset to wrong user ID (CVE-2024-10978)\n  * postgresql: PostgreSQL PL/Perl environment variable changes execute arbitrary code (CVE-2024-10979)\n  * postgresql: PostgreSQL row security below e.g. subqueries disregards user ID changes (CVE-2024-10976)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2024:3270"
+						"url": "https://access.redhat.com/errata/RHSA-2024:10832"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-3758"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10976"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2223762"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10978"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/8/ALSA-2024-3270.html"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10979"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2326251"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2326253"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2326263"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-10832.html"
 					}
 				],
-				"published": "2024-05-22T00:00:00Z",
-				"modified": "2024-05-29T14:46:26Z"
+				"published": "2024-12-05T00:00:00Z",
+				"modified": "2024-12-05T14:20:19Z"
 			},
 			"segments": [
 				{
@@ -44,11 +60,43 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-3758",
+				"id": "CVE-2024-10976",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2023-3758"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10976"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10978",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10978"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10979",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10979"
 					}
 				]
 			},
@@ -75,12 +123,10 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libipa_hbac",
+										"name": "postgresql:13::pg_repack",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -88,11 +134,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:1.4.6-3.module_el8.6.0+2760+1746ec94"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:1.4.6-3.module_el8.6.0+2760+1746ec94"
 										]
 									}
 								}
@@ -105,23 +151,20 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_autofs",
+										"name": "postgresql:13::pg_repack",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:1.4.6-3.module_el8.9.0+3704+f1f917ce"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:1.4.6-3.module_el8.9.0+3704+f1f917ce"
 										]
 									}
 								}
@@ -134,12 +177,10 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_certmap",
+										"name": "postgresql:13::pgaudit",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -147,11 +188,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:1.5.0-1.module_el8.6.0+2760+1746ec94"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:1.5.0-1.module_el8.6.0+2760+1746ec94"
 										]
 									}
 								}
@@ -164,24 +205,20 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_idmap",
+										"name": "postgresql:13::pgaudit",
 										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:1.5.0-1.module_el8.6.0+3095+ee60d910"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:1.5.0-1.module_el8.6.0+3095+ee60d910"
 										]
 									}
 								}
@@ -194,24 +231,20 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_nss_idmap",
+										"name": "postgresql:13::postgres-decoderbufs",
 										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
-											"x86_64"
+											"aarch64"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:0.10.0-2.module_el8.9.0+3704+f1f917ce"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:0.10.0-2.module_el8.9.0+3704+f1f917ce"
 										]
 									}
 								}
@@ -224,12 +257,9 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_nss_idmap-devel",
+										"name": "postgresql:13::postgres-decoderbufs",
 										"architectures": [
-											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -237,11 +267,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:0.10.0-2.module_el8.6.0+2760+1746ec94"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:0.10.0-2.module_el8.6.0+2760+1746ec94"
 										]
 									}
 								}
@@ -254,24 +284,20 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_simpleifp",
+										"name": "postgresql:13::postgres-decoderbufs",
 										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:0.10.0-2.module_el8.6.0+3095+ee60d910"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:0.10.0-2.module_el8.6.0+3095+ee60d910"
 										]
 									}
 								}
@@ -284,7 +310,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsss_sudo",
+										"name": "postgresql:13::postgresql",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -296,11 +322,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -313,7 +339,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-libipa_hbac",
+										"name": "postgresql:13::postgresql-contrib",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -325,11 +351,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -342,7 +368,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-libsss_nss_idmap",
+										"name": "postgresql:13::postgresql-docs",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -354,11 +380,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -371,7 +397,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-sss",
+										"name": "postgresql:13::postgresql-plperl",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -383,11 +409,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -400,7 +426,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-sss-murmur",
+										"name": "postgresql:13::postgresql-plpython3",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -412,11 +438,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -429,7 +455,152 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-sssdconfig",
+										"name": "postgresql:13::postgresql-pltcl",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:13::postgresql-server",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:13::postgresql-server-devel",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:13::postgresql-static",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:13::postgresql-test",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:13::postgresql-test-rpm-macros",
 										"architectures": [
 											"noarch"
 										]
@@ -438,11 +609,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -455,7 +626,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "sssd",
+										"name": "postgresql:13::postgresql-upgrade",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -467,11 +638,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -484,7 +655,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "sssd-ad",
+										"name": "postgresql:13::postgresql-upgrade-devel",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
@@ -496,447 +667,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.9.4-3.el8_10"
+												"lt": "0:13.18-1.module_el8.10.0+3928+8233d274"
 											}
 										],
 										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-client",
-										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-common",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-common-pac",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-dbus",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-idp",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-ipa",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-kcm",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-krb5",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-krb5-common",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-ldap",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-nfs-idmap",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-polkit-rules",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-proxy",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-tools",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "sssd-winbind-idmap",
-										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:2.9.4-3.el8_10"
-											}
-										],
-										"fixed": [
-											"0:2.9.4-3.el8_10"
+											"0:13.18-1.module_el8.10.0+3928+8233d274"
 										]
 									}
 								}
@@ -950,7 +685,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:3270.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:10832.json"
 		]
 	}
 }
