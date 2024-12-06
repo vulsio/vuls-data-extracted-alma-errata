@@ -1,62 +1,54 @@
 {
-	"id": "ALSA-2022:5267",
+	"id": "ALSA-2024:10791",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2022:5267",
-				"title": "Important: kernel-rt security and bug fix update",
-				"description": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\nSecurity Fix(es):\n* kernel: Small table perturb size in the TCP source port generation algorithm can lead to information leak (CVE-2022-1012)\n* kernel: race condition in perf_event_open leads to privilege escalation (CVE-2022-1729)\n* kernel: a use-after-free write in the netfilter subsystem can lead to privilege escalation to root (CVE-2022-1966)\n* kernel: buffer overflow in IPsec ESP transformation code (CVE-2022-27666)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nBug Fix(es):\n* kernel-rt: update RT source tree to the latest AlmaLinux-9.0.z1 Batch (BZ#2089492)",
+				"id": "ALSA-2024:10791",
+				"title": "Important: postgresql security update",
+				"description": "PostgreSQL is an advanced object-relational database management system (DBMS).  \n\nSecurity Fix(es):  \n\n  * postgresql: PostgreSQL SET ROLE, SET SESSION AUTHORIZATION reset to wrong user ID (CVE-2024-10978)\n  * postgresql: PostgreSQL PL/Perl environment variable changes execute arbitrary code (CVE-2024-10979)\n  * postgresql: PostgreSQL row security below e.g. subqueries disregards user ID changes (CVE-2024-10976)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Important"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2022:5267"
+						"url": "https://access.redhat.com/errata/RHSA-2024:10791"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1012"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10976"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1729"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10978"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1966"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10979"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-27666"
+						"url": "https://bugzilla.redhat.com/2326251"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2061633"
+						"url": "https://bugzilla.redhat.com/2326253"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2064604"
+						"url": "https://bugzilla.redhat.com/2326263"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2086753"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2092427"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/9/ALSA-2022-5267.html"
+						"url": "https://errata.almalinux.org/9/ALSA-2024-10791.html"
 					}
 				],
-				"published": "2022-06-28T00:00:00Z",
-				"modified": "2022-06-30T08:42:04Z"
+				"published": "2024-12-04T00:00:00Z",
+				"modified": "2024-12-05T14:23:44Z"
 			},
 			"segments": [
 				{
@@ -68,11 +60,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-1012",
+				"id": "CVE-2024-10976",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1012"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10976"
 					}
 				]
 			},
@@ -84,11 +76,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-1729",
+				"id": "CVE-2024-10978",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1729"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10978"
 					}
 				]
 			},
@@ -100,27 +92,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-1966",
+				"id": "CVE-2024-10979",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1966"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:9"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2022-27666",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-27666"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10979"
 					}
 				]
 			},
@@ -147,8 +123,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt",
+										"name": "postgresql",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -156,11 +135,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -173,8 +152,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-core",
+										"name": "postgresql-contrib",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -182,11 +164,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -199,8 +181,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-debug",
+										"name": "postgresql-docs",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -208,11 +193,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -225,8 +210,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-debug-core",
+										"name": "postgresql-plperl",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -234,11 +222,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -251,8 +239,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-debug-devel",
+										"name": "postgresql-plpython3",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -260,11 +251,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -277,8 +268,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-debug-kvm",
+										"name": "postgresql-pltcl",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -286,11 +280,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -303,8 +297,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-debug-modules",
+										"name": "postgresql-private-devel",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -312,11 +309,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -329,8 +326,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-debug-modules-extra",
+										"name": "postgresql-private-libs",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -338,11 +338,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -355,8 +355,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-devel",
+										"name": "postgresql-server",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -364,11 +367,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -381,8 +384,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-kvm",
+										"name": "postgresql-server-devel",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -390,11 +396,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -407,8 +413,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-modules",
+										"name": "postgresql-static",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -416,11 +425,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -433,8 +442,11 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-rt-modules-extra",
+										"name": "postgresql-test",
 										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
 											"x86_64"
 										]
 									},
@@ -442,11 +454,95 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.14.0-70.17.1.rt21.89.el9_0"
+												"lt": "0:13.18-1.el9_5"
 											}
 										],
 										"fixed": [
-											"0:5.14.0-70.17.1.rt21.89.el9_0"
+											"0:13.18-1.el9_5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql-test-rpm-macros",
+										"architectures": [
+											"noarch"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.el9_5"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.el9_5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql-upgrade",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.el9_5"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.el9_5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql-upgrade-devel",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x",
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:13.18-1.el9_5"
+											}
+										],
+										"fixed": [
+											"0:13.18-1.el9_5"
 										]
 									}
 								}
@@ -460,7 +556,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/9/2022/ALSA-2022:5267.json"
+			"vuls-data-raw-alma-errata/9/2024/ALSA-2024:10791.json"
 		]
 	}
 }
