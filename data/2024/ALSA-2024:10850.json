@@ -1,74 +1,38 @@
 {
-	"id": "ALSA-2022:1557",
+	"id": "ALSA-2024:10850",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2022:1557",
-				"title": "Moderate: mariadb:10.5 security, bug fix, and enhancement update",
-				"description": "MariaDB is a multi-user, multi-threaded SQL database server that is binary compatible with MySQL. \n\nThe following packages have been upgraded to a later upstream version: mariadb (10.5.13), galera (26.4.9). (BZ#2050546)\n\nSecurity Fix(es):\n\n* mysql: Server: DML unspecified vulnerability (CPU Apr 2021) (CVE-2021-2154)\n\n* mysql: Server: DML unspecified vulnerability (CPU Apr 2021) (CVE-2021-2166)\n\n* mysql: InnoDB unspecified vulnerability (CPU Jul 2021) (CVE-2021-2372)\n\n* mysql: InnoDB unspecified vulnerability (CPU Jul 2021) (CVE-2021-2389)\n\n* mysql: InnoDB unspecified vulnerability (CPU Oct 2021) (CVE-2021-35604)\n\n* mariadb: Integer overflow in sql_lex.cc integer leading to crash (CVE-2021-46667)\n\n* mariadb: Crash in get_sort_by_table() in subquery with ORDER BY having outer ref (CVE-2021-46657)\n\n* mariadb: save_window_function_values triggers an abort during IN subquery (CVE-2021-46658)\n\n* mariadb: Crash in set_var.cc via certain UPDATE queries with nested subqueries (CVE-2021-46662)\n\n* mariadb: Crash caused by mishandling of a pushdown from a HAVING clause to a WHERE clause (CVE-2021-46666)\n\n* mariadb: No password masking in audit log when using ALTER USER <user> IDENTIFIED BY <password> command (BZ#1981332)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* mariadb-10.5-module: /etc/security/user_map.conf getting overwritten with mariadb-server upgrade (BZ#2050515)\n\n* mariadb-server:10.5 in centos8 stream is not shipping wsrep_sst_rsync_tunnel (BZ#2050524)\n\n* Galera doesn't work without 'procps-ng' package MariaDB-10.5 (BZ#2050542)",
+				"id": "ALSA-2024:10850",
+				"title": "Important: ruby:2.5 security update",
+				"description": "Ruby is an extensible, interpreted, object-oriented, scripting language. It has features to process text files and to perform system management tasks.  \n\nSecurity Fix(es):  \n\n  * rexml: REXML ReDoS vulnerability (CVE-2024-49761)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Moderate"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/8/ALSA-2022-1557.html"
+						"url": "https://access.redhat.com/errata/RHSA-2024:10850"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2154"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-49761"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2166"
+						"url": "https://bugzilla.redhat.com/2322153"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2372"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2389"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-35604"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46657"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46658"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46662"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46666"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46667"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2022-21451"
-					},
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2022-27385"
+						"url": "https://errata.almalinux.org/8/ALSA-2024-10850.html"
 					}
 				],
-				"published": "2022-04-26T13:50:46Z",
-				"modified": "2022-04-28T12:56:03Z"
+				"published": "2024-12-05T00:00:00Z",
+				"modified": "2024-12-09T09:43:44Z"
 			},
 			"segments": [
 				{
@@ -80,187 +44,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-2154",
+				"id": "CVE-2024-49761",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2154"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-2166",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2166"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-2372",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2372"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-2389",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-2389"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-35604",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-35604"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46657",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46657"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46658",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46658"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46662",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46662"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46666",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46666"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46667",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2021-46667"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2022-21451",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2022-21451"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "alma:8"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2022-27385",
-				"references": [
-					{
-						"source": "errata.almalinux.org",
-						"url": "https://vulners.com/cve/CVE-2022-27385"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-49761"
 					}
 				]
 			},
@@ -289,125 +77,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::Judy",
-											"architectures": [
-												"aarch64"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:1.0.5-18.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"0:1.0.5-18.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::Judy",
-											"architectures": [
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:1.0.5-18.module_el8.6.0+2867+72759d2f"
-											}
-										],
-										"fixed": [
-											"0:1.0.5-18.module_el8.6.0+2867+72759d2f"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::Judy",
-											"architectures": [
-												"x86_64"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:1.0.5-18.module_el8.5.0+2637+d11efe18"
-											}
-										],
-										"fixed": [
-											"0:1.0.5-18.module_el8.5.0+2637+d11efe18"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::galera",
+											"name": "ruby:2.5::ruby",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:26.4.9-4.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"0:26.4.9-4.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::galera",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -416,11 +91,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:26.4.9-4.module_el8.5.0+2637+d11efe18"
+												"lt": "0:2.5.9-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"0:26.4.9-4.module_el8.5.0+2637+d11efe18"
+											"0:2.5.9-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -435,38 +110,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb",
+											"name": "ruby:2.5::ruby-devel",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -475,11 +124,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:2.5.9-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:2.5.9-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -494,38 +143,70 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-backup",
+											"name": "ruby:2.5::ruby-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.5.9-113.module_el8.10.0+3932+2d440da3"
+											}
+										],
+										"fixed": [
+											"0:2.5.9-113.module_el8.10.0+3932+2d440da3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::ruby-irb",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.5.9-113.module_el8.10.0+3932+2d440da3"
+											}
+										],
+										"fixed": [
+											"0:2.5.9-113.module_el8.10.0+3932+2d440da3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::ruby-libs",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-backup",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -534,11 +215,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:2.5.9-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:2.5.9-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -553,38 +234,70 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-common",
+											"name": "ruby:2.5::rubygem-abrt",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:0.3.0-4.module_el8.5.0+2625+ec418553"
+											}
+										],
+										"fixed": [
+											"0:0.3.0-4.module_el8.5.0+2625+ec418553"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-abrt-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
+											}
+										],
+										"fixed": [
+											"0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-bigdecimal",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-common",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -593,11 +306,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:1.3.4-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:1.3.4-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -612,38 +325,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-devel",
+											"name": "ruby:2.5::rubygem-bson",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-devel",
-											"architectures": [
 												"x86_64"
 											]
 										}
@@ -652,11 +336,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:4.3.0-2.module_el8.5.0+2625+ec418553"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:4.3.0-2.module_el8.5.0+2625+ec418553"
 										]
 									}
 								}
@@ -671,38 +355,186 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-embedded",
+											"name": "ruby:2.5::rubygem-bson",
+											"architectures": [
+												"ppc64le"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:4.3.0-2.module_el8.5.0+259+8cec6917"
+											}
+										],
+										"fixed": [
+											"0:4.3.0-2.module_el8.5.0+259+8cec6917"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-bson",
+											"architectures": [
+												"s390x"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:4.3.0-2.module_el8.6.0+3170+4b08f9d4"
+											}
+										],
+										"fixed": [
+											"0:4.3.0-2.module_el8.6.0+3170+4b08f9d4"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-bson-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:4.3.0-2.module_el8.5.0+2625+ec418553"
+											}
+										],
+										"fixed": [
+											"0:4.3.0-2.module_el8.5.0+2625+ec418553"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-bundler",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.16.1-4.module_el8.10.0+3871+342e2c2f"
+											}
+										],
+										"fixed": [
+											"0:1.16.1-4.module_el8.10.0+3871+342e2c2f"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-bundler-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.16.1-4.module_el8.5.0+2625+ec418553"
+											}
+										],
+										"fixed": [
+											"0:1.16.1-4.module_el8.5.0+2625+ec418553"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-did_you_mean",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.2.0-113.module_el8.10.0+3932+2d440da3"
+											}
+										],
+										"fixed": [
+											"0:1.2.0-113.module_el8.10.0+3932+2d440da3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-io-console",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-embedded",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -711,11 +543,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:0.4.6-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:0.4.6-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -730,38 +562,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-embedded-devel",
+											"name": "ruby:2.5::rubygem-json",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-embedded-devel",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -770,11 +576,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:2.1.0-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:2.1.0-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -789,38 +595,96 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-errmsg",
+											"name": "ruby:2.5::rubygem-minitest",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:5.10.3-113.module_el8.10.0+3932+2d440da3"
+											}
+										],
+										"fixed": [
+											"0:5.10.3-113.module_el8.10.0+3932+2d440da3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-mongo",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.5.1-2.module_el8.5.0+2625+ec418553"
+											}
+										],
+										"fixed": [
+											"0:2.5.1-2.module_el8.5.0+2625+ec418553"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-mongo-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.5.1-2.module_el8.5.0+2625+ec418553"
+											}
+										],
+										"fixed": [
+											"0:2.5.1-2.module_el8.5.0+2625+ec418553"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-mysql2",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-errmsg",
-											"architectures": [
 												"x86_64"
 											]
 										}
@@ -829,11 +693,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:0.4.10-4.module_el8.5.0+2625+ec418553"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:0.4.10-4.module_el8.5.0+2625+ec418553"
 										]
 									}
 								}
@@ -848,38 +712,128 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-gssapi-server",
+											"name": "ruby:2.5::rubygem-mysql2",
+											"architectures": [
+												"ppc64le"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:0.4.10-4.module_el8.5.0+259+8cec6917"
+											}
+										],
+										"fixed": [
+											"0:0.4.10-4.module_el8.5.0+259+8cec6917"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-mysql2",
+											"architectures": [
+												"s390x"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:0.4.10-4.module_el8.6.0+3170+4b08f9d4"
+											}
+										],
+										"fixed": [
+											"0:0.4.10-4.module_el8.6.0+3170+4b08f9d4"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-mysql2-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:0.4.10-4.module_el8.5.0+2625+ec418553"
+											}
+										],
+										"fixed": [
+											"0:0.4.10-4.module_el8.5.0+2625+ec418553"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-net-telnet",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:0.1.1-113.module_el8.10.0+3932+2d440da3"
+											}
+										],
+										"fixed": [
+											"0:0.1.1-113.module_el8.10.0+3932+2d440da3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-openssl",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-gssapi-server",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -888,11 +842,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:2.1.2-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:2.1.2-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -907,38 +861,11 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-oqgraph-engine",
+											"name": "ruby:2.5::rubygem-pg",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-oqgraph-engine",
-											"architectures": [
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -947,11 +874,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:1.0.0-3.module_el8.9.0+3635+c6f99506"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:1.0.0-3.module_el8.9.0+3635+c6f99506"
 										]
 									}
 								}
@@ -966,38 +893,70 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-pam",
+											"name": "ruby:2.5::rubygem-pg-doc",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.0.0-3.module_el8.9.0+3635+c6f99506"
+											}
+										],
+										"fixed": [
+											"0:1.0.0-3.module_el8.9.0+3635+c6f99506"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-power_assert",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.1.1-113.module_el8.10.0+3932+2d440da3"
+											}
+										],
+										"fixed": [
+											"0:1.1.1-113.module_el8.10.0+3932+2d440da3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ruby:2.5::rubygem-psych",
 											"architectures": [
 												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-pam",
-											"architectures": [
+												"i686",
+												"ppc64le",
+												"s390x",
 												"x86_64"
 											]
 										}
@@ -1006,11 +965,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:3.0.2-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:3.0.2-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1025,10 +984,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-server",
+											"name": "ruby:2.5::rubygem-rake",
 											"architectures": [
-												"aarch64",
-												"ppc64le"
+												"noarch"
 											]
 										}
 									},
@@ -1036,11 +994,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
+												"lt": "0:12.3.3-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
+											"0:12.3.3-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1055,9 +1013,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-server",
+											"name": "ruby:2.5::rubygem-rdoc",
 											"architectures": [
-												"x86_64"
+												"noarch"
 											]
 										}
 									},
@@ -1065,11 +1023,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:6.0.1.1-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:6.0.1.1-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1084,10 +1042,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-server-galera",
+											"name": "ruby:2.5::rubygem-test-unit",
 											"architectures": [
-												"aarch64",
-												"ppc64le"
+												"noarch"
 											]
 										}
 									},
@@ -1095,11 +1052,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
+												"lt": "0:3.2.7-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
+											"0:3.2.7-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1114,9 +1071,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-server-galera",
+											"name": "ruby:2.5::rubygem-xmlrpc",
 											"architectures": [
-												"x86_64"
+												"noarch"
 											]
 										}
 									},
@@ -1124,11 +1081,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:0.3.0-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:0.3.0-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1143,10 +1100,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-server-utils",
+											"name": "ruby:2.5::rubygems",
 											"architectures": [
-												"aarch64",
-												"ppc64le"
+												"noarch"
 											]
 										}
 									},
@@ -1154,11 +1110,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
+												"lt": "0:2.7.6.3-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
+											"0:2.7.6.3-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1173,9 +1129,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "mariadb:10.5::mariadb-server-utils",
+											"name": "ruby:2.5::rubygems-devel",
 											"architectures": [
-												"x86_64"
+												"noarch"
 											]
 										}
 									},
@@ -1183,70 +1139,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+												"lt": "0:2.7.6.3-113.module_el8.10.0+3932+2d440da3"
 											}
 										],
 										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-test",
-											"architectures": [
-												"aarch64",
-												"ppc64le"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.6.0+2761+593e5e59"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "mariadb:10.5::mariadb-test",
-											"architectures": [
-												"x86_64"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "3:10.5.13-1.module_el8.5.0+2637+d11efe18"
-											}
-										],
-										"fixed": [
-											"3:10.5.13-1.module_el8.5.0+2637+d11efe18"
+											"0:2.7.6.3-113.module_el8.10.0+3932+2d440da3"
 										]
 									}
 								}
@@ -1260,7 +1157,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/8/2022/ALSA-2022:1557.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:10850.json"
 		]
 	}
 }
