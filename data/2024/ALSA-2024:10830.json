@@ -1,38 +1,54 @@
 {
-	"id": "ALSA-2023:2987",
+	"id": "ALSA-2024:10830",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALSA-2023:2987",
-				"title": "Low: samba security, bug fix, and enhancement update",
-				"description": "Samba is an open-source implementation of the Server Message Block (SMB) protocol and the related Common Internet File System (CIFS) protocol, which allow PC-compatible machines to share files, printers, and various information.\n\nThe following packages have been upgraded to a later upstream version: samba (4.17.5). (BZ#2132051)\n\nSecurity Fix(es):\n\n* samba: GnuTLS gnutls_rnd() can fail and give predictable random values (CVE-2022-1615)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+				"id": "ALSA-2024:10830",
+				"title": "Important: postgresql:15 security update",
+				"description": "PostgreSQL is an advanced object-relational database management system (DBMS).  \n\nSecurity Fix(es):  \n\n  * postgresql: PostgreSQL SET ROLE, SET SESSION AUTHORIZATION reset to wrong user ID (CVE-2024-10978)\n  * postgresql: PostgreSQL PL/Perl environment variable changes execute arbitrary code (CVE-2024-10979)\n  * postgresql: PostgreSQL row security below e.g. subqueries disregards user ID changes (CVE-2024-10976)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "errata.almalinux.org",
-						"vendor": "Low"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/errata/RHSA-2023:2987"
+						"url": "https://access.redhat.com/errata/RHSA-2024:10830"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1615"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10976"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://bugzilla.redhat.com/2122649"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10978"
 					},
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://errata.almalinux.org/8/ALSA-2023-2987.html"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10979"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2326251"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2326253"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2326263"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-10830.html"
 					}
 				],
-				"published": "2023-05-16T00:00:00Z",
-				"modified": "2023-05-19T22:02:33Z"
+				"published": "2024-12-05T00:00:00Z",
+				"modified": "2024-12-10T09:13:17Z"
 			},
 			"segments": [
 				{
@@ -44,11 +60,43 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-1615",
+				"id": "CVE-2024-10976",
 				"references": [
 					{
 						"source": "errata.almalinux.org",
-						"url": "https://access.redhat.com/security/cve/CVE-2022-1615"
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10976"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10978",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10978"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10979",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-10979"
 					}
 				]
 			},
@@ -75,23 +123,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "ctdb",
+										"name": "postgresql:15::pg_repack",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:1.4.8-1.module_el8.9.0+3706+885c732e"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:1.4.8-1.module_el8.9.0+3706+885c732e"
 										]
 									}
 								}
@@ -104,24 +151,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libnetapi",
+										"name": "postgresql:15::pgaudit",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:1.7.0-1.module_el8.9.0+3706+885c732e"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:1.7.0-1.module_el8.9.0+3706+885c732e"
 										]
 									}
 								}
@@ -134,24 +179,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libnetapi-devel",
+										"name": "postgresql:15::postgres-decoderbufs",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:1.9.7-1.Final.module_el8.9.0+3706+885c732e"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:1.9.7-1.Final.module_el8.9.0+3706+885c732e"
 										]
 									}
 								}
@@ -164,24 +207,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsmbclient",
+										"name": "postgresql:15::postgresql",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -194,24 +235,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libsmbclient-devel",
+										"name": "postgresql:15::postgresql-contrib",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -224,24 +263,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libwbclient",
+										"name": "postgresql:15::postgresql-docs",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -254,24 +291,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "libwbclient-devel",
+										"name": "postgresql:15::postgresql-plperl",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -284,24 +319,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-samba",
+										"name": "postgresql:15::postgresql-plpython3",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -314,23 +347,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-samba-dc",
+										"name": "postgresql:15::postgresql-pltcl",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -343,24 +375,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-samba-devel",
+										"name": "postgresql:15::postgresql-private-devel",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -373,23 +403,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-samba-test",
+										"name": "postgresql:15::postgresql-private-libs",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -402,23 +431,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba",
+										"name": "postgresql:15::postgresql-server",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -431,23 +459,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-client",
+										"name": "postgresql:15::postgresql-server-devel",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -460,24 +487,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-client-libs",
+										"name": "postgresql:15::postgresql-static",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -490,7 +515,35 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-common",
+										"name": "postgresql:15::postgresql-test",
+										"architectures": [
+											"aarch64",
+											"ppc64le",
+											"s390x"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
+											}
+										],
+										"fixed": [
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:15::postgresql-test-rpm-macros",
 										"architectures": [
 											"noarch"
 										]
@@ -499,11 +552,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -516,53 +569,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-common-libs",
-										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:4.17.5-2.el8"
-											}
-										],
-										"fixed": [
-											"0:4.17.5-2.el8"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "samba-common-tools",
+										"name": "postgresql:15::postgresql-upgrade",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -575,53 +597,22 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-dc-libs",
-										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
-											"x86_64"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:4.17.5-2.el8"
-											}
-										],
-										"fixed": [
-											"0:4.17.5-2.el8"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "samba-dcerpc",
+										"name": "postgresql:15::postgresql-upgrade-devel",
 										"architectures": [
 											"aarch64",
 											"ppc64le",
-											"s390x",
-											"x86_64"
+											"s390x"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -634,12 +625,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-devel",
+										"name": "postgresql:16::pg_repack",
 										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -647,11 +634,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:1.4.8-1.module_el8.10.0+3798+606ebb9f"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:1.4.8-1.module_el8.10.0+3798+606ebb9f"
 										]
 									}
 								}
@@ -664,11 +651,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-krb5-printing",
+										"name": "postgresql:16::pgaudit",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -676,11 +660,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:1.7.0-1.module_el8.9.0+3706+885c732e"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:1.7.0-1.module_el8.9.0+3706+885c732e"
 										]
 									}
 								}
@@ -693,11 +677,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-ldb-ldap-modules",
+										"name": "postgresql:16::postgres-decoderbufs",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -705,11 +686,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:1.9.7-1.Final.module_el8.9.0+3706+885c732e"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:1.9.7-1.Final.module_el8.9.0+3706+885c732e"
 										]
 									}
 								}
@@ -722,12 +703,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-libs",
+										"name": "postgresql:16::postgresql",
 										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -735,11 +712,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -752,20 +729,20 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-pidl",
+										"name": "postgresql:16::postgresql-contrib",
 										"architectures": [
-											"noarch"
+											"x86_64"
 										]
 									},
 									"affected": {
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -778,11 +755,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-test",
+										"name": "postgresql:16::postgresql-docs",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -790,11 +764,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -807,11 +781,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-test-libs",
+										"name": "postgresql:16::postgresql-plperl",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -819,11 +790,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -836,11 +807,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-tools",
+										"name": "postgresql:16::postgresql-plpython3",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -848,11 +816,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -865,11 +833,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-usershares",
+										"name": "postgresql:16::postgresql-pltcl",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -877,11 +842,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -894,11 +859,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-vfs-iouring",
+										"name": "postgresql:16::postgresql-private-devel",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -906,11 +868,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -923,11 +885,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-winbind",
+										"name": "postgresql:16::postgresql-private-libs",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -935,11 +894,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -952,11 +911,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-winbind-clients",
+										"name": "postgresql:16::postgresql-server",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -964,11 +920,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -981,11 +937,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-winbind-krb5-locator",
+										"name": "postgresql:16::postgresql-server-devel",
 										"architectures": [
-											"aarch64",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -993,11 +946,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -1010,12 +963,8 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-winbind-modules",
+										"name": "postgresql:16::postgresql-static",
 										"architectures": [
-											"aarch64",
-											"i686",
-											"ppc64le",
-											"s390x",
 											"x86_64"
 										]
 									},
@@ -1023,11 +972,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -1040,7 +989,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "samba-winexe",
+										"name": "postgresql:16::postgresql-test",
 										"architectures": [
 											"x86_64"
 										]
@@ -1049,11 +998,63 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.17.5-2.el8"
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
 											}
 										],
 										"fixed": [
-											"0:4.17.5-2.el8"
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:16::postgresql-upgrade",
+										"architectures": [
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
+											}
+										],
+										"fixed": [
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql:16::postgresql-upgrade-devel",
+										"architectures": [
+											"x86_64"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:15.10-1.module_el8.10.0+3929+38258aa5"
+											}
+										],
+										"fixed": [
+											"0:15.10-1.module_el8.10.0+3929+38258aa5"
 										]
 									}
 								}
@@ -1067,7 +1068,7 @@
 	"data_source": {
 		"id": "alma-errata",
 		"raws": [
-			"vuls-data-raw-alma-errata/8/2023/ALSA-2023:2987.json"
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:10830.json"
 		]
 	}
 }
