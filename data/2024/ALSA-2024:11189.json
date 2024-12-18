@@ -1,0 +1,111 @@
+{
+	"id": "ALSA-2024:11189",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:11189",
+				"title": "Moderate: python3.11-urllib3 security update",
+				"description": "The python-urllib3 package provides the Python HTTP module with connection pooling and file POST abilities.  \n\nSecurity Fix(es):  \n\n  * urllib3: Request body not stripped after redirect from 303 status changes request method to GET (CVE-2023-45803)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Moderate"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:11189"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-45803"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2246840"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-11189.html"
+					}
+				],
+				"published": "2024-12-17T00:00:00Z",
+				"modified": "2024-12-18T12:47:55Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-45803",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2023-45803"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "alma:8",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "python3.11-urllib3",
+											"architectures": [
+												"noarch"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.26.12-5.el8_10"
+											}
+										],
+										"fixed": [
+											"0:1.26.12-5.el8_10"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:11189.json"
+		]
+	}
+}
