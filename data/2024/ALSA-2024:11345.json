@@ -1,0 +1,196 @@
+{
+	"id": "ALSA-2024:11345",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALSA-2024:11345",
+				"title": "Important: gstreamer1-plugins-base security update",
+				"description": "GStreamer is a streaming media framework based on graphs of filters which operate on media data. The gstreamer1-plugins-base packages contain a collection of well-maintained base plug-ins.  \n\nSecurity Fix(es):  \n\n  * gstreamer1-plugins-base: GStreamer has a stack-buffer overflow in vorbis_handle_identification_packet (CVE-2024-47538)\n  * gstreamer1-plugins-base: out-of-bounds write in Ogg demuxer (CVE-2024-47615)\n  * gstreamer1-plugins-base: stack-buffer overflow in gst_opus_dec_parse_header (CVE-2024-47607)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "errata.almalinux.org",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/errata/RHSA-2024:11345"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-47538"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-47607"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-47615"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2331727"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2331740"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://bugzilla.redhat.com/2331754"
+					},
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://errata.almalinux.org/8/ALSA-2024-11345.html"
+					}
+				],
+				"published": "2024-12-18T00:00:00Z",
+				"modified": "2024-12-18T12:39:10Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-47538",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-47538"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47607",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-47607"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47615",
+				"references": [
+					{
+						"source": "errata.almalinux.org",
+						"url": "https://access.redhat.com/security/cve/CVE-2024-47615"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "alma:8"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "alma:8",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gstreamer1-plugins-base",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"ppc64le",
+												"s390x",
+												"x86_64"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.16.1-5.el8_10"
+											}
+										],
+										"fixed": [
+											"0:1.16.1-5.el8_10"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gstreamer1-plugins-base-devel",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"ppc64le",
+												"s390x",
+												"x86_64"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.16.1-5.el8_10"
+											}
+										],
+										"fixed": [
+											"0:1.16.1-5.el8_10"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "alma-errata",
+		"raws": [
+			"vuls-data-raw-alma-errata/8/2024/ALSA-2024:11345.json"
+		]
+	}
+}
